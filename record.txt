@@ -1,0 +1,625 @@
+['/home/scai/Workspace/xfang21/github_repos/agent_preferences', '/home/scai/Workspace/xfang21/github_repos/agent_preferences', '/home/scai/Workspace/sye10/virtualHome/virtualhome', '/home/scai/Workspace/xfang21/github_repos/virtualhome/virtualhome/simulation', '/usr/lib/python38.zip', '/usr/lib/python3.8', '/usr/lib/python3.8/lib-dynload', '/home/scai/.local/lib/python3.8/site-packages', '/usr/local/lib/python3.8/dist-packages', '/usr/lib/python3/dist-packages']
+/home/scai/Workspace/xfang21/github_repos/agent_preferences
+length of env_task_set: 2
+episode_ids: [0, 1]
+Init Env
+['/home/scai/Workspace/xfang21/github_repos/linux_exec.v2.3.0.x86_64', '-batchmode', '-nographics', '-http-port=8080', '-logFile /home/scai/Workspace/xfang21/github_repos/agent_preferences/Player_8080.log']
+Getting connection...
+Resetting... Envid: 0. Taskid: 0. Index: 0
+task_spec: dict_items([('on_remotecontrol_373', {'count': 1, 'grab_obj_ids': [457], 'container_ids': [373]})])
+episode: 0
+Resetting... Envid: 0. Taskid: 0. Index: 0
+task_spec: dict_items([('on_remotecontrol_373', {'count': 1, 'grab_obj_ids': [457], 'container_ids': [373]})])
+dict_keys([0]) 1
+arena reset to 0
+task_spec: dict_items([('on_remotecontrol_373', {'count': 1, 'grab_obj_ids': [457], 'container_ids': [373]})])
+success ['[walk] <bathroom> (11)', '[walk] <bathroomcabinet> (48)', '[open] <bathroomcabinet> (48)', '[grab] <remotecontrol> (457)']
+success ['[walk] <bathroom> (11)', '[walk] <bathroomcabinet> (48)', '[open] <bathroomcabinet> (48)', '[grab] <remotecontrol> (457)']
+success ['[walk] <bathroom> (11)', '[walk] <bathroomcabinet> (48)', '[open] <bathroomcabinet> (48)', '[grab] <remotecontrol> (457)']
+success ['[walk] <bathroom> (11)', '[walk] <bathroomcabinet> (48)', '[open] <bathroomcabinet> (48)', '[grab] <remotecontrol> (457)']
+success ['[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <kitchencabinet> (236)', '[open] <kitchencabinet> (236)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchencabinet> (236)', '[open] <kitchencabinet> (236)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchencabinet> (236)', '[open] <kitchencabinet> (236)', '[grab] <remotecontrol> (457)']
+success ['[walk] <bathroom> (11)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <bathroom> (11)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <bathroom> (11)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <kitchencabinet> (236)', '[open] <kitchencabinet> (236)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchencabinet> (236)', '[open] <kitchencabinet> (236)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchencabinet> (236)', '[open] <kitchencabinet> (236)', '[grab] <remotecontrol> (457)']
+success ['[walk] <bedroom> (73)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <bedroom> (73)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <bedroom> (73)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <microwave> (313)', '[open] <microwave> (313)', '[grab] <remotecontrol> (457)']
+success ['[walk] <microwave> (313)', '[open] <microwave> (313)', '[grab] <remotecontrol> (457)']
+success ['[walk] <microwave> (313)', '[open] <microwave> (313)', '[grab] <remotecontrol> (457)']
+success ['[walk] <bedroom> (73)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <bedroom> (73)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <bedroom> (73)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <fridge> (305)', '[open] <fridge> (305)', '[grab] <remotecontrol> (457)']
+success ['[walk] <fridge> (305)', '[open] <fridge> (305)', '[grab] <remotecontrol> (457)']
+success ['[walk] <fridge> (305)', '[open] <fridge> (305)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <bathroom> (11)', '[walk] <remotecontrol> (457)', '[grab] <remotecontrol> (457)']
+success ['[walk] <bathroom> (11)', '[walk] <remotecontrol> (457)', '[grab] <remotecontrol> (457)']
+success ['[walk] <bathroom> (11)', '[walk] <remotecontrol> (457)', '[grab] <remotecontrol> (457)']
+success ['[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <stove> (311)', '[open] <stove> (311)', '[grab] <remotecontrol> (457)']
+success ['[walk] <stove> (311)', '[open] <stove> (311)', '[grab] <remotecontrol> (457)']
+success ['[walk] <stove> (311)', '[open] <stove> (311)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <kitchencabinet> (237)', '[open] <kitchencabinet> (237)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchencabinet> (237)', '[open] <kitchencabinet> (237)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchencabinet> (237)', '[open] <kitchencabinet> (237)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <bathroom> (11)', '[walk] <bathroomcabinet> (48)', '[open] <bathroomcabinet> (48)', '[grab] <remotecontrol> (457)']
+success ['[walk] <bathroom> (11)', '[walk] <bathroomcabinet> (48)', '[open] <bathroomcabinet> (48)', '[grab] <remotecontrol> (457)']
+success ['[walk] <bathroom> (11)', '[walk] <bathroomcabinet> (48)', '[open] <bathroomcabinet> (48)', '[grab] <remotecontrol> (457)']
+success ['[walk] <bathroom> (11)', '[walk] <bathroomcabinet> (48)', '[open] <bathroomcabinet> (48)', '[grab] <remotecontrol> (457)']
+success ['[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <stove> (311)', '[open] <stove> (311)', '[grab] <remotecontrol> (457)']
+success ['[walk] <stove> (311)', '[open] <stove> (311)', '[grab] <remotecontrol> (457)']
+success ['[walk] <stove> (311)', '[open] <stove> (311)', '[grab] <remotecontrol> (457)']
+success ['[walk] <bedroom> (73)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <bedroom> (73)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <bedroom> (73)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <kitchencabinet> (237)', '[open] <kitchencabinet> (237)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchencabinet> (237)', '[open] <kitchencabinet> (237)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchencabinet> (237)', '[open] <kitchencabinet> (237)', '[grab] <remotecontrol> (457)']
+success ['[walk] <bathroom> (11)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <bathroom> (11)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <bathroom> (11)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <bathroom> (11)', '[walk] <bathroomcabinet> (48)', '[open] <bathroomcabinet> (48)', '[grab] <remotecontrol> (457)']
+success ['[walk] <bathroom> (11)', '[walk] <bathroomcabinet> (48)', '[open] <bathroomcabinet> (48)', '[grab] <remotecontrol> (457)']
+success ['[walk] <bathroom> (11)', '[walk] <bathroomcabinet> (48)', '[open] <bathroomcabinet> (48)', '[grab] <remotecontrol> (457)']
+success ['[walk] <bathroom> (11)', '[walk] <bathroomcabinet> (48)', '[open] <bathroomcabinet> (48)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <kitchencabinet> (237)', '[open] <kitchencabinet> (237)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchencabinet> (237)', '[open] <kitchencabinet> (237)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchencabinet> (237)', '[open] <kitchencabinet> (237)', '[grab] <remotecontrol> (457)']
+success ['[walk] <bedroom> (73)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <bedroom> (73)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <bedroom> (73)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <bathroom> (11)', '[walk] <bathroomcabinet> (48)', '[open] <bathroomcabinet> (48)', '[grab] <remotecontrol> (457)']
+success ['[walk] <bathroom> (11)', '[walk] <bathroomcabinet> (48)', '[open] <bathroomcabinet> (48)', '[grab] <remotecontrol> (457)']
+success ['[walk] <bathroom> (11)', '[walk] <bathroomcabinet> (48)', '[open] <bathroomcabinet> (48)', '[grab] <remotecontrol> (457)']
+success ['[walk] <bathroom> (11)', '[walk] <bathroomcabinet> (48)', '[open] <bathroomcabinet> (48)', '[grab] <remotecontrol> (457)']
+success ['[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <bathroom> (11)', '[walk] <bathroomcabinet> (48)', '[open] <bathroomcabinet> (48)', '[grab] <remotecontrol> (457)']
+success ['[walk] <bathroom> (11)', '[walk] <bathroomcabinet> (48)', '[open] <bathroomcabinet> (48)', '[grab] <remotecontrol> (457)']
+success ['[walk] <bathroom> (11)', '[walk] <bathroomcabinet> (48)', '[open] <bathroomcabinet> (48)', '[grab] <remotecontrol> (457)']
+success ['[walk] <bathroom> (11)', '[walk] <bathroomcabinet> (48)', '[open] <bathroomcabinet> (48)', '[grab] <remotecontrol> (457)']
+success ['[walk] <bedroom> (73)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <bedroom> (73)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <bedroom> (73)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <kitchencabinet> (236)', '[open] <kitchencabinet> (236)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchencabinet> (236)', '[open] <kitchencabinet> (236)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchencabinet> (236)', '[open] <kitchencabinet> (236)', '[grab] <remotecontrol> (457)']
+success ['[walk] <bedroom> (73)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <bedroom> (73)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <bedroom> (73)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <kitchencabinet> (234)', '[open] <kitchencabinet> (234)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchencabinet> (234)', '[open] <kitchencabinet> (234)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchencabinet> (234)', '[open] <kitchencabinet> (234)', '[grab] <remotecontrol> (457)']
+success ['[walk] <bathroom> (11)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <bathroom> (11)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <bathroom> (11)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <microwave> (313)', '[open] <microwave> (313)', '[grab] <remotecontrol> (457)']
+success ['[walk] <microwave> (313)', '[open] <microwave> (313)', '[grab] <remotecontrol> (457)']
+success ['[walk] <microwave> (313)', '[open] <microwave> (313)', '[grab] <remotecontrol> (457)']
+success ['[walk] <bathroom> (11)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <bathroom> (11)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <bathroom> (11)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <stove> (311)', '[open] <stove> (311)', '[grab] <remotecontrol> (457)']
+success ['[walk] <stove> (311)', '[open] <stove> (311)', '[grab] <remotecontrol> (457)']
+success ['[walk] <stove> (311)', '[open] <stove> (311)', '[grab] <remotecontrol> (457)']
+success ['[walk] <bedroom> (73)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <bedroom> (73)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <bedroom> (73)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <kitchencabinet> (236)', '[open] <kitchencabinet> (236)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchencabinet> (236)', '[open] <kitchencabinet> (236)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchencabinet> (236)', '[open] <kitchencabinet> (236)', '[grab] <remotecontrol> (457)']
+success ['[walk] <bedroom> (73)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <bedroom> (73)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <bedroom> (73)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+Plan Done
+{'edges': [{'from_id': 225, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 226, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 227, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 228, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 230, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 231, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 232, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 233, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 234, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 235, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 236, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 237, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 238, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 239, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 240, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 241, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 242, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 243, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 244, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 245, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 246, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 247, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 248, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 249, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 250, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 251, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 252, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 253, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 254, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 255, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 256, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 257, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 258, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 259, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 260, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 261, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 262, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 263, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 264, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 265, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 266, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 267, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 269, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 271, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 272, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 275, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 276, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 279, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 280, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 283, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 284, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 300, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 301, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 304, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 305, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 306, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 308, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 311, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 313, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 318, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 319, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 320, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 321, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 322, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 323, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 324, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 325, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 330, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 331, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 332, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 333, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 334, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 1, 'to_id': 205, 'relation_type': 'INSIDE'}, {'from_id': 243, 'to_id': 238, 'relation_type': 'ON'}, {'from_id': 244, 'to_id': 238, 'relation_type': 'ON'}, {'from_id': 248, 'to_id': 238, 'relation_type': 'ON'}, {'from_id': 252, 'to_id': 231, 'relation_type': 'ON'}, {'from_id': 260, 'to_id': 230, 'relation_type': 'ON'}, {'from_id': 264, 'to_id': 230, 'relation_type': 'ON'}, {'from_id': 266, 'to_id': 238, 'relation_type': 'ON'}, {'from_id': 267, 'to_id': 238, 'relation_type': 'ON'}, {'from_id': 269, 'to_id': 311, 'relation_type': 'ON'}, {'from_id': 271, 'to_id': 231, 'relation_type': 'ON'}, {'from_id': 275, 'to_id': 231, 'relation_type': 'ON'}, {'from_id': 280, 'to_id': 231, 'relation_type': 'ON'}, {'from_id': 283, 'to_id': 231, 'relation_type': 'ON'}, {'from_id': 300, 'to_id': 230, 'relation_type': 'ON'}, {'from_id': 301, 'to_id': 230, 'relation_type': 'ON'}, {'from_id': 306, 'to_id': 238, 'relation_type': 'ON'}, {'from_id': 308, 'to_id': 238, 'relation_type': 'ON'}, {'from_id': 313, 'to_id': 238, 'relation_type': 'ON'}, {'from_id': 318, 'to_id': 231, 'relation_type': 'ON'}, {'from_id': 319, 'to_id': 231, 'relation_type': 'ON'}, {'from_id': 320, 'to_id': 238, 'relation_type': 'ON'}, {'from_id': 321, 'to_id': 238, 'relation_type': 'ON'}, {'from_id': 322, 'to_id': 238, 'relation_type': 'ON'}, {'from_id': 323, 'to_id': 238, 'relation_type': 'ON'}, {'from_id': 324, 'to_id': 238, 'relation_type': 'ON'}, {'from_id': 325, 'to_id': 238, 'relation_type': 'ON'}, {'from_id': 330, 'to_id': 250, 'relation_type': 'ON'}, {'from_id': 331, 'to_id': 250, 'relation_type': 'ON'}, {'from_id': 332, 'to_id': 251, 'relation_type': 'ON'}, {'from_id': 333, 'to_id': 251, 'relation_type': 'ON'}, {'from_id': 334, 'to_id': 251, 'relation_type': 'ON'}, {'from_id': 231, 'to_id': 1, 'relation_type': 'CLOSE'}, {'from_id': 1, 'to_id': 231, 'relation_type': 'CLOSE'}, {'from_id': 232, 'to_id': 253, 'relation_type': 'ON'}, {'from_id': 233, 'to_id': 253, 'relation_type': 'ON'}, {'from_id': 233, 'to_id': 1, 'relation_type': 'CLOSE'}, {'from_id': 1, 'to_id': 233, 'relation_type': 'CLOSE'}, {'from_id': 319, 'to_id': 252, 'relation_type': 'ON'}, {'from_id': 318, 'to_id': 252, 'relation_type': 'ON'}, {'from_id': 252, 'to_id': 1, 'relation_type': 'CLOSE'}, {'from_id': 1, 'to_id': 252, 'relation_type': 'CLOSE'}, {'from_id': 253, 'to_id': 1, 'relation_type': 'CLOSE'}, {'from_id': 1, 'to_id': 253, 'relation_type': 'CLOSE'}, {'from_id': 256, 'to_id': 254, 'relation_type': 'ON'}, {'from_id': 257, 'to_id': 259, 'relation_type': 'ON'}, {'from_id': 260, 'to_id': 264, 'relation_type': 'FACING'}, {'from_id': 249, 'to_id': 264, 'relation_type': 'FACING'}, {'from_id': 232, 'to_id': 264, 'relation_type': 'FACING'}, {'from_id': 272, 'to_id': 264, 'relation_type': 'FACING'}, {'from_id': 271, 'to_id': 264, 'relation_type': 'FACING'}, {'from_id': 276, 'to_id': 264, 'relation_type': 'FACING'}, {'from_id': 275, 'to_id': 264, 'relation_type': 'FACING'}, {'from_id': 252, 'to_id': 264, 'relation_type': 'FACING'}, {'from_id': 318, 'to_id': 264, 'relation_type': 'FACING'}, {'from_id': 319, 'to_id': 264, 'relation_type': 'FACING'}, {'from_id': 231, 'to_id': 264, 'relation_type': 'FACING'}, {'from_id': 334, 'to_id': 264, 'relation_type': 'FACING'}, {'from_id': 333, 'to_id': 264, 'relation_type': 'FACING'}, {'from_id': 251, 'to_id': 264, 'relation_type': 'FACING'}, {'from_id': 280, 'to_id': 264, 'relation_type': 'FACING'}, {'from_id': 279, 'to_id': 264, 'relation_type': 'FACING'}, {'from_id': 283, 'to_id': 264, 'relation_type': 'FACING'}, {'from_id': 332, 'to_id': 264, 'relation_type': 'FACING'}, {'from_id': 284, 'to_id': 264, 'relation_type': 'FACING'}, {'from_id': 258, 'to_id': 264, 'relation_type': 'FACING'}, {'from_id': 261, 'to_id': 264, 'relation_type': 'FACING'}, {'from_id': 263, 'to_id': 264, 'relation_type': 'FACING'}, {'from_id': 257, 'to_id': 264, 'relation_type': 'FACING'}, {'from_id': 259, 'to_id': 264, 'relation_type': 'FACING'}, {'from_id': 265, 'to_id': 264, 'relation_type': 'FACING'}, {'from_id': 263, 'to_id': 265, 'relation_type': 'FACING'}, {'from_id': 261, 'to_id': 265, 'relation_type': 'FACING'}, {'from_id': 262, 'to_id': 265, 'relation_type': 'FACING'}, {'from_id': 280, 'to_id': 265, 'relation_type': 'FACING'}, {'from_id': 272, 'to_id': 265, 'relation_type': 'FACING'}, {'from_id': 271, 'to_id': 265, 'relation_type': 'FACING'}, {'from_id': 252, 'to_id': 265, 'relation_type': 'FACING'}, {'from_id': 319, 'to_id': 265, 'relation_type': 'FACING'}, {'from_id': 318, 'to_id': 265, 'relation_type': 'FACING'}, {'from_id': 276, 'to_id': 265, 'relation_type': 'FACING'}, {'from_id': 253, 'to_id': 265, 'relation_type': 'FACING'}, {'from_id': 232, 'to_id': 265, 'relation_type': 'FACING'}, {'from_id': 275, 'to_id': 265, 'relation_type': 'FACING'}, {'from_id': 264, 'to_id': 265, 'relation_type': 'FACING'}, {'from_id': 279, 'to_id': 1, 'relation_type': 'CLOSE'}, {'from_id': 1, 'to_id': 279, 'relation_type': 'CLOSE'}, {'from_id': 280, 'to_id': 1, 'relation_type': 'CLOSE'}, {'from_id': 1, 'to_id': 280, 'relation_type': 'CLOSE'}, {'from_id': 283, 'to_id': 1, 'relation_type': 'CLOSE'}, {'from_id': 1, 'to_id': 283, 'relation_type': 'CLOSE'}, {'from_id': 284, 'to_id': 1, 'relation_type': 'CLOSE'}, {'from_id': 1, 'to_id': 284, 'relation_type': 'CLOSE'}], 'nodes': [{'id': 225, 'category': 'Lamps', 'class_name': 'ceilinglamp', 'prefab_name': 'PRE_LAM_Ceiling_lamp_02_01', 'obj_transform': {'position': [-1.361, 0.0, -7.25], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-1.361, 2.22767544, -7.25], 'size': [0.531659365, 0.5451052, 0.5316591]}, 'properties': [], 'states': []}, {'id': 226, 'category': 'Lamps', 'class_name': 'ceilinglamp', 'prefab_name': 'PRE_LAM_Ceiling_lamp_02_01', 'obj_transform': {'position': [-1.361, 0.0, -4.0], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-1.361, 2.22767544, -4.0], 'size': [0.531659365, 0.5451052, 0.5316591]}, 'properties': [], 'states': []}, {'id': 227, 'category': 'Lamps', 'class_name': 'walllamp', 'prefab_name': 'PRE_LAM_Wall_lamp_01_02', 'obj_transform': {'position': [-3.084, 1.398, -1.799], 'rotation': [0.5, 0.5, -0.5, 0.5], 'scale': [0.554439962, 0.554439962, 0.554439962]}, 'bounding_box': {'center': [-2.3909502, 1.39800262, -1.84650517], 'size': [0.47817415, 0.121887378, 0.0950104743]}, 'properties': [], 'states': []}, {'id': 228, 'category': 'Lamps', 'class_name': 'walllamp', 'prefab_name': 'PRE_LAM_Wall_lamp_01_02', 'obj_transform': {'position': [-1.206, 1.398, -1.799], 'rotation': [0.5, 0.5, -0.5, 0.5], 'scale': [0.554439962, 0.554439962, 0.554439962]}, 'bounding_box': {'center': [-0.51295, 1.39800262, -1.84650517], 'size': [0.47817415, 0.121887378, 0.0950104743]}, 'properties': [], 'states': []}, {'id': 230, 'category': 'Furniture', 'class_name': 'tvstand', 'prefab_name': 'PRE_FUR_TV_stand_01_06', 'obj_transform': {'position': [-1.361, 0.0, -8.796], 'rotation': [0.0, 0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-1.359, 0.246, -8.796], 'size': [2.16000032, 0.492, 0.760000467]}, 'properties': ['SURFACES', 'MOVABLE'], 'states': []}, {'id': 231, 'category': 'Furniture', 'class_name': 'kitchentable', 'prefab_name': 'PRE_FUR_Kitchen_table_01_01', 'obj_transform': {'position': [-1.119, -0.001, -5.5], 'rotation': [0.0, 0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-1.119, 0.474000037, -5.5], 'size': [2.0, 0.950000048, 1.09200037]}, 'properties': ['SURFACES', 'MOVABLE'], 'states': []}, {'id': 232, 'category': 'Furniture', 'class_name': 'bench', 'prefab_name': 'PRE_FUR_Bench_01_03', 'obj_transform': {'position': [-1.119, 0.001, -6.278], 'rotation': [0.0, -0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-1.119, 0.3, -6.278], 'size': [1.57760036, 0.508300066, 0.350199819]}, 'properties': ['SURFACES', 'SITTABLE', 'LIEABLE', 'MOVABLE'], 'states': []}, {'id': 233, 'category': 'Furniture', 'class_name': 'bench', 'prefab_name': 'PRE_FUR_Bench_01_03', 'obj_transform': {'position': [-1.119, 0.001, -4.686], 'rotation': [0.0, -0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-1.119, 0.3, -4.686], 'size': [1.57760036, 0.508300066, 0.350199819]}, 'properties': ['SURFACES', 'SITTABLE', 'LIEABLE', 'MOVABLE'], 'states': []}, {'id': 234, 'category': 'Furniture', 'class_name': 'kitchencabinet', 'prefab_name': 'kitchen_cabinet', 'obj_transform': {'position': [-0.6832998, 1.954, -2.17780018], 'rotation': [0.0, 0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-0.317799479, 1.95515037, -2.01137686], 'size': [0.7580001, 0.6996989, 0.40215373]}, 'properties': ['SURFACES', 'CAN_OPEN', 'CONTAINERS'], 'states': ['CLOSED']}, {'id': 235, 'category': 'Furniture', 'class_name': 'kitchencabinet', 'prefab_name': 'kitchen_cabinet', 'obj_transform': {'position': [-1.4317, 1.954, -2.178], 'rotation': [0.0, 0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-1.0662, 1.95515037, -2.01157665], 'size': [0.7579999, 0.6996989, 0.40215373]}, 'properties': ['SURFACES', 'CAN_OPEN', 'CONTAINERS'], 'states': ['CLOSED']}, {'id': 236, 'category': 'Furniture', 'class_name': 'kitchencabinet', 'prefab_name': 'kitchen_cabinet', 'obj_transform': {'position': [-2.1823, 1.954, -2.178], 'rotation': [0.0, 0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-1.81680012, 1.95515037, -2.01157665], 'size': [0.7579999, 0.6996989, 0.40215373]}, 'properties': ['SURFACES', 'CAN_OPEN', 'CONTAINERS'], 'states': ['CLOSED']}, {'id': 237, 'category': 'Furniture', 'class_name': 'kitchencabinet', 'prefab_name': 'kitchen_cabinet', 'obj_transform': {'position': [-2.9291, 1.954, -2.178], 'rotation': [0.0, 0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-2.56360054, 1.95515037, -2.01157665], 'size': [0.7579994, 0.6996989, 0.40215373]}, 'properties': ['SURFACES', 'CAN_OPEN', 'CONTAINERS'], 'states': ['CLOSED']}, {'id': 238, 'category': 'Furniture', 'class_name': 'kitchencounter', 'prefab_name': 'PRE_FUR_Kitchen_counter_01_04', 'obj_transform': {'position': [-1.43699992, 0.0, -2.208], 'rotation': [0.0, 0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-1.43699992, 0.52, -2.1869998], 'size': [3.01400042, 1.05, 0.770000458]}, 'properties': ['SURFACES'], 'states': ['CLOSED']}, {'id': 239, 'category': 'Furniture', 'class_name': 'kitchencounterdrawer', 'prefab_name': 'HSHP_MOD_Kitchen_counter_drawer_01', 'obj_transform': {'position': [-1.43699992, 0.225, -2.182], 'rotation': [0.0, 0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-1.43699992, 0.356, -2.205], 'size': [0.9820001, 0.272, 0.7120002]}, 'properties': [], 'states': []}, {'id': 240, 'category': 'Furniture', 'class_name': 'kitchencounterdrawer', 'prefab_name': 'HSHP_MOD_Kitchen_counter_drawer_02', 'obj_transform': {'position': [-1.43699992, 0.504, -2.182], 'rotation': [0.0, 0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-1.43699992, 0.635, -2.205], 'size': [0.9820001, 0.272, 0.7120002]}, 'properties': [], 'states': []}, {'id': 241, 'category': 'Furniture', 'class_name': 'kitchencounterdrawer', 'prefab_name': 'HSHP_MOD_Kitchen_counter_drawer_03', 'obj_transform': {'position': [-0.44119978, 0.504, -2.18200016], 'rotation': [0.0, 0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-0.441199541, 0.635, -2.20500016], 'size': [0.9820001, 0.272, 0.7120002]}, 'properties': [], 'states': []}, {'id': 242, 'category': 'Furniture', 'class_name': 'kitchencounterdrawer', 'prefab_name': 'HSHP_MOD_Kitchen_counter_drawer_04', 'obj_transform': {'position': [-0.44119978, 0.225, -2.18200016], 'rotation': [0.0, 0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-0.441199541, 0.356, -2.20500016], 'size': [0.9820001, 0.272, 0.7120002]}, 'properties': [], 'states': []}, {'id': 243, 'category': 'Furniture', 'class_name': 'kitchencounterdrawer', 'prefab_name': 'HSHP_MOD_Kitchen_counter_drawer_05', 'obj_transform': {'position': [-0.4409998, 0.779, -2.18200016], 'rotation': [0.0, 0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-0.4409995, 0.909999967, -2.20500016], 'size': [0.9820001, 0.272, 0.7120002]}, 'properties': [], 'states': []}, {'id': 244, 'category': 'Furniture', 'class_name': 'kitchencounterdrawer', 'prefab_name': 'HSHP_MOD_Kitchen_counter_drawer_06', 'obj_transform': {'position': [-2.429, 0.779, -2.182], 'rotation': [0.0, 0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-2.42900014, 0.909999967, -2.205], 'size': [0.9820001, 0.272, 0.7120002]}, 'properties': [], 'states': []}, {'id': 245, 'category': 'Furniture', 'class_name': 'kitchencounterdrawer', 'prefab_name': 'HSHP_MOD_Kitchen_counter_drawer_07', 'obj_transform': {'position': [-2.429, 0.225, -2.182], 'rotation': [0.0, 0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-2.42900014, 0.356, -2.205], 'size': [0.9820001, 0.272, 0.7120002]}, 'properties': [], 'states': []}, {'id': 246, 'category': 'Furniture', 'class_name': 'kitchencounterdrawer', 'prefab_name': 'HSHP_MOD_Kitchen_counter_drawer_08', 'obj_transform': {'position': [-2.429, 0.504, -2.182], 'rotation': [0.0, 0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-2.42900014, 0.635, -2.205], 'size': [0.9820001, 0.272, 0.7120002]}, 'properties': [], 'states': []}, {'id': 247, 'category': 'Furniture', 'class_name': 'sink', 'prefab_name': 'Sink', 'obj_transform': {'position': [-1.43699992, 0.844, -2.252], 'rotation': [0.0, 0.7071068, 0.0, 0.7071068], 'scale': [0.03580393, 0.01, 0.06783933]}, 'bounding_box': {'center': [-1.43699992, 0.844, -2.252], 'size': [0.6783934, 2.220446e-18, 0.3580394]}, 'properties': ['RECIPIENT', 'CONTAINERS'], 'states': []}, {'id': 248, 'category': 'Furniture', 'class_name': 'faucet', 'prefab_name': 'Faucet', 'obj_transform': {'position': [-1.407, 1.1, -1.908], 'rotation': [0.0, 0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-1.407, 1.1, -1.908], 'size': [0.100000143, 0.100000143, 0.100000143]}, 'properties': ['HAS_SWITCH'], 'states': ['OFF']}, {'id': 249, 'category': 'Furniture', 'class_name': 'bookshelf', 'prefab_name': 'PRE_FUR_Bookshelf_01_03', 'obj_transform': {'position': [-3.658, 0.005, -7.619], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [0.8451472, 0.8451474, 0.8451474]}, 'bounding_box': {'center': [-3.658, 0.9414233, -7.619], 'size': [0.270447135, 1.8728466, 1.7866416]}, 'properties': ['SURFACES', 'CONTAINERS'], 'states': ['CLOSED']}, {'id': 250, 'category': 'Furniture', 'class_name': 'wallshelf', 'prefab_name': 'PRE_FUR_Shelf_05', 'obj_transform': {'position': [0.952999949, 1.727, -3.899], 'rotation': [0.0, 1.0, 0.0, 2.324581e-06], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [0.953001142, 1.653366, -3.899], 'size': [0.272277743, 0.1819556, 1.00000143]}, 'properties': [], 'states': []}, {'id': 251, 'category': 'Furniture', 'class_name': 'wallshelf', 'prefab_name': 'PRE_FUR_Shelf_04', 'obj_transform': {'position': [0.952999949, 1.727, -6.486], 'rotation': [0.0, 1.0, 0.0, 2.324581e-06], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [0.953001142, 1.653366, -6.486], 'size': [0.272277743, 0.1819556, 1.00000143]}, 'properties': [], 'states': []}, {'id': 252, 'category': 'Decor', 'class_name': 'rug', 'prefab_name': 'PRE_DEC_Rug_03_08', 'obj_transform': {'position': [-1.119, 0.947, -5.5], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [0.521351635, 0.185543329, 0.521351755]}, 'bounding_box': {'center': [-1.119, 0.94910413, -5.49999952], 'size': [1.86958814, 0.00420892937, 0.5918864]}, 'properties': ['SURFACES', 'GRABBABLE', 'SITTABLE', 'LIEABLE', 'MOVABLE'], 'states': []}, {'id': 253, 'category': 'Decor', 'class_name': 'rug', 'prefab_name': 'PRE_DEC_Rug_03_03', 'obj_transform': {'position': [-1.079, 0.0, -5.48], 'rotation': [0.0, 0.707106, 0.0, 0.7071076], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-1.07899916, 0.0113401255, -5.48], 'size': [1.13529968, 0.0226843487, 3.58604312]}, 'properties': ['SURFACES', 'GRABBABLE', 'SITTABLE', 'LIEABLE', 'MOVABLE'], 'states': []}, {'id': 254, 'category': 'Decor', 'class_name': 'wallpictureframe', 'prefab_name': 'PRE_DEC_Painting_08', 'obj_transform': {'position': [-3.81, 1.36, -4.046], 'rotation': [0.0, -1.1920929e-07, 0.0, 1.0], 'scale': [0.2596627, 0.259662628, 0.259662628]}, 'bounding_box': {'center': [-3.803735, 1.3599999, -4.046], 'size': [0.0125303511, 0.287005216, 0.668847144]}, 'properties': ['GRABBABLE', 'HANGABLE', 'HAS_PAPER', 'MOVABLE'], 'states': []}, {'id': 255, 'category': 'Decor', 'class_name': 'wallpictureframe', 'prefab_name': 'PRE_DEC_Painting_02', 'obj_transform': {'position': [-3.81, 1.5, -3.416], 'rotation': [0.0, -1.1920929e-07, 0.0, 1.0], 'scale': [0.5007861, 0.5007861, 0.5007861]}, 'bounding_box': {'center': [-3.79955363, 1.50000012, -3.4160006], 'size': [0.02089377, 0.62951, 0.478566468]}, 'properties': ['GRABBABLE', 'HANGABLE', 'HAS_PAPER', 'MOVABLE'], 'states': []}, {'id': 256, 'category': 'Decor', 'class_name': 'wallpictureframe', 'prefab_name': 'PRE_DEC_Painting_05', 'obj_transform': {'position': [-3.81099987, 1.77, -3.896], 'rotation': [0.0, 2.41398789e-06, 0.0, 1.0], 'scale': [0.314151883, 0.314151883, 0.314151883]}, 'bounding_box': {'center': [-3.8044467, 1.77, -3.89600039], 'size': [0.0131084034, 0.394902617, 0.300213158]}, 'properties': ['GRABBABLE', 'HANGABLE', 'HAS_PAPER', 'MOVABLE'], 'states': []}, {'id': 257, 'category': 'Decor', 'class_name': 'wallpictureframe', 'prefab_name': 'PRE_DEC_Painting_15', 'obj_transform': {'position': [1.08900011, 1.67, -4.981], 'rotation': [0.0, 1.0, 0.0, 2.32458115e-06], 'scale': [0.46321243, 0.463212371, 0.463212371]}, 'bounding_box': {'center': [1.07933748, 1.67, -4.98099947], 'size': [0.0193280745, 0.582278132, 0.4426599]}, 'properties': ['GRABBABLE', 'HANGABLE', 'HAS_PAPER', 'MOVABLE'], 'states': []}, {'id': 258, 'category': 'Decor', 'class_name': 'wallpictureframe', 'prefab_name': 'PRE_DEC_Painting_10', 'obj_transform': {'position': [1.09500015, 1.44, -5.481], 'rotation': [0.0, 1.0, 0.0, 2.32458115e-06], 'scale': [0.41410163, 0.41410163, 0.41410163]}, 'bounding_box': {'center': [1.086362, 1.44, -5.48099947], 'size': [0.0172788687, 0.5205438, 0.3957282]}, 'properties': ['GRABBABLE', 'HANGABLE', 'HAS_PAPER', 'MOVABLE'], 'states': []}, {'id': 259, 'category': 'Decor', 'class_name': 'wallpictureframe', 'prefab_name': 'PRE_DEC_Painting_04', 'obj_transform': {'position': [1.08600008, 1.18, -4.87100029], 'rotation': [0.0, 1.0, 0.0, -1.62920685e-07], 'scale': [0.230813444, 0.230813444, 0.230813444]}, 'bounding_box': {'center': [1.08043122, 1.18, -4.87100029], 'size': [0.0111382464, 0.2551182, 0.594536543]}, 'properties': ['GRABBABLE', 'HANGABLE', 'HAS_PAPER', 'MOVABLE'], 'states': []}, {'id': 260, 'category': 'Decor', 'class_name': 'orchid', 'prefab_name': 'PRE_DEC_Orchid_02', 'obj_transform': {'position': [-1.08499992, 0.492, -8.582], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [0.6834315, 0.6834315, 0.6834315]}, 'bounding_box': {'center': [-1.08499992, 0.558287442, -8.582], 'size': [0.165631026, 0.132575318, 0.165631041]}, 'properties': [], 'states': []}, {'id': 261, 'category': 'Electronics', 'class_name': 'lightswitch', 'prefab_name': 'PRE_ELE_Light_switch_01', 'obj_transform': {'position': [-3.81100225, 1.21218228, -4.86884356], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-3.80845022, 1.21218228, -4.86884356], 'size': [0.005105672, 0.0936371461, 0.06867787]}, 'properties': ['HAS_SWITCH', 'HAS_PLUG'], 'states': ['ON']}, {'id': 262, 'category': 'Electronics', 'class_name': 'powersocket', 'prefab_name': 'PRE_ELE_Power_socket_01', 'obj_transform': {'position': [-3.8119998, 0.18473959, -4.90084], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-3.80396771, 0.18473959, -4.90084], 'size': [0.01606408, 0.154280722, 0.09082343]}, 'properties': [], 'states': []}, {'id': 263, 'category': 'Electronics', 'class_name': 'wallphone', 'prefab_name': 'PRE_ELE_Wall_phone_04', 'obj_transform': {'position': [-3.81100368, 1.201, -4.601], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-3.80132341, 1.201, -4.601], 'size': [0.0193605591, 0.269949377, 0.09333785]}, 'properties': ['GRABBABLE', 'HAS_SWITCH', 'HAS_PLUG', 'MOVABLE'], 'states': ['OFF']}, {'id': 264, 'category': 'Electronics', 'class_name': 'tv', 'prefab_name': 'PRE_ELE_TV_01', 'obj_transform': {'position': [-1.704, 0.495, -8.825], 'rotation': [0.0, -0.7070805, 0.0, 0.7071332], 'scale': [0.531408548, 0.531408548, 0.531408548]}, 'bounding_box': {'center': [-1.70399857, 0.834420145, -8.825], 'size': [0.912024, 0.6788422, 0.1941805]}, 'properties': ['HAS_SWITCH', 'LOOKABLE', 'HAS_PLUG'], 'states': ['OFF']}, {'id': 265, 'category': 'Electronics', 'class_name': 'clock', 'prefab_name': 'Clock_1', 'obj_transform': {'position': [-3.804, 1.79597306, -4.537313], 'rotation': [0.0, 0.7071068, 0.0, 0.7071068], 'scale': [0.250000238, 0.25, 0.250000238]}, 'bounding_box': {'center': [-3.78560829, 1.79597306, -4.537313], 'size': [0.0435576439, 0.249847889, 0.249848366]}, 'properties': ['GRABBABLE', 'HAS_SWITCH', 'LOOKABLE', 'HAS_PLUG', 'MOVABLE'], 'states': ['OFF']}, {'id': 266, 'category': 'Props', 'class_name': 'washingsponge', 'prefab_name': 'PRE_PRO_Washing_sponge', 'obj_transform': {'position': [-1.91899991, 1.071, -1.962], 'rotation': [0.0, -0.365092069, 0.0, 0.930971444], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-1.91813064, 1.09543192, -1.96119452], 'size': [0.218452, 0.0488643944, 0.214291573]}, 'properties': ['GRABBABLE', 'MOVABLE'], 'states': []}, {'id': 267, 'category': 'Props', 'class_name': 'dishwashingliquid', 'prefab_name': 'PRE_PRO_Washing_liquid', 'obj_transform': {'position': [-0.967999935, 1.071, -1.979], 'rotation': [0.0, -0.548024654, 0.0, 0.836462259], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-0.9679998, 1.21952772, -1.979], 'size': [0.137701526, 0.29705584, 0.110639386]}, 'properties': ['GRABBABLE', 'POURABLE', 'MOVABLE', 'CREAM'], 'states': []}, {'id': 269, 'category': 'Props', 'class_name': 'fryingpan', 'prefab_name': 'PRE_PRO_Frying_pan_01', 'obj_transform': {'position': [0.378000021, 1.097, -2.04400015], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [0.486745238, 1.13117719, -2.04400039], 'size': [0.5364209, 0.06835502, 0.318930417]}, 'properties': ['SURFACES', 'GRABBABLE', 'RECIPIENT', 'CONTAINERS', 'MOVABLE'], 'states': []}, {'id': 271, 'category': 'Props', 'class_name': 'cutleryknife', 'prefab_name': 'PRE_PRO_Knife_03', 'obj_transform': {'position': [-1.32499993, 0.949, -5.8], 'rotation': [0.707106769, -3.16101421e-08, -0.7071069, 1.05367128e-08], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-1.3266145, 0.95314, -5.843127], 'size': [0.0194395147, 0.00569083774, 0.257214069]}, 'properties': ['GRABBABLE', 'MOVABLE'], 'states': []}, {'id': 272, 'category': 'Props', 'class_name': 'cutleryfork', 'prefab_name': 'PRE_PRO_Fork_01', 'obj_transform': {'position': [-1.67, 0.962, -5.8], 'rotation': [0.0, 0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-1.67, 1.06471372, -5.841016], 'size': [0.0257531833, 0.0193981566, 0.2614353]}, 'properties': ['GRABBABLE', 'MOVABLE'], 'states': []}, {'id': 275, 'category': 'Props', 'class_name': 'cutleryknife', 'prefab_name': 'PRE_PRO_Knife_03', 'obj_transform': {'position': [-0.481999934, 0.949, -5.8], 'rotation': [0.707106769, -3.16101421e-08, -0.7071069, 1.05367128e-08], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-0.483614534, 0.95314, -5.843127], 'size': [0.0194395147, 0.00569083774, 0.257214069]}, 'properties': ['GRABBABLE', 'MOVABLE'], 'states': []}, {'id': 276, 'category': 'Props', 'class_name': 'cutleryfork', 'prefab_name': 'PRE_PRO_Fork_01', 'obj_transform': {'position': [-0.826999962, 0.962, -5.8], 'rotation': [0.0, 0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-0.826999962, 1.06471372, -5.841016], 'size': [0.0257531833, 0.0193981566, 0.2614353]}, 'properties': ['GRABBABLE', 'MOVABLE'], 'states': []}, {'id': 279, 'category': 'Props', 'class_name': 'cutleryfork', 'prefab_name': 'PRE_PRO_Fork_01', 'obj_transform': {'position': [-1.319, 0.962, -5.197], 'rotation': [0.0, -0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-1.319, 1.06471372, -5.1559844], 'size': [0.0257531833, 0.0193981566, 0.2614353]}, 'properties': ['GRABBABLE', 'MOVABLE'], 'states': []}, {'id': 280, 'category': 'Props', 'class_name': 'cutleryknife', 'prefab_name': 'PRE_PRO_Knife_03', 'obj_transform': {'position': [-1.664, 0.949, -5.197], 'rotation': [0.7071069, -1.05367173e-08, 0.707106769, -3.161014e-08], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-1.66238546, 0.95314, -5.15387344], 'size': [0.0194394384, 0.00569083774, 0.257214069]}, 'properties': ['GRABBABLE', 'MOVABLE'], 'states': []}, {'id': 283, 'category': 'Props', 'class_name': 'cutleryknife', 'prefab_name': 'PRE_PRO_Knife_03', 'obj_transform': {'position': [-0.821, 0.949, -5.197], 'rotation': [0.7071069, -1.05367173e-08, 0.707106769, -3.161014e-08], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-0.81938535, 0.95314, -5.15387344], 'size': [0.0194394384, 0.00569083774, 0.257214069]}, 'properties': ['GRABBABLE', 'MOVABLE'], 'states': []}, {'id': 284, 'category': 'Props', 'class_name': 'cutleryfork', 'prefab_name': 'PRE_PRO_Fork_01', 'obj_transform': {'position': [-0.475999951, 0.962, -5.197], 'rotation': [0.0, -0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-0.475999981, 1.06471372, -5.1559844], 'size': [0.0257531833, 0.0193981566, 0.2614353]}, 'properties': ['GRABBABLE', 'MOVABLE'], 'states': []}, {'id': 300, 'category': 'Props', 'class_name': 'box', 'prefab_name': 'PRE_PRO_Box_01', 'obj_transform': {'position': [-0.980999947, 0.495, -8.901], 'rotation': [0.0, -0.7793498, 0.0, 0.6265891], 'scale': [0.4968679, 0.496867955, 0.496867925]}, 'bounding_box': {'center': [-0.981, 0.543350339, -8.901], 'size': [0.226109341, 0.09670141, 0.178365886]}, 'properties': ['GRABBABLE', 'RECIPIENT', 'CAN_OPEN', 'CONTAINERS', 'COVER_OBJECT', 'MOVABLE'], 'states': ['CLOSED']}, {'id': 301, 'category': 'Props', 'class_name': 'photoframe', 'prefab_name': 'PRE_PRO_Photo_frame_01', 'obj_transform': {'position': [-0.675995, 0.496638536, -8.835577], 'rotation': [0.0, -0.8556375, 0.0, 0.5175757], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-0.676784933, 0.6029018, -8.834068], 'size': [0.175063714, 0.212527975, 0.141334951]}, 'properties': [], 'states': []}, {'id': 304, 'category': 'Appliances', 'class_name': 'stovefan', 'prefab_name': 'PRE_APP_Stove_fan_01', 'obj_transform': {'position': [0.577, 0.0, -2.262], 'rotation': [0.0, 0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [0.576993167, 2.08290529, -2.11185479], 'size': [0.9244469, 0.450402617, 0.6212866]}, 'properties': [], 'states': []}, {'id': 305, 'category': 'Appliances', 'class_name': 'fridge', 'prefab_name': 'PRE_APP_Fridge_01_06', 'obj_transform': {'position': [-3.376, 0.001, -2.162], 'rotation': [0.0, 0.7071068, 0.0, 0.7071068], 'scale': [0.9446888, 0.9446889, 0.9446889]}, 'bounding_box': {'center': [-3.37654, 1.00480747, -2.15178466], 'size': [0.8404542, 2.007618, 0.672774732]}, 'properties': ['CAN_OPEN', 'HAS_SWITCH', 'CONTAINERS', 'HAS_PLUG'], 'states': ['CLOSED', 'OFF']}, {'id': 306, 'category': 'Appliances', 'class_name': 'coffeemaker', 'prefab_name': 'PRE_APP_Coffeemaker_01', 'obj_transform': {'position': [-0.1329999, 1.07, -2.184], 'rotation': [0.0, 0.12911129, 0.0, 0.991630137], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-0.113873124, 1.24974978, -2.19303], 'size': [0.35552603, 0.35950017, 0.121831417]}, 'properties': ['RECIPIENT', 'CAN_OPEN', 'HAS_SWITCH', 'CONTAINERS', 'HAS_PLUG', 'MOVABLE'], 'states': ['OFF']}, {'id': 308, 'category': 'Appliances', 'class_name': 'toaster', 'prefab_name': 'PRE_APP_Toaster_02', 'obj_transform': {'position': [-0.860999942, 1.065, -2.257], 'rotation': [0.0, -0.7660445, 0.0, 0.642787635], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-0.8604447, 1.16941106, -2.280498], 'size': [0.253967643, 0.209531546, 0.314458847]}, 'properties': ['HAS_SWITCH', 'CONTAINERS', 'HAS_PLUG', 'MOVABLE'], 'states': ['OFF']}, {'id': 311, 'category': 'Appliances', 'class_name': 'stove', 'prefab_name': 'PRE_APP_Stove_01_02', 'obj_transform': {'position': [0.577, 0.025, -2.307], 'rotation': [0.0, 0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [0.577, 0.534999967, -2.23199987], 'size': [1.002, 1.08, 0.832000256]}, 'properties': ['SURFACES', 'CAN_OPEN', 'HAS_SWITCH', 'CONTAINERS'], 'states': ['OFF', 'CLOSED']}, {'id': 313, 'category': 'Appliances', 'class_name': 'microwave', 'prefab_name': 'Microwave_1', 'obj_transform': {'position': [-2.628, 1.074, -2.298], 'rotation': [0.0, 0.7071068, 0.7071068, 0.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-2.628, 1.22628593, -2.30813074], 'size': [0.5393157, 0.304915667, 0.399261]}, 'properties': ['CAN_OPEN', 'HAS_SWITCH', 'CONTAINERS', 'HAS_PLUG'], 'states': ['CLOSED', 'OFF']}, {'id': 318, 'category': 'Food', 'class_name': 'whippedcream', 'prefab_name': 'SMGP_PRE_Whipped_cream_1024', 'obj_transform': {'position': [-0.782591343, 0.9524823, -5.58123875], 'rotation': [0.0, -0.7466263, 0.0, 0.6652438], 'scale': [0.3, 0.3, 0.300000072]}, 'bounding_box': {'center': [-0.782591045, 1.06506383, -5.58123875], 'size': [0.08597894, 0.2251632, 0.08426537]}, 'properties': ['GRABBABLE', 'EATABLE', 'CUTTABLE', 'MOVABLE'], 'states': []}, {'id': 319, 'category': 'Food', 'class_name': 'pie', 'prefab_name': 'DHP_PRE_Cherry_pie_1024', 'obj_transform': {'position': [-1.08049989, 0.9516, -5.5], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [0.3, 0.3, 0.3]}, 'bounding_box': {'center': [-1.08049989, 0.9718377, -5.5], 'size': [0.2884866, 0.0404766, 0.2884866]}, 'properties': ['GRABBABLE', 'EATABLE', 'CUTTABLE', 'MOVABLE'], 'states': []}, {'id': 320, 'category': 'Food', 'class_name': 'bellpepper', 'prefab_name': 'FMGP_PRE_Bell_pepper_1024', 'obj_transform': {'position': [-2.17614651, 1.08602071, -2.221712], 'rotation': [-0.119798742, -0.166846722, -0.03292839, 0.9781238], 'scale': [0.8672942, 0.8672942, 0.8672942]}, 'bounding_box': {'center': [-2.168935, 1.16316593, -2.23639774], 'size': [0.155619621, 0.182390451, 0.172775269]}, 'properties': ['GRABBABLE', 'MOVABLE'], 'states': []}, {'id': 321, 'category': 'Food', 'class_name': 'bellpepper', 'prefab_name': 'FMGP_PRE_Bell_pepper_1024', 'obj_transform': {'position': [-2.06821537, 1.15513873, -2.31458426], 'rotation': [-0.312949032, 0.0047922493, 0.6497461, 0.6927265], 'scale': [0.903431058, 0.903431, 0.903432131]}, 'bounding_box': {'center': [-2.143676, 1.15329659, -2.34699416], 'size': [0.211979866, 0.1602745, 0.209794521]}, 'properties': ['GRABBABLE', 'MOVABLE'], 'states': []}, {'id': 322, 'category': 'Food', 'class_name': 'bellpepper', 'prefab_name': 'FMGP_PRE_Bell_pepper_1024', 'obj_transform': {'position': [-2.06353354, 1.11687112, -2.27939558], 'rotation': [0.472073257, -0.0358101949, -0.0681058, 0.878194869], 'scale': [0.9034308, 0.9034307, 0.903431952]}, 'bounding_box': {'center': [-2.05691218, 1.15887237, -2.20910931], 'size': [0.142453671, 0.201490164, 0.200228214]}, 'properties': ['GRABBABLE', 'MOVABLE'], 'states': []}, {'id': 323, 'category': 'Food', 'class_name': 'bellpepper', 'prefab_name': 'FMGP_PRE_Bell_pepper_1024', 'obj_transform': {'position': [-2.12134957, 1.09504879, -2.158417], 'rotation': [-0.137179762, 0.9707951, 0.16403155, 0.108776279], 'scale': [0.816188037, 0.8161879, 0.816188]}, 'bounding_box': {'center': [-2.14324856, 1.16346467, -2.13977766], 'size': [0.1596508, 0.194765329, 0.164864063]}, 'properties': ['GRABBABLE', 'MOVABLE'], 'states': []}, {'id': 324, 'category': 'Food', 'class_name': 'bellpepper', 'prefab_name': 'FMGP_PRE_Bell_pepper_1024', 'obj_transform': {'position': [-2.220418, 1.13310182, -2.127372], 'rotation': [-0.5030935, 0.6790531, -0.233644918, 0.480826259], 'scale': [0.8161881, 0.816188037, 0.816188]}, 'bounding_box': {'center': [-2.25176144, 1.162121, -2.18806124], 'size': [0.163116455, 0.168728113, 0.206600189]}, 'properties': ['GRABBABLE', 'MOVABLE'], 'states': []}, {'id': 325, 'category': 'Food', 'class_name': 'bellpepper', 'prefab_name': 'FMGP_PRE_Bell_pepper_1024', 'obj_transform': {'position': [-2.212165, 1.15753436, -2.35433388], 'rotation': [0.237213016, 0.3858538, 0.633992136, 0.6268181], 'scale': [0.9034308, 0.9034307, 0.903431952]}, 'bounding_box': {'center': [-2.25977445, 1.16503, -2.287811], 'size': [0.201928616, 0.148302555, 0.217702389]}, 'properties': ['GRABBABLE', 'MOVABLE'], 'states': []}, {'id': 330, 'category': 'Food', 'class_name': 'candybar', 'prefab_name': 'SMGP_PRE_Candy_bar_1024', 'obj_transform': {'position': [0.9610001, 1.745, -3.74], 'rotation': [0.0, 0.984442, 0.0, -0.175709963], 'scale': [0.286821157, 0.2868212, 0.2868212]}, 'bounding_box': {'center': [0.9610001, 1.76108122, -3.74], 'size': [0.127040192, 0.03216298, 0.210372061]}, 'properties': ['GRABBABLE', 'EATABLE', 'MOVABLE'], 'states': []}, {'id': 331, 'category': 'Food', 'class_name': 'chocolatesyrup', 'prefab_name': 'SMGP_PRE_Chocolate_syrup_1024', 'obj_transform': {'position': [0.9239999, 1.746, -3.56], 'rotation': [0.0, 0.966078758, 0.0, -0.258247674], 'scale': [0.242501974, 0.242501974, 0.242501989]}, 'bounding_box': {'center': [0.9240001, 1.84668994, -3.5599997], 'size': [0.114626527, 0.202268228, 0.131068349]}, 'properties': ['GRABBABLE', 'EATABLE', 'CUTTABLE', 'MOVABLE'], 'states': []}, {'id': 332, 'category': 'Food', 'class_name': 'crackers', 'prefab_name': 'SMGP_PRE_Salt_crackers_1024', 'obj_transform': {'position': [0.945000052, 1.744, -6.232], 'rotation': [0.0, -0.542568564, 0.0, 0.840011537], 'scale': [0.248058885, 0.248058885, 0.248058885]}, 'bounding_box': {'center': [0.9450002, 1.77339327, -6.232], 'size': [0.174846858, 0.05878673, 0.258267254]}, 'properties': ['GRABBABLE', 'MOVABLE'], 'states': ['CLOSED']}, {'id': 333, 'category': 'Food', 'class_name': 'creamybuns', 'prefab_name': 'SMGP_PRE_Creamy_buns_1024', 'obj_transform': {'position': [0.934000134, 1.745, -6.6], 'rotation': [0.0, 0.232002392, 0.0, 0.9727152], 'scale': [0.316670835, 0.316670865, 0.3166709]}, 'bounding_box': {'center': [0.934, 1.80853033, -6.60000038], 'size': [0.2058141, 0.127061963, 0.295580059]}, 'properties': ['GRABBABLE', 'EATABLE', 'CUTTABLE', 'MOVABLE'], 'states': []}, {'id': 334, 'category': 'Food', 'class_name': 'cereal', 'prefab_name': 'SMGP_PRE_Cereal_1024', 'obj_transform': {'position': [0.9569999, 1.745, -6.813], 'rotation': [0.0, -0.309668958, 0.0, 0.9508445], 'scale': [0.252370417, 0.2523704, 0.2523704]}, 'bounding_box': {'center': [0.957000434, 1.89207232, -6.81300068], 'size': [0.241956264, 0.294145018, 0.208714068]}, 'properties': ['GRABBABLE', 'EATABLE', 'MOVABLE'], 'states': []}, {'id': 1, 'category': 'Characters', 'class_name': 'character', 'prefab_name': 'Female1', 'obj_transform': {'position': [-1.40426326, 1.25, -3.91368484], 'rotation': [0.0, 0.037803214, 0.0, 0.9992852], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-1.40467238, 2.15133262, -3.91908121], 'size': [0.8773432, 1.79949617, 0.446530342]}, 'properties': [], 'states': []}, {'id': 11, 'category': 'Rooms', 'class_name': 'bathroom', 'prefab_name': 'PRE_ROO_Bathroom_00', 'obj_transform': {'position': [-6.385, -0.003, -0.527], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-5.135, 1.247, 0.723], 'size': [8.0, 3.0, 5.5]}, 'properties': [], 'states': []}, {'id': 73, 'category': 'Rooms', 'class_name': 'bedroom', 'prefab_name': 'PRE_ROO_Bedroom_00', 'obj_transform': {'position': [-10.11, 0.0, -6.75], 'rotation': [0.0, -0.7071068, 0.0, 0.7071067], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-7.61, 1.25, -5.5], 'size': [8.0, 3.0, 8.0]}, 'properties': [], 'states': []}, {'id': 205, 'category': 'Rooms', 'class_name': 'kitchen', 'prefab_name': 'PRE_ROO_Kitchen_00', 'obj_transform': {'position': [-1.361, 0.0, -3.0], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-1.361, 1.25, -5.5], 'size': [5.5, 3.0, 8.0]}, 'properties': [], 'states': []}, {'id': 335, 'category': 'Rooms', 'class_name': 'livingroom', 'prefab_name': 'PRE_ROO_Livingroom_00', 'obj_transform': {'position': [3.639, 0.0, -5.4782], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [4.889, 1.25, -7.9782], 'size': [8.0, 3.0, 8.0]}, 'properties': [], 'states': []}]}
+['<char0> [walktowards] <bathroom> (11)']
+[33m['<char0> [walktowards] <bathroom> (11)'][0m
+
+Agent Step:
+----------
+Action:  {0: '[walktowards] <bathroom> (11)'} [-2.2694092  0.8995386 -4.296317 ]
+Plan: ['[walk] <bathroom> (11)', '[walk] <bathroomcabinet> (48)', '[open] <bathroomcabinet> (48)', '[grab] <remotecontrol> (457)']
+----------
+task_spec: dict_items([('on_remotecontrol_373', {'count': 1, 'grab_obj_ids': [457], 'container_ids': [373]})])
+['<char0> [walktowards] <bathroom> (11)']
+[33m['<char0> [walktowards] <bathroom> (11)'][0m
+
+Agent Step:
+----------
+Action:  {0: '[walktowards] <bathroom> (11)'} [-3.0712698  0.8992452 -4.8959174]
+Plan: ['[walk] <bathroom> (11)', '[walk] <bathroomcabinet> (48)', '[open] <bathroomcabinet> (48)', '[grab] <remotecontrol> (457)']
+----------
+task_spec: dict_items([('on_remotecontrol_373', {'count': 1, 'grab_obj_ids': [457], 'container_ids': [373]})])
+['<char0> [walktowards] <bathroom> (11)']
+[33m['<char0> [walktowards] <bathroom> (11)'][0m
+
+Agent Step:
+----------
+Action:  {0: '[walktowards] <bathroom> (11)'} [-3.9148273  0.9038347 -5.4247165]
+Plan: ['[walk] <bathroom> (11)', '[walk] <bathroomcabinet> (48)', '[open] <bathroomcabinet> (48)', '[grab] <remotecontrol> (457)']
+----------
+task_spec: dict_items([('on_remotecontrol_373', {'count': 1, 'grab_obj_ids': [457], 'container_ids': [373]})])
+['<char0> [walktowards] <bathroom> (11)']
+[33m['<char0> [walktowards] <bathroom> (11)'][0m
+
+Agent Step:
+----------
+Action:  {0: '[walktowards] <bathroom> (11)'} [-4.2665467   0.90091914 -4.5725603 ]
+Plan: ['[walk] <bathroom> (11)', '[walk] <bathroomcabinet> (48)', '[open] <bathroomcabinet> (48)', '[grab] <remotecontrol> (457)']
+----------
+task_spec: dict_items([('on_remotecontrol_373', {'count': 1, 'grab_obj_ids': [457], 'container_ids': [373]})])
+['<char0> [walktowards] <bathroom> (11)']
+[33m['<char0> [walktowards] <bathroom> (11)'][0m
+
+Agent Step:
+----------
+Action:  {0: '[walktowards] <bathroom> (11)'} [-4.5525036   0.90329117 -3.6054654 ]
+Plan: ['[walk] <bathroom> (11)', '[walk] <bathroomcabinet> (48)', '[open] <bathroomcabinet> (48)', '[grab] <remotecontrol> (457)']
+----------
+task_spec: dict_items([('on_remotecontrol_373', {'count': 1, 'grab_obj_ids': [457], 'container_ids': [373]})])
+['<char0> [walktowards] <bathroom> (11)']
+[33m['<char0> [walktowards] <bathroom> (11)'][0m
+
+Agent Step:
+----------
+Action:  {0: '[walktowards] <bathroom> (11)'} [-4.7904816  0.9009091 -2.6423926]
+Plan: ['[walk] <bathroom> (11)', '[walk] <bathroomcabinet> (48)', '[open] <bathroomcabinet> (48)', '[grab] <remotecontrol> (457)']
+----------
+task_spec: dict_items([('on_remotecontrol_373', {'count': 1, 'grab_obj_ids': [457], 'container_ids': [373]})])
+['<char0> [walktowards] <bathroom> (11)']
+[33m['<char0> [walktowards] <bathroom> (11)'][0m
+
+Agent Step:
+----------
+Action:  {0: '[walktowards] <bathroom> (11)'} [-5.041163    0.90350384 -1.663415  ]
+Plan: ['[walk] <bathroom> (11)', '[walk] <bathroomcabinet> (48)', '[open] <bathroomcabinet> (48)', '[grab] <remotecontrol> (457)']
+----------
+task_spec: dict_items([('on_remotecontrol_373', {'count': 1, 'grab_obj_ids': [457], 'container_ids': [373]})])
+['<char0> [walktowards] <bathroomcabinet> (48)']
+[33m['<char0> [walktowards] <bathroomcabinet> (48)'][0m
+
+Agent Step:
+----------
+Action:  {0: '[walktowards] <bathroomcabinet> (48)'} [-5.7360806   0.90013593 -0.98087555]
+Plan: ['[walk] <bathroomcabinet> (48)', '[open] <bathroomcabinet> (48)', '[grab] <remotecontrol> (457)', '[walk] <desk> (373)']
+----------
+task_spec: dict_items([('on_remotecontrol_373', {'count': 1, 'grab_obj_ids': [457], 'container_ids': [373]})])
+['<char0> [walktowards] <bathroomcabinet> (48)']
+[33m['<char0> [walktowards] <bathroomcabinet> (48)'][0m
+
+Agent Step:
+----------
+Action:  {0: '[walktowards] <bathroomcabinet> (48)'} [-6.3703313   0.89904565 -0.20859486]
+Plan: ['[walk] <bathroomcabinet> (48)', '[open] <bathroomcabinet> (48)', '[grab] <remotecontrol> (457)', '[walk] <desk> (373)']
+----------
+task_spec: dict_items([('on_remotecontrol_373', {'count': 1, 'grab_obj_ids': [457], 'container_ids': [373]})])
+['<char0> [walktowards] <bathroomcabinet> (48)']
+[33m['<char0> [walktowards] <bathroomcabinet> (48)'][0m
+
+Agent Step:
+----------
+Action:  {0: '[walktowards] <bathroomcabinet> (48)'} [-7.0910673   0.89944     0.48378685]
+Plan: ['[walk] <bathroomcabinet> (48)', '[open] <bathroomcabinet> (48)', '[grab] <remotecontrol> (457)', '[walk] <desk> (373)']
+----------
+task_spec: dict_items([('on_remotecontrol_373', {'count': 1, 'grab_obj_ids': [457], 'container_ids': [373]})])
+['<char0> [open] <bathroomcabinet> (48)']
+[33m['<char0> [open] <bathroomcabinet> (48)'][0m
+
+Agent Step:
+----------
+Action:  {0: '[open] <bathroomcabinet> (48)'} [-7.87078     0.89800835  1.2365497 ]
+Plan: ['[open] <bathroomcabinet> (48)', '[grab] <remotecontrol> (457)', '[walk] <desk> (373)']
+----------
+task_spec: dict_items([('on_remotecontrol_373', {'count': 1, 'grab_obj_ids': [457], 'container_ids': [373]})])
+success ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (234)', '[open] <kitchencabinet> (234)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (234)', '[open] <kitchencabinet> (234)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (234)', '[open] <kitchencabinet> (234)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (234)', '[open] <kitchencabinet> (234)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <remotecontrol> (457)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <remotecontrol> (457)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <remotecontrol> (457)', '[grab] <remotecontrol> (457)']
+success ['[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <remotecontrol> (457)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <remotecontrol> (457)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <remotecontrol> (457)', '[grab] <remotecontrol> (457)']
+success ['[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (237)', '[open] <kitchencabinet> (237)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (237)', '[open] <kitchencabinet> (237)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (237)', '[open] <kitchencabinet> (237)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (237)', '[open] <kitchencabinet> (237)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (236)', '[open] <kitchencabinet> (236)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (236)', '[open] <kitchencabinet> (236)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (236)', '[open] <kitchencabinet> (236)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (236)', '[open] <kitchencabinet> (236)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (235)', '[open] <kitchencabinet> (235)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (235)', '[open] <kitchencabinet> (235)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (235)', '[open] <kitchencabinet> (235)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (235)', '[open] <kitchencabinet> (235)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <kitchen> (205)', '[walk] <fridge> (305)', '[open] <fridge> (305)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchen> (205)', '[walk] <fridge> (305)', '[open] <fridge> (305)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchen> (205)', '[walk] <fridge> (305)', '[open] <fridge> (305)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchen> (205)', '[walk] <fridge> (305)', '[open] <fridge> (305)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (237)', '[open] <kitchencabinet> (237)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (237)', '[open] <kitchencabinet> (237)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (237)', '[open] <kitchencabinet> (237)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (237)', '[open] <kitchencabinet> (237)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <cabinet> (415)', '[open] <cabinet> (415)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <cabinet> (415)', '[open] <cabinet> (415)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <cabinet> (415)', '[open] <cabinet> (415)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <cabinet> (415)', '[open] <cabinet> (415)', '[grab] <remotecontrol> (457)']
+success ['[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (236)', '[open] <kitchencabinet> (236)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (236)', '[open] <kitchencabinet> (236)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (236)', '[open] <kitchencabinet> (236)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (236)', '[open] <kitchencabinet> (236)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <kitchen> (205)', '[walk] <microwave> (313)', '[open] <microwave> (313)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchen> (205)', '[walk] <microwave> (313)', '[open] <microwave> (313)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchen> (205)', '[walk] <microwave> (313)', '[open] <microwave> (313)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchen> (205)', '[walk] <microwave> (313)', '[open] <microwave> (313)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <cabinet> (415)', '[open] <cabinet> (415)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <cabinet> (415)', '[open] <cabinet> (415)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <cabinet> (415)', '[open] <cabinet> (415)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <cabinet> (415)', '[open] <cabinet> (415)', '[grab] <remotecontrol> (457)']
+success ['[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <remotecontrol> (457)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <remotecontrol> (457)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <remotecontrol> (457)', '[grab] <remotecontrol> (457)']
+success ['[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (237)', '[open] <kitchencabinet> (237)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (237)', '[open] <kitchencabinet> (237)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (237)', '[open] <kitchencabinet> (237)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (237)', '[open] <kitchencabinet> (237)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (235)', '[open] <kitchencabinet> (235)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (235)', '[open] <kitchencabinet> (235)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (235)', '[open] <kitchencabinet> (235)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (235)', '[open] <kitchencabinet> (235)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <kitchen> (205)', '[walk] <microwave> (313)', '[open] <microwave> (313)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchen> (205)', '[walk] <microwave> (313)', '[open] <microwave> (313)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchen> (205)', '[walk] <microwave> (313)', '[open] <microwave> (313)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchen> (205)', '[walk] <microwave> (313)', '[open] <microwave> (313)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (237)', '[open] <kitchencabinet> (237)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (237)', '[open] <kitchencabinet> (237)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (237)', '[open] <kitchencabinet> (237)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (237)', '[open] <kitchencabinet> (237)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <cabinet> (415)', '[open] <cabinet> (415)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <cabinet> (415)', '[open] <cabinet> (415)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <cabinet> (415)', '[open] <cabinet> (415)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <cabinet> (415)', '[open] <cabinet> (415)', '[grab] <remotecontrol> (457)']
+success ['[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (237)', '[open] <kitchencabinet> (237)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (237)', '[open] <kitchencabinet> (237)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (237)', '[open] <kitchencabinet> (237)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (237)', '[open] <kitchencabinet> (237)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <remotecontrol> (457)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <remotecontrol> (457)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <remotecontrol> (457)', '[grab] <remotecontrol> (457)']
+success ['[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+Plan Done
+{'edges': [{'from_id': 30, 'to_id': 11, 'relation_type': 'INSIDE'}, {'from_id': 31, 'to_id': 11, 'relation_type': 'INSIDE'}, {'from_id': 32, 'to_id': 11, 'relation_type': 'INSIDE'}, {'from_id': 33, 'to_id': 11, 'relation_type': 'INSIDE'}, {'from_id': 34, 'to_id': 11, 'relation_type': 'INSIDE'}, {'from_id': 35, 'to_id': 11, 'relation_type': 'INSIDE'}, {'from_id': 36, 'to_id': 11, 'relation_type': 'INSIDE'}, {'from_id': 37, 'to_id': 11, 'relation_type': 'INSIDE'}, {'from_id': 38, 'to_id': 11, 'relation_type': 'INSIDE'}, {'from_id': 39, 'to_id': 11, 'relation_type': 'INSIDE'}, {'from_id': 40, 'to_id': 11, 'relation_type': 'INSIDE'}, {'from_id': 41, 'to_id': 11, 'relation_type': 'INSIDE'}, {'from_id': 42, 'to_id': 11, 'relation_type': 'INSIDE'}, {'from_id': 43, 'to_id': 11, 'relation_type': 'INSIDE'}, {'from_id': 44, 'to_id': 11, 'relation_type': 'INSIDE'}, {'from_id': 45, 'to_id': 11, 'relation_type': 'INSIDE'}, {'from_id': 46, 'to_id': 11, 'relation_type': 'INSIDE'}, {'from_id': 47, 'to_id': 11, 'relation_type': 'INSIDE'}, {'from_id': 48, 'to_id': 11, 'relation_type': 'INSIDE'}, {'from_id': 49, 'to_id': 11, 'relation_type': 'INSIDE'}, {'from_id': 50, 'to_id': 11, 'relation_type': 'INSIDE'}, {'from_id': 52, 'to_id': 11, 'relation_type': 'INSIDE'}, {'from_id': 53, 'to_id': 11, 'relation_type': 'INSIDE'}, {'from_id': 54, 'to_id': 11, 'relation_type': 'INSIDE'}, {'from_id': 55, 'to_id': 11, 'relation_type': 'INSIDE'}, {'from_id': 56, 'to_id': 11, 'relation_type': 'INSIDE'}, {'from_id': 57, 'to_id': 11, 'relation_type': 'INSIDE'}, {'from_id': 58, 'to_id': 11, 'relation_type': 'INSIDE'}, {'from_id': 59, 'to_id': 11, 'relation_type': 'INSIDE'}, {'from_id': 60, 'to_id': 11, 'relation_type': 'INSIDE'}, {'from_id': 62, 'to_id': 11, 'relation_type': 'INSIDE'}, {'from_id': 63, 'to_id': 11, 'relation_type': 'INSIDE'}, {'from_id': 65, 'to_id': 11, 'relation_type': 'INSIDE'}, {'from_id': 66, 'to_id': 11, 'relation_type': 'INSIDE'}, {'from_id': 67, 'to_id': 11, 'relation_type': 'INSIDE'}, {'from_id': 68, 'to_id': 11, 'relation_type': 'INSIDE'}, {'from_id': 69, 'to_id': 11, 'relation_type': 'INSIDE'}, {'from_id': 71, 'to_id': 11, 'relation_type': 'INSIDE'}, {'from_id': 72, 'to_id': 11, 'relation_type': 'INSIDE'}, {'from_id': 50, 'to_id': 49, 'relation_type': 'ON'}, {'from_id': 53, 'to_id': 49, 'relation_type': 'ON'}, {'from_id': 54, 'to_id': 49, 'relation_type': 'ON'}, {'from_id': 55, 'to_id': 54, 'relation_type': 'ON'}, {'from_id': 55, 'to_id': 53, 'relation_type': 'ON'}, {'from_id': 56, 'to_id': 49, 'relation_type': 'ON'}, {'from_id': 57, 'to_id': 49, 'relation_type': 'ON'}, {'from_id': 60, 'to_id': 49, 'relation_type': 'ON'}, {'from_id': 62, 'to_id': 49, 'relation_type': 'ON'}, {'from_id': 63, 'to_id': 49, 'relation_type': 'ON'}, {'from_id': 65, 'to_id': 49, 'relation_type': 'ON'}, {'from_id': 66, 'to_id': 49, 'relation_type': 'ON'}, {'from_id': 69, 'to_id': 43, 'relation_type': 'ON'}, {'from_id': 1, 'to_id': 63, 'relation_type': 'CLOSE'}, {'from_id': 63, 'to_id': 1, 'relation_type': 'CLOSE'}, {'from_id': 1, 'to_id': 60, 'relation_type': 'CLOSE'}, {'from_id': 60, 'to_id': 1, 'relation_type': 'CLOSE'}, {'from_id': 1, 'to_id': 57, 'relation_type': 'CLOSE'}, {'from_id': 57, 'to_id': 1, 'relation_type': 'CLOSE'}, {'from_id': 1, 'to_id': 62, 'relation_type': 'CLOSE'}, {'from_id': 62, 'to_id': 1, 'relation_type': 'CLOSE'}, {'from_id': 1, 'to_id': 49, 'relation_type': 'CLOSE'}, {'from_id': 49, 'to_id': 1, 'relation_type': 'CLOSE'}, {'from_id': 1, 'to_id': 56, 'relation_type': 'CLOSE'}, {'from_id': 56, 'to_id': 1, 'relation_type': 'CLOSE'}, {'from_id': 1, 'to_id': 65, 'relation_type': 'CLOSE'}, {'from_id': 65, 'to_id': 1, 'relation_type': 'CLOSE'}, {'from_id': 1, 'to_id': 50, 'relation_type': 'CLOSE'}, {'from_id': 50, 'to_id': 1, 'relation_type': 'CLOSE'}, {'from_id': 1, 'to_id': 66, 'relation_type': 'CLOSE'}, {'from_id': 66, 'to_id': 1, 'relation_type': 'CLOSE'}, {'from_id': 1, 'to_id': 48, 'relation_type': 'CLOSE'}, {'from_id': 48, 'to_id': 1, 'relation_type': 'CLOSE'}, {'from_id': 1, 'to_id': 54, 'relation_type': 'CLOSE'}, {'from_id': 54, 'to_id': 1, 'relation_type': 'CLOSE'}, {'from_id': 1, 'to_id': 55, 'relation_type': 'CLOSE'}, {'from_id': 55, 'to_id': 1, 'relation_type': 'CLOSE'}, {'from_id': 1, 'to_id': 53, 'relation_type': 'CLOSE'}, {'from_id': 53, 'to_id': 1, 'relation_type': 'CLOSE'}, {'from_id': 1, 'to_id': 11, 'relation_type': 'INSIDE'}], 'nodes': [{'id': 30, 'category': 'Decor', 'class_name': 'rug', 'prefab_name': 'PRE_DEC_Rug_01_01_01', 'obj_transform': {'position': [-5.135, -0.003, -0.697], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-5.135, 0.0039701, -0.697], 'size': [1.69976461, 0.0139463525, 1.69976473]}, 'properties': ['SURFACES', 'GRABBABLE', 'SITTABLE', 'LIEABLE', 'MOVABLE'], 'states': []}, {'id': 31, 'category': 'Decor', 'class_name': 'curtains', 'prefab_name': 'PRE_DEC_Curtains_01_03', 'obj_transform': {'position': [-5.135, -0.003, 3.134], 'rotation': [0.0, 0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-5.135, 2.056, 3.12600017], 'size': [1.18166411, 0.0208109133, 0.0208110809]}, 'properties': ['CAN_OPEN', 'COVER_OBJECT', 'MOVABLE'], 'states': ['CLOSED']}, {'id': 32, 'category': 'Decor', 'class_name': 'curtains', 'prefab_name': 'PRE_DEC_Curtains_01_01', 'obj_transform': {'position': [-5.50200033, 0.004, 3.127], 'rotation': [0.0, 0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 0.47204107]}, 'bounding_box': {'center': [-5.504837, 1.49554825, 3.09801054], 'size': [0.2800073, 1.15232611, 0.107338078]}, 'properties': ['CAN_OPEN', 'COVER_OBJECT', 'MOVABLE'], 'states': ['CLOSED']}, {'id': 33, 'category': 'Decor', 'class_name': 'curtains', 'prefab_name': 'PRE_DEC_Curtains_01_01', 'obj_transform': {'position': [-4.7840004, 0.004, 3.127], 'rotation': [0.0, 0.707106769, 0.0, 0.7071069], 'scale': [1.0, 1.0, 0.4945932]}, 'bounding_box': {'center': [-4.781032, 1.49554825, 3.09800863], 'size': [0.29338488, 1.152326, 0.107338063]}, 'properties': ['CAN_OPEN', 'COVER_OBJECT', 'MOVABLE'], 'states': ['CLOSED']}, {'id': 34, 'category': 'Lamps', 'class_name': 'ceilinglamp', 'prefab_name': 'PRE_LAM_Ceiling_lamp_03_01', 'obj_transform': {'position': [-5.135, -0.003, 1.086], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-5.135, 2.42706633, 1.086], 'size': [0.932432234, 0.152424768, 0.926426232]}, 'properties': [], 'states': []}, {'id': 35, 'category': 'Lamps', 'class_name': 'walllamp', 'prefab_name': 'PRE_LAM_Wall_lamp_01_02', 'obj_transform': {'position': [-8.835, 0.126999989, 2.673], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-8.749319, 1.377, 2.67299533], 'size': [0.171362966, 0.8624453, 0.219838738]}, 'properties': [], 'states': []}, {'id': 36, 'category': 'Lamps', 'class_name': 'walllamp', 'prefab_name': 'PRE_LAM_Wall_lamp_01_02', 'obj_transform': {'position': [-8.835, 0.126999989, -1.212], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-8.749319, 1.377, -1.21200466], 'size': [0.171362966, 0.8624453, 0.219838738]}, 'properties': [], 'states': []}, {'id': 37, 'category': 'Lamps', 'class_name': 'walllamp', 'prefab_name': 'PRE_LAM_Wall_lamp_01_02', 'obj_transform': {'position': [-1.43200016, 0.126999989, 0.723], 'rotation': [0.0, 1.0, 0.0, -4.371139e-08], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-1.51768136, 1.377, 0.723004639], 'size': [0.171362981, 0.8624453, 0.219838753]}, 'properties': [], 'states': []}, {'id': 38, 'category': 'Furniture', 'class_name': 'bathtub', 'prefab_name': 'PRE_FUR_Bathtub_01', 'obj_transform': {'position': [-5.135, -0.003, 2.602], 'rotation': [0.0, 0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-5.135, 0.409000039, 2.629], 'size': [1.73600018, 0.824000061, 0.9700004]}, 'properties': ['SITTABLE', 'LIEABLE'], 'states': []}, {'id': 39, 'category': 'Furniture', 'class_name': 'towelrack', 'prefab_name': 'PRE_FUR_Towel_rack_01', 'obj_transform': {'position': [-7.76300049, -0.003, -1.727], 'rotation': [0.0, -0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-7.762999, 1.247, -1.68376982], 'size': [0.496149749, 0.0247555971, 0.0864602849]}, 'properties': ['SURFACES', 'GRABBABLE', 'MOVABLE'], 'states': []}, {'id': 40, 'category': 'Furniture', 'class_name': 'towelrack', 'prefab_name': 'PRE_FUR_Towel_rack_01', 'obj_transform': {'position': [-7.097, -0.003, -1.727], 'rotation': [0.0, -0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-7.09699869, 1.247, -1.68376982], 'size': [0.496149749, 0.0247555971, 0.0864602849]}, 'properties': ['SURFACES', 'GRABBABLE', 'MOVABLE'], 'states': []}, {'id': 41, 'category': 'Furniture', 'class_name': 'towelrack', 'prefab_name': 'PRE_FUR_Towel_rack_01', 'obj_transform': {'position': [-6.81100035, -0.003, 3.174], 'rotation': [0.0, 0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-6.81100225, 1.247, 3.13077], 'size': [0.496149749, 0.0247555971, 0.0864602849]}, 'properties': ['SURFACES', 'GRABBABLE', 'MOVABLE'], 'states': []}, {'id': 42, 'category': 'Furniture', 'class_name': 'towelrack', 'prefab_name': 'PRE_FUR_Towel_rack_01', 'obj_transform': {'position': [-7.477, -0.003, 3.174], 'rotation': [0.0, 0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-7.477002, 1.247, 3.13077], 'size': [0.496149749, 0.0247555971, 0.0864602849]}, 'properties': ['SURFACES', 'GRABBABLE', 'MOVABLE'], 'states': []}, {'id': 43, 'category': 'Furniture', 'class_name': 'wallshelf', 'prefab_name': 'PRE_FUR_Shelf_01', 'obj_transform': {'position': [-7.15, 1.737, 3.037], 'rotation': [0.0, 0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-7.15, 1.663366, 3.03700113], 'size': [1.00000024, 0.1819556, 0.272273242]}, 'properties': [], 'states': []}, {'id': 44, 'category': 'Furniture', 'class_name': 'stall', 'prefab_name': 'PRE_FUR_Toilet_stall_01_04', 'obj_transform': {'position': [-2.20800018, -0.003, -1.123], 'rotation': [0.0, -0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-2.2079885, 1.247, -0.9564894], 'size': [1.56272221, 2.50001717, 1.56474054]}, 'properties': [], 'states': []}, {'id': 45, 'category': 'Furniture', 'class_name': 'toilet', 'prefab_name': 'PRE_FUR_Toilet_01', 'obj_transform': {'position': [-2.21500015, -0.153000012, -1.625], 'rotation': [0.0, -0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-2.11371541, 0.211479113, -1.22684073], 'size': [0.7693826, 0.542430043, 0.79842186]}, 'properties': ['SITTABLE', 'CAN_OPEN', 'CONTAINERS'], 'states': ['CLOSED']}, {'id': 46, 'category': 'Furniture', 'class_name': 'stall', 'prefab_name': 'PRE_FUR_Shower_stall_05_04', 'obj_transform': {'position': [-2.21, -0.003, 2.568], 'rotation': [0.0, 0.7071068, 0.0, 0.7071067], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-2.21001172, 1.24668717, 2.4014895], 'size': [1.56272185, 2.50064278, 1.56474018]}, 'properties': [], 'states': []}, {'id': 47, 'category': 'Furniture', 'class_name': 'curtains', 'prefab_name': 'MOD_FUR_Shower_stall_01_Curtain_01', 'obj_transform': {'position': [-2.21, -0.003, 1.77700019], 'rotation': [0.0, 0.7071068, 0.0, 0.7071067], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-1.70392942, 1.244173, 1.67400122], 'size': [0.3018598, 2.29940414, 0.05150947]}, 'properties': ['CAN_OPEN', 'COVER_OBJECT', 'MOVABLE'], 'states': ['CLOSED']}, {'id': 48, 'category': 'Furniture', 'class_name': 'bathroomcabinet', 'prefab_name': 'PRE_FUR_Bathroom_cabinet_02_01_w_lamps', 'obj_transform': {'position': [-8.771, -0.003, 0.723], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-8.7650795, 1.8119719, 0.7229934], 'size': [0.135947421, 0.757355332, 2.8516078]}, 'properties': ['SURFACES', 'CAN_OPEN', 'CONTAINERS'], 'states': ['OPEN']}, {'id': 49, 'category': 'Furniture', 'class_name': 'bathroomcounter', 'prefab_name': 'PRE_FUR_Bathroom_counter_02', 'obj_transform': {'position': [-8.501, -0.003, 0.723], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-8.50600052, 0.76699996, 0.723], 'size': [0.652, 0.39, 2.862]}, 'properties': ['SURFACES'], 'states': ['CLOSED']}, {'id': 50, 'category': 'Furniture', 'class_name': 'faucet', 'prefab_name': 'Faucet', 'obj_transform': {'position': [-8.761001, 1.007, 0.752999961], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-8.761001, 1.007, 0.752999961], 'size': [0.100000381, 0.0999999642, 0.100000024]}, 'properties': ['HAS_SWITCH'], 'states': ['OFF']}, {'id': 52, 'category': 'Doors', 'class_name': 'doorjamb', 'prefab_name': 'PRE_DOO_Doorjamb_05', 'obj_transform': {'position': [-5.127, 0.0, -1.75899982], 'rotation': [0.0, -0.707107544, 0.0, -0.707106054], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-5.12700367, 1.029126, -1.75935686], 'size': [0.928397655, 2.058256, 0.122325018]}, 'properties': [], 'states': []}, {'id': 53, 'category': 'Props', 'class_name': 'towel', 'prefab_name': 'PRE_PRO_Towel_02', 'obj_transform': {'position': [-8.482, 0.974, -0.4], 'rotation': [0.0, 0.7071068, 0.0, 0.707106769], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-8.482, 1.01807261, -0.400000125], 'size': [0.383101076, 0.08814656, 0.125627086]}, 'properties': ['GRABBABLE', 'COVER_OBJECT', 'MOVABLE'], 'states': []}, {'id': 54, 'category': 'Props', 'class_name': 'towel', 'prefab_name': 'PRE_PRO_Towel_02', 'obj_transform': {'position': [-8.482, 0.974, -0.282], 'rotation': [0.0, 0.724468, 0.0, -0.689308465], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-8.482, 1.01807261, -0.2819999], 'size': [0.388872117, 0.08814656, 0.144514844]}, 'properties': ['GRABBABLE', 'COVER_OBJECT', 'MOVABLE'], 'states': []}, {'id': 55, 'category': 'Props', 'class_name': 'towel', 'prefab_name': 'PRE_PRO_Towel_02', 'obj_transform': {'position': [-8.482, 1.05059993, -0.341000021], 'rotation': [0.0, 0.7244683, 0.0, -0.6893082], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-8.482, 1.09467256, -0.3409999], 'size': [0.388872266, 0.08814656, 0.144515172]}, 'properties': ['GRABBABLE', 'COVER_OBJECT', 'MOVABLE'], 'states': []}, {'id': 56, 'category': 'Props', 'class_name': 'perfume', 'prefab_name': 'PRE_PRO_Perfume_01', 'obj_transform': {'position': [-8.662001, 0.974, 1.47], 'rotation': [1.80999507e-06, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-8.662001, 1.05042267, 1.47000015], 'size': [0.0532537177, 0.15284577, 0.0532542728]}, 'properties': [], 'states': []}, {'id': 57, 'category': 'Props', 'class_name': 'deodorant', 'prefab_name': 'PRE_PRO_Deodorant_01', 'obj_transform': {'position': [-8.650001, 0.974, 1.402], 'rotation': [1.80999507e-06, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-8.650001, 1.04720378, 1.402], 'size': [0.04111485, 0.146407843, 0.0411159]}, 'properties': [], 'states': []}, {'id': 58, 'category': 'Props', 'class_name': 'hairproduct', 'prefab_name': 'PRE_PRO_Conditioner_01', 'obj_transform': {'position': [-2.93300033, 1.265, 2.516], 'rotation': [1.67750466e-06, 0.375553429, -6.7975e-07, 0.9268008], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-2.93300033, 1.35551775, 2.516], 'size': [0.104539424, 0.181035951, 0.104539439]}, 'properties': ['GRABBABLE', 'POURABLE', 'CAN_OPEN', 'MOVABLE'], 'states': ['CLOSED']}, {'id': 59, 'category': 'Props', 'class_name': 'hairproduct', 'prefab_name': 'PRE_PRO_Shampoo_01', 'obj_transform': {'position': [-2.93300033, 1.265, 2.36000013], 'rotation': [1.80801544e-06, -0.04675849, 8.463263e-08, 0.998906255], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-2.93300033, 1.35551775, 2.36000013], 'size': [0.0805116445, 0.181035951, 0.08051262]}, 'properties': ['GRABBABLE', 'POURABLE', 'CAN_OPEN', 'MOVABLE'], 'states': ['CLOSED']}, {'id': 60, 'category': 'Props', 'class_name': 'facecream', 'prefab_name': 'PRE_PRO_Face_cream_01', 'obj_transform': {'position': [-8.599, 0.974, 1.336], 'rotation': [0.0, 0.458708942, 0.0, 0.8885866], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-8.599, 0.989763737, 1.336], 'size': [0.09001241, 0.03152771, 0.09001239]}, 'properties': ['GRABBABLE', 'POURABLE', 'MOVABLE', 'CREAM'], 'states': []}, {'id': 62, 'category': 'Props', 'class_name': 'toothpaste', 'prefab_name': 'SHP_PRE_Toothpaste', 'obj_transform': {'position': [-8.66400051, 0.974, 1.13599992], 'rotation': [6.9471173e-07, 0.923408151, -1.67136523e-06, 0.3838196], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-8.673403, 0.990777969, 1.1453557], 'size': [0.162069991, 0.0335562676, 0.161610529]}, 'properties': ['GRABBABLE', 'POURABLE', 'CAN_OPEN', 'MOVABLE', 'CREAM'], 'states': ['CLOSED']}, {'id': 63, 'category': 'Props', 'class_name': 'painkillers', 'prefab_name': 'SHP_PRE_Painkillers', 'obj_transform': {'position': [-8.385, 0.974, 1.5559001], 'rotation': [1.80999507e-06, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-8.385, 1.0370928, 1.5559001], 'size': [0.06954043, 0.126186043, 0.0677977]}, 'properties': [], 'states': []}, {'id': 65, 'category': 'Props', 'class_name': 'toothbrush', 'prefab_name': 'PRE_PRO_Toothbrush_01', 'obj_transform': {'position': [-8.7197, 1.0934, 1.09260011], 'rotation': [-0.605069339, 0.0, 0.0, 0.796172857], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-8.7197, 1.091192, 1.10261476], 'size': [0.01650901, 0.238004878, 0.0861479044]}, 'properties': ['GRABBABLE', 'RECIPIENT', 'MOVABLE'], 'states': []}, {'id': 66, 'category': 'Props', 'class_name': 'barsoap', 'prefab_name': 'PRE_PRO_Hand_soap_01', 'obj_transform': {'position': [-8.744, 0.974, 0.356], 'rotation': [1.80999507e-06, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-8.744, 0.995696962, 0.356000066], 'size': [0.07662157, 0.0433947556, 0.129800841]}, 'properties': ['GRABBABLE', 'MOVABLE', 'CREAM'], 'states': []}, {'id': 67, 'category': 'Props', 'class_name': 'towel', 'prefab_name': 'PRE_PRO_Towel_01', 'obj_transform': {'position': [-6.81100035, 1.24379992, 3.0849], 'rotation': [0.0, 0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-6.811, 1.062752, 3.09083462], 'size': [0.3167056, 0.4129926, 0.0332073756]}, 'properties': ['GRABBABLE', 'COVER_OBJECT', 'MOVABLE'], 'states': []}, {'id': 68, 'category': 'Props', 'class_name': 'towel', 'prefab_name': 'PRE_PRO_Towel_01', 'obj_transform': {'position': [-7.477, 1.24379992, 3.0849], 'rotation': [0.0, 0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-7.47699976, 1.062752, 3.09083462], 'size': [0.3167056, 0.4129926, 0.0332073756]}, 'properties': ['GRABBABLE', 'COVER_OBJECT', 'MOVABLE'], 'states': []}, {'id': 69, 'category': 'Props', 'class_name': 'candle', 'prefab_name': 'PRE_DEC_Candle_01', 'obj_transform': {'position': [-6.87031031, 1.75831032, 3.00855184], 'rotation': [0.0, 0.3070547, 0.0, 0.9516919], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-6.87031031, 1.82689106, 3.0085516], 'size': [0.115519673, 0.137161791, 0.115519762]}, 'properties': ['GRABBABLE', 'HAS_SWITCH', 'MOVABLE'], 'states': ['OFF']}, {'id': 71, 'category': 'Electronics', 'class_name': 'lightswitch', 'prefab_name': 'PRE_ELE_Light_switch_01', 'obj_transform': {'position': [-5.69400024, 1.328, -1.72799993], 'rotation': [0.0, -0.7071068, 0.0, 0.7071067], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-5.69400024, 1.328, -1.72544789], 'size': [0.068677865, 0.0936371461, 0.00510568]}, 'properties': ['HAS_SWITCH', 'HAS_PLUG'], 'states': ['ON']}, {'id': 72, 'category': 'Appliances', 'class_name': 'washingmachine', 'prefab_name': 'Dark_Grey_Washing_Machine', 'obj_transform': {'position': [-3.58500028, -0.003, -1.357], 'rotation': [0.0, 1.0, 0.0, 0.0], 'scale': [1.2, 1.2, 1.2]}, 'bounding_box': {'center': [-3.58500028, 0.496382862, -1.357], 'size': [0.724769831, 0.9977087, 0.6621626]}, 'properties': ['RECIPIENT', 'CAN_OPEN', 'HAS_SWITCH', 'CONTAINERS', 'HAS_PLUG'], 'states': ['CLOSED', 'OFF']}, {'id': 1, 'category': 'Characters', 'class_name': 'character', 'prefab_name': 'Female1', 'obj_transform': {'position': [-7.908001, -0.01441101, 1.26799965], 'rotation': [0.0, -0.7071067, 0.0, 0.707106948], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-7.87078, 0.898008347, 1.23654974], 'size': [0.523777, 1.80948019, 0.879085541]}, 'properties': [], 'states': []}, {'id': 11, 'category': 'Rooms', 'class_name': 'bathroom', 'prefab_name': 'PRE_ROO_Bathroom_00', 'obj_transform': {'position': [-6.385, -0.003, -0.527], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-5.135, 1.247, 0.723], 'size': [8.0, 3.0, 5.5]}, 'properties': [], 'states': []}, {'id': 73, 'category': 'Rooms', 'class_name': 'bedroom', 'prefab_name': 'PRE_ROO_Bedroom_00', 'obj_transform': {'position': [-10.11, 0.0, -6.75], 'rotation': [0.0, -0.7071068, 0.0, 0.7071067], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-7.61, 1.25, -5.5], 'size': [8.0, 3.0, 8.0]}, 'properties': [], 'states': []}, {'id': 205, 'category': 'Rooms', 'class_name': 'kitchen', 'prefab_name': 'PRE_ROO_Kitchen_00', 'obj_transform': {'position': [-1.361, 0.0, -3.0], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-1.361, 1.25, -5.5], 'size': [5.5, 3.0, 8.0]}, 'properties': [], 'states': []}, {'id': 335, 'category': 'Rooms', 'class_name': 'livingroom', 'prefab_name': 'PRE_ROO_Livingroom_00', 'obj_transform': {'position': [3.639, 0.0, -5.4782], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [4.889, 1.25, -7.9782], 'size': [8.0, 3.0, 8.0]}, 'properties': [], 'states': []}]}
+['<char0> [walktowards] <kitchen> (205)']
+[33m['<char0> [walktowards] <kitchen> (205)'][0m
+
+Agent Step:
+----------
+Action:  {0: '[walktowards] <kitchen> (205)'} [-7.30672     0.89909405  0.5457965 ]
+Plan: ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (237)', '[open] <kitchencabinet> (237)', '[grab] <remotecontrol> (457)']
+----------
+task_spec: dict_items([('on_remotecontrol_373', {'count': 1, 'grab_obj_ids': [457], 'container_ids': [373]})])
+['<char0> [walktowards] <kitchen> (205)']
+[33m['<char0> [walktowards] <kitchen> (205)'][0m
+
+Agent Step:
+----------
+Action:  {0: '[walktowards] <kitchen> (205)'} [-6.563194    0.9040671  -0.14441192]
+Plan: ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (237)', '[open] <kitchencabinet> (237)', '[grab] <remotecontrol> (457)']
+----------
+task_spec: dict_items([('on_remotecontrol_373', {'count': 1, 'grab_obj_ids': [457], 'container_ids': [373]})])
+['<char0> [walktowards] <kitchen> (205)']
+[33m['<char0> [walktowards] <kitchen> (205)'][0m
+
+Agent Step:
+----------
+Action:  {0: '[walktowards] <kitchen> (205)'} [-5.8718996   0.9026126  -0.86521083]
+Plan: ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (237)', '[open] <kitchencabinet> (237)', '[grab] <remotecontrol> (457)']
+----------
+task_spec: dict_items([('on_remotecontrol_373', {'count': 1, 'grab_obj_ids': [457], 'container_ids': [373]})])
+['<char0> [walktowards] <kitchen> (205)']
+[33m['<char0> [walktowards] <kitchen> (205)'][0m
+
+Agent Step:
+----------
+Action:  {0: '[walktowards] <kitchen> (205)'} [-5.242534    0.89625347 -1.6483935 ]
+Plan: ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (237)', '[open] <kitchencabinet> (237)', '[grab] <remotecontrol> (457)']
+----------
+task_spec: dict_items([('on_remotecontrol_373', {'count': 1, 'grab_obj_ids': [457], 'container_ids': [373]})])
+['<char0> [walktowards] <kitchen> (205)']
+[33m['<char0> [walktowards] <kitchen> (205)'][0m
+
+Agent Step:
+----------
+Action:  {0: '[walktowards] <kitchen> (205)'} [-4.9760885  0.8996759 -2.6107159]
+Plan: ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (237)', '[open] <kitchencabinet> (237)', '[grab] <remotecontrol> (457)']
+----------
+task_spec: dict_items([('on_remotecontrol_373', {'count': 1, 'grab_obj_ids': [457], 'container_ids': [373]})])
+['<char0> [walktowards] <kitchen> (205)']
+[33m['<char0> [walktowards] <kitchen> (205)'][0m
+
+Agent Step:
+----------
+Action:  {0: '[walktowards] <kitchen> (205)'} [-4.6975675   0.90625817 -3.5660486 ]
+Plan: ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (237)', '[open] <kitchencabinet> (237)', '[grab] <remotecontrol> (457)']
+----------
+task_spec: dict_items([('on_remotecontrol_373', {'count': 1, 'grab_obj_ids': [457], 'container_ids': [373]})])
+['<char0> [walktowards] <kitchen> (205)']
+[33m['<char0> [walktowards] <kitchen> (205)'][0m
+
+Agent Step:
+----------
+Action:  {0: '[walktowards] <kitchen> (205)'} [-4.3563285  0.906521  -4.509087 ]
+Plan: ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (237)', '[open] <kitchencabinet> (237)', '[grab] <remotecontrol> (457)']
+----------
+task_spec: dict_items([('on_remotecontrol_373', {'count': 1, 'grab_obj_ids': [457], 'container_ids': [373]})])
+['<char0> [walktowards] <kitchen> (205)']
+[33m['<char0> [walktowards] <kitchen> (205)'][0m
+
+Agent Step:
+----------
+Action:  {0: '[walktowards] <kitchen> (205)'} [-3.9755688   0.90406924 -5.37169   ]
+Plan: ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (237)', '[open] <kitchencabinet> (237)', '[grab] <remotecontrol> (457)']
+----------
+task_spec: dict_items([('on_remotecontrol_373', {'count': 1, 'grab_obj_ids': [457], 'container_ids': [373]})])
+['<char0> [walktowards] <kitchen> (205)']
+[33m['<char0> [walktowards] <kitchen> (205)'][0m
+
+Agent Step:
+----------
+Action:  {0: '[walktowards] <kitchen> (205)'} [-2.9920206  0.8966344 -5.253404 ]
+Plan: ['[walk] <kitchen> (205)', '[walk] <kitchencabinet> (237)', '[open] <kitchencabinet> (237)', '[grab] <remotecontrol> (457)']
+----------
+task_spec: dict_items([('on_remotecontrol_373', {'count': 1, 'grab_obj_ids': [457], 'container_ids': [373]})])
+['<char0> [walktowards] <kitchencabinet> (237)']
+[33m['<char0> [walktowards] <kitchencabinet> (237)'][0m
+
+Agent Step:
+----------
+Action:  {0: '[walktowards] <kitchencabinet> (237)'} [-2.653999   0.9004846 -4.325565 ]
+Plan: ['[walk] <kitchencabinet> (237)', '[open] <kitchencabinet> (237)', '[grab] <remotecontrol> (457)', '[walk] <livingroom> (335)']
+----------
+task_spec: dict_items([('on_remotecontrol_373', {'count': 1, 'grab_obj_ids': [457], 'container_ids': [373]})])
+['<char0> [walktowards] <kitchencabinet> (237)']
+[33m['<char0> [walktowards] <kitchencabinet> (237)'][0m
+
+Agent Step:
+----------
+Action:  {0: '[walktowards] <kitchencabinet> (237)'} [-2.3533657  0.899826  -3.372896 ]
+Plan: ['[walk] <kitchencabinet> (237)', '[open] <kitchencabinet> (237)', '[grab] <remotecontrol> (457)', '[walk] <livingroom> (335)']
+----------
+task_spec: dict_items([('on_remotecontrol_373', {'count': 1, 'grab_obj_ids': [457], 'container_ids': [373]})])
+['<char0> [open] <kitchencabinet> (237)']
+[33m['<char0> [open] <kitchencabinet> (237)'][0m
+
+Agent Step:
+----------
+Action:  {0: '[open] <kitchencabinet> (237)'} [-2.2781458   0.89771193 -2.9951243 ]
+Plan: ['[open] <kitchencabinet> (237)', '[grab] <remotecontrol> (457)', '[walk] <livingroom> (335)']
+----------
+task_spec: dict_items([('on_remotecontrol_373', {'count': 1, 'grab_obj_ids': [457], 'container_ids': [373]})])
+success ['[open] <kitchencabinet> (235)', '[grab] <remotecontrol> (457)']
+Failure ['[open] <kitchencabinet> (235)', '[grab] <remotecontrol> (457)']
+success ['[open] <kitchencabinet> (235)', '[grab] <remotecontrol> (457)']
+Failure ['[open] <kitchencabinet> (235)', '[grab] <remotecontrol> (457)']
+> [0;32m/home/scai/Workspace/xfang21/github_repos/agent_preferences/MCTS/MCTS_particles_v2_instance.py[0m(832)[0;36mselect_child[0;34m()[0m
+[0;32m    831 [0;31m            [0mtotal_reward[0m [0;34m=[0m [0;36m0[0m[0;34m[0m[0;34m[0m[0m
+[0m[0;32m--> 832 [0;31m            [0;32mfor[0m [0maction_str[0m [0;32min[0m [0mactions[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0m[0;32m    833 [0;31m                [0;31m# print("Child ", action_str)[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[0m
+ipdb> > [0;32m/home/scai/Workspace/xfang21/github_repos/agent_preferences/MCTS/MCTS_particles_v2_instance.py[0m(832)[0;36mselect_child[0;34m()[0m
+[0;32m    831 [0;31m            [0mtotal_reward[0m [0;34m=[0m [0;36m0[0m[0;34m[0m[0;34m[0m[0m
+[0m[0;32m--> 832 [0;31m            [0;32mfor[0m [0maction_str[0m [0;32min[0m [0mactions[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0m[0;32m    833 [0;31m                [0;31m# print("Child ", action_str)[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[0m
+ipdb> 
+plan fail in index 1
+
+plan fail in index 5
+success ['[open] <fridge> (305)', '[grab] <remotecontrol> (457)']
+Failure ['[open] <fridge> (305)', '[grab] <remotecontrol> (457)']
+success ['[open] <fridge> (305)', '[grab] <remotecontrol> (457)']
+Failure ['[open] <fridge> (305)', '[grab] <remotecontrol> (457)']
+> [0;32m/home/scai/Workspace/xfang21/github_repos/agent_preferences/MCTS/MCTS_particles_v2_instance.py[0m(832)[0;36mselect_child[0;34m()[0m
+[0;32m    831 [0;31m            [0mtotal_reward[0m [0;34m=[0m [0;36m0[0m[0;34m[0m[0;34m[0m[0m
+[0m[0;32m--> 832 [0;31m            [0;32mfor[0m [0maction_str[0m [0;32min[0m [0mactions[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0m[0;32m    833 [0;31m                [0;31m# print("Child ", action_str)[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[0m
+ipdb> > [0;32m/home/scai/Workspace/xfang21/github_repos/agent_preferences/MCTS/MCTS_particles_v2_instance.py[0m(832)[0;36mselect_child[0;34m()[0m
+[0;32m    831 [0;31m            [0mtotal_reward[0m [0;34m=[0m [0;36m0[0m[0;34m[0m[0;34m[0m[0m
+[0m[0;32m--> 832 [0;31m            [0;32mfor[0m [0maction_str[0m [0;32min[0m [0mactions[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0m[0;32m    833 [0;31m                [0;31m# print("Child ", action_str)[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[0m
+ipdb> 
+plan fail in index 9
+
+plan fail in index 4
+success ['[open] <kitchencabinet> (236)', '[grab] <remotecontrol> (457)']
+Failure ['[open] <kitchencabinet> (236)', '[grab] <remotecontrol> (457)']
+> [0;32m/home/scai/Workspace/xfang21/github_repos/agent_preferences/MCTS/MCTS_particles_v2_instance.py[0m(832)[0;36mselect_child[0;34m()[0m
+[0;32m    831 [0;31m            [0mtotal_reward[0m [0;34m=[0m [0;36m0[0m[0;34m[0m[0;34m[0m[0m
+[0m[0;32m--> 832 [0;31m            [0;32mfor[0m [0maction_str[0m [0;32min[0m [0mactions[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0m[0;32m    833 [0;31m                [0;31m# print("Child ", action_str)[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[0m
+ipdb> 
+plan fail in index 15
+success ['[open] <kitchencabinet> (236)', '[grab] <remotecontrol> (457)']
+Failure ['[open] <kitchencabinet> (236)', '[grab] <remotecontrol> (457)']
+success ['[open] <microwave> (313)', '[grab] <remotecontrol> (457)']
+Failure ['[open] <microwave> (313)', '[grab] <remotecontrol> (457)']
+> [0;32m/home/scai/Workspace/xfang21/github_repos/agent_preferences/MCTS/MCTS_particles_v2_instance.py[0m(832)[0;36mselect_child[0;34m()[0m
+[0;32m    831 [0;31m            [0mtotal_reward[0m [0;34m=[0m [0;36m0[0m[0;34m[0m[0;34m[0m[0m
+[0m[0;32m--> 832 [0;31m            [0;32mfor[0m [0maction_str[0m [0;32min[0m [0mactions[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0m[0;32m    833 [0;31m                [0;31m# print("Child ", action_str)[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[0m
+ipdb> 
+plan fail in index 18
+success ['[open] <fridge> (305)', '[grab] <remotecontrol> (457)']
+Failure ['[open] <fridge> (305)', '[grab] <remotecontrol> (457)']
+> [0;32m/home/scai/Workspace/xfang21/github_repos/agent_preferences/MCTS/MCTS_particles_v2_instance.py[0m(832)[0;36mselect_child[0;34m()[0m
+[0;32m    831 [0;31m            [0mtotal_reward[0m [0;34m=[0m [0;36m0[0m[0;34m[0m[0;34m[0m[0m
+[0m[0;32m--> 832 [0;31m            [0;32mfor[0m [0maction_str[0m [0;32min[0m [0mactions[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0m[0;32m    833 [0;31m                [0;31m# print("Child ", action_str)[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[0m
+ipdb> > [0;32m/home/scai/Workspace/xfang21/github_repos/agent_preferences/MCTS/MCTS_particles_v2_instance.py[0m(832)[0;36mselect_child[0;34m()[0m
+[0;32m    831 [0;31m            [0mtotal_reward[0m [0;34m=[0m [0;36m0[0m[0;34m[0m[0;34m[0m[0m
+[0m[0;32m--> 832 [0;31m            [0;32mfor[0m [0maction_str[0m [0;32min[0m [0mactions[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0m[0;32m    833 [0;31m                [0;31m# print("Child ", action_str)[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[0m
+ipdb> 
+plan fail in index 6
+
+plan fail in index 19
+success ['[walk] <livingroom> (335)', '[walk] <remotecontrol> (457)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <remotecontrol> (457)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <remotecontrol> (457)', '[grab] <remotecontrol> (457)']
+success ['[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <cabinet> (415)', '[open] <cabinet> (415)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <cabinet> (415)', '[open] <cabinet> (415)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <cabinet> (415)', '[open] <cabinet> (415)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <cabinet> (415)', '[open] <cabinet> (415)', '[grab] <remotecontrol> (457)']
+success ['[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <kitchencabinet> (234)', '[open] <kitchencabinet> (234)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchencabinet> (234)', '[open] <kitchencabinet> (234)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchencabinet> (234)', '[open] <kitchencabinet> (234)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <cabinet> (415)', '[open] <cabinet> (415)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <cabinet> (415)', '[open] <cabinet> (415)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <cabinet> (415)', '[open] <cabinet> (415)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <cabinet> (415)', '[open] <cabinet> (415)', '[grab] <remotecontrol> (457)']
+success ['[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <kitchencabinet> (234)', '[open] <kitchencabinet> (234)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchencabinet> (234)', '[open] <kitchencabinet> (234)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchencabinet> (234)', '[open] <kitchencabinet> (234)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <cabinet> (415)', '[open] <cabinet> (415)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <cabinet> (415)', '[open] <cabinet> (415)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <cabinet> (415)', '[open] <cabinet> (415)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <cabinet> (415)', '[open] <cabinet> (415)', '[grab] <remotecontrol> (457)']
+success ['[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <cabinet> (415)', '[open] <cabinet> (415)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <cabinet> (415)', '[open] <cabinet> (415)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <cabinet> (415)', '[open] <cabinet> (415)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <cabinet> (415)', '[open] <cabinet> (415)', '[grab] <remotecontrol> (457)']
+success ['[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <cabinet> (415)', '[open] <cabinet> (415)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <cabinet> (415)', '[open] <cabinet> (415)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <cabinet> (415)', '[open] <cabinet> (415)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <cabinet> (415)', '[open] <cabinet> (415)', '[grab] <remotecontrol> (457)']
+success ['[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <stove> (311)', '[open] <stove> (311)', '[grab] <remotecontrol> (457)']
+success ['[walk] <stove> (311)', '[open] <stove> (311)', '[grab] <remotecontrol> (457)']
+success ['[walk] <stove> (311)', '[open] <stove> (311)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <cabinet> (415)', '[open] <cabinet> (415)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <cabinet> (415)', '[open] <cabinet> (415)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <cabinet> (415)', '[open] <cabinet> (415)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <cabinet> (415)', '[open] <cabinet> (415)', '[grab] <remotecontrol> (457)']
+success ['[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <kitchencabinet> (234)', '[open] <kitchencabinet> (234)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchencabinet> (234)', '[open] <kitchencabinet> (234)', '[grab] <remotecontrol> (457)']
+success ['[walk] <kitchencabinet> (234)', '[open] <kitchencabinet> (234)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <livingroom> (335)', '[walk] <cabinet> (415)', '[open] <cabinet> (415)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <cabinet> (415)', '[open] <cabinet> (415)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <cabinet> (415)', '[open] <cabinet> (415)', '[grab] <remotecontrol> (457)']
+success ['[walk] <livingroom> (335)', '[walk] <cabinet> (415)', '[open] <cabinet> (415)', '[grab] <remotecontrol> (457)']
+success ['[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+success ['[walk] <desk> (373)', '[putback] <remotecontrol> (457) <desk> (373)']
+rasiing
+None
+None
+CLOSING PROC
+CLOSING PROC
+CLOSING PROC

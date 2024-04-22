@@ -1,0 +1,2832 @@
+path /home/scai/Workspace/xfang21/github_repos/agent_preferences/gen_data/../../virtualhome/virtualhome
+/home/scai/Workspace/xfang21/github_repos/agent_preferences/gen_data/../../virtualhome/virtualhome/simulation/unity_simulator/comm_unity.py
+<module 'simulation.unity_simulator.comm_unity' from '/home/scai/Workspace/xfang21/github_repos/agent_preferences/gen_data/../../virtualhome/virtualhome/simulation/unity_simulator/comm_unity.py'>
+['/home/scai/Workspace/xfang21/github_repos/linux_exec.v2.3.0.x86_64', '-batchmode', '-nographics', '-http-port=8080', '-logFile /home/scai/Workspace/xfang21/github_repos/agent_preferences/gen_data/Player_8080.log']
+Getting connection...
+apartment 0
+------------------------------------------------------------------------------
+testing 0/100000: setup_table. apartment 0
+------------------------------------------------------------------------------
+[238]
+[238]
+init goal: {'salmon': 1}
+Placing: salmon. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'fridge'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'fridge'], ['INSIDE', 'stove']]
+1
+Placing: condimentbottle. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet']]
+1
+0
+1
+Placing: remotecontrol. Candidates: [('ON', 'sofa'), ('ON', 'coffeetable'), ('INSIDE', 'cabinet')] [['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'cabinet']]
+1
+Placing: plate. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'sofa'), ('ON', 'coffeetable'), ('INSIDE', 'fridge'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'fridge'], ['INSIDE', 'dishwasher'], ['INSIDE', 'stove']]
+1
+Placing: wineglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+1
+1
+1
+1
+Placing: waterglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+1
+0
+1
+1
+Placing: dishbowl. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('INSIDE', 'fridge'), ('ON', 'coffeetable')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['INSIDE', 'fridge'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+1
+1
+0
+1
+1
+Placing: cupcake. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('ON', 'sofa'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['ON', 'sofa'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['INSIDE', 'stove']]
+0
+1
+1
+Placing: apple. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet']]
+apple 237
+1
+Placing: chips. Candidates: [('INSIDE', 'microwave'), ('INSIDE', 'cabinet'), ('INSIDE', 'kitchencabinet'), ('ON', 'sofa'), ('ON', 'kitchentable')] [['INSIDE', 'microwave'], ['INSIDE', 'cabinet'], ['INSIDE', 'kitchencabinet'], ['ON', 'sofa'], ['ON', 'kitchentable']]
+0
+1
+1
+Placing: book. Candidates: [('ON', 'sofa'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('ON', 'kitchentable'), ('ON', 'nightstand'), ('ON', 'sofa')] [['ON', 'sofa'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['ON', 'kitchentable'], ['ON', 'nightstand'], ['ON', 'sofa']]
+1
+0
+0
+0
+1
+Placing: wine. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable']]
+1
+1
+Adding objects:
+[32m[][0m
+[31m[][0m
+----------------------------------------------------------------------
+setup_table False {'unplaced': ['salmon.1000', 'condimentbottle.1001', 'condimentbottle.1002', 'plate.1004', 'waterglass.1010', 'waterglass.1011', 'waterglass.1012', 'waterglass.1013', 'dishbowl.1014', 'dishbowl.1015', 'dishbowl.1016', 'dishbowl.1017', 'dishbowl.1018', 'cupcake.1019', 'cupcake.1020', 'apple.1021', 'chips.1022', 'chips.1023']} 22
+{'unplaced': ['salmon.1000', 'condimentbottle.1001', 'condimentbottle.1002', 'plate.1004', 'waterglass.1010', 'waterglass.1011', 'waterglass.1012', 'waterglass.1013', 'dishbowl.1014', 'dishbowl.1015', 'dishbowl.1016', 'dishbowl.1017', 'dishbowl.1018', 'cupcake.1019', 'cupcake.1020', 'apple.1021', 'chips.1022', 'chips.1023']}
+Objects unplaced
+['microwave']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['fridge']
+Objects unplaced
+['sofa']
+Objects unplaced
+['coffeetable']
+Objects unplaced
+['sofa']
+Objects unplaced
+['sofa']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['fridge']
+Objects unplaced
+['sofa']
+Objects unplaced
+['fridge']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['microwave']
+Objects unplaced
+['sofa']
+apartment: 0: success 0 over 1 (total: 100000)
+------------------------------------------------------------------------------
+testing 1/100000: setup_table. apartment 0
+------------------------------------------------------------------------------
+[238]
+[238]
+init goal: {'remotecontrol': 1}
+Placing: remotecontrol. Candidates: [('ON', 'sofa'), ('ON', 'coffeetable'), ('INSIDE', 'cabinet')] [['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'cabinet']]
+1
+Placing: condimentbottle. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet']]
+1
+1
+Placing: plate. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'sofa'), ('ON', 'coffeetable'), ('INSIDE', 'fridge'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'fridge'], ['INSIDE', 'dishwasher'], ['INSIDE', 'stove']]
+1
+1
+0
+1
+0
+0
+0
+1
+Placing: wineglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+1
+1
+1
+Placing: waterglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+1
+Placing: dishbowl. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('INSIDE', 'fridge'), ('ON', 'coffeetable')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['INSIDE', 'fridge'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+0
+1
+Placing: cupcake. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('ON', 'sofa'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['ON', 'sofa'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['INSIDE', 'stove']]
+0
+1
+1
+1
+Placing: salmon. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'fridge'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'fridge'], ['INSIDE', 'stove']]
+1
+Placing: apple. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet']]
+apple 305
+1
+apple 231
+0
+apple 415
+1
+Placing: chips. Candidates: [('INSIDE', 'microwave'), ('INSIDE', 'cabinet'), ('INSIDE', 'kitchencabinet'), ('ON', 'sofa'), ('ON', 'kitchentable')] [['INSIDE', 'microwave'], ['INSIDE', 'cabinet'], ['INSIDE', 'kitchencabinet'], ['ON', 'sofa'], ['ON', 'kitchentable']]
+1
+Placing: book. Candidates: [('ON', 'sofa'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('ON', 'kitchentable'), ('ON', 'nightstand'), ('ON', 'sofa')] [['ON', 'sofa'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['ON', 'kitchentable'], ['ON', 'nightstand'], ['ON', 'sofa']]
+0
+1
+1
+0
+0
+0
+1
+1
+Placing: wine. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable']]
+1
+1
+Adding objects:
+[32m[][0m
+[31m[][0m
+----------------------------------------------------------------------
+setup_table False {'unplaced': ['condimentbottle.1001', 'condimentbottle.1002', 'plate.1003', 'plate.1004', 'plate.1005', 'plate.1006', 'waterglass.1011', 'waterglass.1012', 'dishbowl.1013', 'cupcake.1014', 'cupcake.1015', 'cupcake.1016', 'salmon.1017', 'apple.1018', 'apple.1019', 'chips.1020']} 18
+{'unplaced': ['condimentbottle.1001', 'condimentbottle.1002', 'plate.1003', 'plate.1004', 'plate.1005', 'plate.1006', 'waterglass.1011', 'waterglass.1012', 'dishbowl.1013', 'cupcake.1014', 'cupcake.1015', 'cupcake.1016', 'salmon.1017', 'apple.1018', 'apple.1019', 'chips.1020']}
+Objects unplaced
+['microwave']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['microwave']
+Objects unplaced
+['stove']
+Objects unplaced
+['stove']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['sofa']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['sofa']
+Objects unplaced
+['stove']
+Objects unplaced
+['fridge']
+Objects unplaced
+['fridge']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['kitchencabinet']
+Placing: remotecontrol. Candidates: [('ON', 'sofa'), ('ON', 'coffeetable'), ('INSIDE', 'cabinet')] [['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'cabinet']]
+{'id': 454, 'category': 'WineGlass_2', 'class_name': 'wineglass', 'prefab_name': 'WineGlass_2', 'obj_transform': {'position': [-1.81680012, 2.175, -2.01157665], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-1.81680012, 2.175, -2.01157665], 'size': [0.115999937, 0.195000172, 0.116000056]}, 'properties': ['GRABBABLE', 'RECIPIENT', 'POURABLE', 'MOVABLE'], 'states': []}
+{'id': 455, 'category': 'WineGlass_2', 'class_name': 'wineglass', 'prefab_name': 'WineGlass_2', 'obj_transform': {'position': [-1.06619978, 2.175, -2.01157665], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-1.06619978, 2.175, -2.01157665], 'size': [0.115999937, 0.195000172, 0.116000056]}, 'properties': ['GRABBABLE', 'RECIPIENT', 'POURABLE', 'MOVABLE'], 'states': []}
+{'id': 456, 'category': 'Wine_1', 'class_name': 'wine', 'prefab_name': 'Wine_1', 'obj_transform': {'position': [-3.37654018, 1.143265, -2.15178466], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-3.37654018, 1.143265, -2.15178466], 'size': [0.123000145, 0.4555695, 0.123000145]}, 'properties': ['GRABBABLE', 'DRINKABLE', 'POURABLE', 'MOVABLE'], 'states': []}
+{'id': 457, 'category': 'Remote_control_1', 'class_name': 'remotecontrol', 'prefab_name': 'Remote_control_1', 'obj_transform': {'position': [6.01558733, 0.274431467, -6.70802641], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [6.01580334, 0.292100221, -6.70798874], 'size': [0.202, 0.035, 0.082]}, 'properties': ['GRABBABLE', 'HAS_SWITCH', 'MOVABLE'], 'states': ['OFF']}
+{'id': 458, 'category': 'WineGlass_2', 'class_name': 'wineglass', 'prefab_name': 'WineGlass_2', 'obj_transform': {'position': [1.46799994, 0.872106552, -6.014], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [1.46799994, 0.872106552, -6.014], 'size': [0.115999937, 0.194999933, 0.116000175]}, 'properties': ['GRABBABLE', 'RECIPIENT', 'POURABLE', 'MOVABLE'], 'states': []}
+{'id': 459, 'category': 'WineGlass_2', 'class_name': 'wineglass', 'prefab_name': 'WineGlass_2', 'obj_transform': {'position': [1.46799994, 0.872106552, -6.014], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [1.46799994, 0.872106552, -6.014], 'size': [0.115999937, 0.194999933, 0.116000175]}, 'properties': ['GRABBABLE', 'RECIPIENT', 'POURABLE', 'MOVABLE'], 'states': []}
+{'id': 460, 'category': 'Book_1', 'class_name': 'book', 'prefab_name': 'Book_1', 'obj_transform': {'position': [6.154, 0.4130593, -6.8982], 'rotation': [0.5000001, 0.5, 0.5, 0.49999994], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [6.154, 0.4130593, -6.8982], 'size': [0.05725479, 0.2769183, 0.221235275]}, 'properties': ['GRABBABLE', 'CUTTABLE', 'CAN_OPEN', 'READABLE', 'HAS_PAPER', 'MOVABLE'], 'states': ['CLOSED']}
+{'id': 461, 'category': 'Book_1', 'class_name': 'book', 'prefab_name': 'Book_1', 'obj_transform': {'position': [6.89370155, 0.390410781, -5.54532671], 'rotation': [0.5000001, 0.5, 0.5, 0.49999994], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [6.89370155, 0.390410781, -5.54532671], 'size': [0.05725479, 0.2769183, 0.221235275]}, 'properties': ['GRABBABLE', 'CUTTABLE', 'CAN_OPEN', 'READABLE', 'HAS_PAPER', 'MOVABLE'], 'states': ['CLOSED']}
+{'id': 462, 'category': 'Book_1', 'class_name': 'book', 'prefab_name': 'Book_1', 'obj_transform': {'position': [6.74501276, 0.390410781, -5.469566], 'rotation': [0.5000001, 0.5, 0.5, 0.49999994], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [6.74501276, 0.390410781, -5.469566], 'size': [0.05725479, 0.2769183, 0.221235275]}, 'properties': ['GRABBABLE', 'CUTTABLE', 'CAN_OPEN', 'READABLE', 'HAS_PAPER', 'MOVABLE'], 'states': ['CLOSED']}
+{'id': 463, 'category': 'Book_1', 'class_name': 'book', 'prefab_name': 'Book_1', 'obj_transform': {'position': [6.58019, 0.390410781, -5.44346046], 'rotation': [0.5000001, 0.5, 0.5, 0.49999994], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [6.58019, 0.390410781, -5.44346046], 'size': [0.05725479, 0.2769183, 0.221235275]}, 'properties': ['GRABBABLE', 'CUTTABLE', 'CAN_OPEN', 'READABLE', 'HAS_PAPER', 'MOVABLE'], 'states': ['CLOSED']}
+{'id': 464, 'category': 'Wine_1', 'class_name': 'wine', 'prefab_name': 'Wine_1', 'obj_transform': {'position': [1.46799994, 0.745845437, -6.014], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [1.46799994, 0.745845437, -6.014], 'size': [0.122999907, 0.4555695, 0.123000145]}, 'properties': ['GRABBABLE', 'DRINKABLE', 'POURABLE', 'MOVABLE'], 'states': []}
+final s: True
+remotecontrol 1 [457]
+num nodes:
+413 413
+apartment: 0: success 1 over 2 (total: 100000)
+------------------------------------------------------------------------------
+testing 2/100000: setup_table. apartment 0
+------------------------------------------------------------------------------
+[238]
+[238]
+init goal: {'wine': 1}
+Placing: wine. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable']]
+1
+1
+Placing: condimentbottle. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet']]
+1
+1
+Placing: remotecontrol. Candidates: [('ON', 'sofa'), ('ON', 'coffeetable'), ('INSIDE', 'cabinet')] [['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'cabinet']]
+1
+1
+Placing: plate. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'sofa'), ('ON', 'coffeetable'), ('INSIDE', 'fridge'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'fridge'], ['INSIDE', 'dishwasher'], ['INSIDE', 'stove']]
+1
+1
+Placing: wineglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+0
+1
+0
+0
+1
+0
+0
+1
+1
+1
+Placing: waterglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+0
+1
+1
+0
+0
+0
+1
+Placing: dishbowl. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('INSIDE', 'fridge'), ('ON', 'coffeetable')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['INSIDE', 'fridge'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+1
+1
+0
+0
+1
+0
+0
+0
+1
+Placing: cupcake. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('ON', 'sofa'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['ON', 'sofa'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['INSIDE', 'stove']]
+1
+Placing: salmon. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'fridge'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'fridge'], ['INSIDE', 'stove']]
+1
+Placing: apple. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet']]
+apple 415
+1
+Placing: chips. Candidates: [('INSIDE', 'microwave'), ('INSIDE', 'cabinet'), ('INSIDE', 'kitchencabinet'), ('ON', 'sofa'), ('ON', 'kitchentable')] [['INSIDE', 'microwave'], ['INSIDE', 'cabinet'], ['INSIDE', 'kitchencabinet'], ['ON', 'sofa'], ['ON', 'kitchentable']]
+1
+Placing: book. Candidates: [('ON', 'sofa'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('ON', 'kitchentable'), ('ON', 'nightstand'), ('ON', 'sofa')] [['ON', 'sofa'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['ON', 'kitchentable'], ['ON', 'nightstand'], ['ON', 'sofa']]
+1
+1
+1
+Adding objects:
+[32m[][0m
+[31m[][0m
+----------------------------------------------------------------------
+setup_table False {'unplaced': ['condimentbottle.1002', 'condimentbottle.1003', 'plate.1006', 'plate.1007', 'waterglass.1013', 'waterglass.1014', 'waterglass.1015', 'dishbowl.1016', 'dishbowl.1017', 'dishbowl.1018', 'dishbowl.1019', 'dishbowl.1020', 'cupcake.1021', 'salmon.1022', 'apple.1023', 'chips.1024']} 19
+{'unplaced': ['condimentbottle.1002', 'condimentbottle.1003', 'plate.1006', 'plate.1007', 'waterglass.1013', 'waterglass.1014', 'waterglass.1015', 'dishbowl.1016', 'dishbowl.1017', 'dishbowl.1018', 'dishbowl.1019', 'dishbowl.1020', 'cupcake.1021', 'salmon.1022', 'apple.1023', 'chips.1024']}
+Objects unplaced
+['cabinet']
+Objects unplaced
+['microwave']
+Objects unplaced
+['fridge']
+Objects unplaced
+['fridge']
+Objects unplaced
+['sofa']
+Objects unplaced
+['sofa']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['coffeetable']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['fridge']
+Objects unplaced
+['coffeetable']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['microwave']
+Objects unplaced
+['stove']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['microwave']
+Placing: wine. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable']]
+1
+{'id': 454, 'category': 'Wine_1', 'class_name': 'wine', 'prefab_name': 'Wine_1', 'obj_transform': {'position': [-7.17619848, 0.473384976, -5.402445], 'rotation': [0.0, -0.7071068, 0.0, 0.7071067], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-7.17619848, 0.473384976, -5.402445], 'size': [0.123000145, 0.4555695, 0.123000145]}, 'properties': ['GRABBABLE', 'DRINKABLE', 'POURABLE', 'MOVABLE'], 'states': []}
+{'id': 455, 'category': 'Wine_1', 'class_name': 'wine', 'prefab_name': 'Wine_1', 'obj_transform': {'position': [-3.37654018, 1.143265, -2.15178466], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-3.37654018, 1.143265, -2.15178466], 'size': [0.123000145, 0.4555695, 0.123000145]}, 'properties': ['GRABBABLE', 'DRINKABLE', 'POURABLE', 'MOVABLE'], 'states': []}
+{'id': 456, 'category': 'WineGlass_2', 'class_name': 'wineglass', 'prefab_name': 'WineGlass_2', 'obj_transform': {'position': [-1.06619978, 2.175, -2.01157665], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-1.06619978, 2.175, -2.01157665], 'size': [0.115999937, 0.195000172, 0.116000056]}, 'properties': ['GRABBABLE', 'RECIPIENT', 'POURABLE', 'MOVABLE'], 'states': []}
+{'id': 457, 'category': 'Remote_control_1', 'class_name': 'remotecontrol', 'prefab_name': 'Remote_control_1', 'obj_transform': {'position': [1.46778393, 0.7744378, -6.01403761], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [1.46799994, 0.7921065, -6.014], 'size': [0.202, 0.035, 0.082]}, 'properties': ['GRABBABLE', 'HAS_SWITCH', 'MOVABLE'], 'states': ['OFF']}
+{'id': 458, 'category': 'Remote_control_1', 'class_name': 'remotecontrol', 'prefab_name': 'Remote_control_1', 'obj_transform': {'position': [6.899139, 0.251782954, -5.53758335], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [6.899355, 0.2694517, -5.53754568], 'size': [0.202, 0.035, 0.082]}, 'properties': ['GRABBABLE', 'HAS_SWITCH', 'MOVABLE'], 'states': ['OFF']}
+{'id': 459, 'category': 'WineGlass_2', 'class_name': 'wineglass', 'prefab_name': 'WineGlass_2', 'obj_transform': {'position': [6.76127243, 0.349451661, -5.41952372], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [6.76127243, 0.349451661, -5.41952372], 'size': [0.116000175, 0.195, 0.116000175]}, 'properties': ['GRABBABLE', 'RECIPIENT', 'POURABLE', 'MOVABLE'], 'states': []}
+{'id': 460, 'category': 'WineGlass_2', 'class_name': 'wineglass', 'prefab_name': 'WineGlass_2', 'obj_transform': {'position': [6.58019, 0.349451661, -5.390843], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [6.58019, 0.349451661, -5.390843], 'size': [0.116000175, 0.195, 0.116000175]}, 'properties': ['GRABBABLE', 'RECIPIENT', 'POURABLE', 'MOVABLE'], 'states': []}
+{'id': 461, 'category': 'WineGlass_2', 'class_name': 'wineglass', 'prefab_name': 'WineGlass_2', 'obj_transform': {'position': [6.39910746, 0.349451661, -5.41952372], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [6.39910746, 0.349451661, -5.41952372], 'size': [0.116000175, 0.195, 0.116000175]}, 'properties': ['GRABBABLE', 'RECIPIENT', 'POURABLE', 'MOVABLE'], 'states': []}
+{'id': 462, 'category': 'WineGlass_2', 'class_name': 'wineglass', 'prefab_name': 'WineGlass_2', 'obj_transform': {'position': [1.52677846, 0.872106552, -5.93309832], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [1.52677846, 0.872106552, -5.93309832], 'size': [0.115999937, 0.194999933, 0.116000175]}, 'properties': ['GRABBABLE', 'RECIPIENT', 'POURABLE', 'MOVABLE'], 'states': []}
+{'id': 463, 'category': 'Book_1', 'class_name': 'book', 'prefab_name': 'Book_1', 'obj_transform': {'position': [6.266679, 0.390410781, -5.54532671], 'rotation': [0.5000001, 0.5, 0.5, 0.49999994], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [6.266679, 0.390410781, -5.54532671], 'size': [0.05725479, 0.2769183, 0.221235275]}, 'properties': ['GRABBABLE', 'CUTTABLE', 'CAN_OPEN', 'READABLE', 'HAS_PAPER', 'MOVABLE'], 'states': ['CLOSED']}
+{'id': 464, 'category': 'Book_1', 'class_name': 'book', 'prefab_name': 'Book_1', 'obj_transform': {'position': [1.46799994, 0.9130656, -6.014], 'rotation': [0.5000001, 0.5, 0.5, 0.49999994], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [1.46799994, 0.9130656, -6.014], 'size': [0.05725479, 0.2769183, 0.221235275]}, 'properties': ['GRABBABLE', 'CUTTABLE', 'CAN_OPEN', 'READABLE', 'HAS_PAPER', 'MOVABLE'], 'states': ['CLOSED']}
+{'id': 465, 'category': 'Book_1', 'class_name': 'book', 'prefab_name': 'Book_1', 'obj_transform': {'position': [1.46799994, 0.9130656, -6.014], 'rotation': [0.5000001, 0.5, 0.5, 0.49999994], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [1.46799994, 0.9130656, -6.014], 'size': [0.05725479, 0.2769183, 0.221235275]}, 'properties': ['GRABBABLE', 'CUTTABLE', 'CAN_OPEN', 'READABLE', 'HAS_PAPER', 'MOVABLE'], 'states': ['CLOSED']}
+final s: True
+wine 1 [454, 455]
+num nodes:
+414 414
+apartment: 0: success 2 over 3 (total: 100000)
+apartment 1
+------------------------------------------------------------------------------
+testing 0/100000: setup_table. apartment 1
+------------------------------------------------------------------------------
+[210, 221, 222]
+[210, 221, 222]
+init goal: {'chips': 1}
+Placing: chips. Candidates: [('INSIDE', 'microwave'), ('INSIDE', 'cabinet'), ('INSIDE', 'kitchencabinet'), ('ON', 'sofa'), ('ON', 'kitchentable')] [['INSIDE', 'microwave'], ['INSIDE', 'cabinet'], ['INSIDE', 'kitchencabinet'], ['ON', 'sofa'], ['ON', 'kitchentable']]
+1
+1
+Placing: condimentbottle. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet']]
+1
+1
+Placing: remotecontrol. Candidates: [('ON', 'sofa'), ('ON', 'coffeetable'), ('INSIDE', 'cabinet')] [['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'cabinet']]
+1
+1
+Placing: plate. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'sofa'), ('ON', 'coffeetable'), ('INSIDE', 'fridge'), ('INSIDE', 'dishwasher'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'fridge'], ['INSIDE', 'dishwasher'], ['INSIDE', 'stove']]
+1
+Placing: wineglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+1
+1
+Placing: waterglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+Placing: dishbowl. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('INSIDE', 'fridge'), ('ON', 'coffeetable'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['INSIDE', 'fridge'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+0
+1
+1
+Placing: cupcake. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('ON', 'sofa'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['ON', 'sofa'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['INSIDE', 'stove']]
+1
+Placing: salmon. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'fridge'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'fridge'], ['INSIDE', 'stove']]
+0
+0
+0
+1
+0
+1
+Placing: apple. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet']]
+apple 225
+1
+apple 87
+1
+apple 202
+1
+apple 87
+1
+Placing: book. Candidates: [('ON', 'sofa'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('ON', 'kitchentable'), ('ON', 'nightstand'), ('ON', 'sofa')] [['ON', 'sofa'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['ON', 'kitchentable'], ['ON', 'nightstand'], ['ON', 'sofa']]
+1
+1
+1
+0
+1
+Placing: wine. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable']]
+1
+Adding objects:
+[32m[][0m
+[31m[][0m
+----------------------------------------------------------------------
+setup_table False {'unplaced': ['chips.1000', 'chips.1001', 'condimentbottle.1002', 'condimentbottle.1003', 'plate.1006', 'waterglass.1010', 'dishbowl.1011', 'dishbowl.1012', 'cupcake.1013', 'salmon.1014', 'salmon.1015', 'apple.1016', 'apple.1017', 'apple.1018', 'apple.1019']} 25
+{'unplaced': ['chips.1000', 'chips.1001', 'condimentbottle.1002', 'condimentbottle.1003', 'plate.1006', 'waterglass.1010', 'dishbowl.1011', 'dishbowl.1012', 'cupcake.1013', 'salmon.1014', 'salmon.1015', 'apple.1016', 'apple.1017', 'apple.1018', 'apple.1019']}
+Objects unplaced
+['microwave']
+Objects unplaced
+['microwave']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['microwave']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['coffeetable']
+Objects unplaced
+['fridge']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['fridge']
+Objects unplaced
+['fridge']
+Objects unplaced
+['fridge']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['cabinet']
+apartment: 1: success 0 over 1 (total: 100000)
+------------------------------------------------------------------------------
+testing 1/100000: setup_table. apartment 1
+------------------------------------------------------------------------------
+[210, 221, 222]
+[210, 221, 222]
+init goal: {'remotecontrol': 1}
+Placing: remotecontrol. Candidates: [('ON', 'sofa'), ('ON', 'coffeetable'), ('INSIDE', 'cabinet')] [['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'cabinet']]
+1
+Placing: condimentbottle. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet']]
+1
+1
+Placing: plate. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'sofa'), ('ON', 'coffeetable'), ('INSIDE', 'fridge'), ('INSIDE', 'dishwasher'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'fridge'], ['INSIDE', 'dishwasher'], ['INSIDE', 'stove']]
+1
+1
+1
+1
+1
+Placing: wineglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+Placing: waterglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+1
+1
+1
+0
+1
+Placing: dishbowl. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('INSIDE', 'fridge'), ('ON', 'coffeetable'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['INSIDE', 'fridge'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+1
+Placing: cupcake. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('ON', 'sofa'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['ON', 'sofa'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['INSIDE', 'stove']]
+1
+1
+Placing: salmon. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'fridge'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'fridge'], ['INSIDE', 'stove']]
+1
+1
+Placing: apple. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet']]
+apple 203
+1
+apple 87
+1
+apple 87
+1
+apple 225
+1
+Placing: chips. Candidates: [('INSIDE', 'microwave'), ('INSIDE', 'cabinet'), ('INSIDE', 'kitchencabinet'), ('ON', 'sofa'), ('ON', 'kitchentable')] [['INSIDE', 'microwave'], ['INSIDE', 'cabinet'], ['INSIDE', 'kitchencabinet'], ['ON', 'sofa'], ['ON', 'kitchentable']]
+1
+Placing: book. Candidates: [('ON', 'sofa'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('ON', 'kitchentable'), ('ON', 'nightstand'), ('ON', 'sofa')] [['ON', 'sofa'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['ON', 'kitchentable'], ['ON', 'nightstand'], ['ON', 'sofa']]
+1
+1
+1
+0
+1
+Placing: wine. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable']]
+1
+Adding objects:
+[32m[][0m
+[31m[][0m
+----------------------------------------------------------------------
+setup_table False {'unplaced': ['condimentbottle.1001', 'condimentbottle.1002', 'plate.1003', 'plate.1004', 'plate.1005', 'plate.1006', 'plate.1007', 'waterglass.1009', 'waterglass.1010', 'waterglass.1011', 'waterglass.1012', 'waterglass.1013', 'dishbowl.1014', 'dishbowl.1015', 'cupcake.1016', 'cupcake.1017', 'salmon.1018', 'salmon.1019', 'apple.1020', 'apple.1021', 'apple.1022', 'apple.1023', 'chips.1024']} 25
+{'unplaced': ['condimentbottle.1001', 'condimentbottle.1002', 'plate.1003', 'plate.1004', 'plate.1005', 'plate.1006', 'plate.1007', 'waterglass.1009', 'waterglass.1010', 'waterglass.1011', 'waterglass.1012', 'waterglass.1013', 'dishbowl.1014', 'dishbowl.1015', 'cupcake.1016', 'cupcake.1017', 'salmon.1018', 'salmon.1019', 'apple.1020', 'apple.1021', 'apple.1022', 'apple.1023', 'chips.1024']}
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['microwave']
+Objects unplaced
+['stove']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['fridge']
+Objects unplaced
+['stove']
+Objects unplaced
+['fridge']
+Objects unplaced
+['coffeetable']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['sofa']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['sofa']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['fridge']
+Objects unplaced
+['sofa']
+Objects unplaced
+['fridge']
+Objects unplaced
+['stove']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['fridge']
+Objects unplaced
+['sofa']
+Placing: remotecontrol. Candidates: [('ON', 'sofa'), ('ON', 'coffeetable'), ('INSIDE', 'cabinet')] [['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'cabinet']]
+{'id': 330, 'category': 'WineGlass_2', 'class_name': 'wineglass', 'prefab_name': 'WineGlass_2', 'obj_transform': {'position': [2.46765447, 0.611460567, 3.697001], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [2.46765447, 0.611460567, 3.697001], 'size': [0.116000175, 0.194999933, 0.116000175]}, 'properties': ['GRABBABLE', 'RECIPIENT', 'POURABLE', 'MOVABLE'], 'states': []}
+{'id': 331, 'category': 'Book_1', 'class_name': 'book', 'prefab_name': 'Book_1', 'obj_transform': {'position': [2.49553132, 0.6524197, 3.52099371], 'rotation': [0.5000001, 0.5, 0.5, 0.49999994], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [2.49553132, 0.6524197, 3.52099371], 'size': [0.05725479, 0.2769183, 0.2212348]}, 'properties': ['GRABBABLE', 'CUTTABLE', 'CAN_OPEN', 'READABLE', 'HAS_PAPER', 'MOVABLE'], 'states': ['CLOSED']}
+{'id': 332, 'category': 'Remote_control_1', 'class_name': 'remotecontrol', 'prefab_name': 'Remote_control_1', 'obj_transform': {'position': [-14.8302155, 0.245431468, 6.127963], 'rotation': [0.0, 0.7071068, 0.0, 0.7071067], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-14.8301783, 0.2631002, 6.127747], 'size': [0.081999965, 0.035, 0.201999992]}, 'properties': ['GRABBABLE', 'HAS_SWITCH', 'MOVABLE'], 'states': ['OFF']}
+{'id': 333, 'category': 'Book_1', 'class_name': 'book', 'prefab_name': 'Book_1', 'obj_transform': {'position': [-16.2308731, 0.5511127, 7.04170227], 'rotation': [0.7071068, 0.7071067, -1.49011612e-07, -8.940697e-08], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-16.2308731, 0.5511127, 7.04170227], 'size': [0.221233368, 0.276918173, 0.05725479]}, 'properties': ['GRABBABLE', 'CUTTABLE', 'CAN_OPEN', 'READABLE', 'HAS_PAPER', 'MOVABLE'], 'states': ['CLOSED']}
+{'id': 334, 'category': 'Book_1', 'class_name': 'book', 'prefab_name': 'Book_1', 'obj_transform': {'position': [-16.306633, 0.5511127, 6.89301348], 'rotation': [0.7071068, 0.7071067, -1.49011612e-07, -8.940697e-08], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-16.306633, 0.5511127, 6.89301348], 'size': [0.221233368, 0.276918173, 0.05725479]}, 'properties': ['GRABBABLE', 'CUTTABLE', 'CAN_OPEN', 'READABLE', 'HAS_PAPER', 'MOVABLE'], 'states': ['CLOSED']}
+{'id': 335, 'category': 'Book_1', 'class_name': 'book', 'prefab_name': 'Book_1', 'obj_transform': {'position': [-16.332737, 0.5511127, 6.728191], 'rotation': [0.7071068, 0.7071067, -1.49011612e-07, -8.940697e-08], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-16.332737, 0.5511127, 6.728191], 'size': [0.221233368, 0.276918173, 0.05725479]}, 'properties': ['GRABBABLE', 'CUTTABLE', 'CAN_OPEN', 'READABLE', 'HAS_PAPER', 'MOVABLE'], 'states': ['CLOSED']}
+{'id': 336, 'category': 'Wine_1', 'class_name': 'wine', 'prefab_name': 'Wine_1', 'obj_transform': {'position': [-14.6299992, 0.473384976, 6.12800074], 'rotation': [0.0, 0.7071068, 0.0, 0.7071067], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-14.6299992, 0.473384976, 6.12800074], 'size': [0.122999191, 0.4555695, 0.123000145]}, 'properties': ['GRABBABLE', 'DRINKABLE', 'POURABLE', 'MOVABLE'], 'states': []}
+final s: True
+remotecontrol 1 [332]
+num nodes:
+287 287
+apartment: 1: success 1 over 2 (total: 100000)
+------------------------------------------------------------------------------
+testing 2/100000: setup_table. apartment 1
+------------------------------------------------------------------------------
+[210, 221, 222]
+[210, 221, 222]
+init goal: {'condimentbottle': 1}
+Placing: condimentbottle. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet']]
+1
+1
+Placing: remotecontrol. Candidates: [('ON', 'sofa'), ('ON', 'coffeetable'), ('INSIDE', 'cabinet')] [['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'cabinet']]
+1
+1
+Placing: plate. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'sofa'), ('ON', 'coffeetable'), ('INSIDE', 'fridge'), ('INSIDE', 'dishwasher'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'fridge'], ['INSIDE', 'dishwasher'], ['INSIDE', 'stove']]
+1
+1
+Placing: wineglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+1
+0
+1
+Placing: waterglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+0
+1
+0
+1
+1
+1
+Placing: dishbowl. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('INSIDE', 'fridge'), ('ON', 'coffeetable'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['INSIDE', 'fridge'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+0
+1
+0
+1
+1
+1
+Placing: cupcake. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('ON', 'sofa'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['ON', 'sofa'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['INSIDE', 'stove']]
+1
+1
+1
+Placing: salmon. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'fridge'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'fridge'], ['INSIDE', 'stove']]
+1
+Placing: apple. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet']]
+apple 87
+1
+apple 225
+1
+Placing: chips. Candidates: [('INSIDE', 'microwave'), ('INSIDE', 'cabinet'), ('INSIDE', 'kitchencabinet'), ('ON', 'sofa'), ('ON', 'kitchentable')] [['INSIDE', 'microwave'], ['INSIDE', 'cabinet'], ['INSIDE', 'kitchencabinet'], ['ON', 'sofa'], ['ON', 'kitchentable']]
+1
+Placing: book. Candidates: [('ON', 'sofa'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('ON', 'kitchentable'), ('ON', 'nightstand'), ('ON', 'sofa')] [['ON', 'sofa'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['ON', 'kitchentable'], ['ON', 'nightstand'], ['ON', 'sofa']]
+1
+Placing: wine. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable']]
+1
+1
+Adding objects:
+[32m[][0m
+[31m[][0m
+----------------------------------------------------------------------
+setup_table False {'unplaced': ['condimentbottle.1000', 'condimentbottle.1001', 'plate.1004', 'plate.1005', 'waterglass.1009', 'waterglass.1010', 'waterglass.1011', 'waterglass.1012', 'dishbowl.1013', 'dishbowl.1014', 'dishbowl.1015', 'dishbowl.1016', 'cupcake.1017', 'cupcake.1018', 'cupcake.1019', 'salmon.1020', 'apple.1021', 'apple.1022', 'chips.1023']} 19
+{'unplaced': ['condimentbottle.1000', 'condimentbottle.1001', 'plate.1004', 'plate.1005', 'waterglass.1009', 'waterglass.1010', 'waterglass.1011', 'waterglass.1012', 'dishbowl.1013', 'dishbowl.1014', 'dishbowl.1015', 'dishbowl.1016', 'cupcake.1017', 'cupcake.1018', 'cupcake.1019', 'salmon.1020', 'apple.1021', 'apple.1022', 'chips.1023']}
+Objects unplaced
+['cabinet']
+Objects unplaced
+['microwave']
+Objects unplaced
+['fridge']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['coffeetable']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['coffeetable']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['fridge']
+Objects unplaced
+['sofa']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['microwave']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['microwave']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['fridge']
+Objects unplaced
+['sofa']
+apartment: 1: success 1 over 3 (total: 100000)
+------------------------------------------------------------------------------
+testing 3/100000: setup_table. apartment 1
+------------------------------------------------------------------------------
+[210, 221, 222]
+[210, 221, 222]
+init goal: {'plate': 1}
+Placing: plate. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'sofa'), ('ON', 'coffeetable'), ('INSIDE', 'fridge'), ('INSIDE', 'dishwasher'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'fridge'], ['INSIDE', 'dishwasher'], ['INSIDE', 'stove']]
+1
+0
+1
+1
+1
+1
+Placing: condimentbottle. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet']]
+1
+Placing: remotecontrol. Candidates: [('ON', 'sofa'), ('ON', 'coffeetable'), ('INSIDE', 'cabinet')] [['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'cabinet']]
+1
+1
+Placing: wineglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+0
+0
+1
+1
+Placing: waterglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+0
+0
+1
+1
+1
+1
+1
+Placing: dishbowl. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('INSIDE', 'fridge'), ('ON', 'coffeetable'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['INSIDE', 'fridge'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+0
+0
+1
+0
+1
+Placing: cupcake. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('ON', 'sofa'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['ON', 'sofa'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['INSIDE', 'stove']]
+1
+Placing: salmon. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'fridge'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'fridge'], ['INSIDE', 'stove']]
+1
+Placing: apple. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet']]
+apple 207
+1
+Placing: chips. Candidates: [('INSIDE', 'microwave'), ('INSIDE', 'cabinet'), ('INSIDE', 'kitchencabinet'), ('ON', 'sofa'), ('ON', 'kitchentable')] [['INSIDE', 'microwave'], ['INSIDE', 'cabinet'], ['INSIDE', 'kitchencabinet'], ['ON', 'sofa'], ['ON', 'kitchentable']]
+1
+Placing: book. Candidates: [('ON', 'sofa'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('ON', 'kitchentable'), ('ON', 'nightstand'), ('ON', 'sofa')] [['ON', 'sofa'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['ON', 'kitchentable'], ['ON', 'nightstand'], ['ON', 'sofa']]
+0
+0
+1
+0
+0
+1
+Placing: wine. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable']]
+1
+1
+Adding objects:
+[32m[][0m
+[31m[][0m
+----------------------------------------------------------------------
+setup_table False {'unplaced': ['plate.1000', 'plate.1001', 'plate.1002', 'plate.1003', 'plate.1004', 'condimentbottle.1005', 'waterglass.1010', 'waterglass.1011', 'waterglass.1012', 'waterglass.1013', 'waterglass.1014', 'dishbowl.1015', 'dishbowl.1016', 'cupcake.1017', 'salmon.1018', 'apple.1019', 'chips.1020']} 21
+{'unplaced': ['plate.1000', 'plate.1001', 'plate.1002', 'plate.1003', 'plate.1004', 'condimentbottle.1005', 'waterglass.1010', 'waterglass.1011', 'waterglass.1012', 'waterglass.1013', 'waterglass.1014', 'dishbowl.1015', 'dishbowl.1016', 'cupcake.1017', 'salmon.1018', 'apple.1019', 'chips.1020']}
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['fridge']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['sofa']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['fridge']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['kitchencabinet']
+apartment: 1: success 1 over 4 (total: 100000)
+------------------------------------------------------------------------------
+testing 4/100000: setup_table. apartment 1
+------------------------------------------------------------------------------
+[210, 221, 222]
+[210, 221, 222]
+init goal: {'apple': 1}
+Placing: apple. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet']]
+apple 225
+1
+apple 199
+1
+Placing: condimentbottle. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet']]
+1
+Placing: remotecontrol. Candidates: [('ON', 'sofa'), ('ON', 'coffeetable'), ('INSIDE', 'cabinet')] [['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'cabinet']]
+1
+1
+Placing: plate. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'sofa'), ('ON', 'coffeetable'), ('INSIDE', 'fridge'), ('INSIDE', 'dishwasher'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'fridge'], ['INSIDE', 'dishwasher'], ['INSIDE', 'stove']]
+0
+1
+Placing: wineglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+0
+1
+1
+Placing: waterglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+1
+1
+1
+Placing: dishbowl. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('INSIDE', 'fridge'), ('ON', 'coffeetable'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['INSIDE', 'fridge'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+0
+1
+1
+1
+Placing: cupcake. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('ON', 'sofa'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['ON', 'sofa'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['INSIDE', 'stove']]
+1
+1
+1
+Placing: salmon. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'fridge'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'fridge'], ['INSIDE', 'stove']]
+1
+Placing: chips. Candidates: [('INSIDE', 'microwave'), ('INSIDE', 'cabinet'), ('INSIDE', 'kitchencabinet'), ('ON', 'sofa'), ('ON', 'kitchentable')] [['INSIDE', 'microwave'], ['INSIDE', 'cabinet'], ['INSIDE', 'kitchencabinet'], ['ON', 'sofa'], ['ON', 'kitchentable']]
+1
+1
+Placing: book. Candidates: [('ON', 'sofa'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('ON', 'kitchentable'), ('ON', 'nightstand'), ('ON', 'sofa')] [['ON', 'sofa'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['ON', 'kitchentable'], ['ON', 'nightstand'], ['ON', 'sofa']]
+1
+0
+1
+1
+0
+1
+Placing: wine. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable']]
+1
+Adding objects:
+[32m[][0m
+[31m[][0m
+----------------------------------------------------------------------
+setup_table False {'unplaced': ['apple.1000', 'apple.1001', 'condimentbottle.1002', 'plate.1005', 'waterglass.1008', 'waterglass.1009', 'waterglass.1010', 'waterglass.1011', 'dishbowl.1012', 'dishbowl.1013', 'dishbowl.1014', 'cupcake.1015', 'cupcake.1016', 'cupcake.1017', 'salmon.1018', 'chips.1019', 'chips.1020']} 19
+{'unplaced': ['apple.1000', 'apple.1001', 'condimentbottle.1002', 'plate.1005', 'waterglass.1008', 'waterglass.1009', 'waterglass.1010', 'waterglass.1011', 'dishbowl.1012', 'dishbowl.1013', 'dishbowl.1014', 'cupcake.1015', 'cupcake.1016', 'cupcake.1017', 'salmon.1018', 'chips.1019', 'chips.1020']}
+Objects unplaced
+['fridge']
+Objects unplaced
+['kitchentable']
+Objects unplaced
+['microwave']
+Objects unplaced
+['kitchentable']
+Objects unplaced
+['kitchentable']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['kitchentable']
+Objects unplaced
+['kitchentable']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['kitchentable']
+Objects unplaced
+['stove']
+Objects unplaced
+['kitchentable']
+Objects unplaced
+['microwave']
+Objects unplaced
+['kitchencabinet']
+apartment: 1: success 1 over 5 (total: 100000)
+------------------------------------------------------------------------------
+testing 5/100000: setup_table. apartment 1
+------------------------------------------------------------------------------
+[210, 221, 222]
+[210, 221, 222]
+init goal: {'apple': 1}
+Placing: apple. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet']]
+apple 199
+1
+apple 199
+1
+apple 199
+1
+Placing: condimentbottle. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet']]
+1
+Placing: remotecontrol. Candidates: [('ON', 'sofa'), ('ON', 'coffeetable'), ('INSIDE', 'cabinet')] [['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'cabinet']]
+1
+1
+Placing: plate. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'sofa'), ('ON', 'coffeetable'), ('INSIDE', 'fridge'), ('INSIDE', 'dishwasher'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'fridge'], ['INSIDE', 'dishwasher'], ['INSIDE', 'stove']]
+0
+1
+1
+1
+1
+1
+Placing: wineglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+1
+0
+1
+1
+Placing: waterglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+1
+Placing: dishbowl. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('INSIDE', 'fridge'), ('ON', 'coffeetable'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['INSIDE', 'fridge'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+Placing: cupcake. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('ON', 'sofa'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['ON', 'sofa'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['INSIDE', 'stove']]
+1
+Placing: salmon. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'fridge'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'fridge'], ['INSIDE', 'stove']]
+1
+Placing: chips. Candidates: [('INSIDE', 'microwave'), ('INSIDE', 'cabinet'), ('INSIDE', 'kitchencabinet'), ('ON', 'sofa'), ('ON', 'kitchentable')] [['INSIDE', 'microwave'], ['INSIDE', 'cabinet'], ['INSIDE', 'kitchencabinet'], ['ON', 'sofa'], ['ON', 'kitchentable']]
+1
+1
+Placing: book. Candidates: [('ON', 'sofa'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('ON', 'kitchentable'), ('ON', 'nightstand'), ('ON', 'sofa')] [['ON', 'sofa'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['ON', 'kitchentable'], ['ON', 'nightstand'], ['ON', 'sofa']]
+1
+1
+1
+1
+Placing: wine. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable']]
+1
+Adding objects:
+[32m[][0m
+[31m[][0m
+----------------------------------------------------------------------
+setup_table False {'unplaced': ['apple.1000', 'apple.1001', 'apple.1002', 'condimentbottle.1003', 'plate.1006', 'plate.1007', 'plate.1008', 'plate.1009', 'plate.1010', 'waterglass.1015', 'waterglass.1016', 'dishbowl.1017', 'cupcake.1018', 'salmon.1019', 'chips.1020', 'chips.1021']} 19
+{'unplaced': ['apple.1000', 'apple.1001', 'apple.1002', 'condimentbottle.1003', 'plate.1006', 'plate.1007', 'plate.1008', 'plate.1009', 'plate.1010', 'waterglass.1015', 'waterglass.1016', 'dishbowl.1017', 'cupcake.1018', 'salmon.1019', 'chips.1020', 'chips.1021']}
+Objects unplaced
+['kitchentable']
+Objects unplaced
+['kitchentable']
+Objects unplaced
+['kitchentable']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['kitchentable']
+Objects unplaced
+['sofa']
+Objects unplaced
+['coffeetable']
+Objects unplaced
+['stove']
+Objects unplaced
+['fridge']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['sofa']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['stove']
+Objects unplaced
+['kitchentable']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['kitchentable']
+apartment: 1: success 1 over 6 (total: 100000)
+------------------------------------------------------------------------------
+testing 6/100000: setup_table. apartment 1
+------------------------------------------------------------------------------
+[210, 221, 222]
+[210, 221, 222]
+init goal: {'wineglass': 1}
+Placing: wineglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+1
+1
+1
+Placing: condimentbottle. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet']]
+1
+Placing: remotecontrol. Candidates: [('ON', 'sofa'), ('ON', 'coffeetable'), ('INSIDE', 'cabinet')] [['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'cabinet']]
+1
+Placing: plate. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'sofa'), ('ON', 'coffeetable'), ('INSIDE', 'fridge'), ('INSIDE', 'dishwasher'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'fridge'], ['INSIDE', 'dishwasher'], ['INSIDE', 'stove']]
+1
+Placing: waterglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+0
+0
+1
+1
+1
+1
+1
+Placing: dishbowl. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('INSIDE', 'fridge'), ('ON', 'coffeetable'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['INSIDE', 'fridge'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+Placing: cupcake. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('ON', 'sofa'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['ON', 'sofa'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['INSIDE', 'stove']]
+1
+1
+Placing: salmon. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'fridge'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'fridge'], ['INSIDE', 'stove']]
+1
+Placing: apple. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet']]
+apple 225
+1
+apple 205
+1
+apple 87
+1
+Placing: chips. Candidates: [('INSIDE', 'microwave'), ('INSIDE', 'cabinet'), ('INSIDE', 'kitchencabinet'), ('ON', 'sofa'), ('ON', 'kitchentable')] [['INSIDE', 'microwave'], ['INSIDE', 'cabinet'], ['INSIDE', 'kitchencabinet'], ['ON', 'sofa'], ['ON', 'kitchentable']]
+1
+1
+Placing: book. Candidates: [('ON', 'sofa'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('ON', 'kitchentable'), ('ON', 'nightstand'), ('ON', 'sofa')] [['ON', 'sofa'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['ON', 'kitchentable'], ['ON', 'nightstand'], ['ON', 'sofa']]
+1
+1
+1
+1
+Placing: wine. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable']]
+1
+1
+Adding objects:
+[32m[][0m
+[31m[][0m
+----------------------------------------------------------------------
+setup_table False {'unplaced': ['condimentbottle.1004', 'plate.1006', 'waterglass.1007', 'waterglass.1008', 'waterglass.1009', 'waterglass.1010', 'waterglass.1011', 'dishbowl.1012', 'cupcake.1013', 'cupcake.1014', 'salmon.1015', 'apple.1016', 'apple.1017', 'apple.1018', 'chips.1019', 'chips.1020']} 15
+{'unplaced': ['condimentbottle.1004', 'plate.1006', 'waterglass.1007', 'waterglass.1008', 'waterglass.1009', 'waterglass.1010', 'waterglass.1011', 'dishbowl.1012', 'cupcake.1013', 'cupcake.1014', 'salmon.1015', 'apple.1016', 'apple.1017', 'apple.1018', 'chips.1019', 'chips.1020']}
+Objects unplaced
+['microwave']
+Objects unplaced
+['fridge']
+Objects unplaced
+['sofa']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['sofa']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['fridge']
+Objects unplaced
+['stove']
+Objects unplaced
+['kitchentable']
+Objects unplaced
+['fridge']
+Objects unplaced
+['fridge']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['sofa']
+Objects unplaced
+['sofa']
+Placing: wineglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+{'id': 330, 'category': 'WineGlass_2', 'class_name': 'wineglass', 'prefab_name': 'WineGlass_2', 'obj_transform': {'position': [-0.7303797, 0.8721068, 5.904], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-0.7303797, 0.8721068, 5.904], 'size': [0.115999937, 0.194999933, 0.116000175]}, 'properties': ['GRABBABLE', 'RECIPIENT', 'POURABLE', 'MOVABLE'], 'states': []}
+{'id': 331, 'category': 'WineGlass_2', 'class_name': 'wineglass', 'prefab_name': 'WineGlass_2', 'obj_transform': {'position': [2.46765447, 0.611460567, 3.697001], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [2.46765447, 0.611460567, 3.697001], 'size': [0.116000175, 0.194999933, 0.116000175]}, 'properties': ['GRABBABLE', 'RECIPIENT', 'POURABLE', 'MOVABLE'], 'states': []}
+{'id': 332, 'category': 'Remote_control_1', 'class_name': 'remotecontrol', 'prefab_name': 'Remote_control_1', 'obj_transform': {'position': [2.73178339, 0.409831226, 5.49996328], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [2.7319994, 0.42749998, 5.500001], 'size': [0.202, 0.035, 0.082]}, 'properties': ['GRABBABLE', 'HAS_SWITCH', 'MOVABLE'], 'states': ['OFF']}
+{'id': 333, 'category': 'Book_1', 'class_name': 'book', 'prefab_name': 'Book_1', 'obj_transform': {'position': [2.49553132, 0.6524197, 3.52099371], 'rotation': [0.5000001, 0.5, 0.5, 0.49999994], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [2.49553132, 0.6524197, 3.52099371], 'size': [0.05725479, 0.2769183, 0.2212348]}, 'properties': ['GRABBABLE', 'CUTTABLE', 'CAN_OPEN', 'READABLE', 'HAS_PAPER', 'MOVABLE'], 'states': ['CLOSED']}
+{'id': 334, 'category': 'Book_1', 'class_name': 'book', 'prefab_name': 'Book_1', 'obj_transform': {'position': [2.93199944, 0.548459053, 5.500001], 'rotation': [0.5000001, 0.5, 0.5, 0.49999994], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [2.93199944, 0.548459053, 5.500001], 'size': [0.05725479, 0.2769183, 0.221235275]}, 'properties': ['GRABBABLE', 'CUTTABLE', 'CAN_OPEN', 'READABLE', 'HAS_PAPER', 'MOVABLE'], 'states': ['CLOSED']}
+{'id': 335, 'category': 'Wine_1', 'class_name': 'wine', 'prefab_name': 'Wine_1', 'obj_transform': {'position': [-0.7303797, 0.7458457, 5.904], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-0.7303797, 0.7458457, 5.904], 'size': [0.123000026, 0.4555695, 0.123000145]}, 'properties': ['GRABBABLE', 'DRINKABLE', 'POURABLE', 'MOVABLE'], 'states': []}
+{'id': 336, 'category': 'WineGlass_2', 'class_name': 'wineglass', 'prefab_name': 'WineGlass_2', 'obj_transform': {'position': [-5.527199, 2.271, -0.9866209], 'rotation': [0.0, -0.7071068, 0.0, 0.7071067], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-5.527199, 2.271, -0.9866209], 'size': [0.116000175, 0.195000172, 0.115999937]}, 'properties': ['GRABBABLE', 'RECIPIENT', 'POURABLE', 'MOVABLE'], 'states': []}
+{'id': 337, 'category': 'Wine_1', 'class_name': 'wine', 'prefab_name': 'Wine_1', 'obj_transform': {'position': [-5.527199, 2.16928482, -0.9866209], 'rotation': [0.0, -0.7071068, 0.0, 0.7071067], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-5.527199, 2.16928482, -0.9866209], 'size': [0.123000145, 0.4555694, 0.122999966]}, 'properties': ['GRABBABLE', 'DRINKABLE', 'POURABLE', 'MOVABLE'], 'states': []}
+{'id': 338, 'category': 'WineGlass_2', 'class_name': 'wineglass', 'prefab_name': 'WineGlass_2', 'obj_transform': {'position': [-16.2734413, 0.510153651, 7.07263], 'rotation': [0.0, 0.7071068, 0.0, 0.7071067], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-16.2734413, 0.510153651, 7.07263], 'size': [0.116001129, 0.194999963, 0.116000175]}, 'properties': ['GRABBABLE', 'RECIPIENT', 'POURABLE', 'MOVABLE'], 'states': []}
+{'id': 339, 'category': 'Book_1', 'class_name': 'book', 'prefab_name': 'Book_1', 'obj_transform': {'position': [-14.83, 0.3840593, 6.12800074], 'rotation': [0.7071068, 0.7071067, -1.49011612e-07, -8.940697e-08], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-14.83, 0.3840593, 6.12800074], 'size': [0.221235275, 0.276918173, 0.05725479]}, 'properties': ['GRABBABLE', 'CUTTABLE', 'CAN_OPEN', 'READABLE', 'HAS_PAPER', 'MOVABLE'], 'states': ['CLOSED']}
+{'id': 340, 'category': 'Book_1', 'class_name': 'book', 'prefab_name': 'Book_1', 'obj_transform': {'position': [-16.306633, 0.5511127, 6.89301348], 'rotation': [0.7071068, 0.7071067, -1.49011612e-07, -8.940697e-08], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-16.306633, 0.5511127, 6.89301348], 'size': [0.221233368, 0.276918173, 0.05725479]}, 'properties': ['GRABBABLE', 'CUTTABLE', 'CAN_OPEN', 'READABLE', 'HAS_PAPER', 'MOVABLE'], 'states': ['CLOSED']}
+final s: True
+wineglass 1 [330, 331, 336, 338]
+num nodes:
+291 291
+apartment: 1: success 2 over 7 (total: 100000)
+apartment 2
+------------------------------------------------------------------------------
+testing 0/100000: setup_table. apartment 2
+------------------------------------------------------------------------------
+[136, 137, 146]
+[136, 137, 146]
+init goal: {'plate': 1}
+Placing: plate. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'sofa'), ('ON', 'coffeetable'), ('INSIDE', 'fridge'), ('INSIDE', 'dishwasher'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'fridge'], ['INSIDE', 'dishwasher'], ['INSIDE', 'stove']]
+1
+1
+1
+Placing: condimentbottle. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet']]
+1
+Placing: remotecontrol. Candidates: [('ON', 'sofa'), ('ON', 'coffeetable'), ('INSIDE', 'cabinet')] [['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'cabinet']]
+1
+1
+Placing: wineglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+0
+1
+0
+1
+1
+Placing: waterglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+1
+Placing: dishbowl. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('INSIDE', 'fridge'), ('ON', 'coffeetable'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['INSIDE', 'fridge'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+1
+0
+1
+Placing: cupcake. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('ON', 'sofa'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['ON', 'sofa'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['INSIDE', 'stove']]
+1
+1
+1
+Placing: salmon. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'fridge'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'fridge'], ['INSIDE', 'stove']]
+1
+1
+Placing: apple. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet']]
+apple 396
+1
+Placing: chips. Candidates: [('INSIDE', 'microwave'), ('INSIDE', 'cabinet'), ('INSIDE', 'kitchencabinet'), ('ON', 'sofa'), ('ON', 'kitchentable')] [['INSIDE', 'microwave'], ['INSIDE', 'cabinet'], ['INSIDE', 'kitchencabinet'], ['ON', 'sofa'], ['ON', 'kitchentable']]
+1
+1
+Placing: book. Candidates: [('ON', 'sofa'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('ON', 'nightstand'), ('ON', 'sofa')] [['ON', 'sofa'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['ON', 'nightstand'], ['ON', 'sofa']]
+1
+1
+0
+1
+Placing: wine. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable']]
+1
+Adding objects:
+[32m[][0m
+[31m[][0m
+----------------------------------------------------------------------
+setup_table False {'unplaced': ['plate.1000', 'plate.1001', 'plate.1002', 'condimentbottle.1003', 'waterglass.1009', 'waterglass.1010', 'dishbowl.1011', 'dishbowl.1012', 'dishbowl.1013', 'cupcake.1014', 'cupcake.1015', 'cupcake.1016', 'salmon.1017', 'salmon.1018', 'apple.1019', 'chips.1020', 'chips.1021']} 22
+{'unplaced': ['plate.1000', 'plate.1001', 'plate.1002', 'condimentbottle.1003', 'waterglass.1009', 'waterglass.1010', 'dishbowl.1011', 'dishbowl.1012', 'dishbowl.1013', 'cupcake.1014', 'cupcake.1015', 'cupcake.1016', 'salmon.1017', 'salmon.1018', 'apple.1019', 'chips.1020', 'chips.1021']}
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['microwave']
+Objects unplaced
+['sofa']
+Objects unplaced
+['kitchentable']
+Objects unplaced
+['sofa']
+Objects unplaced
+['kitchentable']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['kitchentable']
+Objects unplaced
+['fridge']
+Objects unplaced
+['kitchentable']
+Objects unplaced
+['fridge']
+Objects unplaced
+['fridge']
+Objects unplaced
+['fridge']
+Objects unplaced
+['kitchentable']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['kitchentable']
+Objects unplaced
+['sofa']
+apartment: 2: success 0 over 1 (total: 100000)
+------------------------------------------------------------------------------
+testing 1/100000: setup_table. apartment 2
+------------------------------------------------------------------------------
+[136, 137, 146]
+[136, 137, 146]
+init goal: {'condimentbottle': 1}
+Placing: condimentbottle. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet']]
+1
+1
+Placing: remotecontrol. Candidates: [('ON', 'sofa'), ('ON', 'coffeetable'), ('INSIDE', 'cabinet')] [['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'cabinet']]
+1
+Placing: plate. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'sofa'), ('ON', 'coffeetable'), ('INSIDE', 'fridge'), ('INSIDE', 'dishwasher'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'fridge'], ['INSIDE', 'dishwasher'], ['INSIDE', 'stove']]
+0
+1
+Placing: wineglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+0
+0
+0
+1
+1
+Placing: waterglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+1
+1
+1
+0
+1
+Placing: dishbowl. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('INSIDE', 'fridge'), ('ON', 'coffeetable'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['INSIDE', 'fridge'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+Placing: cupcake. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('ON', 'sofa'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['ON', 'sofa'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['INSIDE', 'stove']]
+1
+1
+1
+1
+Placing: salmon. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'fridge'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'fridge'], ['INSIDE', 'stove']]
+1
+Placing: apple. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet']]
+apple 131
+1
+Placing: chips. Candidates: [('INSIDE', 'microwave'), ('INSIDE', 'cabinet'), ('INSIDE', 'kitchencabinet'), ('ON', 'sofa'), ('ON', 'kitchentable')] [['INSIDE', 'microwave'], ['INSIDE', 'cabinet'], ['INSIDE', 'kitchencabinet'], ['ON', 'sofa'], ['ON', 'kitchentable']]
+1
+1
+Placing: book. Candidates: [('ON', 'sofa'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('ON', 'nightstand'), ('ON', 'sofa')] [['ON', 'sofa'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['ON', 'nightstand'], ['ON', 'sofa']]
+1
+1
+1
+0
+1
+Placing: wine. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable']]
+1
+Adding objects:
+[32m[][0m
+[31m[][0m
+----------------------------------------------------------------------
+setup_table False {'unplaced': ['condimentbottle.1000', 'condimentbottle.1001', 'plate.1003', 'waterglass.1007', 'waterglass.1008', 'waterglass.1009', 'waterglass.1010', 'waterglass.1011', 'dishbowl.1012', 'cupcake.1013', 'cupcake.1014', 'cupcake.1015', 'cupcake.1016', 'salmon.1017', 'apple.1018', 'chips.1019', 'chips.1020']} 21
+{'unplaced': ['condimentbottle.1000', 'condimentbottle.1001', 'plate.1003', 'waterglass.1007', 'waterglass.1008', 'waterglass.1009', 'waterglass.1010', 'waterglass.1011', 'dishbowl.1012', 'cupcake.1013', 'cupcake.1014', 'cupcake.1015', 'cupcake.1016', 'salmon.1017', 'apple.1018', 'chips.1019', 'chips.1020']}
+Objects unplaced
+['microwave']
+Objects unplaced
+['microwave']
+Objects unplaced
+['coffeetable']
+Objects unplaced
+['coffeetable']
+Objects unplaced
+['coffeetable']
+Objects unplaced
+['sofa']
+Objects unplaced
+['kitchentable']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['kitchentable']
+Objects unplaced
+['fridge']
+Objects unplaced
+['fridge']
+Objects unplaced
+['sofa']
+Objects unplaced
+['stove']
+Objects unplaced
+['stove']
+Objects unplaced
+['kitchentable']
+Objects unplaced
+['sofa']
+Objects unplaced
+['microwave']
+apartment: 2: success 0 over 2 (total: 100000)
+------------------------------------------------------------------------------
+testing 2/100000: setup_table. apartment 2
+------------------------------------------------------------------------------
+[136, 137, 146]
+[136, 137, 146]
+init goal: {'apple': 1}
+Placing: apple. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet']]
+apple 162
+1
+apple 396
+1
+Placing: condimentbottle. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet']]
+1
+1
+Placing: remotecontrol. Candidates: [('ON', 'sofa'), ('ON', 'coffeetable'), ('INSIDE', 'cabinet')] [['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'cabinet']]
+1
+1
+Placing: plate. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'sofa'), ('ON', 'coffeetable'), ('INSIDE', 'fridge'), ('INSIDE', 'dishwasher'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'fridge'], ['INSIDE', 'dishwasher'], ['INSIDE', 'stove']]
+1
+Placing: wineglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+Placing: waterglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+1
+1
+1
+1
+Placing: dishbowl. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('INSIDE', 'fridge'), ('ON', 'coffeetable'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['INSIDE', 'fridge'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+Placing: cupcake. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('ON', 'sofa'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['ON', 'sofa'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['INSIDE', 'stove']]
+1
+1
+Placing: salmon. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'fridge'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'fridge'], ['INSIDE', 'stove']]
+1
+1
+Placing: chips. Candidates: [('INSIDE', 'microwave'), ('INSIDE', 'cabinet'), ('INSIDE', 'kitchencabinet'), ('ON', 'sofa'), ('ON', 'kitchentable')] [['INSIDE', 'microwave'], ['INSIDE', 'cabinet'], ['INSIDE', 'kitchencabinet'], ['ON', 'sofa'], ['ON', 'kitchentable']]
+1
+1
+Placing: book. Candidates: [('ON', 'sofa'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('ON', 'nightstand'), ('ON', 'sofa')] [['ON', 'sofa'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['ON', 'nightstand'], ['ON', 'sofa']]
+1
+1
+1
+1
+Placing: wine. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable']]
+1
+1
+Adding objects:
+[32m[][0m
+[31m[][0m
+----------------------------------------------------------------------
+setup_table False {'unplaced': ['apple.1000', 'apple.1001', 'condimentbottle.1002', 'condimentbottle.1003', 'plate.1006', 'waterglass.1008', 'waterglass.1009', 'waterglass.1010', 'waterglass.1011', 'waterglass.1012', 'dishbowl.1013', 'cupcake.1014', 'cupcake.1015', 'salmon.1016', 'salmon.1017', 'chips.1018', 'chips.1019']} 16
+{'unplaced': ['apple.1000', 'apple.1001', 'condimentbottle.1002', 'condimentbottle.1003', 'plate.1006', 'waterglass.1008', 'waterglass.1009', 'waterglass.1010', 'waterglass.1011', 'waterglass.1012', 'dishbowl.1013', 'cupcake.1014', 'cupcake.1015', 'salmon.1016', 'salmon.1017', 'chips.1018', 'chips.1019']}
+Objects unplaced
+['fridge']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['microwave']
+Objects unplaced
+['coffeetable']
+Objects unplaced
+['kitchentable']
+Objects unplaced
+['kitchentable']
+Objects unplaced
+['sofa']
+Objects unplaced
+['coffeetable']
+Objects unplaced
+['kitchentable']
+Objects unplaced
+['fridge']
+Objects unplaced
+['stove']
+Objects unplaced
+['sofa']
+Objects unplaced
+['kitchentable']
+Objects unplaced
+['stove']
+Objects unplaced
+['sofa']
+Objects unplaced
+['kitchentable']
+apartment: 2: success 0 over 3 (total: 100000)
+------------------------------------------------------------------------------
+testing 3/100000: setup_table. apartment 2
+------------------------------------------------------------------------------
+[136, 137, 146]
+[136, 137, 146]
+init goal: {'wine': 1}
+Placing: wine. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable']]
+1
+1
+Placing: condimentbottle. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet']]
+1
+1
+Placing: remotecontrol. Candidates: [('ON', 'sofa'), ('ON', 'coffeetable'), ('INSIDE', 'cabinet')] [['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'cabinet']]
+1
+1
+Placing: plate. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'sofa'), ('ON', 'coffeetable'), ('INSIDE', 'fridge'), ('INSIDE', 'dishwasher'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'fridge'], ['INSIDE', 'dishwasher'], ['INSIDE', 'stove']]
+1
+1
+1
+0
+1
+Placing: wineglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+1
+1
+1
+1
+Placing: waterglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+1
+1
+1
+0
+1
+Placing: dishbowl. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('INSIDE', 'fridge'), ('ON', 'coffeetable'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['INSIDE', 'fridge'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+1
+0
+1
+Placing: cupcake. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('ON', 'sofa'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['ON', 'sofa'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['INSIDE', 'stove']]
+1
+1
+Placing: salmon. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'fridge'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'fridge'], ['INSIDE', 'stove']]
+1
+0
+1
+Placing: apple. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet']]
+apple 162
+1
+apple 142
+1
+apple 144
+1
+Placing: chips. Candidates: [('INSIDE', 'microwave'), ('INSIDE', 'cabinet'), ('INSIDE', 'kitchencabinet'), ('ON', 'sofa'), ('ON', 'kitchentable')] [['INSIDE', 'microwave'], ['INSIDE', 'cabinet'], ['INSIDE', 'kitchencabinet'], ['ON', 'sofa'], ['ON', 'kitchentable']]
+1
+Placing: book. Candidates: [('ON', 'sofa'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('ON', 'nightstand'), ('ON', 'sofa')] [['ON', 'sofa'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['ON', 'nightstand'], ['ON', 'sofa']]
+1
+1
+Adding objects:
+[32m[][0m
+[31m[][0m
+----------------------------------------------------------------------
+setup_table False {'unplaced': ['condimentbottle.1002', 'condimentbottle.1003', 'plate.1006', 'plate.1007', 'plate.1008', 'plate.1009', 'waterglass.1015', 'waterglass.1016', 'waterglass.1017', 'waterglass.1018', 'waterglass.1019', 'dishbowl.1020', 'dishbowl.1021', 'dishbowl.1022', 'cupcake.1023', 'cupcake.1024', 'salmon.1025', 'salmon.1026', 'apple.1027', 'apple.1028', 'apple.1029', 'chips.1030']} 16
+{'unplaced': ['condimentbottle.1002', 'condimentbottle.1003', 'plate.1006', 'plate.1007', 'plate.1008', 'plate.1009', 'waterglass.1015', 'waterglass.1016', 'waterglass.1017', 'waterglass.1018', 'waterglass.1019', 'dishbowl.1020', 'dishbowl.1021', 'dishbowl.1022', 'cupcake.1023', 'cupcake.1024', 'salmon.1025', 'salmon.1026', 'apple.1027', 'apple.1028', 'apple.1029', 'chips.1030']}
+Objects unplaced
+['cabinet']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['stove']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['stove']
+Objects unplaced
+['coffeetable']
+Objects unplaced
+['sofa']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['sofa']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['microwave']
+Objects unplaced
+['kitchentable']
+Objects unplaced
+['fridge']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['kitchentable']
+Placing: wine. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable']]
+1
+{'id': 411, 'category': 'Wine_1', 'class_name': 'wine', 'prefab_name': 'Wine_1', 'obj_transform': {'position': [-7.076813, 1.19580746, 7.39342833], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-7.076813, 1.19580746, 7.39342833], 'size': [0.123000145, 0.4555695, 0.123000145]}, 'properties': ['GRABBABLE', 'DRINKABLE', 'POURABLE', 'MOVABLE'], 'states': []}
+{'id': 412, 'category': 'WineGlass_2', 'class_name': 'wineglass', 'prefab_name': 'WineGlass_2', 'obj_transform': {'position': [-7.23842335, 2.271, 4.2774], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-7.23842335, 2.271, 4.2774], 'size': [0.116000175, 0.195000172, 0.116000175]}, 'properties': ['GRABBABLE', 'RECIPIENT', 'POURABLE', 'MOVABLE'], 'states': []}
+{'id': 413, 'category': 'Remote_control_1', 'class_name': 'remotecontrol', 'prefab_name': 'Remote_control_1', 'obj_transform': {'position': [-9.246215, 0.583069861, -4.555038], 'rotation': [0.0, -0.7071068, 0.0, 0.7071067], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-9.246253, 0.6007386, -4.55482149], 'size': [0.0820000246, 0.035, 0.201999962]}, 'properties': ['GRABBABLE', 'HAS_SWITCH', 'MOVABLE'], 'states': ['OFF']}
+{'id': 414, 'category': 'Remote_control_1', 'class_name': 'remotecontrol', 'prefab_name': 'Remote_control_1', 'obj_transform': {'position': [-9.046215, 0.583069861, -4.555038], 'rotation': [0.0, -0.7071068, 0.0, 0.7071067], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-9.046253, 0.6007386, -4.55482149], 'size': [0.0820000246, 0.035, 0.201999962]}, 'properties': ['GRABBABLE', 'HAS_SWITCH', 'MOVABLE'], 'states': ['OFF']}
+{'id': 415, 'category': 'WineGlass_2', 'class_name': 'wineglass', 'prefab_name': 'WineGlass_2', 'obj_transform': {'position': [-7.35871744, 0.48671785, -4.47336769], 'rotation': [0.0, -0.7071068, 0.0, 0.7071067], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-7.35871744, 0.48671785, -4.47336769], 'size': [0.116000175, 0.195, 0.116000175]}, 'properties': ['GRABBABLE', 'RECIPIENT', 'POURABLE', 'MOVABLE'], 'states': []}
+{'id': 416, 'category': 'WineGlass_2', 'class_name': 'wineglass', 'prefab_name': 'WineGlass_2', 'obj_transform': {'position': [-9.145998, 0.680738568, -4.55500031], 'rotation': [0.0, -0.7071068, 0.0, 0.7071067], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-9.145998, 0.680738568, -4.55500031], 'size': [0.115999222, 0.194999933, 0.116000175]}, 'properties': ['GRABBABLE', 'RECIPIENT', 'POURABLE', 'MOVABLE'], 'states': []}
+{'id': 417, 'category': 'Book_1', 'class_name': 'book', 'prefab_name': 'Book_1', 'obj_transform': {'position': [-7.25871754, 0.5276389, -4.47336769], 'rotation': [2.98023224e-08, -2.98023224e-08, 0.7071068, 0.7071067], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-7.25871754, 0.5276389, -4.47336769], 'size': [0.221235275, 0.276918173, 0.05725479]}, 'properties': ['GRABBABLE', 'CUTTABLE', 'CAN_OPEN', 'READABLE', 'HAS_PAPER', 'MOVABLE'], 'states': ['CLOSED']}
+{'id': 418, 'category': 'Book_1', 'class_name': 'book', 'prefab_name': 'Book_1', 'obj_transform': {'position': [-9.32690048, 0.7216977, -4.496222], 'rotation': [2.98023224e-08, -2.98023224e-08, 0.7071068, 0.7071067], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-9.32690048, 0.7216977, -4.496222], 'size': [0.221235275, 0.276918173, 0.05725479]}, 'properties': ['GRABBABLE', 'CUTTABLE', 'CAN_OPEN', 'READABLE', 'HAS_PAPER', 'MOVABLE'], 'states': ['CLOSED']}
+{'id': 419, 'category': 'Wine_1', 'class_name': 'wine', 'prefab_name': 'Wine_1', 'obj_transform': {'position': [1.459403, 0.745845437, 5.95199871], 'rotation': [0.0, 0.7071068, 0.0, 0.7071067], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [1.459403, 0.745845437, 5.95199871], 'size': [0.122999907, 0.4555695, 0.123000145]}, 'properties': ['GRABBABLE', 'DRINKABLE', 'POURABLE', 'MOVABLE'], 'states': []}
+{'id': 420, 'category': 'WineGlass_2', 'class_name': 'wineglass', 'prefab_name': 'WineGlass_2', 'obj_transform': {'position': [1.459403, 0.872106552, 5.95199871], 'rotation': [0.0, 0.7071068, 0.0, 0.7071067], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [1.459403, 0.872106552, 5.95199871], 'size': [0.115999937, 0.194999933, 0.116000175]}, 'properties': ['GRABBABLE', 'RECIPIENT', 'POURABLE', 'MOVABLE'], 'states': []}
+{'id': 421, 'category': 'WineGlass_2', 'class_name': 'wineglass', 'prefab_name': 'WineGlass_2', 'obj_transform': {'position': [1.459403, 0.872106552, 5.95199871], 'rotation': [0.0, 0.7071068, 0.0, 0.7071067], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [1.459403, 0.872106552, 5.95199871], 'size': [0.115999937, 0.194999933, 0.116000175]}, 'properties': ['GRABBABLE', 'RECIPIENT', 'POURABLE', 'MOVABLE'], 'states': []}
+final s: True
+wine 1 [411, 419]
+num nodes:
+351 351
+apartment: 2: success 1 over 4 (total: 100000)
+------------------------------------------------------------------------------
+testing 4/100000: setup_table. apartment 2
+------------------------------------------------------------------------------
+[136, 137, 146]
+[136, 137, 146]
+init goal: {'chips': 1}
+Placing: chips. Candidates: [('INSIDE', 'microwave'), ('INSIDE', 'cabinet'), ('INSIDE', 'kitchencabinet'), ('ON', 'sofa'), ('ON', 'kitchentable')] [['INSIDE', 'microwave'], ['INSIDE', 'cabinet'], ['INSIDE', 'kitchencabinet'], ['ON', 'sofa'], ['ON', 'kitchentable']]
+1
+Placing: condimentbottle. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet']]
+1
+Placing: remotecontrol. Candidates: [('ON', 'sofa'), ('ON', 'coffeetable'), ('INSIDE', 'cabinet')] [['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'cabinet']]
+1
+Placing: plate. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'sofa'), ('ON', 'coffeetable'), ('INSIDE', 'fridge'), ('INSIDE', 'dishwasher'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'fridge'], ['INSIDE', 'dishwasher'], ['INSIDE', 'stove']]
+1
+0
+1
+Placing: wineglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+0
+0
+0
+1
+Placing: waterglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+0
+1
+Placing: dishbowl. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('INSIDE', 'fridge'), ('ON', 'coffeetable'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['INSIDE', 'fridge'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+0
+1
+1
+0
+0
+0
+0
+1
+1
+0
+0
+1
+Placing: cupcake. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('ON', 'sofa'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['ON', 'sofa'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['INSIDE', 'stove']]
+1
+1
+1
+1
+Placing: salmon. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'fridge'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'fridge'], ['INSIDE', 'stove']]
+0
+0
+1
+1
+Placing: apple. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet']]
+apple 162
+1
+apple 162
+1
+apple 131
+1
+apple 162
+1
+Placing: book. Candidates: [('ON', 'sofa'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('ON', 'nightstand'), ('ON', 'sofa')] [['ON', 'sofa'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['ON', 'nightstand'], ['ON', 'sofa']]
+1
+1
+0
+1
+1
+Placing: wine. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable']]
+1
+1
+Adding objects:
+[32m[][0m
+[31m[][0m
+----------------------------------------------------------------------
+setup_table False {'unplaced': ['chips.1000', 'condimentbottle.1001', 'plate.1003', 'plate.1004', 'waterglass.1006', 'waterglass.1007', 'dishbowl.1008', 'dishbowl.1009', 'dishbowl.1010', 'dishbowl.1011', 'dishbowl.1012', 'cupcake.1013', 'cupcake.1014', 'cupcake.1015', 'cupcake.1016', 'salmon.1017', 'salmon.1018', 'apple.1019', 'apple.1020', 'apple.1021', 'apple.1022']} 16
+{'unplaced': ['chips.1000', 'condimentbottle.1001', 'plate.1003', 'plate.1004', 'waterglass.1006', 'waterglass.1007', 'dishbowl.1008', 'dishbowl.1009', 'dishbowl.1010', 'dishbowl.1011', 'dishbowl.1012', 'cupcake.1013', 'cupcake.1014', 'cupcake.1015', 'cupcake.1016', 'salmon.1017', 'salmon.1018', 'apple.1019', 'apple.1020', 'apple.1021', 'apple.1022']}
+Objects unplaced
+['cabinet']
+Objects unplaced
+['microwave']
+Objects unplaced
+['microwave']
+Objects unplaced
+['stove']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['fridge']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['kitchentable']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['kitchentable']
+Objects unplaced
+['kitchentable']
+Objects unplaced
+['kitchentable']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['kitchentable']
+Objects unplaced
+['kitchentable']
+Objects unplaced
+['fridge']
+Objects unplaced
+['fridge']
+Objects unplaced
+['kitchentable']
+Objects unplaced
+['fridge']
+apartment: 2: success 1 over 5 (total: 100000)
+------------------------------------------------------------------------------
+testing 5/100000: setup_table. apartment 2
+------------------------------------------------------------------------------
+[136, 137, 146]
+[136, 137, 146]
+init goal: {'book': 1}
+Placing: book. Candidates: [('ON', 'sofa'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('ON', 'nightstand'), ('ON', 'sofa')] [['ON', 'sofa'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['ON', 'nightstand'], ['ON', 'sofa']]
+1
+1
+0
+1
+0
+1
+Placing: condimentbottle. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet']]
+1
+Placing: remotecontrol. Candidates: [('ON', 'sofa'), ('ON', 'coffeetable'), ('INSIDE', 'cabinet')] [['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'cabinet']]
+1
+Placing: plate. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'sofa'), ('ON', 'coffeetable'), ('INSIDE', 'fridge'), ('INSIDE', 'dishwasher'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'fridge'], ['INSIDE', 'dishwasher'], ['INSIDE', 'stove']]
+1
+1
+1
+1
+1
+Placing: wineglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+1
+0
+1
+1
+1
+Placing: waterglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+1
+0
+1
+Placing: dishbowl. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('INSIDE', 'fridge'), ('ON', 'coffeetable'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['INSIDE', 'fridge'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+0
+0
+0
+1
+1
+1
+Placing: cupcake. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('ON', 'sofa'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['ON', 'sofa'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['INSIDE', 'stove']]
+1
+1
+1
+Placing: salmon. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'fridge'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'fridge'], ['INSIDE', 'stove']]
+1
+1
+Placing: apple. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet']]
+apple 135
+1
+apple 162
+1
+apple 143
+1
+Placing: chips. Candidates: [('INSIDE', 'microwave'), ('INSIDE', 'cabinet'), ('INSIDE', 'kitchencabinet'), ('ON', 'sofa'), ('ON', 'kitchentable')] [['INSIDE', 'microwave'], ['INSIDE', 'cabinet'], ['INSIDE', 'kitchencabinet'], ['ON', 'sofa'], ['ON', 'kitchentable']]
+1
+1
+Placing: wine. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable']]
+1
+Adding objects:
+[32m[][0m
+[31m[][0m
+----------------------------------------------------------------------
+setup_table False {'unplaced': ['condimentbottle.1004', 'plate.1006', 'plate.1007', 'plate.1008', 'plate.1009', 'plate.1010', 'waterglass.1016', 'waterglass.1017', 'waterglass.1018', 'dishbowl.1019', 'dishbowl.1020', 'dishbowl.1021', 'cupcake.1022', 'cupcake.1023', 'cupcake.1024', 'salmon.1025', 'salmon.1026', 'apple.1027', 'apple.1028', 'apple.1029', 'chips.1030', 'chips.1031']} 25
+{'unplaced': ['condimentbottle.1004', 'plate.1006', 'plate.1007', 'plate.1008', 'plate.1009', 'plate.1010', 'waterglass.1016', 'waterglass.1017', 'waterglass.1018', 'dishbowl.1019', 'dishbowl.1020', 'dishbowl.1021', 'cupcake.1022', 'cupcake.1023', 'cupcake.1024', 'salmon.1025', 'salmon.1026', 'apple.1027', 'apple.1028', 'apple.1029', 'chips.1030', 'chips.1031']}
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['fridge']
+Objects unplaced
+['sofa']
+Objects unplaced
+['coffeetable']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['kitchentable']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['sofa']
+Objects unplaced
+['sofa']
+Objects unplaced
+['coffeetable']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['stove']
+Objects unplaced
+['sofa']
+Objects unplaced
+['fridge']
+Objects unplaced
+['kitchentable']
+Objects unplaced
+['fridge']
+Objects unplaced
+['kitchentable']
+Objects unplaced
+['fridge']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['sofa']
+Objects unplaced
+['sofa']
+Placing: book. Candidates: [('ON', 'sofa'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('ON', 'nightstand'), ('ON', 'sofa')] [['ON', 'sofa'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['ON', 'nightstand'], ['ON', 'sofa']]
+{'id': 411, 'category': 'WineGlass_2', 'class_name': 'wineglass', 'prefab_name': 'WineGlass_2', 'obj_transform': {'position': [-7.238623, 2.271, 2.4912], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-7.238623, 2.271, 2.4912], 'size': [0.116000175, 0.195000172, 0.116000175]}, 'properties': ['GRABBABLE', 'RECIPIENT', 'POURABLE', 'MOVABLE'], 'states': []}
+{'id': 412, 'category': 'Wine_1', 'class_name': 'wine', 'prefab_name': 'Wine_1', 'obj_transform': {'position': [-3.398, 1.20978475, 5.318], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-3.398, 1.20978475, 5.318], 'size': [0.123000145, 0.4555695, 0.123000145]}, 'properties': ['GRABBABLE', 'DRINKABLE', 'POURABLE', 'MOVABLE'], 'states': []}
+{'id': 413, 'category': 'Book_1', 'class_name': 'book', 'prefab_name': 'Book_1', 'obj_transform': {'position': [-9.245998, 0.7216977, -4.55500031], 'rotation': [2.98023224e-08, -2.98023224e-08, 0.7071068, 0.7071067], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-9.245998, 0.7216977, -4.55500031], 'size': [0.221235275, 0.276918173, 0.05725479]}, 'properties': ['GRABBABLE', 'CUTTABLE', 'CAN_OPEN', 'READABLE', 'HAS_PAPER', 'MOVABLE'], 'states': ['CLOSED']}
+{'id': 414, 'category': 'Book_1', 'class_name': 'book', 'prefab_name': 'Book_1', 'obj_transform': {'position': [-7.35871744, 0.527672052, -4.47336769], 'rotation': [2.98023224e-08, -2.98023224e-08, 0.7071068, 0.7071067], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-7.35871744, 0.527672052, -4.47336769], 'size': [0.221235275, 0.276918173, 0.05725479]}, 'properties': ['GRABBABLE', 'CUTTABLE', 'CAN_OPEN', 'READABLE', 'HAS_PAPER', 'MOVABLE'], 'states': ['CLOSED']}
+{'id': 415, 'category': 'WineGlass_2', 'class_name': 'wineglass', 'prefab_name': 'WineGlass_2', 'obj_transform': {'position': [-7.32781553, 0.4867076, -4.378262], 'rotation': [0.0, -0.7071068, 0.0, 0.7071067], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-7.32781553, 0.4867076, -4.378262], 'size': [0.116000175, 0.195, 0.116000175]}, 'properties': ['GRABBABLE', 'RECIPIENT', 'POURABLE', 'MOVABLE'], 'states': []}
+{'id': 416, 'category': 'WineGlass_2', 'class_name': 'wineglass', 'prefab_name': 'WineGlass_2', 'obj_transform': {'position': [-7.389619, 0.486728072, -4.56847334], 'rotation': [0.0, -0.7071068, 0.0, 0.7071067], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-7.389619, 0.486728072, -4.56847334], 'size': [0.116000175, 0.194999963, 0.116000175]}, 'properties': ['GRABBABLE', 'RECIPIENT', 'POURABLE', 'MOVABLE'], 'states': []}
+{'id': 417, 'category': 'WineGlass_2', 'class_name': 'wineglass', 'prefab_name': 'WineGlass_2', 'obj_transform': {'position': [-9.215096, 0.680738568, -4.45989466], 'rotation': [0.0, -0.7071068, 0.0, 0.7071067], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-9.215096, 0.680738568, -4.45989466], 'size': [0.115999222, 0.194999933, 0.116000175]}, 'properties': ['GRABBABLE', 'RECIPIENT', 'POURABLE', 'MOVABLE'], 'states': []}
+{'id': 418, 'category': 'Book_1', 'class_name': 'book', 'prefab_name': 'Book_1', 'obj_transform': {'position': [1.459403, 0.913065732, 5.95199871], 'rotation': [0.7071068, 0.7071067, -1.49011612e-07, -8.940697e-08], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [1.459403, 0.9130658, 5.95199871], 'size': [0.221235037, 0.276918232, 0.05725479]}, 'properties': ['GRABBABLE', 'CUTTABLE', 'CAN_OPEN', 'READABLE', 'HAS_PAPER', 'MOVABLE'], 'states': ['CLOSED']}
+{'id': 419, 'category': 'Book_1', 'class_name': 'book', 'prefab_name': 'Book_1', 'obj_transform': {'position': [1.459403, 0.913065732, 5.95199871], 'rotation': [0.7071068, 0.7071067, -1.49011612e-07, -8.940697e-08], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [1.459403, 0.9130658, 5.95199871], 'size': [0.221235037, 0.276918232, 0.05725479]}, 'properties': ['GRABBABLE', 'CUTTABLE', 'CAN_OPEN', 'READABLE', 'HAS_PAPER', 'MOVABLE'], 'states': ['CLOSED']}
+{'id': 420, 'category': 'Remote_control_1', 'class_name': 'remotecontrol', 'prefab_name': 'Remote_control_1', 'obj_transform': {'position': [1.45918751, 0.7744379, 5.951961], 'rotation': [0.0, 0.7071068, 0.0, 0.7071067], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [1.4592247, 0.7921066, 5.951745], 'size': [0.081999965, 0.035, 0.201999992]}, 'properties': ['GRABBABLE', 'HAS_SWITCH', 'MOVABLE'], 'states': ['OFF']}
+{'id': 421, 'category': 'WineGlass_2', 'class_name': 'wineglass', 'prefab_name': 'WineGlass_2', 'obj_transform': {'position': [1.55940342, 0.872106552, 5.95199871], 'rotation': [0.0, 0.7071068, 0.0, 0.7071067], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [1.55940342, 0.872106552, 5.95199871], 'size': [0.115999937, 0.194999933, 0.116000175]}, 'properties': ['GRABBABLE', 'RECIPIENT', 'POURABLE', 'MOVABLE'], 'states': []}
+final s: True
+book 1 [413, 414, 418, 419]
+num nodes:
+351 351
+apartment: 2: success 2 over 6 (total: 100000)
+apartment 4
+------------------------------------------------------------------------------
+testing 0/100000: setup_table. apartment 4
+------------------------------------------------------------------------------
+[150]
+[150]
+init goal: {'book': 1}
+Placing: book. Candidates: [('ON', 'sofa'), ('INSIDE', 'cabinet'), ('ON', 'kitchentable'), ('ON', 'nightstand'), ('ON', 'sofa')] [['ON', 'sofa'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['ON', 'kitchentable'], ['ON', 'nightstand'], ['ON', 'sofa']]
+1
+0
+1
+1
+Placing: condimentbottle. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet']]
+1
+1
+Placing: remotecontrol. Candidates: [('ON', 'sofa'), ('INSIDE', 'cabinet')] [['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'cabinet']]
+1
+Placing: plate. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'sofa'), ('INSIDE', 'fridge'), ('INSIDE', 'dishwasher'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'fridge'], ['INSIDE', 'dishwasher'], ['INSIDE', 'stove']]
+1
+1
+Placing: wineglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+Placing: waterglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+Placing: dishbowl. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['INSIDE', 'fridge'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+0
+1
+0
+1
+1
+1
+Placing: cupcake. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('ON', 'sofa'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['ON', 'sofa'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['INSIDE', 'stove']]
+1
+1
+Placing: salmon. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'fridge'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'fridge'], ['INSIDE', 'stove']]
+0
+0
+1
+1
+Placing: apple. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet']]
+apple 148
+1
+apple 275
+1
+Placing: chips. Candidates: [('INSIDE', 'microwave'), ('INSIDE', 'cabinet'), ('INSIDE', 'kitchencabinet'), ('ON', 'sofa'), ('ON', 'kitchentable')] [['INSIDE', 'microwave'], ['INSIDE', 'cabinet'], ['INSIDE', 'kitchencabinet'], ['ON', 'sofa'], ['ON', 'kitchentable']]
+0
+0
+0
+0
+0
+0
+0
+1
+Placing: wine. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable']]
+1
+1
+Adding objects:
+[32m[][0m
+[31m[][0m
+----------------------------------------------------------------------
+setup_table False {'unplaced': ['condimentbottle.1003', 'condimentbottle.1004', 'plate.1006', 'plate.1007', 'waterglass.1009', 'dishbowl.1010', 'dishbowl.1011', 'dishbowl.1012', 'dishbowl.1013', 'dishbowl.1014', 'cupcake.1015', 'cupcake.1016', 'salmon.1017', 'salmon.1018', 'apple.1019', 'apple.1020', 'chips.1021']} 15
+{'unplaced': ['condimentbottle.1003', 'condimentbottle.1004', 'plate.1006', 'plate.1007', 'waterglass.1009', 'dishbowl.1010', 'dishbowl.1011', 'dishbowl.1012', 'dishbowl.1013', 'dishbowl.1014', 'cupcake.1015', 'cupcake.1016', 'salmon.1017', 'salmon.1018', 'apple.1019', 'apple.1020', 'chips.1021']}
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['sofa']
+Objects unplaced
+['microwave']
+Objects unplaced
+['sofa']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['dishwasher']
+Objects unplaced
+['sofa']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['microwave']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['stove']
+Objects unplaced
+['stove']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['sofa']
+Placing: book. Candidates: [('ON', 'sofa'), ('INSIDE', 'cabinet'), ('ON', 'kitchentable'), ('ON', 'nightstand'), ('ON', 'sofa')] [['ON', 'sofa'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['ON', 'kitchentable'], ['ON', 'nightstand'], ['ON', 'sofa']]
+1
+{'id': 368, 'category': 'Book_1', 'class_name': 'book', 'prefab_name': 'Book_1', 'obj_transform': {'position': [-1.62, 0.7216977, -2.27], 'rotation': [0.5000001, 0.5, 0.5, 0.49999994], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-1.62, 0.7216977, -2.27], 'size': [0.05725479, 0.2769183, 0.2212348]}, 'properties': ['GRABBABLE', 'CUTTABLE', 'CAN_OPEN', 'READABLE', 'HAS_PAPER', 'MOVABLE'], 'states': ['CLOSED']}
+{'id': 369, 'category': 'Book_1', 'class_name': 'book', 'prefab_name': 'Book_1', 'obj_transform': {'position': [6.89529371, 0.7212069, -4.879], 'rotation': [0.5000001, 0.5, 0.5, 0.49999994], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [6.89529371, 0.7212069, -4.879], 'size': [0.05725479, 0.2769183, 0.221235275]}, 'properties': ['GRABBABLE', 'CUTTABLE', 'CAN_OPEN', 'READABLE', 'HAS_PAPER', 'MOVABLE'], 'states': ['CLOSED']}
+{'id': 370, 'category': 'Wine_1', 'class_name': 'wine', 'prefab_name': 'Wine_1', 'obj_transform': {'position': [7.235423, 2.16928482, 0.214600116], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [7.235423, 2.16928482, 0.214600116], 'size': [0.123000145, 0.4555694, 0.123000011]}, 'properties': ['GRABBABLE', 'DRINKABLE', 'POURABLE', 'MOVABLE'], 'states': []}
+{'id': 371, 'category': 'Wine_1', 'class_name': 'wine', 'prefab_name': 'Wine_1', 'obj_transform': {'position': [7.079718, 1.19580746, -3.06155133], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [7.079718, 1.19580746, -3.06155133], 'size': [0.123000145, 0.4555695, 0.123000145]}, 'properties': ['GRABBABLE', 'DRINKABLE', 'POURABLE', 'MOVABLE'], 'states': []}
+{'id': 372, 'category': 'Book_1', 'class_name': 'book', 'prefab_name': 'Book_1', 'obj_transform': {'position': [4.35149956, 0.7216977, -9.678], 'rotation': [0.7071068, 0.7071067, -1.49011612e-07, -8.940697e-08], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [4.35149956, 0.7216977, -9.678], 'size': [0.221235275, 0.276918173, 0.05725479]}, 'properties': ['GRABBABLE', 'CUTTABLE', 'CAN_OPEN', 'READABLE', 'HAS_PAPER', 'MOVABLE'], 'states': ['CLOSED']}
+{'id': 373, 'category': 'Remote_control_1', 'class_name': 'remotecontrol', 'prefab_name': 'Remote_control_1', 'obj_transform': {'position': [0.284784555, 0.789247334, -9.385037], 'rotation': [0.0, 0.7071068, 0.0, 0.7071067], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [0.2848221, 0.806916058, -9.385254], 'size': [0.081999965, 0.035, 0.201999992]}, 'properties': ['GRABBABLE', 'HAS_SWITCH', 'MOVABLE'], 'states': ['OFF']}
+{'id': 374, 'category': 'WineGlass_2', 'class_name': 'wineglass', 'prefab_name': 'WineGlass_2', 'obj_transform': {'position': [0.3850006, 0.886916041, -9.385], 'rotation': [0.0, 0.7071068, 0.0, 0.7071067], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [0.3850006, 0.886916041, -9.385], 'size': [0.116, 0.194999933, 0.115999222]}, 'properties': ['GRABBABLE', 'RECIPIENT', 'POURABLE', 'MOVABLE'], 'states': []}
+final s: True
+book 1 [368, 369, 372]
+num nodes:
+343 343
+apartment: 4: success 1 over 1 (total: 100000)
+------------------------------------------------------------------------------
+testing 1/100000: setup_table. apartment 4
+------------------------------------------------------------------------------
+[150]
+[150]
+init goal: {'condimentbottle': 1}
+Placing: condimentbottle. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet']]
+1
+1
+Placing: remotecontrol. Candidates: [('ON', 'sofa'), ('INSIDE', 'cabinet')] [['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'cabinet']]
+1
+Placing: plate. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'sofa'), ('INSIDE', 'fridge'), ('INSIDE', 'dishwasher'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'fridge'], ['INSIDE', 'dishwasher'], ['INSIDE', 'stove']]
+1
+1
+Placing: wineglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+1
+1
+1
+1
+Placing: waterglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+1
+1
+1
+Placing: dishbowl. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['INSIDE', 'fridge'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+1
+1
+1
+1
+Placing: cupcake. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('ON', 'sofa'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['ON', 'sofa'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['INSIDE', 'stove']]
+1
+1
+Placing: salmon. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'fridge'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'fridge'], ['INSIDE', 'stove']]
+1
+1
+Placing: apple. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet']]
+apple 275
+1
+apple 157
+1
+apple 138
+1
+apple 157
+1
+Placing: chips. Candidates: [('INSIDE', 'microwave'), ('INSIDE', 'cabinet'), ('INSIDE', 'kitchencabinet'), ('ON', 'sofa'), ('ON', 'kitchentable')] [['INSIDE', 'microwave'], ['INSIDE', 'cabinet'], ['INSIDE', 'kitchencabinet'], ['ON', 'sofa'], ['ON', 'kitchentable']]
+1
+1
+Placing: book. Candidates: [('ON', 'sofa'), ('INSIDE', 'cabinet'), ('ON', 'kitchentable'), ('ON', 'nightstand'), ('ON', 'sofa')] [['ON', 'sofa'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['ON', 'kitchentable'], ['ON', 'nightstand'], ['ON', 'sofa']]
+1
+Placing: wine. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable']]
+1
+Adding objects:
+[32m[][0m
+[31m[][0m
+----------------------------------------------------------------------
+setup_table False {'unplaced': ['condimentbottle.1000', 'condimentbottle.1001', 'plate.1003', 'plate.1004', 'waterglass.1010', 'waterglass.1011', 'waterglass.1012', 'waterglass.1013', 'dishbowl.1014', 'dishbowl.1015', 'dishbowl.1016', 'dishbowl.1017', 'dishbowl.1018', 'cupcake.1019', 'cupcake.1020', 'salmon.1021', 'salmon.1022', 'apple.1023', 'apple.1024', 'apple.1025', 'apple.1026', 'chips.1027', 'chips.1028']} 24
+{'unplaced': ['condimentbottle.1000', 'condimentbottle.1001', 'plate.1003', 'plate.1004', 'waterglass.1010', 'waterglass.1011', 'waterglass.1012', 'waterglass.1013', 'dishbowl.1014', 'dishbowl.1015', 'dishbowl.1016', 'dishbowl.1017', 'dishbowl.1018', 'cupcake.1019', 'cupcake.1020', 'salmon.1021', 'salmon.1022', 'apple.1023', 'apple.1024', 'apple.1025', 'apple.1026', 'chips.1027', 'chips.1028']}
+Objects unplaced
+['kitchentable']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['kitchentable']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['kitchentable']
+Objects unplaced
+['kitchentable']
+Objects unplaced
+['dishwasher']
+Objects unplaced
+['fridge']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['sofa']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['stove']
+Objects unplaced
+['fridge']
+Objects unplaced
+['kitchentable']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['fridge']
+Objects unplaced
+['kitchentable']
+Objects unplaced
+['fridge']
+Objects unplaced
+['microwave']
+Objects unplaced
+['sofa']
+apartment: 4: success 1 over 2 (total: 100000)
+------------------------------------------------------------------------------
+testing 2/100000: setup_table. apartment 4
+------------------------------------------------------------------------------
+[150]
+[150]
+init goal: {'plate': 1}
+Placing: plate. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'sofa'), ('INSIDE', 'fridge'), ('INSIDE', 'dishwasher'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'fridge'], ['INSIDE', 'dishwasher'], ['INSIDE', 'stove']]
+1
+1
+1
+Placing: condimentbottle. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet']]
+1
+Placing: remotecontrol. Candidates: [('ON', 'sofa'), ('INSIDE', 'cabinet')] [['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'cabinet']]
+1
+Placing: wineglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+1
+1
+1
+Placing: waterglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+1
+1
+1
+1
+Placing: dishbowl. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['INSIDE', 'fridge'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+1
+0
+1
+1
+1
+Placing: cupcake. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('ON', 'sofa'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['ON', 'sofa'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['INSIDE', 'stove']]
+1
+1
+1
+Placing: salmon. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'fridge'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'fridge'], ['INSIDE', 'stove']]
+1
+Placing: apple. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet']]
+apple 147
+1
+apple 157
+1
+apple 144
+1
+apple 275
+1
+Placing: chips. Candidates: [('INSIDE', 'microwave'), ('INSIDE', 'cabinet'), ('INSIDE', 'kitchencabinet'), ('ON', 'sofa'), ('ON', 'kitchentable')] [['INSIDE', 'microwave'], ['INSIDE', 'cabinet'], ['INSIDE', 'kitchencabinet'], ['ON', 'sofa'], ['ON', 'kitchentable']]
+1
+Placing: book. Candidates: [('ON', 'sofa'), ('INSIDE', 'cabinet'), ('ON', 'kitchentable'), ('ON', 'nightstand'), ('ON', 'sofa')] [['ON', 'sofa'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['ON', 'kitchentable'], ['ON', 'nightstand'], ['ON', 'sofa']]
+1
+1
+1
+Placing: wine. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable']]
+1
+1
+Adding objects:
+[32m[][0m
+[31m[][0m
+----------------------------------------------------------------------
+setup_table False {'unplaced': ['plate.1000', 'plate.1001', 'plate.1002', 'condimentbottle.1003', 'waterglass.1009', 'waterglass.1010', 'waterglass.1011', 'waterglass.1012', 'waterglass.1013', 'dishbowl.1014', 'dishbowl.1015', 'dishbowl.1016', 'dishbowl.1017', 'dishbowl.1018', 'cupcake.1019', 'cupcake.1020', 'cupcake.1021', 'salmon.1022', 'apple.1023', 'apple.1024', 'apple.1025', 'apple.1026', 'chips.1027']} 23
+{'unplaced': ['plate.1000', 'plate.1001', 'plate.1002', 'condimentbottle.1003', 'waterglass.1009', 'waterglass.1010', 'waterglass.1011', 'waterglass.1012', 'waterglass.1013', 'dishbowl.1014', 'dishbowl.1015', 'dishbowl.1016', 'dishbowl.1017', 'dishbowl.1018', 'cupcake.1019', 'cupcake.1020', 'cupcake.1021', 'salmon.1022', 'apple.1023', 'apple.1024', 'apple.1025', 'apple.1026', 'chips.1027']}
+Objects unplaced
+['fridge']
+Objects unplaced
+['microwave']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['microwave']
+Objects unplaced
+['kitchentable']
+Objects unplaced
+['dishwasher']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['kitchentable']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['kitchentable']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['sofa']
+Objects unplaced
+['microwave']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['fridge']
+Objects unplaced
+['kitchentable']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['fridge']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['kitchencabinet']
+apartment: 4: success 1 over 3 (total: 100000)
+------------------------------------------------------------------------------
+testing 3/100000: setup_table. apartment 4
+------------------------------------------------------------------------------
+[150]
+[150]
+init goal: {'cupcake': 1}
+Placing: cupcake. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('ON', 'sofa'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['ON', 'sofa'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['INSIDE', 'stove']]
+1
+1
+1
+Placing: condimentbottle. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet']]
+1
+1
+Placing: remotecontrol. Candidates: [('ON', 'sofa'), ('INSIDE', 'cabinet')] [['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'cabinet']]
+1
+Placing: plate. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'sofa'), ('INSIDE', 'fridge'), ('INSIDE', 'dishwasher'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'fridge'], ['INSIDE', 'dishwasher'], ['INSIDE', 'stove']]
+1
+1
+1
+Placing: wineglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+1
+1
+Placing: waterglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+Placing: dishbowl. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['INSIDE', 'fridge'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+1
+Placing: salmon. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'fridge'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'fridge'], ['INSIDE', 'stove']]
+1
+Placing: apple. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet']]
+apple 142
+1
+apple 157
+1
+Placing: chips. Candidates: [('INSIDE', 'microwave'), ('INSIDE', 'cabinet'), ('INSIDE', 'kitchencabinet'), ('ON', 'sofa'), ('ON', 'kitchentable')] [['INSIDE', 'microwave'], ['INSIDE', 'cabinet'], ['INSIDE', 'kitchencabinet'], ['ON', 'sofa'], ['ON', 'kitchentable']]
+1
+1
+Placing: book. Candidates: [('ON', 'sofa'), ('INSIDE', 'cabinet'), ('ON', 'kitchentable'), ('ON', 'nightstand'), ('ON', 'sofa')] [['ON', 'sofa'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['ON', 'kitchentable'], ['ON', 'nightstand'], ['ON', 'sofa']]
+0
+1
+0
+1
+1
+Placing: wine. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable']]
+1
+Adding objects:
+[32m[][0m
+[31m[][0m
+----------------------------------------------------------------------
+setup_table False {'unplaced': ['cupcake.1000', 'cupcake.1001', 'cupcake.1002', 'condimentbottle.1003', 'condimentbottle.1004', 'plate.1006', 'plate.1007', 'plate.1008', 'waterglass.1012', 'dishbowl.1013', 'dishbowl.1014', 'salmon.1015', 'apple.1016', 'apple.1017', 'chips.1018', 'chips.1019']} 21
+{'unplaced': ['cupcake.1000', 'cupcake.1001', 'cupcake.1002', 'condimentbottle.1003', 'condimentbottle.1004', 'plate.1006', 'plate.1007', 'plate.1008', 'waterglass.1012', 'dishbowl.1013', 'dishbowl.1014', 'salmon.1015', 'apple.1016', 'apple.1017', 'chips.1018', 'chips.1019']}
+Objects unplaced
+['microwave']
+Objects unplaced
+['sofa']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['microwave']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['stove']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['dishwasher']
+Objects unplaced
+['sofa']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['fridge']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['fridge']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['microwave']
+apartment: 4: success 1 over 4 (total: 100000)
+------------------------------------------------------------------------------
+testing 4/100000: setup_table. apartment 4
+------------------------------------------------------------------------------
+[150]
+[150]
+init goal: {'waterglass': 1}
+Placing: waterglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+1
+1
+1
+1
+Placing: condimentbottle. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet']]
+1
+Placing: remotecontrol. Candidates: [('ON', 'sofa'), ('INSIDE', 'cabinet')] [['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'cabinet']]
+1
+Placing: plate. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'sofa'), ('INSIDE', 'fridge'), ('INSIDE', 'dishwasher'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'fridge'], ['INSIDE', 'dishwasher'], ['INSIDE', 'stove']]
+1
+1
+1
+1
+Placing: wineglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+1
+1
+1
+1
+Placing: dishbowl. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['INSIDE', 'fridge'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+1
+Placing: cupcake. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('ON', 'sofa'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['ON', 'sofa'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['INSIDE', 'stove']]
+1
+1
+Placing: salmon. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'fridge'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'fridge'], ['INSIDE', 'stove']]
+1
+Placing: apple. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet']]
+apple 275
+1
+apple 148
+1
+apple 142
+1
+apple 148
+1
+Placing: chips. Candidates: [('INSIDE', 'microwave'), ('INSIDE', 'cabinet'), ('INSIDE', 'kitchencabinet'), ('ON', 'sofa'), ('ON', 'kitchentable')] [['INSIDE', 'microwave'], ['INSIDE', 'cabinet'], ['INSIDE', 'kitchencabinet'], ['ON', 'sofa'], ['ON', 'kitchentable']]
+1
+Placing: book. Candidates: [('ON', 'sofa'), ('INSIDE', 'cabinet'), ('ON', 'kitchentable'), ('ON', 'nightstand'), ('ON', 'sofa')] [['ON', 'sofa'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['ON', 'kitchentable'], ['ON', 'nightstand'], ['ON', 'sofa']]
+1
+1
+Placing: wine. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable']]
+1
+1
+Adding objects:
+[32m[][0m
+[31m[][0m
+----------------------------------------------------------------------
+setup_table False {'unplaced': ['waterglass.1000', 'waterglass.1001', 'waterglass.1002', 'waterglass.1003', 'waterglass.1004', 'condimentbottle.1005', 'plate.1007', 'plate.1008', 'plate.1009', 'plate.1010', 'dishbowl.1016', 'dishbowl.1017', 'cupcake.1018', 'cupcake.1019', 'salmon.1020', 'apple.1021', 'apple.1022', 'apple.1023', 'apple.1024', 'chips.1025']} 15
+{'unplaced': ['waterglass.1000', 'waterglass.1001', 'waterglass.1002', 'waterglass.1003', 'waterglass.1004', 'condimentbottle.1005', 'plate.1007', 'plate.1008', 'plate.1009', 'plate.1010', 'dishbowl.1016', 'dishbowl.1017', 'cupcake.1018', 'cupcake.1019', 'salmon.1020', 'apple.1021', 'apple.1022', 'apple.1023', 'apple.1024', 'chips.1025']}
+Objects unplaced
+['cabinet']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['dishwasher']
+Objects unplaced
+['dishwasher']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['sofa']
+Objects unplaced
+['sofa']
+Objects unplaced
+['fridge']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['dishwasher']
+Objects unplaced
+['fridge']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['stove']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['sofa']
+apartment: 4: success 1 over 5 (total: 100000)
+------------------------------------------------------------------------------
+testing 5/100000: setup_table. apartment 4
+------------------------------------------------------------------------------
+[150]
+[150]
+init goal: {'remotecontrol': 1}
+Placing: remotecontrol. Candidates: [('ON', 'sofa'), ('INSIDE', 'cabinet')] [['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'cabinet']]
+1
+1
+Placing: condimentbottle. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet']]
+1
+Placing: plate. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('ON', 'sofa'), ('INSIDE', 'fridge'), ('INSIDE', 'dishwasher'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'fridge'], ['INSIDE', 'dishwasher'], ['INSIDE', 'stove']]
+1
+1
+Placing: wineglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+Placing: waterglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+1
+1
+Placing: dishbowl. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'cabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'dishwasher')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['INSIDE', 'fridge'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+0
+1
+1
+Placing: cupcake. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('ON', 'sofa'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['ON', 'sofa'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['INSIDE', 'stove']]
+1
+1
+1
+Placing: salmon. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'fridge'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'fridge'], ['INSIDE', 'stove']]
+1
+Placing: apple. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet']]
+apple 157
+1
+apple 157
+1
+apple 157
+1
+Placing: chips. Candidates: [('INSIDE', 'microwave'), ('INSIDE', 'cabinet'), ('INSIDE', 'kitchencabinet'), ('ON', 'sofa'), ('ON', 'kitchentable')] [['INSIDE', 'microwave'], ['INSIDE', 'cabinet'], ['INSIDE', 'kitchencabinet'], ['ON', 'sofa'], ['ON', 'kitchentable']]
+1
+1
+Placing: book. Candidates: [('ON', 'sofa'), ('INSIDE', 'cabinet'), ('ON', 'kitchentable'), ('ON', 'nightstand'), ('ON', 'sofa')] [['ON', 'sofa'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['ON', 'kitchentable'], ['ON', 'nightstand'], ['ON', 'sofa']]
+0
+1
+0
+1
+Placing: wine. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'kitchencabinet'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable']]
+0
+1
+0
+1
+Adding objects:
+[32m[][0m
+[31m[][0m
+----------------------------------------------------------------------
+setup_table False {'unplaced': ['condimentbottle.1002', 'plate.1003', 'plate.1004', 'waterglass.1006', 'waterglass.1007', 'waterglass.1008', 'dishbowl.1009', 'dishbowl.1010', 'cupcake.1011', 'cupcake.1012', 'cupcake.1013', 'salmon.1014', 'apple.1015', 'apple.1016', 'apple.1017', 'chips.1018', 'chips.1019']} 18
+{'unplaced': ['condimentbottle.1002', 'plate.1003', 'plate.1004', 'waterglass.1006', 'waterglass.1007', 'waterglass.1008', 'dishbowl.1009', 'dishbowl.1010', 'cupcake.1011', 'cupcake.1012', 'cupcake.1013', 'salmon.1014', 'apple.1015', 'apple.1016', 'apple.1017', 'chips.1018', 'chips.1019']}
+Objects unplaced
+['microwave']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['kitchencabinet']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['dishwasher']
+Objects unplaced
+['dishwasher']
+Objects unplaced
+['dishwasher']
+Objects unplaced
+['microwave']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['microwave']
+Objects unplaced
+['stove']
+Objects unplaced
+['fridge']
+Objects unplaced
+['fridge']
+Objects unplaced
+['fridge']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['cabinet']
+Placing: remotecontrol. Candidates: [('ON', 'sofa'), ('INSIDE', 'cabinet')] [['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'cabinet']]
+{'id': 368, 'category': 'Remote_control_1', 'class_name': 'remotecontrol', 'prefab_name': 'Remote_control_1', 'obj_transform': {'position': [-1.72021616, 0.583069861, -2.27003765], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-1.72, 0.6007386, -2.27], 'size': [0.202, 0.035, 0.082]}, 'properties': ['GRABBABLE', 'HAS_SWITCH', 'MOVABLE'], 'states': ['OFF']}
+{'id': 369, 'category': 'Wine_1', 'class_name': 'wine', 'prefab_name': 'Wine_1', 'obj_transform': {'position': [6.3212, 2.16928482, 1.06262338], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [6.3212, 2.16928482, 1.06262338], 'size': [0.123000145, 0.4555694, 0.122999907]}, 'properties': ['GRABBABLE', 'DRINKABLE', 'POURABLE', 'MOVABLE'], 'states': []}
+{'id': 370, 'category': 'Wine_1', 'class_name': 'wine', 'prefab_name': 'Wine_1', 'obj_transform': {'position': [5.5728, 2.16928482, 1.06242335], 'rotation': [0.0, 0.0, 0.0, 1.0], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [5.5728, 2.16928482, 1.06242335], 'size': [0.123000145, 0.4555694, 0.122999907]}, 'properties': ['GRABBABLE', 'DRINKABLE', 'POURABLE', 'MOVABLE'], 'states': []}
+{'id': 371, 'category': 'Remote_control_1', 'class_name': 'remotecontrol', 'prefab_name': 'Remote_control_1', 'obj_transform': {'position': [0.284784555, 0.789247334, -9.385037], 'rotation': [0.0, 0.7071068, 0.0, 0.7071067], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [0.2848221, 0.806916058, -9.385254], 'size': [0.081999965, 0.035, 0.201999992]}, 'properties': ['GRABBABLE', 'HAS_SWITCH', 'MOVABLE'], 'states': ['OFF']}
+{'id': 372, 'category': 'WineGlass_2', 'class_name': 'wineglass', 'prefab_name': 'WineGlass_2', 'obj_transform': {'position': [0.3850006, 0.886916041, -9.385], 'rotation': [0.0, 0.7071068, 0.0, 0.7071067], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [0.3850006, 0.886916041, -9.385], 'size': [0.116, 0.194999933, 0.115999222]}, 'properties': ['GRABBABLE', 'RECIPIENT', 'POURABLE', 'MOVABLE'], 'states': []}
+{'id': 373, 'category': 'Book_1', 'class_name': 'book', 'prefab_name': 'Book_1', 'obj_transform': {'position': [4.35149956, 0.7216977, -9.678], 'rotation': [0.7071068, 0.7071067, -1.49011612e-07, -8.940697e-08], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [4.35149956, 0.7216977, -9.678], 'size': [0.221235275, 0.276918173, 0.05725479]}, 'properties': ['GRABBABLE', 'CUTTABLE', 'CAN_OPEN', 'READABLE', 'HAS_PAPER', 'MOVABLE'], 'states': ['CLOSED']}
+{'id': 374, 'category': 'Book_1', 'class_name': 'book', 'prefab_name': 'Book_1', 'obj_transform': {'position': [4.55149937, 0.7216977, -9.678], 'rotation': [0.7071068, 0.7071067, -1.49011612e-07, -8.940697e-08], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [4.55149937, 0.7216977, -9.678], 'size': [0.221235275, 0.276918173, 0.05725479]}, 'properties': ['GRABBABLE', 'CUTTABLE', 'CAN_OPEN', 'READABLE', 'HAS_PAPER', 'MOVABLE'], 'states': ['CLOSED']}
+final s: True
+remotecontrol 1 [368, 371]
+num nodes:
+343 343
+apartment: 4: success 2 over 6 (total: 100000)
+apartment 5
+------------------------------------------------------------------------------
+testing 0/100000: setup_table. apartment 5
+------------------------------------------------------------------------------
+[189]
+[189]
+init goal: {'apple': 1}
+Placing: apple. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet']]
+apple 235
+1
+Placing: condimentbottle. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet']]
+0
+1
+0
+0
+1
+Placing: remotecontrol. Candidates: [('ON', 'sofa'), ('ON', 'coffeetable'), ('INSIDE', 'cabinet')] [['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'cabinet']]
+1
+1
+Placing: plate. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'cabinet'), ('ON', 'sofa'), ('ON', 'coffeetable'), ('INSIDE', 'fridge'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'fridge'], ['INSIDE', 'dishwasher'], ['INSIDE', 'stove']]
+1
+Placing: wineglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+1
+1
+Placing: waterglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+1
+0
+1
+1
+Placing: dishbowl. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'cabinet'), ('INSIDE', 'fridge'), ('ON', 'coffeetable')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['INSIDE', 'fridge'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+1
+Placing: cupcake. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('ON', 'sofa'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['ON', 'sofa'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['INSIDE', 'stove']]
+1
+1
+Placing: salmon. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'fridge'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'fridge'], ['INSIDE', 'stove']]
+1
+0
+1
+Placing: chips. Candidates: [('INSIDE', 'microwave'), ('INSIDE', 'cabinet'), ('ON', 'sofa'), ('ON', 'kitchentable')] [['INSIDE', 'microwave'], ['INSIDE', 'cabinet'], ['INSIDE', 'kitchencabinet'], ['ON', 'sofa'], ['ON', 'kitchentable']]
+1
+1
+Placing: book. Candidates: [('ON', 'sofa'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('ON', 'kitchentable'), ('ON', 'nightstand'), ('ON', 'sofa')] [['ON', 'sofa'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['ON', 'kitchentable'], ['ON', 'nightstand'], ['ON', 'sofa']]
+0
+0
+1
+0
+0
+1
+0
+1
+Placing: wine. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable']]
+1
+Adding objects:
+[32m[][0m
+[31m[][0m
+----------------------------------------------------------------------
+setup_table False {'unplaced': ['apple.1000', 'condimentbottle.1001', 'condimentbottle.1002', 'plate.1005', 'waterglass.1009', 'waterglass.1010', 'waterglass.1011', 'waterglass.1012', 'dishbowl.1013', 'dishbowl.1014', 'cupcake.1015', 'cupcake.1016', 'salmon.1017', 'salmon.1018', 'chips.1019', 'chips.1020']} 21
+{'unplaced': ['apple.1000', 'condimentbottle.1001', 'condimentbottle.1002', 'plate.1005', 'waterglass.1009', 'waterglass.1010', 'waterglass.1011', 'waterglass.1012', 'dishbowl.1013', 'dishbowl.1014', 'cupcake.1015', 'cupcake.1016', 'salmon.1017', 'salmon.1018', 'chips.1019', 'chips.1020']}
+Objects unplaced
+['fridge']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['microwave']
+Objects unplaced
+['fridge']
+Objects unplaced
+['sofa']
+Objects unplaced
+['coffeetable']
+Objects unplaced
+['coffeetable']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['fridge']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['stove']
+Objects unplaced
+['microwave']
+Objects unplaced
+['fridge']
+Objects unplaced
+['stove']
+Objects unplaced
+['microwave']
+Objects unplaced
+['cabinet']
+apartment: 5: success 0 over 1 (total: 100000)
+------------------------------------------------------------------------------
+testing 1/100000: setup_table. apartment 5
+------------------------------------------------------------------------------
+[189]
+[189]
+init goal: {'plate': 1}
+Placing: plate. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'cabinet'), ('ON', 'sofa'), ('ON', 'coffeetable'), ('INSIDE', 'fridge'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'fridge'], ['INSIDE', 'dishwasher'], ['INSIDE', 'stove']]
+1
+1
+0
+0
+0
+1
+1
+1
+Placing: condimentbottle. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet']]
+1
+0
+0
+0
+0
+1
+Placing: remotecontrol. Candidates: [('ON', 'sofa'), ('ON', 'coffeetable'), ('INSIDE', 'cabinet')] [['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'cabinet']]
+1
+1
+Placing: wineglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+0
+0
+0
+0
+1
+Placing: waterglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+0
+0
+1
+1
+1
+0
+1
+Placing: dishbowl. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'cabinet'), ('INSIDE', 'fridge'), ('ON', 'coffeetable')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['INSIDE', 'fridge'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+0
+0
+0
+0
+0
+1
+Placing: cupcake. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('ON', 'sofa'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['ON', 'sofa'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['INSIDE', 'stove']]
+1
+1
+1
+Placing: salmon. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'fridge'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'fridge'], ['INSIDE', 'stove']]
+1
+1
+Placing: apple. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet']]
+apple 306
+1
+apple 186
+0
+apple 186
+0
+apple 306
+1
+apple 306
+1
+apple 186
+0
+apple 186
+0
+apple 235
+1
+Placing: chips. Candidates: [('INSIDE', 'microwave'), ('INSIDE', 'cabinet'), ('ON', 'sofa'), ('ON', 'kitchentable')] [['INSIDE', 'microwave'], ['INSIDE', 'cabinet'], ['INSIDE', 'kitchencabinet'], ['ON', 'sofa'], ['ON', 'kitchentable']]
+1
+Placing: book. Candidates: [('ON', 'sofa'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('ON', 'kitchentable'), ('ON', 'nightstand'), ('ON', 'sofa')] [['ON', 'sofa'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['ON', 'kitchentable'], ['ON', 'nightstand'], ['ON', 'sofa']]
+0
+0
+0
+0
+1
+Placing: wine. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable']]
+0
+0
+0
+0
+1
+Adding objects:
+[32m[][0m
+[31m[][0m
+----------------------------------------------------------------------
+setup_table False {'unplaced': ['plate.1000', 'plate.1001', 'plate.1002', 'plate.1003', 'plate.1004', 'condimentbottle.1005', 'condimentbottle.1006', 'waterglass.1010', 'waterglass.1011', 'waterglass.1012', 'waterglass.1013', 'dishbowl.1014', 'dishbowl.1015', 'cupcake.1016', 'cupcake.1017', 'cupcake.1018', 'salmon.1019', 'salmon.1020', 'apple.1021', 'apple.1022', 'apple.1023', 'apple.1024', 'chips.1025']} 15
+{'unplaced': ['plate.1000', 'plate.1001', 'plate.1002', 'plate.1003', 'plate.1004', 'condimentbottle.1005', 'condimentbottle.1006', 'waterglass.1010', 'waterglass.1011', 'waterglass.1012', 'waterglass.1013', 'dishbowl.1014', 'dishbowl.1015', 'cupcake.1016', 'cupcake.1017', 'cupcake.1018', 'salmon.1019', 'salmon.1020', 'apple.1021', 'apple.1022', 'apple.1023', 'apple.1024', 'chips.1025']}
+Objects unplaced
+['microwave']
+Objects unplaced
+['fridge']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['sofa']
+Objects unplaced
+['sofa']
+Objects unplaced
+['microwave']
+Objects unplaced
+['microwave']
+Objects unplaced
+['sofa']
+Objects unplaced
+['coffeetable']
+Objects unplaced
+['sofa']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['fridge']
+Objects unplaced
+['sofa']
+Objects unplaced
+['fridge']
+Objects unplaced
+['fridge']
+Objects unplaced
+['stove']
+Objects unplaced
+['stove']
+Objects unplaced
+['fridge']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['fridge']
+Objects unplaced
+['cabinet']
+apartment: 5: success 0 over 2 (total: 100000)
+------------------------------------------------------------------------------
+testing 2/100000: setup_table. apartment 5
+------------------------------------------------------------------------------
+[189]
+[189]
+init goal: {'remotecontrol': 1}
+Placing: remotecontrol. Candidates: [('ON', 'sofa'), ('ON', 'coffeetable'), ('INSIDE', 'cabinet')] [['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'cabinet']]
+1
+Placing: condimentbottle. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet']]
+1
+1
+Placing: plate. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'cabinet'), ('ON', 'sofa'), ('ON', 'coffeetable'), ('INSIDE', 'fridge'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'fridge'], ['INSIDE', 'dishwasher'], ['INSIDE', 'stove']]
+1
+0
+0
+1
+0
+1
+1
+1
+Placing: wineglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+1
+1
+0
+0
+1
+1
+Placing: waterglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+0
+1
+1
+0
+0
+1
+Placing: dishbowl. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'cabinet'), ('INSIDE', 'fridge'), ('ON', 'coffeetable')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['INSIDE', 'fridge'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+0
+0
+0
+0
+1
+Placing: cupcake. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('ON', 'sofa'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['ON', 'sofa'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['INSIDE', 'stove']]
+1
+0
+1
+Placing: salmon. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'fridge'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'fridge'], ['INSIDE', 'stove']]
+1
+1
+Placing: apple. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet']]
+apple 306
+0
+apple 306
+0
+apple 235
+1
+apple 235
+1
+apple 235
+1
+Placing: chips. Candidates: [('INSIDE', 'microwave'), ('INSIDE', 'cabinet'), ('ON', 'sofa'), ('ON', 'kitchentable')] [['INSIDE', 'microwave'], ['INSIDE', 'cabinet'], ['INSIDE', 'kitchencabinet'], ['ON', 'sofa'], ['ON', 'kitchentable']]
+0
+1
+0
+0
+1
+Placing: book. Candidates: [('ON', 'sofa'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('ON', 'kitchentable'), ('ON', 'nightstand'), ('ON', 'sofa')] [['ON', 'sofa'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['ON', 'kitchentable'], ['ON', 'nightstand'], ['ON', 'sofa']]
+0
+1
+0
+1
+Placing: wine. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable']]
+1
+1
+Adding objects:
+[32m[][0m
+[31m[][0m
+----------------------------------------------------------------------
+setup_table False {'unplaced': ['condimentbottle.1001', 'condimentbottle.1002', 'plate.1003', 'plate.1004', 'plate.1005', 'plate.1006', 'plate.1007', 'waterglass.1013', 'waterglass.1014', 'waterglass.1015', 'dishbowl.1016', 'cupcake.1017', 'cupcake.1018', 'salmon.1019', 'salmon.1020', 'apple.1021', 'apple.1022', 'apple.1023', 'chips.1024', 'chips.1025']} 15
+{'unplaced': ['condimentbottle.1001', 'condimentbottle.1002', 'plate.1003', 'plate.1004', 'plate.1005', 'plate.1006', 'plate.1007', 'waterglass.1013', 'waterglass.1014', 'waterglass.1015', 'dishbowl.1016', 'cupcake.1017', 'cupcake.1018', 'salmon.1019', 'salmon.1020', 'apple.1021', 'apple.1022', 'apple.1023', 'chips.1024', 'chips.1025']}
+Objects unplaced
+['cabinet']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['microwave']
+Objects unplaced
+['coffeetable']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['stove']
+Objects unplaced
+['coffeetable']
+Objects unplaced
+['sofa']
+Objects unplaced
+['sofa']
+Objects unplaced
+['sofa']
+Objects unplaced
+['fridge']
+Objects unplaced
+['sofa']
+Objects unplaced
+['fridge']
+Objects unplaced
+['fridge']
+Objects unplaced
+['fridge']
+Objects unplaced
+['fridge']
+Objects unplaced
+['fridge']
+Objects unplaced
+['sofa']
+Objects unplaced
+['sofa']
+Placing: remotecontrol. Candidates: [('ON', 'sofa'), ('ON', 'coffeetable'), ('INSIDE', 'cabinet')] [['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'cabinet']]
+{'id': 335, 'category': 'Book_1', 'class_name': 'book', 'prefab_name': 'Book_1', 'obj_transform': {'position': [-7.519099, 0.4070593, -5.42489529], 'rotation': [2.98023224e-08, -2.98023224e-08, 0.7071068, 0.7071067], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-7.519099, 0.4070593, -5.42489529], 'size': [0.221235275, 0.276918173, 0.05725479]}, 'properties': ['GRABBABLE', 'CUTTABLE', 'CAN_OPEN', 'READABLE', 'HAS_PAPER', 'MOVABLE'], 'states': ['CLOSED']}
+{'id': 336, 'category': 'Wine_1', 'class_name': 'wine', 'prefab_name': 'Wine_1', 'obj_transform': {'position': [0.6643921, 1.06028438, -0.428900838], 'rotation': [0.0, 0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [0.6643921, 1.06028438, -0.428900838], 'size': [0.123000026, 0.455569685, 0.123000085]}, 'properties': ['GRABBABLE', 'DRINKABLE', 'POURABLE', 'MOVABLE'], 'states': []}
+{'id': 337, 'category': 'Wine_1', 'class_name': 'wine', 'prefab_name': 'Wine_1', 'obj_transform': {'position': [0.764392138, 1.06028438, -0.428900838], 'rotation': [0.0, 0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [0.764392138, 1.06028438, -0.428900838], 'size': [0.123000026, 0.455569685, 0.123000085]}, 'properties': ['GRABBABLE', 'DRINKABLE', 'POURABLE', 'MOVABLE'], 'states': []}
+{'id': 338, 'category': 'Remote_control_1', 'class_name': 'remotecontrol', 'prefab_name': 'Remote_control_1', 'obj_transform': {'position': [-6.94755268, 0.251782954, -15.645402], 'rotation': [0.0, 0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-6.94751453, 0.2694517, -15.6456184], 'size': [0.08199998, 0.035, 0.202000052]}, 'properties': ['GRABBABLE', 'HAS_SWITCH', 'MOVABLE'], 'states': ['OFF']}
+{'id': 339, 'category': 'WineGlass_2', 'class_name': 'wineglass', 'prefab_name': 'WineGlass_2', 'obj_transform': {'position': [-1.69199944, 0.8721068, -12.111], 'rotation': [0.0, 0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-1.69199944, 0.8721068, -12.111], 'size': [0.116000175, 0.195000052, 0.115999222]}, 'properties': ['GRABBABLE', 'RECIPIENT', 'POURABLE', 'MOVABLE'], 'states': []}
+{'id': 340, 'category': 'WineGlass_2', 'class_name': 'wineglass', 'prefab_name': 'WineGlass_2', 'obj_transform': {'position': [-1.69199944, 0.8721068, -12.111], 'rotation': [0.0, 0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-1.69199944, 0.8721068, -12.111], 'size': [0.116000175, 0.195000052, 0.115999222]}, 'properties': ['GRABBABLE', 'RECIPIENT', 'POURABLE', 'MOVABLE'], 'states': []}
+{'id': 341, 'category': 'WineGlass_2', 'class_name': 'wineglass', 'prefab_name': 'WineGlass_2', 'obj_transform': {'position': [-6.7521925, 0.349451661, -15.6517706], 'rotation': [0.0, 0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-6.7521925, 0.349451661, -15.6517706], 'size': [0.116000175, 0.195000052, 0.115999222]}, 'properties': ['GRABBABLE', 'RECIPIENT', 'POURABLE', 'MOVABLE'], 'states': []}
+{'id': 342, 'category': 'WineGlass_2', 'class_name': 'wineglass', 'prefab_name': 'WineGlass_2', 'obj_transform': {'position': [-6.53177547, 0.349451661, -15.6801519], 'rotation': [0.0, 0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-6.53177547, 0.349451661, -15.6801519], 'size': [0.116000175, 0.195000052, 0.115999222]}, 'properties': ['GRABBABLE', 'RECIPIENT', 'POURABLE', 'MOVABLE'], 'states': []}
+{'id': 343, 'category': 'WineGlass_2', 'class_name': 'wineglass', 'prefab_name': 'WineGlass_2', 'obj_transform': {'position': [-7.1364727, 0.349451661, -15.65597], 'rotation': [0.0, 0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-7.1364727, 0.349451661, -15.65597], 'size': [0.116000175, 0.195000052, 0.115999222]}, 'properties': ['GRABBABLE', 'RECIPIENT', 'POURABLE', 'MOVABLE'], 'states': []}
+{'id': 344, 'category': 'Book_1', 'class_name': 'book', 'prefab_name': 'Book_1', 'obj_transform': {'position': [-6.85181427, 0.390410781, -15.6833744], 'rotation': [0.707106948, 0.7071068, -8.940697e-08, -2.98023224e-08], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-6.85181427, 0.390410781, -15.6833744], 'size': [0.221235275, 0.276918381, 0.05725479]}, 'properties': ['GRABBABLE', 'CUTTABLE', 'CAN_OPEN', 'READABLE', 'HAS_PAPER', 'MOVABLE'], 'states': ['CLOSED']}
+final s: True
+remotecontrol 1 [338]
+num nodes:
+322 322
+apartment: 5: success 1 over 3 (total: 100000)
+------------------------------------------------------------------------------
+testing 3/100000: setup_table. apartment 5
+------------------------------------------------------------------------------
+[189]
+[189]
+init goal: {'book': 1}
+Placing: book. Candidates: [('ON', 'sofa'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('ON', 'kitchentable'), ('ON', 'nightstand'), ('ON', 'sofa')] [['ON', 'sofa'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['ON', 'kitchentable'], ['ON', 'nightstand'], ['ON', 'sofa']]
+0
+0
+0
+0
+1
+1
+1
+Placing: condimentbottle. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet']]
+1
+Placing: remotecontrol. Candidates: [('ON', 'sofa'), ('ON', 'coffeetable'), ('INSIDE', 'cabinet')] [['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'cabinet']]
+1
+1
+Placing: plate. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'cabinet'), ('ON', 'sofa'), ('ON', 'coffeetable'), ('INSIDE', 'fridge'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'sofa'], ['ON', 'coffeetable'], ['INSIDE', 'fridge'], ['INSIDE', 'dishwasher'], ['INSIDE', 'stove']]
+1
+1
+0
+1
+1
+Placing: wineglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+0
+1
+Placing: waterglass. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+1
+1
+0
+0
+1
+1
+Placing: dishbowl. Candidates: [('ON', 'kitchentable'), ('ON', 'sofa'), ('INSIDE', 'cabinet'), ('INSIDE', 'fridge'), ('ON', 'coffeetable')] [['ON', 'kitchentable'], ['ON', 'sofa'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'cabinet'], ['INSIDE', 'fridge'], ['ON', 'coffeetable'], ['INSIDE', 'dishwasher']]
+1
+0
+0
+0
+0
+0
+0
+1
+1
+Placing: cupcake. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('ON', 'sofa'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['ON', 'sofa'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['INSIDE', 'stove']]
+1
+Placing: salmon. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'microwave'), ('INSIDE', 'fridge'), ('INSIDE', 'stove')] [['ON', 'kitchentable'], ['INSIDE', 'microwave'], ['INSIDE', 'fridge'], ['INSIDE', 'stove']]
+0
+0
+1
+1
+Placing: apple. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet']]
+apple 186
+0
+apple 235
+1
+apple 306
+0
+apple 186
+0
+apple 186
+0
+apple 306
+0
+apple 186
+0
+apple 235
+1
+Placing: chips. Candidates: [('INSIDE', 'microwave'), ('INSIDE', 'cabinet'), ('ON', 'sofa'), ('ON', 'kitchentable')] [['INSIDE', 'microwave'], ['INSIDE', 'cabinet'], ['INSIDE', 'kitchencabinet'], ['ON', 'sofa'], ['ON', 'kitchentable']]
+0
+1
+Placing: wine. Candidates: [('ON', 'kitchentable'), ('INSIDE', 'fridge'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable')] [['ON', 'kitchentable'], ['INSIDE', 'kitchencabinet'], ['INSIDE', 'fridge'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable']]
+1
+Adding objects:
+[32m[][0m
+[31m[][0m
+----------------------------------------------------------------------
+setup_table False {'unplaced': ['condimentbottle.1003', 'plate.1006', 'plate.1007', 'plate.1008', 'plate.1009', 'waterglass.1012', 'waterglass.1013', 'waterglass.1014', 'waterglass.1015', 'waterglass.1016', 'dishbowl.1017', 'dishbowl.1018', 'dishbowl.1019', 'cupcake.1020', 'salmon.1021', 'salmon.1022', 'apple.1023', 'apple.1024', 'chips.1025']} 24
+{'unplaced': ['condimentbottle.1003', 'plate.1006', 'plate.1007', 'plate.1008', 'plate.1009', 'waterglass.1012', 'waterglass.1013', 'waterglass.1014', 'waterglass.1015', 'waterglass.1016', 'dishbowl.1017', 'dishbowl.1018', 'dishbowl.1019', 'cupcake.1020', 'salmon.1021', 'salmon.1022', 'apple.1023', 'apple.1024', 'chips.1025']}
+Objects unplaced
+['cabinet']
+Objects unplaced
+['stove']
+Objects unplaced
+['sofa']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['fridge']
+Objects unplaced
+['sofa']
+Objects unplaced
+['sofa']
+Objects unplaced
+['cabinet']
+Objects unplaced
+['sofa']
+Objects unplaced
+['coffeetable']
+Objects unplaced
+['fridge']
+Objects unplaced
+['sofa']
+Objects unplaced
+['sofa']
+Objects unplaced
+['sofa']
+Objects unplaced
+['fridge']
+Objects unplaced
+['stove']
+Objects unplaced
+['fridge']
+Objects unplaced
+['fridge']
+Objects unplaced
+['microwave']
+Placing: book. Candidates: [('ON', 'sofa'), ('INSIDE', 'cabinet'), ('ON', 'coffeetable'), ('ON', 'kitchentable'), ('ON', 'nightstand'), ('ON', 'sofa')] [['ON', 'sofa'], ['INSIDE', 'cabinet'], ['ON', 'coffeetable'], ['ON', 'kitchentable'], ['ON', 'nightstand'], ['ON', 'sofa']]
+1
+{'id': 335, 'category': 'Book_1', 'class_name': 'book', 'prefab_name': 'Book_1', 'obj_transform': {'position': [-6.85181427, 0.390410781, -15.6833744], 'rotation': [0.707106948, 0.7071068, -8.940697e-08, -2.98023224e-08], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-6.85181427, 0.390410781, -15.6833744], 'size': [0.221235275, 0.276918381, 0.05725479]}, 'properties': ['GRABBABLE', 'CUTTABLE', 'CAN_OPEN', 'READABLE', 'HAS_PAPER', 'MOVABLE'], 'states': ['CLOSED']}
+{'id': 336, 'category': 'Book_1', 'class_name': 'book', 'prefab_name': 'Book_1', 'obj_transform': {'position': [-6.65257168, 0.390410781, -15.6833744], 'rotation': [0.707106948, 0.7071068, -8.940697e-08, -2.98023224e-08], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-6.65257168, 0.390410781, -15.6833744], 'size': [0.221235275, 0.276918381, 0.05725479]}, 'properties': ['GRABBABLE', 'CUTTABLE', 'CAN_OPEN', 'READABLE', 'HAS_PAPER', 'MOVABLE'], 'states': ['CLOSED']}
+{'id': 337, 'category': 'Book_1', 'class_name': 'book', 'prefab_name': 'Book_1', 'obj_transform': {'position': [-1.69199944, 0.913065851, -12.111], 'rotation': [0.707106948, 0.7071068, -8.940697e-08, -2.98023224e-08], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-1.69199944, 0.913065851, -12.111], 'size': [0.221235275, 0.2769183, 0.05725479]}, 'properties': ['GRABBABLE', 'CUTTABLE', 'CAN_OPEN', 'READABLE', 'HAS_PAPER', 'MOVABLE'], 'states': ['CLOSED']}
+{'id': 338, 'category': 'Remote_control_1', 'class_name': 'remotecontrol', 'prefab_name': 'Remote_control_1', 'obj_transform': {'position': [-6.88590431, 0.251782954, -15.7876644], 'rotation': [0.0, 0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-6.885866, 0.2694517, -15.78788], 'size': [0.08199998, 0.035, 0.202000052]}, 'properties': ['GRABBABLE', 'HAS_SWITCH', 'MOVABLE'], 'states': ['OFF']}
+{'id': 339, 'category': 'Remote_control_1', 'class_name': 'remotecontrol', 'prefab_name': 'Remote_control_1', 'obj_transform': {'position': [-1.69221556, 0.7744381, -12.1110373], 'rotation': [0.0, 0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-1.692178, 0.7921068, -12.1112537], 'size': [0.08199998, 0.035, 0.202000052]}, 'properties': ['GRABBABLE', 'HAS_SWITCH', 'MOVABLE'], 'states': ['OFF']}
+{'id': 340, 'category': 'WineGlass_2', 'class_name': 'wineglass', 'prefab_name': 'WineGlass_2', 'obj_transform': {'position': [-5.210001, 0.372100264, -13.3080006], 'rotation': [0.0, 0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-5.210001, 0.372100264, -13.3080006], 'size': [0.116000175, 0.195000052, 0.115999222]}, 'properties': ['GRABBABLE', 'RECIPIENT', 'POURABLE', 'MOVABLE'], 'states': []}
+{'id': 341, 'category': 'WineGlass_2', 'class_name': 'wineglass', 'prefab_name': 'WineGlass_2', 'obj_transform': {'position': [-1.59199941, 0.8721068, -12.111], 'rotation': [0.0, 0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-1.59199941, 0.8721068, -12.111], 'size': [0.115999937, 0.195000052, 0.115999222]}, 'properties': ['GRABBABLE', 'RECIPIENT', 'POURABLE', 'MOVABLE'], 'states': []}
+{'id': 342, 'category': 'Wine_1', 'class_name': 'wine', 'prefab_name': 'Wine_1', 'obj_transform': {'position': [-5.40021229, 0.502385, -13.2461967], 'rotation': [0.0, 0.7071068, 0.0, 0.7071068], 'scale': [1.0, 1.0, 1.0]}, 'bounding_box': {'center': [-5.40021229, 0.502385, -13.2461967], 'size': [0.123000145, 0.455569625, 0.122999191]}, 'properties': ['GRABBABLE', 'DRINKABLE', 'POURABLE', 'MOVABLE'], 'states': []}
+final s: True
+book 1 [335, 336, 337]
+num nodes:
+320 320
+apartment: 5: success 2 over 4 (total: 100000)
+apartment 0
+apartment 1
+apartment 2
+apartment 4
+apartment 5
+apartment 0
+apartment 1
+apartment 2
+apartment 4
+apartment 5
+apartment 0
+apartment 1
+apartment 2
+apartment 4
+apartment 5
+apartment 0
+apartment 1
+apartment 2
+apartment 4
+apartment 5
+env_id: 0
+task_name: setup_table
+goals: {'on_remotecontrol_373': 1}
+env_id: 0
+task_name: setup_table
+goals: {'on_wine_371': 1}
+env_id: 1
+task_name: setup_table
+goals: {'on_remotecontrol_199': 1}
+env_id: 1
+task_name: setup_table
+goals: {'on_wineglass_291': 1}
+env_id: 2
+task_name: setup_table
+goals: {'on_wine_135': 1}
+env_id: 2
+task_name: setup_table
+goals: {'on_book_131': 1}
+env_id: 4
+task_name: setup_table
+goals: {'on_book_138': 1}
+env_id: 4
+task_name: setup_table
+goals: {'on_remotecontrol_138': 1}
+env_id: 5
+task_name: setup_table
+goals: {'on_remotecontrol_186': 1}
+env_id: 5
+task_name: setup_table
+goals: {'on_book_106': 1}
+total #tasks: 10
+CLOSING PROC

@@ -1,0 +1,137 @@
+{
+    "obj_random": [
+        "condimentbottle",
+        "remotecontrol",
+        "plate",
+        "wineglass",
+        "waterglass",
+        "dishbowl",
+        "cupcake",
+        "salmon",
+        "apple",
+        "chips",
+        "book",
+        "wine"
+    ],
+    "setup_table": 
+    {   
+        "counts": {"max": 1, "min": 1},
+        "candidates": [["kitchentable", "on"], ["coffeetable", "on"], ["desk", "on"]],
+        "objects":
+        {
+            "dishbowl": {"env_max_num": 4, "on": ["kitchentable", "coffeetable", "sofa"], "in": ["dishwasher", "microwave", "stove", "kitchencabinet", "fridge", "cabinet"]},
+            "waterglass": {"env_max_num": 4, "on": ["kitchentable", "coffeetable", "sofa"], "in": ["dishwasher", "microwave", "stove", "kitchencabinet", "fridge", "cabinet"]},
+            "wineglass": {"env_max_num": 4, "on": ["kitchentable", "coffeetable", "sofa"], "in": ["dishwasher", "microwave", "stove", "kitchencabinet", "fridge", "cabinet"]},
+            "plate": {"env_max_num": 4, "on": ["kitchentable", "coffeetable", "sofa"], "in": ["dishwasher", "microwave", "stove", "kitchencabinet", "fridge", "cabinet"]},
+            
+            "apple": {"env_max_num": 3, "on": ["kitchentable", "coffeetable", "sofa"], "in": ["dishwasher", "microwave", "stove", "kitchencabinet", "fridge", "cabinet"]},
+            "cupcake": {"env_max_num": 3, "on": ["kitchentable", "coffeetable", "sofa"], "in": ["dishwasher", "microwave", "stove", "kitchencabinet", "fridge", "cabinet"]},
+            "condimentbottle": {"env_max_num": 1, "on": ["kitchentable", "coffeetable", "sofa"], "in": ["dishwasher", "microwave", "stove", "kitchencabinet", "fridge", "cabinet"]},
+            "chips": {"env_max_num": 1, "on": ["kitchentable", "coffeetable", "sofa"], "in": ["dishwasher", "microwave", "stove", "kitchencabinet", "fridge", "cabinet"]},
+            "salmon": {"env_max_num": 1, "on": ["kitchentable", "coffeetable", "sofa"], "in": ["dishwasher", "microwave", "stove", "kitchencabinet", "fridge", "cabinet"]},
+            "wine": {"env_max_num": 1, "on": ["kitchentable", "coffeetable", "sofa"], "in": ["dishwasher", "microwave", "stove", "kitchencabinet", "fridge", "cabinet"]},
+
+            "remotecontrol": {"env_max_num": 1, "on": ["kitchentable", "coffeetable", "sofa"], "in": ["dishwasher", "microwave", "stove", "kitchencabinet", "fridge", "cabinet"]},
+            "book": {"env_max_num": 3, "on": ["kitchentable", "coffeetable", "sofa"], "in": ["dishwasher", "microwave", "stove", "kitchencabinet", "fridge", "cabinet"]}
+        }
+    },
+    "watch_tv": 
+    {   
+        "counts": {"max": 1, "min": 1},
+        "candidates": [["coffeetable", "on"]],
+        "objects":
+        {
+            "chips": {"env_max_num": 3, "on": ["kitchentable"], "in": []},
+            "remotecontrol": {"env_max_num": 1, "on": ["kitchentable"], "in": []},
+            "condimentbottle": {"env_max_num": 3, "on": ["kitchentable"], "in": []}
+        }
+    },
+
+
+    "put_dishwasher":
+    {
+        "candidates": [["dishwasher", "inside"]],
+        "objects": {
+            "waterglass": {"min_num":0, "max_num":2, "env_max_num": 2, "on": [], "in": ["fridge"]},
+            "wineglass": {"min_num":0, "max_num":2, "env_max_num": 2, "on": [], "in": ["fridge"]},
+            "plate": {"min_num":0, "max_num":2, "env_max_num": 2, "on": [], "in": ["fridge"]},
+            "cutleryfork": {"min_num":0, "max_num":2, "env_max_num": 2, "on": [], "in": ["fridge"]}               
+        }
+
+    },
+
+
+    "put_fridge": 
+    {   
+        "counts": {"max": 1, "min": 1},
+        "candidates": [["fridge", "inside"], ["kitchencabinet", "inside"], ["cabinet", "inside"], ["microwave", "inside"], ["stove", "inside"]],
+        "objects":
+        {
+            "dishbowl": {"env_max_num": 4, "on": ["kitchentable", "coffeetable"], "in": ["dishwasher", "microwave", "kitchencabinet"]},
+            "waterglass": {"env_max_num": 4, "on": ["kitchentable", "coffeetable"], "in": ["dishwasher", "kitchencabinet"]},
+            "wineglass": {"env_max_num": 4, "on": ["kitchentable", "coffeetable"], "in": ["dishwasher", "kitchencabinet"]},
+            "plate": {"env_max_num": 4, "on": ["kitchentable", "coffeetable"], "in": ["dishwasher", "kitchencabinet"]},
+            
+            "apple": {"env_max_num": 3, "on": ["kitchentable", "coffeetable"], "in": ["fridge", "kitchencabinet"]},
+            "cupcake": {"env_max_num": 3, "on": ["kitchentable", "coffeetable"], "in": ["fridge", "stove", "microwave", "kitchencabinet"]},
+            "condimentbottle": {"env_max_num": 1, "on": ["kitchentable", "coffeetable"], "in": ["fridge", "kitchencabinet"]},
+            "chips": {"env_max_num": 1, "on": ["kitchentable", "coffeetable"], "in": ["fridge", "kitchencabinet"]},
+            "salmon": {"env_max_num": 1, "on": ["kitchentable", "coffeetable"], "in": ["fridge", "stove", "microwave", "kitchencabinet"]},
+            "wine": {"env_max_num": 1, "on": ["kitchentable", "coffeetable"], "in": ["fridge", "cabinet", "kitchencabinet"]},
+
+            "remotecontrol": {"env_max_num": 1, "on": ["kitchentable", "coffeetable", "sofa"], "in": []},
+            "book": {"env_max_num": 3, "on": ["kitchentable", "coffeetable", "sofa"], "in": []}
+        }
+    },
+    // "put_fridge":
+    // {
+    //     "candidates": [["fridge", "inside"]],
+    //     "objects": {
+    //         "pudding": {"min_num":0, "max_num":2, "env_max_num": 2, "on": [], "in": ["fridge"]},
+    //         "cupcake": {"min_num":0, "max_num":2, "env_max_num": 2, "on": [], "in": ["fridge"]},
+    //         "salmon": {"min_num":0, "max_num":2, "env_max_num": 2, "on": [], "in": ["fridge"]},
+    //         "apple": {"min_num":0, "max_num":2, "env_max_num": 2, "on": [], "in": ["fridge"]}               
+    //     }
+
+    // },
+
+    "prepare_food":
+    {
+        "counts": {"max": 3, "min": 1},
+        "candidates": [["kitchentable", "on"], ["coffeetable", "on"], ["stove", "inside"]],
+        "objects":
+        {
+
+            "pudding": {"env_max_num": 4, "on": ["kitchentable"], "in": []},
+            "cupcake": {"env_max_num": 4, "on": ["kitchentable"], "in": []},
+            "salmon": {"env_max_num": 4, "on": ["kitchentable"], "in": []},
+            "apple": {"env_max_num": 4, "on": ["kitchentable"], "in": []}
+        }
+
+    },
+    "noise":
+    {
+        "cupcake": {"min_num":0, "max_num":2, "env_max_num": 2, 
+                    "on": ["kitchentable", "coffeetable"], 
+                    "in": ["stove", "microwave", "dishwasher", "fridge"]
+                    },
+        "salmon": {"min_num":0, "max_num":2, "env_max_num": 2,
+                    "on": ["kitchentable", "coffeetable"], 
+                    "in": ["stove", "microwave", "dishwasher", "fridge"]},
+        "apple": {"min_num":0, "max_num":2, "env_max_num": 2,
+                  "on": ["kitchentable", "coffeetable"], 
+                  "in": ["stove", "microwave", "dishwasher", "fridge"]},
+        "plate": {"min_num":0, "max_num":2, "env_max_num": 2,
+                  "on": ["kitchentable", "coffeetable"], 
+                  "in": ["stove", "microwave", "dishwasher", "fridge"]},
+        "waterglass": {"min_num":0, "max_num":2, "env_max_num": 2,
+                       "on": ["kitchentable", "coffeetable"], 
+                       "in": ["stove", "microwave", "dishwasher", "fridge"]},
+        "cutleryfork": {"min_num":0, "max_num":2, "env_max_num": 2,
+                        "on": ["kitchentable", "coffeetable"], 
+                        "in": ["stove", "microwave", "dishwasher", "fridge"]}
+    }
+
+}
+
+

@@ -1,0 +1,247 @@
+agents/belief.py:39:        # TODO_belief: set to sometihng sensible
+agents/belief.py:54:        # TODO_belief: set to sometihng sensible
+agents/belief.py:299:                    # TODO: set a max prob
+agents/belief.py:314:        # TODO: ths class should simply have a surface property
+agents/belief.py:329:        # TODO: this should be specified in the properties
+agents/belief.py:358:        """TODO: better initial belief"""
+agents/belief.py:754:                # TODO: what happens when object grabbed
+agents/random_agent.py:154:        # # TODO: probably these 2 cases are not needed
+agents/random_agent.py:167:        # TODO: move this in vh_mdp
+agents/random_agent.py:226:        """TODO: do no need this?"""
+agents/MCTS_agent_particle_v2_instance.py:396:    # TODO: change this as well
+agents/MCTS_agent_particle_v2_instance.py:522:    # TODO: document well what this is doing
+agents/MCTS_agent_particle_v2_instance.py:952:        # TODO: move this in vh_mdp
+agents/MCTS_agent_particle_v2_instance.py:1041:        # TODO: maybe we will want to keep the previous belief graph to avoid replanning
+agents/MCTS_agent_particle_v2_instance.py:1049:        # TODO: is this correct?
+agents/MCTS_agent_particle_v2_instance.py:1445:        """TODO: do no need this?"""
+agents/MCTS_agent_particle_v2.py:350:    # TODO: change this as well
+agents/MCTS_agent_particle_v2.py:881:        # TODO: move this in vh_mdp
+agents/MCTS_agent_particle_v2.py:942:        # TODO: maybe we will want to keep the previous belief graph to avoid replanning
+agents/MCTS_agent_particle_v2.py:950:        # TODO: is this correct?
+agents/MCTS_agent_particle_v2.py:1183:        """TODO: do no need this?"""
+agents/HRL_agent_mcts.py:357:        # TODO: encode states
+agents/NOPA_agent.py:231:        #     # continue  # TODO: add handing over plan
+agents/NOPA_agent.py:305:            # continue  # TODO: add handing over plan
+agents/NOPA_agent.py:786:        # TODO: move this in vh_mdp
+agents/NOPA_agent.py:1127:                    estimated_steps = 100  # TODO: tune this
+agents/NOPA_agent.py:1353:                                == 0  # TODO: check when dist !=0 but estimated_steps = 0
+agents/HRL_agent_RL.py:358:        # TODO: encode states
+agents/HP_random_agent.py:231:        #     # continue  # TODO: add handing over plan
+agents/HP_random_agent.py:305:            # continue  # TODO: add handing over plan
+agents/HP_random_agent.py:677:        self.num_samples = 1  # TODO: adjustable
+agents/HP_random_agent.py:694:        self.inv_plan = False  # TODO: adjustable
+agents/HP_random_agent.py:779:        # TODO: move this in vh_mdp
+agents/HP_random_agent.py:1038:        #         estimated_steps = 100  # TODO: tune this
+agents/HP_agent.py:231:        #     # continue  # TODO: add handing over plan
+agents/HP_agent.py:305:            # continue  # TODO: add handing over plan
+agents/HP_agent.py:677:        self.num_samples = 1  # TODO: adjustable
+agents/HP_agent.py:694:        self.inv_plan = False  # TODO: adjustable
+agents/HP_agent.py:778:        # TODO: move this in vh_mdp
+agents/MCTS_agent_particle.py:185:    # TODO: change this as well
+agents/MCTS_agent_particle.py:483:        # TODO: move this in vh_mdp
+agents/MCTS_agent_particle.py:531:        # TODO: maybe we will want to keep the previous belief graph to avoid replanning
+agents/MCTS_agent_particle.py:538:        # TODO: is this correct?
+agents/MCTS_agent_particle.py:671:        """TODO: do no need this?"""
+agents/MCTS_agent.py:479:        # # TODO: probably these 2 cases are not needed
+agents/MCTS_agent.py:492:        # TODO: move this in vh_mdp
+agents/MCTS_agent.py:508:        """TODO: just close fridge, dishwasher?"""
+agents/MCTS_agent.py:518:        # TODO: is this correct?
+agents/MCTS_agent.py:552:        """TODO: do no need this?"""
+path_sim_dev/linux_exec.v2.3.0_Data/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx:1173:					// refAttr.Form; TODO
+path_sim_dev/linux_exec.v2.3.0_Data/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx:1173:					// refAttr.Form; TODO
+path_sim_dev/linux_exec.v2.3.0_Data/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx:1173:					// refAttr.Form; TODO
+Binary file path_sim_dev/linux_exec.v2.3.0_Data/MonoBleedingEdge/x86_64/libmonobdwgc-2.0.so matches
+Binary file path_sim_dev/linux_exec.v2.3.0_Data/resources.assets.resS matches
+Binary file path_sim_dev/linux_exec.v2.3.0_Data/Managed/System.Configuration.dll matches
+Binary file path_sim_dev/linux_exec.v2.3.0_Data/Managed/System.dll matches
+Binary file path_sim_dev/linux_exec.v2.3.0_Data/Managed/System.Security.dll matches
+Binary file path_sim_dev/linux_exec.v2.3.0_Data/Managed/System.EnterpriseServices.dll matches
+Binary file path_sim_dev/linux_exec.v2.3.0_Data/Managed/System.Core.dll matches
+Binary file path_sim_dev/linux_exec.v2.3.0_Data/Managed/mscorlib.dll matches
+Binary file path_sim_dev/linux_exec.v2.3.0_Data/Managed/System.Drawing.dll matches
+Binary file path_sim_dev/linux_exec.v2.3.0_Data/Managed/System.Data.dll matches
+Binary file path_sim_dev/linux_exec.v2.3.0_Data/Managed/System.Net.Http.dll matches
+Binary file path_sim_dev/linux_exec.v2.3.0_Data/Managed/System.Transactions.dll matches
+Binary file path_sim_dev/UnityPlayer.so matches
+analysis/heling_states_random.py:100:        # # TODO: need to infer the correct edge class
+analysis/heling_states_random.py:217:            continue  # TODO: add handing over plan
+analysis/heling_states_random.py:291:            continue  # TODO: add handing over plan
+analysis/heling_states_random.py:574:    # TODO: add num_samples to the argument
+analysis/read_helping_log.py:81:        # # TODO: need to infer the correct edge class
+analysis/read_helping_log.py:198:            # continue  # TODO: add handing over plan
+analysis/read_helping_log.py:273:            # continue  # TODO: add handing over plan
+analysis/goal_inference_particlefilter_prepare_food.py:694:        # TODO: tianmin, this does not seem correct, but im not sure the logic of the func, can you check?
+analysis/helping_states.py:101:        # # TODO: need to infer the correct edge class
+analysis/helping_states.py:376:            # continue  # TODO: add handing over plan
+analysis/helping_states.py:451:            # continue  # TODO: add handing over plan
+analysis/helping_states.py:734:    # TODO: add num_samples to the argument
+analysis/helping_action_freq_v2.py:91:        # # TODO: need to infer the correct edge class
+analysis/helping_action_freq_v2.py:381:    # TODO: add num_samples to the argument
+analysis/helping_action_freq.py:91:        # # TODO: need to infer the correct edge class
+analysis/helping_action_freq.py:355:    # TODO: add num_samples to the argument
+analysis/helping_gt_goal_debug2.py:92:        # # TODO: need to infer the correct edge class
+analysis/helping_gt_goal_debug2.py:320:    # TODO: add num_samples to the argument
+analysis/evaluate_helping_per_task_Ks.py:136:        # # TODO: need to infer the correct edge class
+analysis/evaluate_helping_per_task_Ks.py:430:        # TODO: add num_samples to the argument
+analysis/helping_states_predicate_goals.py:138:        # # TODO: need to infer the correct edge class
+analysis/helping_states_predicate_goals.py:227:            # continue  # TODO: add handing over plan
+analysis/helping_states_predicate_goals.py:302:            # continue  # TODO: add handing over plan
+analysis/helping_states_predicate_goals.py:590:    # TODO: add num_samples to the argument
+analysis/helping_empowerment.py:358:        #     # continue  # TODO: add handing over plan
+analysis/helping_empowerment.py:432:            # continue  # TODO: add handing over plan
+analysis/helping_empowerment.py:793:    # TODO: add num_samples to the argument
+analysis/helping_empowerment.py:1460:                                estimated_steps = 100  # TODO: tune this
+analysis/helping_empowerment.py:1780:                                            == 0  # TODO: check when dist !=0 but estimated_steps = 0
+analysis/helping_states_diffpred_xavi.py:358:        #     # continue  # TODO: add handing over plan
+analysis/helping_states_diffpred_xavi.py:432:            # continue  # TODO: add handing over plan
+analysis/helping_states_diffpred_xavi.py:803:    # TODO: add num_samples to the argument
+analysis/helping_states_diffpred_xavi.py:1479:                                estimated_steps = 100  # TODO: tune this
+analysis/helping_states_diffpred_xavi.py:1807:                                            == 0  # TODO: check when dist !=0 but estimated_steps = 0
+analysis/main_agent_only_for_human_dataset_single_planner.py:96:    # TODO: add num_samples to the argument
+analysis/main_agent_only_for_human_dataset_single_planner.py:211:        # # TODO: for debug only
+analysis/main_agent_only_for_human_dataset_single_planner.py:241:            # # TODO: for debug only
+analysis/plot_predicates.py:215:    # TODO: add num_samples to the argument
+analysis/helping_states_diffpred.py:358:        #     # continue  # TODO: add handing over plan
+analysis/helping_states_diffpred.py:432:            # continue  # TODO: add handing over plan
+analysis/helping_states_diffpred.py:793:    # TODO: add num_samples to the argument
+analysis/helping_states_diffpred.py:1460:                                estimated_steps = 100  # TODO: tune this
+analysis/helping_states_diffpred.py:1781:                                            == 0  # TODO: check when dist !=0 but estimated_steps = 0
+analysis/plot_predicates_example.py:219:    # TODO: add num_samples to the argument
+analysis/evaluate_helping_per_task.py:136:        # # TODO: need to infer the correct edge class
+analysis/evaluate_helping_per_task.py:363:        # TODO: add num_samples to the argument
+analysis/evaluate_helping.py:135:        # # TODO: need to infer the correct edge class
+analysis/evaluate_helping.py:398:    # TODO: add num_samples to the argument
+analysis/helping_action_freq_ind.py:133:        # # TODO: need to infer the correct edge class
+analysis/helping_action_freq_ind.py:292:    # TODO: add num_samples to the argument
+analysis/compare.py:134:        # # TODO: need to infer the correct edge class
+analysis/compare.py:348:    # TODO: add num_samples to the argument
+analysis/helping_action_freq0.py:133:        # # TODO: need to infer the correct edge class
+analysis/helping_action_freq0.py:307:    # TODO: add num_samples to the argument
+analysis/helping_random_goal.py:167:        # # TODO: need to infer the correct edge class
+analysis/helping_random_goal.py:389:    # TODO: add num_samples to the argument
+analysis/helping_states_diffpred_test.py:358:        #     # continue  # TODO: add handing over plan
+analysis/helping_states_diffpred_test.py:432:            # continue  # TODO: add handing over plan
+analysis/helping_states_diffpred_test.py:791:    # TODO: add num_samples to the argument
+analysis/helping_states_diffpred_test.py:1457:                                estimated_steps = 100  # TODO: tune this
+analysis/helping_states_diffpred_test.py:1777:                                            == 0  # TODO: check when dist !=0 but estimated_steps = 0
+analysis/goal_inference_particlefilter.py:697:        # TODO: tianmin, this does not seem correct, but im not sure the logic of the func, can you check?
+analysis/helping_gt_goal.py:92:        # # TODO: need to infer the correct edge class
+analysis/helping_gt_goal.py:320:    # TODO: add num_samples to the argument
+analysis/goal_inference_particlefilter_backup.py:695:        # TODO: tianmin, this does not seem correct, but im not sure the logic of the func, can you check?
+analysis/helping_action_freq_no_avoidance.py:91:        # # TODO: need to infer the correct edge class
+analysis/helping_action_freq_no_avoidance.py:305:    # TODO: add num_samples to the argument
+analysis/helping_states_v2.py:100:        # # TODO: need to infer the correct edge class
+analysis/helping_states_v2.py:217:            continue  # TODO: add handing over plan
+analysis/helping_states_v2.py:292:            continue  # TODO: add handing over plan
+analysis/helping_states_v2.py:575:    # TODO: add num_samples to the argument
+analysis/helping_states_random.py:100:        # # TODO: need to infer the correct edge class
+analysis/helping_states_random.py:217:            continue  # TODO: add handing over plan
+analysis/helping_states_random.py:291:            continue  # TODO: add handing over plan
+analysis/helping_states_random.py:574:    # TODO: add num_samples to the argument
+analysis/helping_action_freq_new.py:358:        #     # continue  # TODO: add handing over plan
+analysis/helping_action_freq_new.py:432:            # continue  # TODO: add handing over plan
+analysis/helping_action_freq_new.py:795:    # TODO: add num_samples to the argument
+analysis/helping_action_freq_new.py:1459:                                estimated_steps = 100  # TODO: tune this
+analysis/helping_gt_goal_debug.py:93:        # # TODO: need to infer the correct edge class
+analysis/helping_gt_goal_debug.py:316:    # TODO: add num_samples to the argument
+analysis/main_agent_only.py:106:    # TODO: add num_samples to the argument
+analysis/main_agent_only.py:221:        # # TODO: for debug only
+analysis/main_agent_only.py:251:            # # TODO: for debug only
+models/agent_pref_policy_task.py:897:        # TODO: this should change from the previous setting! Uncommend below
+models/agent_pref_policy_task.py:1193:        # TODO: this should change from the previous setting! Uncommend below
+models/actor_critic_hl_mcts.py:101:        # TODO: this can probably be always shared across a batch
+models/actor_critic.py:111:        # TODO: this can probably be always shared across a batch
+utils/utils_plot.py:322:            # TODO: uncomment this for potting better
+Binary file utils/__pycache__/memory.cpython-37.pyc matches
+Binary file utils/__pycache__/utils_environment.cpython-39.pyc matches
+Binary file utils/__pycache__/utils_environment.cpython-38.pyc matches
+Binary file utils/__pycache__/utils_environment.cpython-37.pyc matches
+utils/memory.py:173:        """TODO: currently assume that batch size is large enough to contain all goals in a single batch
+utils/utils_environment.py:247:    """TODO: add more predicate checkers; currently only ON"""
+utils/utils_environment.py:357:    """TODO: add more predicate checkers; currently only ON"""
+utils/utils_environment.py:454:                        # TODO: Grabbed by me, note this will break with more agents
+utils/utils_models_wb.py:750:    # TODO: modify this fro exclusive edge perd
+utils/utils_models_wb.py:1327:    # TODO: modify this fro exclusive edge perd
+utils/utils_rl_agent.py:356:                # TODO: check that here we have the right objects
+utils/utils_rl_agent.py:398:        # TODO: remove
+utils/utils_rl_agent.py:605:        # TODO: remove
+utils/utils_models_wb_backup.py:662:    # TODO: modify this fro exclusive edge perd
+utils/utils_models_wb_backup.py:1017:    # TODO: modify this fro exclusive edge perd
+assistance_methods/NOPA.py:682:    # TODO: create a new dataset that only contains the filtered episodes and allow relative path instead
+assistance_methods/NOPA.py:1318:                                estimated_steps = 100  # TODO: tune this
+assistance_methods/NOPA.py:1583:                                            == 0  # TODO: check when dist !=0 but estimated_steps = 0
+envs/unity_environment.py:269:            self.task_goal[1] = self.task_goal[0] # TODO(xinyu): change this line to set two goals
+envs/unity_environment.py:277:        # TODO: remove
+envs/unity_environment.py:288:        # TODO: in the future we may want different goals
+envs/unity_environment.py:332:                # TODO: this is because trashcan causes problems when removed, need to check more later
+envs/unity_environment.py:350:                # TODO: this is because tashcaan causes problems, check more later
+envs/unity_environment.py:498:            # TODO: implement a real coen here, with unity
+envs/graph_env.py:382:                        total_dist += 0  # TODO: should avoid this
+envs/graph_env.py:433:    #     # TODO: Detect action conflicts
+envs/graph_env.py:623:    # TODO: Now the random function doesn't align with the manually set seed
+envs/graph_env.py:720:        # TODO: this could probably just go into virtualhome
+envs/graph_env.py:856:        # TODO: this can be probably speed up if we can ensure that all objects are either closed or open
+envs/python_environment.py:74:        # TODO: we should specify goal per agent maybe
+envs/python_environment.py:151:        # TODO: in the future we may want different goals
+algos/train_graph_pred_excl_old.py:527:                ]  # TODO: is this correct? Xavi: correct
+algos/train_graph_pred_excl_old.py:916:            pred_changes = output['edge_change'][:, :-1, ...]  # TODO: is this correct?
+algos/train_graph_pred.py:212:                ]  # TODO: is this correct? Xavi: Correct
+algos/train_graph_pred.py:552:                ]  # TODO: is this correct? Xavi: correct
+algos/train_graph_pred.py:896:            pred_changes = output['edge_change'][:, :-1, ...]  # TODO: is this correct?
+algos/train_autoencoder_task.py:978:        # TODO: uncomment?        
+algos/arena_mp2.py:554:        # TODO: is this correct? Padding that is valid?
+algos/a2c_mp.py:110:        # TODO: uncomment
+algos/a2c_mp.py:123:        # # TODO: comment
+algos/a2c_mp.py:192:            # TODO: Uncomment
+algos/a2c_mp.py:198:                # TODO: Uncomment
+algos/a2c_mp.py:348:                        # TODO: decompose here
+algos/a2c.py:36:        # # TODO: comment
+algos/a2c.py:179:                            # TODO: decompose here
+algos/a2c.py:182:                            # TODO: delete
+algos/a2c.py:302:            # TODO: delete
+algos/train_autoencoder_task_nodata.py:912:        # TODO: uncomment?        
+algos/train_goal_conditioned_graph_pred.py:239:                ]  # TODO: is this correct?
+algos/train_goal_conditioned_graph_pred.py:482:                ]  # TODO: is this correct?
+algos/train_goal_conditioned_graph_pred.py:733:            pred_changes = output['edge_change'][:, :-1, ...]  # TODO: is this correct?
+algos/arena.py:184:        # TODO: is this correct? Padding that is valid?
+gen_data/vh_init_noise_agent.py:122:                    # TODO: we never get here
+gen_data/vh_init_toy_pred.py:118:                    # TODO: we never get here
+gen_data/init_goal_setter/init_goal_base.py:488:            # TODO: we need to check the properties and states, probably the easiest is to get them from the original set of graphs
+gen_data/vh_init_toy_pred_small.py:118:                    # TODO: we never get here
+gen_data/vh_init.py:114:                    # TODO: we never get here
+MCTS/MCTS.py:31:        """TODO: add more predicate checkers; currently only ON"""
+MCTS/MCTS.py:75:        """TODO: check predicates other than ON"""
+MCTS/MCTS.py:162:        """TODO: what if the predicte has been fulfilled but still grabbing the object?"""
+MCTS/MCTS.py:248:        # TODO: we should start with goals at random, or with all the goals
+MCTS/MCTS.py:411:                # TODO: this could just be computed in the heuristics?
+MCTS/MCTS.py:449:        """TODO: add more subgoal heuristics; currently only have (put x y)"""
+MCTS/MCTS_particles_v2_instance.py:66:        """TODO: add more predicate checkers; currently only ON"""
+MCTS/MCTS_particles_v2_instance.py:303:            # TODO: is this _Correct
+MCTS/MCTS_particles_v2_instance.py:360:            # TODO: what is this?
+MCTS/MCTS_particles_v2_instance.py:400:        # TODO: we should start with goals at random, or with all the goals
+MCTS/MCTS_particles_v2_instance.py:489:            # TODO: actually we could grab other objects if these dont involve open/close
+MCTS/MCTS_particles_v2_instance.py:631:        # TODO: this assumes a single action in transition, no joint planner
+MCTS/MCTS_particles_v2_instance.py:1014:        # TODO: do we need this?
+MCTS/MCTS_particles_v2_instance.py:1245:        TODO(tianmin): Tianmin, could you add comments for what the different sections here are doing
+MCTS/MCTS_particles_v2_instance.py:1255:        """TODO: add more subgoal heuristics; currently only have (put x y)"""
+Binary file MCTS/__pycache__/MCTS_particles_v2_instance.cpython-37.pyc matches
+Binary file MCTS/__pycache__/MCTS_particles_v2_instance.cpython-38.pyc matches
+Binary file MCTS/__pycache__/MCTS.cpython-38.pyc matches
+Binary file MCTS/__pycache__/MCTS_particles.cpython-38.pyc matches
+Binary file MCTS/__pycache__/MCTS.cpython-37.pyc matches
+Binary file MCTS/__pycache__/MCTS_particles.cpython-37.pyc matches
+Binary file MCTS/__pycache__/MCTS_particles_v2.cpython-38.pyc matches
+Binary file MCTS/__pycache__/MCTS_particles_v2.cpython-37.pyc matches
+MCTS/MCTS_particles.py:46:        """TODO: add more predicate checkers; currently only ON"""
+MCTS/MCTS_particles.py:194:            # TODO: is this _Correct
+MCTS/MCTS_particles.py:241:        # TODO: we should start with goals at random, or with all the goals
+MCTS/MCTS_particles.py:479:        # TODO: do we need this?
+MCTS/MCTS_particles.py:589:        """TODO: add more subgoal heuristics; currently only have (put x y)"""
+MCTS/MCTS_particles_v2.py:55:        """TODO: add more predicate checkers; currently only ON"""
+MCTS/MCTS_particles_v2.py:285:            # TODO: is this _Correct
+MCTS/MCTS_particles_v2.py:331:            # TODO: what is this?
+MCTS/MCTS_particles_v2.py:362:        # TODO: we should start with goals at random, or with all the goals
+MCTS/MCTS_particles_v2.py:539:        # TODO: this assumes a single action in transition, no joint planner
+MCTS/MCTS_particles_v2.py:885:        # TODO: do we need this?
+MCTS/MCTS_particles_v2.py:987:            # TODO(xavier): this crashes sometimes!! Check what is happening
+MCTS/MCTS_particles_v2.py:1086:        """TODO: add more subgoal heuristics; currently only have (put x y)"""
