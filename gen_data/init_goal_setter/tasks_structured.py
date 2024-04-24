@@ -4,7 +4,7 @@ import copy
 
 
 def get_container_task(init_goal_manager, graph, containers):
-    containers = list(set(containers))
+    #containers = list(set(containers))
 
     container_id_map = {}
     container_ids = []
@@ -18,7 +18,8 @@ def get_container_task(init_goal_manager, graph, containers):
         if edge["to_id"] == kitchen and edge["relation_type"] == "INSIDE"
     ]
 
-    for cont, pred in containers:
+    for cont, pred in containers: #class_name, predicate
+        print(cont, pred)
         cont_ids = [
             node["id"] for node in graph["nodes"] if (cont == node["class_name"])
         ]
@@ -26,7 +27,7 @@ def get_container_task(init_goal_manager, graph, containers):
             cont_ids = [ctid for ctid in cont_ids if ctid in ids_kichen]
         if len(cont_ids) == 0:
             ipdb.set_trace()
-        cont_id = init_goal_manager.rand.choice(cont_ids)
+        cont_id = init_goal_manager.rand.choice(cont_ids) #map from predicate to id
         container_id_map[cont] = cont_id
         container_ids.append(cont_id)
         container_preds.append(pred)
@@ -111,27 +112,39 @@ def build_env_goal(
     container_random_pred=[],
 ):
     env_goal = {task_name: []}
+    print(init_goal_manager.goal)
+    print(container_ids)
+    print(container_pred)
+    count = 0
     for k, v in init_goal_manager.goal.items():
-        env_goal[task_name].append(
-            {"put_{}_{}_{}".format(k, container_pred[0], container_ids[0]): v}
-        )
+        if len(container_ids) == 1:
+            env_goal[task_name].append(
+                {"put_{}_{}_{}".format(k, container_pred[0], container_ids[0]): v}
+            )
+        else:
+            env_goal[task_name].append(
+                {"put_{}_{}_{}".format(k, container_pred[count], container_ids[count]): v}
+            )
+        count += 1
 
     ## get goal
     env_goal["noise"] = []
+    count = 0
     for k, v in init_goal_manager.goal_random_agent.items():
         env_goal["noise"].append(
             {
                 "put_{}_{}_{}".format(
-                    k, container_random_pred[0], container_ids_random[0]
+                    k, container_random_pred[count], container_ids_random[count]
                 ): v
             }
         )
+        count += 1
     return env_goal
 
 
 class Task:
     @staticmethod
-    def setup_table(init_goal_manager, graph, start=True):
+    def setup_table(init_goal_manager, graph, start=True, num_goal=2):
         # ipdb.set_trace()
 
         # Make sure candidates are available
@@ -140,7 +153,12 @@ class Task:
         class_names = [node["class_name"] for node in graph["nodes"]]
 
         candidates = [cand for cand in candidates if cand[0] in class_names]
-        container_name, pred_name = init_goal_manager.rand.choice(candidates)
+        container_list = []
+        #container_name, pred_name = init_goal_manager.rand.choice(candidates)
+        for _ in range(num_goal):
+            container_name, pred_name = init_goal_manager.rand.choice(candidates)
+            container_list.append((container_name, pred_name))
+
         min_count, max_count = (
             init_goal_manager.init_pool["counts"]["min"],
             init_goal_manager.init_pool["counts"]["max"],
@@ -162,10 +180,11 @@ class Task:
                 if node["class_name"] == "kitchencounter"
             ]
         )
+        print("container list: ", container_list)
         # ipdb.set_trace()
 
         container_ids, container_pred, container_id_map = get_container_task(
-            init_goal_manager, graph, [(container_name, pred_name)]
+            init_goal_manager, graph, container_list
         )
 
         container_ids_random, container_random_pred, container_ids_random_map = (
@@ -197,7 +216,7 @@ class Task:
             "wine",
         ]
 
-        objects_select = [init_goal_manager.rand.choice(all_object_pool)]
+        objects_select = init_goal_manager.rand.sample(all_object_pool, num_goal)
         # extra_object = init_goal_manager.rand.choice(["wineglass", "waterglass"])
         # objects_select = [extra_object] + ["plate", "cutleryfork"]
         for object_name in objects_select:
@@ -286,7 +305,7 @@ class Task:
         #     print([id2node[idi]['class_name'] for idi in node_ids_from])
         #     ipdb.set_trace()
 
-        assert len(container_ids) == 1
+        #assert len(container_ids) == 1
         # assert len(container_ids_random) > 0
 
         ## get goal
@@ -298,6 +317,7 @@ class Task:
             container_ids_random,
             container_random_pred,
         )
+        print('New environment goal:', env_goal)
 
         return graph, env_goal, True
 
@@ -424,10 +444,12 @@ class Task:
 
         object_candidates = ["pudding", "cupcake", "salmon", "apple"]
         different_classes = init_goal_manager.rand.randint(1, len(object_candidates))
+        different_classes = 1
         objects_selected = init_goal_manager.rand.choices(
             object_candidates, k=different_classes
         )
         how_many_objects = init_goal_manager.rand.randint(3, 7)
+        how_many_objects = 1
         all_object_pool = []
         for obj_name in objects_selected:
             all_object_pool += [obj_name] * how_many_objects
@@ -498,6 +520,8 @@ class Task:
         env_goal = build_env_goal(
             "put_fridge", init_goal_manager, container_ids, container_pred
         )
+
+        print("New environment goal:", env_goal)
 
         return graph, env_goal, True
 
@@ -741,3 +765,192 @@ class Task:
         )
 
         return graph, env_goal, True
+    
+    @staticmethod
+    def setup_table_watch_tv(init_goal_manager, graph, start=True):
+        task_list = ["setup_table", "watch_tv"]
+        num_container_list = {"setup_table": 2, "watch_tv": 1}
+        num_object_list = {"setup_table": 2, "watch_tv": 1}
+        except_position_ids = []
+        env_goal = {}
+        for task in task_list:
+            candidates = init_goal_manager.init_pool[task]["candidates"]
+
+            class_names = [node["class_name"] for node in graph["nodes"]]
+            candidates = [cand for cand in candidates if cand[0] in class_names]
+            class_names = [node["class_name"] for node in graph["nodes"]]
+            container_list = []
+            #container_name, pred_name = init_goal_manager.rand.choice(candidates)
+            for _ in range(num_container_list[task]):
+                container_name, pred_name = init_goal_manager.rand.choice(candidates)
+                assert(container_name in class_names)
+                container_list.append((container_name, pred_name))
+
+            min_count, max_count = (
+                init_goal_manager.init_pool[task]["counts"]["min"],
+                init_goal_manager.init_pool[task]["counts"]["max"],
+            )
+
+            pr_graph = copy.deepcopy(graph)
+            graph = cleanup_graph(init_goal_manager, graph, start)
+            print(
+                [
+                    node["id"]
+                    for node in pr_graph["nodes"]
+                    if node["class_name"] == "kitchencounter"
+                ]
+            )
+            print(
+                [
+                    node["id"]
+                    for node in graph["nodes"]
+                    if node["class_name"] == "kitchencounter"
+                ]
+            )
+            print("container list: ", container_list)
+            # ipdb.set_trace()
+
+            container_ids, container_pred, container_id_map = get_container_task(
+                init_goal_manager, graph, container_list
+            )
+
+            container_ids_random, container_random_pred, container_ids_random_map = (
+                [],
+                [],
+                {},
+            )
+
+            id2node = {node["id"]: node for node in graph["nodes"]}
+
+            # for how many is the table
+            counts_objects = init_goal_manager.rand.randint(min_count, max_count)
+
+            init_goal_manager.goal = {}
+            object_dict = init_goal_manager.init_pool[task]["objects"]
+
+            objects_select = init_goal_manager.rand.sample(object_dict.keys(), num_object_list[task])
+            # extra_object = init_goal_manager.rand.choice(["wineglass", "waterglass"])
+            # objects_select = [extra_object] + ["plate", "cutleryfork"]
+            for object_name in objects_select:
+                init_goal_manager.goal[object_name] = counts_objects
+
+            if len(container_ids) == 0:
+                ipdb.set_trace()
+
+            if init_goal_manager.same_room:
+                objs_in_room = init_goal_manager.get_obj_room(container_ids[0])
+            else:
+                objs_in_room = None
+
+            except_position_ids += [
+                node["id"] for node in graph["nodes"] if ("floor" in node["class_name"])
+            ]
+            except_position_ids += container_ids + container_ids_random
+            print("init goal:", init_goal_manager.goal)
+            # place objects and random objects
+            for k, v in init_goal_manager.goal.items():
+                # obj_ids = [node['id'] for node in graph['nodes'] if k in node['class_name']]
+                # graph = init_goal_manager.remove_obj(graph, obj_ids)
+
+                num_obj = init_goal_manager.rand.randint(
+                    v, init_goal_manager.init_pool[task]["objects"][k]["env_max_num"] + 1
+                )  # random select objects >= goal
+                (
+                    init_goal_manager.object_id_count,
+                    graph,
+                    success,
+                ) = init_goal_manager.add_obj(
+                    graph,
+                    k,
+                    num_obj,
+                    init_goal_manager.object_id_count,
+                    objs_in_room=objs_in_room,
+                    except_position=except_position_ids,
+                    goal_obj=True,
+                )
+                # print([node for node in graph['nodes'] if node['class_name'] == 'wineglass'])
+                if not success:
+                    # ipdb.set_trace()
+                    return None, None, False
+
+            if task == "setup_table":
+                print("---------------------------")
+                print("placing additional objects for setuptable")
+                all_object_pool = [
+                    "condimentbottle",
+                    "remotecontrol",
+                    "plate",
+                    "wineglass",
+                    "waterglass",
+                    "dishbowl",
+                    "cupcake",
+                    "salmon",
+                    "apple",
+                    "chips",
+                    "book",
+                    "wine",
+                ]
+            # place objects and random objects
+                for k in all_object_pool:
+                    if k not in init_goal_manager.goal:
+                        num_obj = init_goal_manager.rand.randint(
+                            1,
+                            init_goal_manager.init_pool[task]["objects"][k]["env_max_num"] + 1,
+                        )  # random select objects >= goal
+                        (
+                            init_goal_manager.object_id_count,
+                            graph,
+                            success,
+                        ) = init_goal_manager.add_obj(
+                            graph,
+                            k,
+                            num_obj,
+                            init_goal_manager.object_id_count,
+                            objs_in_room=objs_in_room,
+                            except_position=except_position_ids,
+                            goal_obj=True,
+                        )
+                        # print([node for node in graph['nodes'] if node['class_name'] == 'wineglass'])
+                        if not success:
+                            # ipdb.set_trace()
+                            return None, None, False
+                        print("success")
+
+            # ipdb.set_trace()
+            # # pdb.set_trace()
+            # if 72 in container_ids:
+            #     node_ids_from = [edge['from_id'] for edge in graph['edges'] if edge['to_id'] == 72 and edge['relation_type'] != 'CLOSE']
+            #     id2node = {node['id']: node for node in graph['nodes']}
+            #     print([id2node[idi]['class_name'] for idi in node_ids_from])
+            #     ipdb.set_trace()
+
+            #assert len(container_ids) == 1
+            # assert len(container_ids_random) > 0
+
+            ## get goal
+            env_goal[task] = build_env_goal(
+                task,
+                init_goal_manager,
+                container_ids,
+                container_pred,
+                container_ids_random,
+                container_random_pred,
+            )
+            print('New environment goal:', env_goal)
+        
+        if start:
+                (
+                    init_goal_manager.object_id_count,
+                    graph,
+                ) = init_goal_manager.setup_other_objs(
+                    graph,
+                    init_goal_manager.object_id_count,
+                    objs_in_room=objs_in_room,
+                    except_position=except_position_ids,
+                )
+        print(env_goal)
+        env_goal_final = {"setup_table_watch_tv": [], "noise": []}
+        for k, v in env_goal.items():
+            env_goal_final["setup_table_watch_tv"] += v[k]
+        print(env_goal_final)
+        return graph, env_goal_final, True

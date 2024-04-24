@@ -429,6 +429,15 @@ if __name__ == "__main__":
         task_goal[0] = goals
         task_goal[1] = goals_noise
 
+        temp = {}
+        count = 0
+        for key, value in task_goal[0].items():
+            temp[count] = {key : value}
+            count += 1
+        task_goal = temp
+
+        print("Task goal", task_goal)
+
         env_task_set.append(
             {
                 "task_id": task_id,
@@ -446,7 +455,7 @@ if __name__ == "__main__":
     pickle.dump(
         env_task_set,
         open(
-            f"{curr_dir}/../dataset/structured_single_agent/{args.split}_env_task_set_{args.num_per_apartment}_{args.mode}_task.{args.task}_apts.{args.apt_str}.pik",
+            f"{curr_dir}/../dataset/structured_double_agent/{args.split}_env_task_set_{args.num_per_apartment}_{args.mode}_task.{args.task}_apts.{args.apt_str}.pik",
             "wb",
         ),
     )

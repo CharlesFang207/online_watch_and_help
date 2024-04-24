@@ -110,13 +110,14 @@ if __name__ == '__main__':
                                     executable_args=executable_args,
                                     base_port=args.base_port,
                                     convert_goal=True,
-                                    recording_options={
-                                        "recording": True,
-                                        'output_folder': "testSingleAgent",
-                                        'file_name_prefix': None,
-                                        'cameras': 'PERSON_FROM_BACK',
-                                        'modality': 'normal',
-                                    })
+                                    #recording_options={
+                                    #    "recording": True,
+                                    #    'output_folder': "testSingleAgent",
+                                    #    'file_name_prefix': None,
+                                    #    'cameras': 'PERSON_FROM_BACK',
+                                    #    'modality': 'normal',
+                                    #}
+                                    )
 
 
         args_common = dict(recursive=False,

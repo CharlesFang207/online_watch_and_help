@@ -18,9 +18,9 @@ class SetInitialGoal:
     def __init__(
         self,
         obj_position,
-        class_name_size,
-        init_pool_tasks,
-        task_name,
+        class_name_size, #environment parameter
+        init_pool_tasks, #from json file
+        task_name, #task name like set up table
         same_room=True,
         goal_template=None,
         rand=None,
@@ -59,6 +59,7 @@ class SetInitialGoal:
         self.same_room = same_room
 
     def set_goal(self):
+        self.init_pool = {}
         if self.task_name in [
             "setup_table_toy",
             "setup_table",
@@ -83,8 +84,8 @@ class SetInitialGoal:
             self.init_pool.update(self.init_pool_tasks["read_book"])
 
         elif self.task_name == "setup_table_watch_tv":
-            self.init_pool = copy.deepcopy(self.init_pool_tasks["setup_table"])
-            self.init_pool.update(self.init_pool_tasks["watch_tv"])
+            self.init_pool["setup_table"] = copy.deepcopy(self.init_pool_tasks["setup_table"])
+            self.init_pool["watch_tv"] = copy.deepcopy(self.init_pool_tasks["watch_tv"])
 
         elif self.task_name == "setup_table_put_fridge":
             self.init_pool = copy.deepcopy(self.init_pool_tasks["setup_table"])

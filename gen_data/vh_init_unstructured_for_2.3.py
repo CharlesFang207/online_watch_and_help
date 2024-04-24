@@ -11,7 +11,7 @@ import argparse
 
 curr_dir = os.path.dirname(os.path.abspath(__file__))
 home_path = "../../"
-sys.path.insert(0, f"{curr_dir}/../../virtualhome/")
+sys.path.insert(0, f"{curr_dir}/../../virtualhome/virtualhome")
 
 print("path", sys.path[0])
 
@@ -95,7 +95,7 @@ if __name__ == "__main__":
     else:
         pass
         # args.apt_str = '0,1,2,4,5'
-    with open(f"{curr_dir}/data/init_pool_structured.json") as file:
+    with open(f"{curr_dir}/data/init_pool_unstructured.json") as file:
         init_pool = json.load(file)
     # comm = comm_unity.UnityCommunication()
     if args.use_editor:
@@ -135,7 +135,7 @@ if __name__ == "__main__":
 
     apartment_ids = [int(apt_id) for apt_id in args.apt_str.split(",")]
     if args.task == "all":
-        tasks = ["setup_table", "prepare_food", "watch_tv"]
+        tasks = ["prepare_food", "watch_tv"]
         # tasks =  ["setup_table", "put_fridge", "prepare_food", "put_dishwasher"]
     else:
         tasks = [args.task]

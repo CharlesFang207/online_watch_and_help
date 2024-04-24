@@ -83,17 +83,6 @@
             "book": {"env_max_num": 3, "on": ["kitchentable", "coffeetable", "sofa"], "in": []}
         }
     },
-    // "put_fridge":
-    // {
-    //     "candidates": [["fridge", "inside"]],
-    //     "objects": {
-    //         "pudding": {"min_num":0, "max_num":2, "env_max_num": 2, "on": [], "in": ["fridge"]},
-    //         "cupcake": {"min_num":0, "max_num":2, "env_max_num": 2, "on": [], "in": ["fridge"]},
-    //         "salmon": {"min_num":0, "max_num":2, "env_max_num": 2, "on": [], "in": ["fridge"]},
-    //         "apple": {"min_num":0, "max_num":2, "env_max_num": 2, "on": [], "in": ["fridge"]}               
-    //     }
-
-    // },
 
     "prepare_food":
     {
