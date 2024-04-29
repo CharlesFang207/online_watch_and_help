@@ -36,7 +36,7 @@ if __name__ == '__main__':
     args.executable_file = '/home/scai/Workspace/xfang21/github_repos/linux_exec.v2.3.0.x86_64'
     args.max_episode_length = 250
     args.num_per_apartment = 20
-    args.dataset_path = './dataset/structured_single_agent/train_env_task_set_2_full_task.setup_table_apts.0.pik'
+    args.dataset_path = './dataset/structured_single_agent/train_env_task_set_2_full_task.all_apts.0,1,2,4,5.pik'
 
     agent_types = [
             ['full', 0, 0.05, False, 0],
