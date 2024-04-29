@@ -129,6 +129,7 @@ class MCTS_particles_v2_instance:
         return count
 
     def run(self, curr_root, t, heuristic_dict, plan, opponent_subgoal):
+        #print("run mcts tree search")
         self.env = VhGraphEnv(n_chars=self.char_index + 1)
         self.env.pomdp = True
         self.env.reset(copy.deepcopy(self.gt_graph))
@@ -179,6 +180,8 @@ class MCTS_particles_v2_instance:
         last_reward = 0.0
         prev_verbose = self.verbose
         for explore_step in tqdm(range(self.num_simulation), disable=not self.verbose):
+            #print("------------------------")
+            #print("step", explore_step)
             if (
                 explore_step % (self.num_simulation - 2) == 0
                 and explore_step > 0
@@ -772,6 +775,8 @@ class MCTS_particles_v2_instance:
         return score
 
     def select_child(self, curr_node, curr_state):
+        #print("-----------------------")
+        #print("select child")
         # print("Child...", actions)
         possible_children = [child for child in curr_node.children]
         scores = [
@@ -820,6 +825,7 @@ class MCTS_particles_v2_instance:
 
         goal_spec, _, heuristic_name = selected_child.id[1]
         actions = selected_child.plan
+        #print(actions)
 
         next_vh_state = curr_state[0]
         if selected_child.state is None:
@@ -830,11 +836,17 @@ class MCTS_particles_v2_instance:
             total_cost = 0
             total_reward = 0
             for action_str in actions:
-                # print("Child ", action_str)
-                # dicti = next_vh_state.to_dict()
-                # print([node['states'] for node in dicti['nodes'] if node['id'] == 328])
+                '''print("Child ", action_str)
+                dicti = next_vh_state.to_dict()
+                for edge in dicti["edges"]:
+                    if edge["from_id"] == 457:
+                        print(edge)
+                    if edge["from_id"] == 1:
+                        print(edge)'''
                 next_vh_state0 = copy.deepcopy(next_vh_state)
                 success, next_vh_state, next_state_dict, cost, reward = self.transition(
+                #bug: if init state of agent is close to a container, then the edge of close from object
+                #inside container to agent is not added
                     next_vh_state0, {self.char_index: action_str}, goal_spec
                 )
                 total_cost += cost
@@ -903,6 +915,7 @@ class MCTS_particles_v2_instance:
         return subgoal_prior
 
     def expand(self, leaf_node, t, state_particle):
+        #print("expand", "green")
         current_child_actions = []
         if t < self.max_episode_length:
             expanded_leaf_node, current_child_actions = self.initialize_children(
@@ -914,6 +927,7 @@ class MCTS_particles_v2_instance:
         return leaf_node, current_child_actions
 
     def backup(self, value, node_list, costs, rewards, reward_rollout, actions_rollout):
+        #print("backup", "green")
         t = len(node_list) - 1
 
         # Compute delta reward
@@ -1022,6 +1036,7 @@ class MCTS_particles_v2_instance:
             satisfied[predicate_key].append(satisfied)
 
     def initialize_children(self, node, state_particle):
+        #print("initialize_children")
         goal_spec = node.id[1][0]
         vh_state, state, satisfied, unsatisfied = state_particle
 
@@ -1100,6 +1115,8 @@ class MCTS_particles_v2_instance:
 
         subgoals += subgoals_hand
 
+        #print(subgoals)
+
         if is_offering:
             pass
         # ipdb.set_trace()
@@ -1127,6 +1144,7 @@ class MCTS_particles_v2_instance:
                 goal_predicate[2],
             )  # subgoal, goal predicate, the new satisfied predicate
             heuristic = self.heuristic_dict[goal.split("_")[0]]
+           # print(heuristic)
             if "offer" in goal:
                 pass
                 # ipdb.set_trace()
@@ -1134,6 +1152,7 @@ class MCTS_particles_v2_instance:
                 action_heuristic, _, action_heuristic_name = heuristic(
                     self.agent_id, self.char_index, unsatisfied, state, self.env, goal
                 )
+                #print(action_heuristic, action_heuristic_name)
             except:
                 print(goal)
                 # ipdb.set_trace()

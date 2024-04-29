@@ -130,7 +130,7 @@ class ArenaMP(object):
                     goal_spec,
                     opponent_subgoal,
                     length_plan=length_plan,
-                    must_replan=False if must_replan is None else must_replan[it],
+                    must_replan=True if must_replan is None else must_replan[it],
                 )
 
                 if tp is True:

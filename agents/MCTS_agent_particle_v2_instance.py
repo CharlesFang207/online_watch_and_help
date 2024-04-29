@@ -190,6 +190,7 @@ def grab_heuristic(
             print(target_action)
         return target_action, cost, f"grab_{target_id}"
     else:
+        #print("here")
         find_actions, find_costs, _ = find_heuristic(
             agent_id, char_index, unsatisfied, env_graph, simulator, object_target
         )
@@ -1027,8 +1028,9 @@ class MCTS_agent_particle_v2_instance:
         return curr_loc_index
 
     def get_action(
-        self, obs, goal_spec, opponent_subgoal=None, length_plan=5, must_replan=False
+        self, obs, goal_spec, opponent_subgoal=None, length_plan=5, must_replan=True
     ):
+        print("a new action is called", "red")
         # ipdb.set_trace()
         if len(goal_spec) == 0:
             ipdb.set_trace()
@@ -1215,6 +1217,7 @@ class MCTS_agent_particle_v2_instance:
                 )
             )
         if should_replan or must_replan:
+            print("must_replan")
             # ipdb.set_trace()
             for particle_id, particle in enumerate(self.particles):
                 belief_states = []
@@ -1249,6 +1252,9 @@ class MCTS_agent_particle_v2_instance:
                         print(satisfied)
                         print(unsatisfied)
                     # ipdb.set_trace()
+                '''for edge in init_state["edges"]:
+                    if edge["from_id"] == 457:
+                        print(edge)'''
                 init_vh_state = self.sim_env.get_vh_state(init_state)
                 # print(colored(unsatisfied, "yellow"))
                 self.particles[particle_id] = (
