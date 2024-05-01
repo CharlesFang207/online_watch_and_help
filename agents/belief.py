@@ -117,7 +117,7 @@ def get_container_prior(id2node, belief_type, container_ids):
         init_values *= 0.01
         init_values[0] = 0.99
         init_values = np.log(init_values)
-    elif belief_type == 'spiked3':
+    elif belief_type == 'spiked3': #TODO: what is this?
         raise Exception
     elif belief_type == 'spiked4':
         class_names = ['fridge', 'stove', 'kitchencabinet']
@@ -143,7 +143,7 @@ class Belief():
             random.seed(seed)
             np.random.seed(seed)
 
-        self.knowledge_containers = True
+        self.knowledge_containers = True #know all the containers in the environment
         self.forget_rate = 0.
         self.belief_type = "uniform"
 
@@ -157,7 +157,7 @@ class Belief():
 
         # Possible beliefs for some objects
         self.container_restrictions = {
-                'book': ['cabinet', 'kitchencabinet']
+                'book': ['cabinet', 'kitchencabinet']  #only book?
         }
 
         self.id_restrictions_inside = {
@@ -204,10 +204,10 @@ class Belief():
         new_graph = {
             'nodes': [copy.deepcopy(node) for node in graph_gt['nodes'] if node['id'] not in self.prohibit_ids],
             'edges': [edge for edge in graph_gt['edges'] if edge['to_id'] not in self.prohibit_ids and edge['from_id'] not in self.prohibit_ids]
-        }
-        self.graph_init = graph_gt
+        } 
+        self.graph_init = graph_gt #observation
         # ipdb.set_trace()
-        self.sampled_graph = new_graph
+        self.sampled_graph = new_graph #own belief no prohibited id
         
 
         self.states_consider = ['OFF', 'CLOSED']
@@ -361,9 +361,9 @@ class Belief():
             if edge['relation_type'] == 'INSIDE' and edge['to_id'] in self.room_ids:
                 object_room_ids[edge['from_id']] = edge['to_id']
 
-        
+        #objects inside any container
         nodes_inside_ids = [x['from_id'] for x in self.sampled_graph['edges'] if x['to_id'] not in self.room_ids and x['relation_type'] == 'INSIDE']
-        nodes_inside = [node for node in self.sampled_graph['nodes'] if node['id'] in nodes_inside_ids and 'GRABBABLE' not in node['states']]
+        nodes_inside = [node for node in self.sampled_graph['nodes'] if node['id'] in nodes_inside_ids and 'GRABBABLE' not in node['properties']] #TODO: "grabble" should in node['properties']
 
         objects_for_belief_reasoning = grabbable_nodes+nodes_inside
         # ipdb.set_trace()
@@ -421,7 +421,8 @@ class Belief():
         self.sampled_graph['edges'] = []
         self.init_belief()
 
-    def sample_from_belief(self, as_vh_state=False, ids_update=None, obs=None):
+    def sample_from_belief(self, as_vh_state=False, ids_update=None, obs=None): 
+        # ids_update: ids need to be updated
         # Sample states. Sample first inside to check if the object is inside a container
         # If inside nothing, sample a room, if a room is sampled, sample whether it is on an object
 
@@ -441,6 +442,7 @@ class Belief():
                 states.append(self.bin_var_dict[var_name][0][value_binary])
 
             node['states'] = states
+        #sample state of updated node from current belief
         node_inside, node_on = {}, {}
         object_grabbed = []
         in_room = []
@@ -455,7 +457,7 @@ class Belief():
             if edge['relation_type'] == 'ON':
                 node_on[edge['from_id']] = edge['to_id']
 
-
+        #inside relationships
         for node in self.sampled_graph['nodes']:
             if ids_update is not None and node['id'] not in ids_update:
                 continue
@@ -713,7 +715,7 @@ class Belief():
             if x['relation_type'] == 'INSIDE':
                 if x['from_id'] in inside.keys():
                     print('Already inside', id2node[x['from_id']]['class_name'], id2node[inside[x['from_id']]]['class_name'], id2node[x['to_id']]['class_name'])
-                    raise Exception
+                    raise Exception #?
                 inside[x['from_id']] = x['to_id']
             
             if x['relation_type'] == 'ON' and x['to_id'] in self.surface_ids:
