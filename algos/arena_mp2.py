@@ -47,6 +47,8 @@ class ArenaMP(object):
         self.saved_info = None
         atexit.register(self.close)
 
+        self.language_infos =[None for _ in range(self.num_agents)]
+
     def close(self):
         print(traceback.print_exc())
 
@@ -121,6 +123,8 @@ class ArenaMP(object):
                 goal_spec = self.env.get_goal2(inferred_goal, self.env.agent_goals[it])
             # ipdb.set_trace()
             if agent.agent_type in ["MCTS", "Random"]:
+
+                language = self.language_infos[it]
                 # opponent_subgoal = None
                 # if agent.recursive:
                 #     opponent_subgoal = self.agents[1 - it].last_subgoal
@@ -130,7 +134,8 @@ class ArenaMP(object):
                     goal_spec,
                     opponent_subgoal,
                     length_plan=length_plan,
-                    must_replan=True if must_replan is None else must_replan[it],
+                    must_replan=True if must_replan is None else must_replan[it], # TODO: already modified this
+                    language=language
                 )
 
                 if tp is True:
@@ -734,3 +739,4 @@ class ArenaMP(object):
         saved_info["finished"] = success
         self.saved_info = saved_info
         return success, self.env.steps, saved_info
+        

@@ -570,7 +570,7 @@ class Belief():
         self.update_to_prior()
         self.update_from_gt_graph(gt_graph)
 
-    def update_graph_from_gt_graph(self, gt_graph, sampled_graph=None, resample_unseen_nodes=False, update_belief=True):
+    def update_graph_from_gt_graph(self, gt_graph, sampled_graph=None, resample_unseen_nodes=False, update_belief=True, language_response=None):
         """
         Updates the current sampled graph with a set of observations
         """
@@ -578,6 +578,7 @@ class Belief():
 
         if sampled_graph is not None:
             self.sampled_graph = sampled_graph
+
 
         id2node = {} 
         gt_graph = {
@@ -591,6 +592,7 @@ class Belief():
             id2node[x['id']] = x
 
         if update_belief:
+            self.update_belief_from_languages(language_response) # TODO: does the order of update_belief_prior and update_belief_from_languages matter?
             self.update_belief(gt_graph)
 
         char_node = self.agent_id
@@ -856,6 +858,34 @@ class Belief():
                     self.room_node[id_node][1][mask_house] = self.first_room[id_node][1][mask_house]
 
         # print("New belief", self.edge_belief[458]['ON'])
+                    
+    def update_belief_from_languages(self, language_response = None):
+        if language_response == None:
+            return
+        
+        # check if the language type is location
+        assert(language_response.language_type == 'location')
+
+        # Update the belief from the language
+        pred, obj_name, position_id = language_response.parse()
+
+        obj_ids = [node['id'] for node in self.sampled_graph['nodes'] if node['class_name'] == obj_name]
+
+        if len(obj_ids) == 0:
+            ipdb.set_trace()
+        else:
+            obj_id = obj_ids[0] # TODO: choose the first object for now
+            if pred.upper() == 'INSIDE':
+                self.edge_belief[obj_id]['INSIDE'][1][:] = self.low_prob
+                self.edge_belief[obj_id]['INSIDE'][1][self.container_index_belief_dict[position_id]] = 1.
+            elif pred.upper() == 'ON':
+                self.edge_belief[obj_id]['ON'][1][:] = self.low_prob
+                self.edge_belief[obj_id]['ON'][1][self.surface_index_belief_dict[position_id]] = 1.
+            else:
+                raise Exception
+            
+            
+
 
 
 

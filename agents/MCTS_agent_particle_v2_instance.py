@@ -16,6 +16,7 @@ import pickle
 
 from . import belief
 from envs.graph_env import VhGraphEnv
+from agents.language import LanguageInquiry, LanguageResponse
 
 #
 import pdb
@@ -1028,9 +1029,48 @@ class MCTS_agent_particle_v2_instance:
         return curr_loc_index
 
     def get_action(
-        self, obs, goal_spec, opponent_subgoal=None, length_plan=5, must_replan=True
+        self, obs, goal_spec, opponent_subgoal=None, length_plan=5, must_replan=True, language=None
     ):
-        print("a new action is called", "red")
+        language_to_be_sent = None
+
+        if type(language) == LanguageInquiry:
+
+            obj_name = language.obj_name
+            
+            obj_ids = [node["id"] for node in obs["nodes"] if node["class_name"] == obj_name]
+            max_prob_obj_id_prob = [None, 0.]
+            pred = None
+            position_id = None
+            for obj_id in obj_ids:
+                if obj_id not in self.edge_belief:
+                    continue
+                else:
+                    max_inside_prob = max(self.edge_belief[obj_id]["INSIDE"][1][:])
+                    max_on_prob = max(self.edge_belief[obj_id]["ON"][1][:])
+                    max_prob = max(max_inside_prob, max_on_prob)
+                    if (max_prob > max_prob_obj_id_prob[1]):
+                    #TODO: decide whether to response based on max_prob
+                        if max_inside_prob >= max_on_prob:
+                            index_list = np.args_where(self.edge_belief[obj_id]["INSIDE"][1][:] == max_inside_prob)
+                            index = random.choice(index_list)
+                            container_id = self.edge_belief[obj_id]["INSIDE"][0][index]
+                            pred = "INSIDE"
+                            position_id = container_id
+                        else:
+                            index_list = np.args_where(self.edge_belief[obj_id]["ON"][1][:] == max_on_prob)
+                            index = random.choice(index_list)
+                            surface_id = self.edge_belief[obj_id]["ON"][0][index]
+                            pred = "ON"
+                            position_id = surface_id
+                        max_prob_obj_id_prob = [obj_id, max_prob]
+
+
+
+            language_to_be_sent = LanguageResponse(pred, 
+                                                   obj_name, 
+                                                   position_id, 
+                                                   self.agent_id, 
+                                                   language.from_agent_id)
         # ipdb.set_trace()
         if len(goal_spec) == 0:
             ipdb.set_trace()
@@ -1225,7 +1265,7 @@ class MCTS_agent_particle_v2_instance:
 
                 # if True: #particle is None:
                 new_graph = self.belief.update_graph_from_gt_graph(
-                    obs, resample_unseen_nodes=True, update_belief=False
+                    obs, resample_unseen_nodes=True, update_belief=False, language_response=language_response
                 )
                 # print('new_graph:')
                 # print([n['id'] for n in new_graph['nodes']])
