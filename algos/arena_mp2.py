@@ -12,6 +12,8 @@ import ray
 import traceback
 import atexit
 from utils import utils_environment as utils
+from typing import List, Optional
+from agents.language import Language, LanguageInquiry, LanguageResponse
 # @ray.remote
 class ArenaMP(object):
     def __init__(
@@ -46,8 +48,9 @@ class ArenaMP(object):
         self.max_number_steps = max_number_steps
         self.saved_info = None
         atexit.register(self.close)
+        self.language_infos: List[Optional[Language]] = [None for _ in range(self.num_agents)]
 
-        self.language_infos =[None for _ in range(self.num_agents)]
+
 
     def close(self):
         print(traceback.print_exc())
@@ -129,7 +132,7 @@ class ArenaMP(object):
                 # if agent.recursive:
                 #     opponent_subgoal = self.agents[1 - it].last_subgoal
                 # ipdb.set_trace()
-                dict_actions[it], dict_info[it] = agent.get_action(
+                dict_actions[it], dict_info[it], language_rsps = agent.get_action(
                     obs[it],
                     goal_spec,
                     opponent_subgoal,

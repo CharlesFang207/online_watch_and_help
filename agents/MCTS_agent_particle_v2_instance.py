@@ -16,7 +16,7 @@ import pickle
 
 from . import belief
 from envs.graph_env import VhGraphEnv
-from agents.language import LanguageInquiry, LanguageResponse
+from agents.language import Language, LanguageInquiry, LanguageResponse
 
 #
 import pdb
@@ -1031,43 +1031,15 @@ class MCTS_agent_particle_v2_instance:
     def get_action(
         self, obs, goal_spec, opponent_subgoal=None, length_plan=5, must_replan=True, language=None
     ):
-        language_to_be_sent = None
+        language_rsps_to_be_sent = None
 
         if type(language) == LanguageInquiry:
 
-            obj_name = language.obj_name
-            
-            obj_ids = [node["id"] for node in obs["nodes"] if node["class_name"] == obj_name]
-            max_prob_obj_id_prob = [None, 0.]
-            pred = None
-            position_id = None
-            for obj_id in obj_ids:
-                if obj_id not in self.edge_belief:
-                    continue
-                else:
-                    max_inside_prob = max(self.edge_belief[obj_id]["INSIDE"][1][:])
-                    max_on_prob = max(self.edge_belief[obj_id]["ON"][1][:])
-                    max_prob = max(max_inside_prob, max_on_prob)
-                    if (max_prob > max_prob_obj_id_prob[1]):
-                    #TODO: decide whether to response based on max_prob
-                        if max_inside_prob >= max_on_prob:
-                            index_list = np.args_where(self.edge_belief[obj_id]["INSIDE"][1][:] == max_inside_prob)
-                            index = random.choice(index_list)
-                            container_id = self.edge_belief[obj_id]["INSIDE"][0][index]
-                            pred = "INSIDE"
-                            position_id = container_id
-                        else:
-                            index_list = np.args_where(self.edge_belief[obj_id]["ON"][1][:] == max_on_prob)
-                            index = random.choice(index_list)
-                            surface_id = self.edge_belief[obj_id]["ON"][0][index]
-                            pred = "ON"
-                            position_id = surface_id
-                        max_prob_obj_id_prob = [obj_id, max_prob]
+            pred, obj_id, position_id = language.extract_max_prob_obj_info(obs, self.belief.edge_belief)
 
-
-
-            language_to_be_sent = LanguageResponse(pred, 
-                                                   obj_name, 
+            language_rsps_to_be_sent = LanguageResponse(pred, 
+                                                   language.obj_name, 
+                                                   obj_id,
                                                    position_id, 
                                                    self.agent_id, 
                                                    language.from_agent_id)
@@ -1472,7 +1444,7 @@ class MCTS_agent_particle_v2_instance:
             #     print("Bad plan")
             #     ipdb.set_trace()
 
-        return action, info
+        return action, info, language_rsps_to_be_sent
 
     def reset(
         self,

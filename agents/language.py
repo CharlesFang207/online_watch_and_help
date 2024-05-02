@@ -10,18 +10,57 @@ import simulation.evolving_graph.utils as vh_utils
 import json
 import copy
 from termcolor import colored
-class LanguageInquiry():
+
+class Language():
     def __init__(self, obj_name, from_agent_id=None, to_agent_id=None):
         self.obj_name = obj_name
         self.from_agent_id = from_agent_id
         self.to_agent_id = to_agent_id
 
 
-class LanguageResponse():
-    def __init__(self, language_type, pred, obj_name, position_id, from_agent_id=None, to_agent_id = None):
+class LanguageInquiry(Language):
+    def __init__(self, obj_name, from_agent_id=None, to_agent_id=None):
+        super().__init__(obj_name, from_agent_id, to_agent_id)
+    
+    # Use the helper's belief and observation to extract the most certain object information
+    def extract_max_prob_obj_info(self, obs, edge_belief):
+        obj_ids = [node["id"] for node in obs["nodes"] if node["class_name"] == self.obj_name]
+        max_obj_id_prob = [None, 0.]
+        pred = None
+        position_id = None
+
+        for obj_id in obj_ids:
+            if obj_id not in edge_belief:
+                continue
+            else:
+                max_inside_prob = max(np.softmax(edge_belief[obj_id]["INSIDE"][1][:]))
+                max_on_prob = max(np.softmax(edge_belief[obj_id]["ON"][1][:]))
+                max_prob = max(max_inside_prob, max_on_prob)
+                if (max_prob > max_obj_id_prob[1]):
+                #TODO: decide whether to respond based on max_prob
+                    if max_inside_prob == max_prob:
+                        index_list = np.args_where(edge_belief[obj_id]["INSIDE"][1][:] == max_inside_prob)
+                        index = random.choice(index_list)
+                        container_id = edge_belief[obj_id]["INSIDE"][0][index]
+                        pred = "INSIDE"
+                        position_id = container_id
+                    else:
+                        index_list = np.args_where(self.edge_belief[obj_id]["ON"][1][:] == max_on_prob)
+                        index = random.choice(index_list)
+                        surface_id = self.edge_belief[obj_id]["ON"][0][index]
+                        pred = "ON"
+                        position_id = surface_id
+                    max_obj_id_prob = [obj_id, max_prob]
+
+        return pred, max_obj_id_prob[0], position_id
+        
+
+
+class LanguageResponse(Language):
+    def __init__(self, language_type, pred, obj_name, obj_id, position_id, from_agent_id=None, to_agent_id = None):
+        # obj_name is used for the natural language conversation. But actually we use obj_id implicitly to avoid ambiguity, we need the obj_id
+        super().__init__(obj_name, from_agent_id, to_agent_id)
         self.language_type = language_type
-        self.from_agent_id = from_agent_id
-        self.to_agent_id = to_agent_id
 
         if language_type == 'location':
             self.language = '{}_{}_{}'.format(pred, obj_name, position_id)
