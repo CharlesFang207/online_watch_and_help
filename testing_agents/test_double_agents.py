@@ -13,7 +13,7 @@ import numpy as np
 from pathlib import Path
 
 from envs.unity_environment import UnityEnvironment
-from agents import MCTS_agent, MCTS_agent_particle_v2, MCTS_agent_particle
+from agents import MCTS_agent, MCTS_agent_particle_v2, MCTS_agent_particle, MCTS_agent_particle_v2_instance
 from arguments import get_args
 from algos.arena_mp2 import ArenaMP
 from utils import utils_goals
@@ -135,8 +135,8 @@ if __name__ == '__main__':
         args_agent1['agent_params'] = agent_args
         args_agent2['agent_params'] = agent_args
 
-        agents = [lambda x, y: MCTS_agent_particle_v2(**args_agent1), 
-                  lambda x, y: MCTS_agent_particle_v2(**args_agent2)]
+        agents = [lambda x, y: MCTS_agent_particle_v2_instance(**args_agent1), 
+                  lambda x, y: MCTS_agent_particle_v2_instance(**args_agent2)]
         
         arena = ArenaMP(args.max_episode_length, id_run, env_fn, agents)
         for iter_id in range(num_tries):

@@ -1236,9 +1236,18 @@ class MCTS_agent_particle_v2_instance:
                 obs_ids = [node["id"] for node in obs["nodes"]]
 
                 # if True: #particle is None:
-                new_graph = self.belief.update_graph_from_gt_graph(
-                    obs, resample_unseen_nodes=True, update_belief=False, language_response=language_response
-                )
+                if type(language) == LanguageResponse:
+                    new_graph = self.belief.update_graph_from_gt_graph(
+                        obs, resample_unseen_nodes=True, update_belief=False, language_response=language
+                    )
+                elif type(language) == LanguageInquiry:
+                    new_graph = self.belief.update_graph_from_gt_graph(
+                        obs, resample_unseen_nodes=True, update_belief=False
+                    )
+                else:
+                    new_graph = self.belief.update_graph_from_gt_graph(
+                        obs, resample_unseen_nodes=True, update_belief=False
+                    )
                 # print('new_graph:')
                 # print([n['id'] for n in new_graph['nodes']])
                 # print(
