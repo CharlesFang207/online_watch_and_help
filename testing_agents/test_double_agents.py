@@ -107,7 +107,7 @@ if __name__ == '__main__':
                                     max_episode_length=args.max_episode_length,
                                     port_id=env_id,
                                     env_task_set=env_task_set,
-                                    observation_types=[args.obs_type],
+                                    observation_types=[args.obs_type for _ in range(2)],
                                     use_editor=args.use_editor,
                                     executable_args=executable_args,
                                     base_port=args.base_port,
