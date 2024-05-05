@@ -140,6 +140,10 @@ class ArenaMP(object):
                     must_replan=True if must_replan is None else must_replan[it], # TODO: already modified this
                     language=language
                 )
+                if not language is None:
+                    self.language_infos[language.from_agent_id] = None
+                if not language_rsps is None:
+                    self.language_infos[language_rsps.to_agent_id] = language_rsps
 
                 if tp is True:
                     dict_actions[it] = dict_actions[it].replace("walktowards", "walk")
