@@ -140,12 +140,12 @@ class ArenaMP(object):
                     length_plan=length_plan,
                     must_replan=True if must_replan is None else must_replan[it], # TODO: already modified this
                     language=language,
-                    inquiry=False
+                    inquiry=inquiry
                 )
-                if not language is None:
-                    self.language_infos[language.from_agent_id] = None
-                if not language_rsps is None:
-                    self.language_infos[language_rsps.to_agent_id] = language_rsps
+                if language is not None:
+                    self.language_infos[language.to_agent_id - 1] = None
+                if language_rsps is not None:
+                    self.language_infos[language_rsps.to_agent_id - 1] = language_rsps
 
                 if tp is True and dict_actions[it] is not None:
                     dict_actions[it] = dict_actions[it].replace("walktowards", "walk")
@@ -606,7 +606,7 @@ class ArenaMP(object):
 
         action_space = self.env.get_action_space()
         dict_actions, dict_info = self.get_actions(
-            obs, action_space, true_graph=true_graph, inquiry=False
+            obs, action_space, true_graph=true_graph, inquiry=inquiry
         )
         print("MCTS returned", dict_actions)
 
@@ -681,7 +681,7 @@ class ArenaMP(object):
                 cv2.imwrite("{}/img_{:04d}.png".format(save_img, step), obs)
             step += 1
             if step % 5 == 1:
-                (obs, reward, done, infos), actions, agent_info = self.step(True)
+                (obs, reward, done, infos), actions, agent_info = self.step(inquiry=True)
             else:
                 (obs, reward, done, infos), actions, agent_info = self.step()
             # ipdb.set_trace()
@@ -713,7 +713,8 @@ class ArenaMP(object):
             print("Action: ", actions, new_agent_position)
             prev_agent_position = new_agent_position
             #logging.info(" | ".join(actions.values()))
-            print("Plan:", agent_info[0]["plan"][:4])
+            print("Plan of agent 0:", agent_info[0]["plan"][:4])
+            print("Plan of agent 1:", agent_info[1]["plan"][:4])
             print("----------")
             success = infos["finished"]
             if "satisfied_goals" in infos:

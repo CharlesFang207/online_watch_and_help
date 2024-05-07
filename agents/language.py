@@ -22,9 +22,9 @@ class LanguageInquiry(Language):
     def __init__(self, obj_name, from_agent_id=None, to_agent_id=None):
         super().__init__(obj_name, from_agent_id, to_agent_id)
     
-    # Use the helper's belief and observation to extract the most certain object information
-    def extract_max_prob_obj_info(self, obs, edge_belief):
-        obj_ids = [node["id"] for node in obs["nodes"] if node["class_name"] == self.obj_name]
+    # Use the helper's belief and sampled graph to extract the most certain object information
+    def extract_max_prob_obj_info(self, sampled_graph, edge_belief):
+        obj_ids = [node["id"] for node in sampled_graph["nodes"] if node["class_name"] == self.obj_name]
         max_obj_id_prob = [None, 0.]
         pred = None
         position_id = None
@@ -33,25 +33,30 @@ class LanguageInquiry(Language):
             if obj_id not in edge_belief:
                 continue
             else:
-                max_inside_prob = max(np.softmax(edge_belief[obj_id]["INSIDE"][1][:]))
-                max_on_prob = max(np.softmax(edge_belief[obj_id]["ON"][1][:]))
+                max_inside_prob = max(scipy.special.softmax(edge_belief[obj_id]["INSIDE"][1][1:])) #TODO: do we need softmax
+                max_on_prob = max(scipy.special.softmax(edge_belief[obj_id]["ON"][1][1:]))
                 max_prob = max(max_inside_prob, max_on_prob)
                 if (max_prob > max_obj_id_prob[1]):
                 #TODO: decide whether to respond based on max_prob
                     if max_inside_prob == max_prob:
-                        index_list = np.args_where(edge_belief[obj_id]["INSIDE"][1][:] == max_inside_prob)
-                        index = random.choice(index_list)
+                        #use 1: because first element in the list is None, can add more logic in the future
+                        index_list = np.argwhere(scipy.special.softmax(edge_belief[obj_id]["INSIDE"][1][1:]) == max_inside_prob).flatten()
+                        index = np.random.choice(index_list)
                         container_id = edge_belief[obj_id]["INSIDE"][0][index]
+                        '''try:
+                            container_id = edge_belief[obj_id]["INSIDE"][0][index]
+                        except TypeError:
+                            ipdb.set_trace()'''
                         pred = "INSIDE"
                         position_id = container_id
                     else:
-                        index_list = np.args_where(self.edge_belief[obj_id]["ON"][1][:] == max_on_prob)
-                        index = random.choice(index_list)
-                        surface_id = self.edge_belief[obj_id]["ON"][0][index]
+                        index_list = np.argwhere(scipy.special.softmax(edge_belief[obj_id]["ON"][1][1:]) == max_on_prob).flatten()
+                        index = np.random.choice(index_list)
+                        surface_id = edge_belief[obj_id]["ON"][0][index]
                         pred = "ON"
                         position_id = surface_id
                     max_obj_id_prob = [obj_id, max_prob]
-
+        #TODO: if position_id is None:
         return pred, max_obj_id_prob[0], position_id
         
 

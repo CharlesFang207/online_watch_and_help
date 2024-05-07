@@ -1,4 +1,5 @@
 import numpy as np
+import scipy.special
 import traceback
 import logging
 import random
@@ -816,8 +817,8 @@ def get_plan(
 
     # ipdb.set_trace()
     # If there is no action predicted but there were goals missing...
-    if len(final_actions) == 0:
-        print("No actions")
+    #if len(final_actions) == 0:
+        #print("No actions")
     if verbose:
         ipdb.set_trace()
 
@@ -1032,21 +1033,22 @@ class MCTS_agent_particle_v2_instance:
         self, obs, goal_spec, opponent_subgoal=None, length_plan=5, must_replan=True, language=None, inquiry=False
     ):
         if language is not None:
-            print("Agent {} received message from {}".format(self.agent_id, language.from_agent_id))
+            print("Agent {} received message from {}".format(self.agent_id - 1, language.from_agent_id - 1))
             if type(language) == LanguageInquiry:
                 print("ask for location of {}".format(language.obj_name))
             if type(language) == LanguageResponse:
                 print("information of {} {} {}".format(language.language.split("_")[0], language.language.split("_")[1], language.language.split("_")[2]))
-        if self.agent_id == 0:
+        if self.agent_id == 1:
             inquiry = False
-        language_rsps_to_be_sent = None
+        language_to_be_sent = None
 
         if type(language) == LanguageInquiry:
 
-            pred, obj_id, position_id = language.extract_max_prob_obj_info(obs, self.belief.edge_belief)
+            pred, obj_id, position_id = language.extract_max_prob_obj_info(self.belief.sampled_graph, self.belief.edge_belief)
             #TODO: should we use observation here? or sampled graph
 
-            language_rsps_to_be_sent = LanguageResponse(pred, 
+            language_to_be_sent = LanguageResponse("location",
+                                                   pred, 
                                                    language.obj_name, 
                                                    obj_id,
                                                    position_id, 
@@ -1061,15 +1063,16 @@ class MCTS_agent_particle_v2_instance:
 
         self.belief.update_belief(obs)
 
-        if not language_rsps_to_be_sent is None:
+        if language_to_be_sent is not None:
             inquiry = False
 
         # TODO: maybe we will want to keep the previous belief graph to avoid replanning
         # self.sim_env.reset(self.previous_belief_graph, {0: goal_spec, 1: goal_spec})
         if inquiry:
-            obj_seek = self.whether_to_ask(goal_spec, 1.0)
-            if not obj_seek is None:
-                language_rsps_to_be_sent = LanguageInquiry(obj_seek, self.agent_id, (self.agent_id + 1) % 2)
+            obj_seek = self.whether_to_ask(goal_spec, 2.0)
+            if obj_seek is not None:
+                language_to_be_sent = LanguageInquiry(obj_seek, self.agent_id, (self.agent_id + 1) % 2)
+        
         last_action = self.last_action
         last_subgoal = self.last_subgoal[0] if self.last_subgoal is not None else None
         subgoals = self.last_subgoal
@@ -1244,7 +1247,7 @@ class MCTS_agent_particle_v2_instance:
                 )
             )
         if should_replan or must_replan:
-            print("must_replan")
+            # print("must_replan")
             # ipdb.set_trace()
             for particle_id, particle in enumerate(self.particles):
                 belief_states = []
@@ -1468,25 +1471,28 @@ class MCTS_agent_particle_v2_instance:
             #     print("Bad plan")
             #     ipdb.set_trace()
 
-        return action, info, language_rsps_to_be_sent
+        return action, info, language_to_be_sent
     
     def whether_to_ask(self, goal_spec, boundary): #decide whether to ask for help
         uncertain_object = ""
         lowest_prob = 1.0
         for goal_name, info in goal_spec.items():
-            max = 0
+            maximum = 0
             for obj_id in info['grab_obj_ids']:
                 if obj_id not in self.belief.edge_belief.keys():
                     continue
-                max_inside_prob = max(np.softmax(self.belief.edge_belief[obj_id]["INSIDE"][1][:]))
-                max_on_prob = max(np.softmax(self.belief.edge_belief[obj_id]["ON"][1][:]))
+                max_inside_prob = max(scipy.special.softmax(self.belief.edge_belief[obj_id]["INSIDE"][1][:]))
+                max_on_prob = max(scipy.special.softmax(self.belief.edge_belief[obj_id]["ON"][1][:]))
                 max_prob = max(max_inside_prob, max_on_prob)
-                if max_prob > max:
-                    max = max_prob
-            if max < lowest_prob:
-                lowest_prob = max
-                uncertain_object = goal_name.split('-')[1]
+                if max_prob > maximum:
+                    maximum = max_prob
+            if maximum < lowest_prob:
+                lowest_prob = maximum
+                uncertain_object = goal_name.split('_')[1]
+        print(lowest_prob)
         if lowest_prob <= boundary:
+            if uncertain_object == "":
+                return None
             return uncertain_object
         return None
 
