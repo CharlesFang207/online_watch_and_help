@@ -36,7 +36,7 @@ if __name__ == '__main__':
     args.executable_file = '/home/scai/Workspace/xfang21/github_repos/linux_exec.v2.3.0.x86_64'
     args.max_episode_length = 250
     args.num_per_apartment = 20
-    args.dataset_path = './dataset/structured_single_agent/train_env_task_set_2_full_task.all_apts.0,1,2,4,5.pik'
+    args.dataset_path = '/home/scai/Workspace/hshi33/virtualhome/online_watch_and_help/dataset/doubleTask.pkl'
 
     agent_types = [
             ['full', 0, 0.05, False, 0],
@@ -110,7 +110,7 @@ if __name__ == '__main__':
                                     observation_types=[args.obs_type for _ in range(2)],
                                     use_editor=args.use_editor,
                                     executable_args=executable_args,
-                                    base_port=args.base_port,
+                                    base_port=8082,
                                     convert_goal=True)
 
 
@@ -154,6 +154,8 @@ if __name__ == '__main__':
             logger = logging.getLogger() 
             logger.setLevel(logging.INFO)
             for episode_id in episode_ids:
+                if episode_id == 3 or episode_id == 11 or episode_id == 10:
+                    continue
                 #if episode_id == 0:
                 #    continue
                 #if episode_id in [2, 6, 7, 12, 17, 20]:

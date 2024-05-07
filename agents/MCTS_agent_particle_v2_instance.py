@@ -1031,6 +1031,14 @@ class MCTS_agent_particle_v2_instance:
     def get_action(
         self, obs, goal_spec, opponent_subgoal=None, length_plan=5, must_replan=True, language=None, inquiry=False
     ):
+        if language is not None:
+            print("Agent {} received message from {}".format(self.agent_id, language.from_agent_id))
+            if type(language) == LanguageInquiry:
+                print("ask for location of {}".format(language.obj_name))
+            if type(language) == LanguageResponse:
+                print("information of {} {} {}".format(language.language.split("_")[0], language.language.split("_")[1], language.language.split("_")[2]))
+        if self.agent_id == 0:
+            inquiry = False
         language_rsps_to_be_sent = None
 
         if type(language) == LanguageInquiry:
@@ -1059,7 +1067,7 @@ class MCTS_agent_particle_v2_instance:
         # TODO: maybe we will want to keep the previous belief graph to avoid replanning
         # self.sim_env.reset(self.previous_belief_graph, {0: goal_spec, 1: goal_spec})
         if inquiry:
-            obj_seek = self.whether_to_ask(goal_spec, 0.5)
+            obj_seek = self.whether_to_ask(goal_spec, 1.0)
             if not obj_seek is None:
                 language_rsps_to_be_sent = LanguageInquiry(obj_seek, self.agent_id, (self.agent_id + 1) % 2)
         last_action = self.last_action

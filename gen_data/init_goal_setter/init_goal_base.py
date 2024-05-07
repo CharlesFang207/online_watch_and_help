@@ -84,8 +84,8 @@ class SetInitialGoal:
             self.init_pool.update(self.init_pool_tasks["read_book"])
 
         elif self.task_name == "setup_table_watch_tv":
-            self.init_pool["setup_table"] = copy.deepcopy(self.init_pool_tasks["setup_table"])
-            self.init_pool["watch_tv"] = copy.deepcopy(self.init_pool_tasks["watch_tv"])
+            self.init_pool = copy.deepcopy(self.init_pool_tasks["setup_table"])
+            self.init_pool.update((self.init_pool_tasks["watch_tv"]))
 
         elif self.task_name == "setup_table_put_fridge":
             self.init_pool = copy.deepcopy(self.init_pool_tasks["setup_table"])
@@ -136,6 +136,9 @@ class SetInitialGoal:
                     self.goal = {}
                     for k, v in self.init_pool.items():
                         self.goal[k] = self.rand.randint(v["min_num"], v["max_num"])
+                        #self.goal[k] = 0
+                    #self.goal["plate"] = 1
+                    #self.goal["cupcake"] = 1
 
                     # break
 
@@ -643,7 +646,7 @@ class SetInitialGoal:
         obj_in_graph = [
             node["class_name"] for node in graph["nodes"]
         ]  # if the object already in env, skip
-
+        self.num_other_obj = 0
         # print(self)
         added_objects, failed_objects = [], []
         for i in range(self.num_other_obj):

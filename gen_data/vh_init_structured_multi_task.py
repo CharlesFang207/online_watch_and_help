@@ -20,14 +20,14 @@ from simulation.unity_simulator import comm_unity
 
 print(comm_unity.__file__)
 from init_goal_setter.init_goal_base import SetInitialGoal
-from init_goal_setter.tasks_structured import Task
+from init_goal_setter.tasks import Task
 
 
 from utils import utils_goals
 
 parser = argparse.ArgumentParser()
 parser.add_argument(
-    "--num-per-apartment", type=int, default=2, help="Maximum #episodes/apartment"
+    "--num-per-apartment", type=int, default=1, help="Maximum #episodes/apartment"
 )
 parser.add_argument("--seed", type=int, default=10, help="Seed for the apartments")
 
@@ -95,7 +95,7 @@ if __name__ == "__main__":
     else:
         pass
         # args.apt_str = '0,1,2,4,5'
-    with open(f"{curr_dir}/data/init_pool_unstructured.json") as file:
+    with open(f"{curr_dir}/data/init_pool.json") as file:
         init_pool = json.load(file)
     # comm = comm_unity.UnityCommunication()
     if args.use_editor:
@@ -122,8 +122,8 @@ if __name__ == "__main__":
     ## -------------------------------------------------------------
     task_names = {
         1: ["setup_table", "put_fridge", "prepare_food", "watch_tv", "setup_table_watch_tv"],
-        2: ["setup_table", "put_fridge", "prepare_food", "put_dishwasher", "watch_tv", "setup_table_watch_tv"],
-        3: ["setup_table", "put_fridge", "prepare_food", "put_dishwasher", "watch_tv", "setup_table_watch_tv"],
+        2: ["setup_table", "put_fridge", "prepare_food", "put_dishwasher", "watch_tv", "setup_table_watch_tv", "setup_table_put_fridge"],
+        3: ["setup_table", "put_fridge", "prepare_food", "put_dishwasher", "watch_tv", "setup_table_watch_tv", "setup_table_prepare_food"],
         4: ["setup_table", "put_fridge", "prepare_food", "put_dishwasher", "watch_tv", "setup_table_watch_tv"],
         5: ["setup_table", "put_fridge", "prepare_food", "put_dishwasher"],
         6: ["setup_table", "put_fridge", "prepare_food", "watch_tv", "setup_table_watch_tv"],
@@ -135,21 +135,25 @@ if __name__ == "__main__":
     success_init_graph = []
 
     apartment_ids = [int(apt_id) for apt_id in args.apt_str.split(",")]
-    apartment_ids = [0, 1, 2, 3, 5, 6]
+    apartment_ids = [2]
     if args.task == "all":
         # tasks = ["setup_table", "prepare_food", "watch_tv"]
         # tasks =  ["setup_table", "put_fridge", "prepare_food", "put_dishwasher"]
-        tasks = ["setup_table_watch_tv"]
+        tasks = ["setup_table_prepare_food"]
     else:
         tasks = [args.task]
 
     ratio = {
         "setup_table_watch_tv": 1.0,
+        "setup_table_prepare_food": 1.0,
+        "setup_table_put_fridge": 1.0,
+        "setup_table": 1.0,
         "put_fridge": 1.0,
         "prepare_food": 1.0,
         "put_dishwasher": 1.0,
         "watch_tv": 1.0,
     }
+
 
     for task in tasks:
         num_per_apartment = int(args.num_per_apartment * ratio[task])
@@ -169,57 +173,22 @@ if __name__ == "__main__":
             # pdb.set_trace()bathroomcounter
 
             # filtering out certain locations
-            old_obj_position = copy.deepcopy(obj_position)
-            for obj, pos_list in old_obj_position.items():
-                positions = [pos for pos in pos_list if pos[1] != "kitchencounter"]
-                pos_list = positions
-                if obj in ["book", "remotecontrol"]:
-                    positions = [
-                        pos
-                        for pos in pos_list
-                        if pos[0] == "INSIDE"
-                        and pos[1] in ["kitchencabinet", "cabinet"]
-                        or pos[0] == "ON"
-                        and pos[1]
-                        in (
-                            ["cabinet", "bench", "nightstand", "coffeetable", "sofa"]
-                            + ([] if apartment == 2 else ["kitchentable"])
-                        )
-                    ]
-
+            for obj, pos_list in obj_position.items():
+                if obj in ['book', 'remotecontrol']:
+                    positions = [pos for pos in pos_list if \
+                                 pos[0] == 'INSIDE' and pos[1] in ['kitchencabinet', 'cabinet'] or \
+                                 pos[0] == 'ON' and pos[1] in \
+                                 (['cabinet', 'bench', 'nightstand'] + ([] if apartment == 2 else ['kitchentable']))]
+                elif obj == 'remotecontrol':
+                    # TODO: we never get here
+                    positions = [pos for pos in pos_list if pos[0] == 'ON' and pos[1] in \
+                                 ['tvstand']]
                 else:
-                    positions = [
-                        pos
-                        for pos in pos_list
-                        if pos[0] == "INSIDE"
-                        and pos[1]
-                        in [
-                            "fridge",
-                            "kitchencabinet",
-                            "cabinet",
-                            "microwave",
-                            "dishwasher",
-                            "stove",
-                        ]
-                        or pos[0] == "ON"
-                        and pos[1]
-                        in (
-                            [
-                                "cabinet",
-                                "coffeetable",
-                                "bench",
-                                "kitchencounter",
-                                "sofa",
-                            ]
-                            + ["kitchentable"]
-                        )
-                    ]
-                if apartment == 5:
-                    if obj == "cutleryfork" and "cabinet" not in [
-                        p[1] for p in positions
-                    ]:
-                        positions += [["INSIDE", "cabinet"]]
-                        # ipdb.set_trace()
+                    positions = [pos for pos in pos_list if \
+                                 pos[0] == 'INSIDE' and pos[1] in ['fridge', 'kitchencabinet', 'cabinet', 'microwave',
+                                                                   'dishwasher', 'stove'] or \
+                                 pos[0] == 'ON' and pos[1] in \
+                                 (['cabinet', 'coffeetable', 'bench', 'kitchencounter'] + ([] if apartment == 2 else ['kitchentable']))]
                 obj_position[obj] = positions
 
 
@@ -255,7 +224,7 @@ if __name__ == "__main__":
                     rand=rand,
                     nprand=nprand,
                     set_random_goal=False,
-                    set_curr_goal=False,
+                    set_curr_goal=True,
                 )
 
                 task_name_red = task_name
@@ -349,7 +318,7 @@ if __name__ == "__main__":
                             print("final s:", s)
                             # ipdb.set_trace()
                             if s:
-                                for subgoal in env_goal[task_name_red]:
+                                '''for subgoal in env_goal[task_name_red]:
                                     for k, v in subgoal.items():
                                         elements = k.split("_")
                                         # print(elements)
@@ -361,7 +330,7 @@ if __name__ == "__main__":
                                                 for node in init_graph["nodes"]
                                                 if node["class_name"] == obj_class_name
                                             ]
-                                            print(obj_class_name, v, ids)
+                                            print(obj_class_name, v, ids)'''
 
                                 count_success += s
                                 check_result = set_init_goal.check_graph(
@@ -370,7 +339,7 @@ if __name__ == "__main__":
                                 assert check_result == True
 
                                 # ipdb.set_trace()
-                                env_goal_key = list(env_goal[task_name][0].keys())[0]
+                                # env_goal_key = list(env_goal[task_name][0].keys())[0]
                                 # if '72' in env_goal_key:
                                 #    node_ids_from = [edge['from_id'] for edge in init_graph['edges'] if edge['to_id'] == 72 and edge['relation_type'] != 'CLOSE']
                                 #    id2node = {node['id']: node for node in init_graph['nodes']}
@@ -412,34 +381,51 @@ if __name__ == "__main__":
         if "toy" in task_name:
             task_name_red = task_name.replace("_1", "").replace("_2", "")
         init_graph = problem_setup["init_graph"]
-        goal = problem_setup["goal"][task_name_red]
+        task1 = ""
+        task2 = ""
+        task_list = ['setup_table', 'put_fridge', 'put_dishwasher', 'prepare_food', 'read_book', 'watch_tv']
+        for task in task_list:
+            if task in task_name_red:
+                task1 = task
+        for task in task_list:
+            if task in task_name_red and not task == task1:
+                task2 = task        
+        #goal = problem_setup["goal"][task_name_red]
+        print(problem_setup["goal"])
+        goal1 = problem_setup["goal"][task1]
+        goal2 = problem_setup["goal"][task2]
 
-        goals = utils_goals.convert_goal_spec(
-            task_name, goal, init_graph, exclude=["cutleryknife"]
+        goal_first = utils_goals.convert_goal_spec(
+            task_name, goal1, init_graph, exclude=["cutleryknife"]
         )
 
-        goal_noise = problem_setup["goal"]["noise"]
+        goal_second = utils_goals.convert_goal_spec(
+            task_name, goal2, init_graph, exclude=["cutleryknife"]
+        )
+
+        '''goal_noise = problem_setup["goal"]["noise"]
 
         goals_noise = utils_goals.convert_goal_spec(
             "noise", goal_noise, init_graph, exclude=["cutleryknife"]
-        )
+        )'''
         print("env_id:", env_id)
         print("task_name:", task_name)
-        print("goals:", goals)
+        print("goals:", [goal_first, goal_second])
 
         task_goal = {}
-        task_goal[0] = goals
-        task_goal[1] = goals_noise
+        task_goal[0] = goal_first
+        task_goal[1] = goal_second
+        #task_goal[1] = goals_noise
 
-        temp = {0: {}, 1: {}}
-        length = 2 #TODO: refine the logic here to split the task
+        '''temp = {0: {}, 1: {}}
+        length = goal_distribution[goal_distribution.keys()[0]]
         for index, key in enumerate(task_goal[0].keys()):
             if index < length:
                 temp[0][key] = task_goal[0][key]
             else:
                 temp[1][key] = task_goal[0][key]
 
-        task_goal = temp
+        task_goal = temp'''
         print("Task goal", task_goal)
 
         env_task_set.append(

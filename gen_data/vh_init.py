@@ -11,7 +11,7 @@ import argparse
 
 curr_dir = os.path.dirname(os.path.abspath(__file__))
 home_path = '../../'
-sys.path.insert(0, f'{curr_dir}/../../virtualhome/')
+sys.path.insert(0, f'{curr_dir}/../../virtualhome/virtualhome/')
 print('path', sys.path[-1])
 
 sys.path.insert(0, f'{curr_dir}/..')
@@ -29,13 +29,16 @@ parser.add_argument('--seed', type=int, default=10, help='Seed for the apartment
 
 parser.add_argument('--task', type=str, default='setup_table', help='Task name')
 parser.add_argument('--apt_str', type=str, default='0,1,2,4,5', help='The apartments where we will generate the data')
-parser.add_argument('--port', type=str, default='8092', help='Task name')
+parser.add_argument('--port', type=str, default='8080', help='Task name')
 parser.add_argument('--display', type=int, default=0, help='Task name')
 parser.add_argument('--mode', type=str, default='full', choices=['simple', 'full'], help='Task name')
 parser.add_argument('--use-editor', action='store_true', default=False, help='Use unity editor')
-parser.add_argument('--exec_file', type=str,
-                    default='../../path_sim/linux_exec/linux_exec.x86_64',
-                    help='Use unity editor')
+parser.add_argument(
+    "--exec_file",
+    type=str,
+    default="/home/scai/Workspace/xfang21/github_repos/linux_exec.v2.3.0.x86_64",
+    help="Use unity editor",
+)
 
 if __name__ == "__main__":
     args = parser.parse_args()
@@ -165,7 +168,7 @@ if __name__ == "__main__":
                             print("Objects unplaced")
                             print([id2node[edge['to_id']]['class_name'] for edge in init_graph['edges'] if
                                    edge['from_id'] == obj_id])
-                            ipdb.set_trace()
+                            #ipdb.set_trace()
                         if task_name != 'read_book' and task_name != 'watch_tv':
                             intersection = set(obj_names) & set(goal_names)
                         else:

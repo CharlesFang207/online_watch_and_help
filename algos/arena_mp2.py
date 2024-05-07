@@ -102,7 +102,8 @@ class ArenaMP(object):
         agent_id=None,
         inferred_goal=None,
         opponent_subgoal=None,
-        tp=False,
+        tp=True,
+        inquiry=False
     ):
         # ipdb.set_trace()
         dict_actions, dict_info = {}, {}
@@ -138,14 +139,15 @@ class ArenaMP(object):
                     opponent_subgoal,
                     length_plan=length_plan,
                     must_replan=True if must_replan is None else must_replan[it], # TODO: already modified this
-                    language=language
+                    language=language,
+                    inquiry=False
                 )
                 if not language is None:
                     self.language_infos[language.from_agent_id] = None
                 if not language_rsps is None:
                     self.language_infos[language_rsps.to_agent_id] = language_rsps
 
-                if tp is True:
+                if tp is True and dict_actions[it] is not None:
                     dict_actions[it] = dict_actions[it].replace("walktowards", "walk")
 
                 ind = it
@@ -595,7 +597,7 @@ class ArenaMP(object):
 
         return c_r_all, info_rollout, rollout_agent
 
-    def step(self, true_graph=False):
+    def step(self, true_graph=False, inquiry=False):
 
         if self.env.steps == 0:
             pass
@@ -604,7 +606,7 @@ class ArenaMP(object):
 
         action_space = self.env.get_action_space()
         dict_actions, dict_info = self.get_actions(
-            obs, action_space, true_graph=true_graph
+            obs, action_space, true_graph=true_graph, inquiry=False
         )
         print("MCTS returned", dict_actions)
 
@@ -670,13 +672,18 @@ class ArenaMP(object):
         self.saved_info = saved_info
         step = 0
         prev_agent_position = np.array([0, 0, 0]).astype(np.float32)
+        step = 0
         while True:
+            step += 1
             if save_img is not None:
                 img_info = {"image_width": 224, "image_height": 224}
                 obs = self.env.get_observation(0, "image", info=img_info)
                 cv2.imwrite("{}/img_{:04d}.png".format(save_img, step), obs)
             step += 1
-            (obs, reward, done, infos), actions, agent_info = self.step()
+            if step % 5 == 1:
+                (obs, reward, done, infos), actions, agent_info = self.step(True)
+            else:
+                (obs, reward, done, infos), actions, agent_info = self.step()
             # ipdb.set_trace()
             new_agent_position = np.array(
                 list(infos["graph"]["nodes"][0]["bounding_box"]["center"])
@@ -705,7 +712,7 @@ class ArenaMP(object):
             # print("Goals:", self.env.task_goal)
             print("Action: ", actions, new_agent_position)
             prev_agent_position = new_agent_position
-            logging.info(" | ".join(actions.values()))
+            #logging.info(" | ".join(actions.values()))
             print("Plan:", agent_info[0]["plan"][:4])
             print("----------")
             success = infos["finished"]

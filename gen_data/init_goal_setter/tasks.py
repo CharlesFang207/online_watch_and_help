@@ -95,9 +95,10 @@ class Task:
         except_position_ids.append(table_id)
 
         for k, v in init_goal_manager.goal.items():
+            if v == 0:
+                continue
             obj_ids = [node['id'] for node in graph['nodes'] if k in node['class_name']]
             graph = init_goal_manager.remove_obj(graph, obj_ids)
-
             num_obj = init_goal_manager.rand.randint(v, init_goal_manager.init_pool[k]['env_max_num'] + 1)  # random select objects >= goal
             init_goal_manager.object_id_count, graph, success = init_goal_manager.add_obj(graph, k, num_obj, init_goal_manager.object_id_count,
                                                                 objs_in_room=objs_in_room, except_position=except_position_ids,
@@ -116,7 +117,6 @@ class Task:
         env_goal = {'setup_table': []}
         for k, v in init_goal_manager.goal.items():
             env_goal['setup_table'].append({'put_{}_on_{}'.format(k, table_id): v})
-
         return graph, env_goal, True
 
 
@@ -308,6 +308,8 @@ class Task:
         except_position_ids.append(fridge_id)
 
         for k, v in init_goal_manager.goal.items():
+            if v == 0:
+                continue
             obj_ids = [node['id'] for node in graph['nodes'] if k in node['class_name']]
             graph = init_goal_manager.remove_obj(graph, obj_ids)
 
@@ -648,6 +650,7 @@ class Task:
             # pdb.set_trace()
             return None, None, False
         env_goal1.update(env_goal2)
+        print("env goal:", env_goal1)
         return graph, env_goal1, success
 
 

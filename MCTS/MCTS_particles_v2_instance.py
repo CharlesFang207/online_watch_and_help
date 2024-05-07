@@ -857,11 +857,11 @@ class MCTS_particles_v2_instance:
                 # # print([node['states'] for node in next_state_dict['nodes'] if node['id'] == 328])
                 # # print('*******')
 
-                if not success:
+                '''if not success:
                     print("Failure", actions)
                     ipdb.set_trace()
                 else:
-                    print("success", actions)
+                    print("success", actions)'''
             # if 'put' in actions:
             #      print("CLOSE:", [edge for edge in next_state_dict['edges'] if edge['to_id'] == 232 and edge['from_id'] == 1])
             # final_vh_state = copy.deepcopy(next_vh_state)

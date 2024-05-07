@@ -767,10 +767,10 @@ class Task:
         return graph, env_goal, True
     
     @staticmethod
-    def setup_table_watch_tv(init_goal_manager, graph, start=True):
+    def setup_table_watch_tv(init_goal_manager, graph, distribution_dict, start=True):
         task_list = ["setup_table", "watch_tv"]
-        num_container_list = {"setup_table": 2, "watch_tv": 1}
-        num_object_list = {"setup_table": 2, "watch_tv": 1}
+        num_container_list = {"setup_table": 1, "watch_tv": 1}
+        num_object_list = distribution_dict
         except_position_ids = []
         env_goal = {}
         for task in task_list:

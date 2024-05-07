@@ -265,6 +265,11 @@ class UnityEnvironment(BaseUnityEnvironment):
         self.init_graph = copy.deepcopy(env_task['init_graph'])
         self.init_rooms = env_task['init_rooms']
         self.task_goal = env_task['task_goal']
+        if "0" in self.task_goal.keys():
+            self.task_goal[0] = self.task_goal["0"]
+            self.task_goal[1] = self.task_goal["1"]
+            del(self.task_goal["0"])
+            del(self.task_goal["1"])
         #if self.task_goal[1] is None or len(self.task_goal[1]) == 0:
             #self.task_goal[1] = self.task_goal[0] # TODO(xinyu): change this line to set two goals
         if self.convert_goal:
@@ -372,9 +377,9 @@ class UnityEnvironment(BaseUnityEnvironment):
                 ipdb.set_trace()
 
         if not success:
-            ipdb.set_trace()
+            #ipdb.set_trace()
             print("Error expanding scene")
-            ipdb.set_trace()
+            #ipdb.set_trace()
             return None
 
         self.offset_cameras = self.comm.camera_count()[1]
