@@ -714,7 +714,10 @@ class ArenaMP(object):
             prev_agent_position = new_agent_position
             #logging.info(" | ".join(actions.values()))
             print("Plan of agent 0:", agent_info[0]["plan"][:4])
-            print("Plan of agent 1:", agent_info[1]["plan"][:4])
+
+            if self.num_agents == 2:
+                print("Plan of agent 1:", agent_info[1]["plan"][:4])
+                
             print("----------")
             success = infos["finished"]
             if "satisfied_goals" in infos:
