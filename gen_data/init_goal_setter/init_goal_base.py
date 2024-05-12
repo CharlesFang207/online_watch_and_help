@@ -648,7 +648,7 @@ class SetInitialGoal:
         ]  # if the object already in env, skip
         self.num_other_obj = 0
         # print(self)
-        added_objects, failed_objects = [], []
+        added_objects, failed_objects = [], [] # TODO(xinyu): seems it's a bug, since failed_objects is not used
         for i in range(self.num_other_obj):
             obj_name = self.rand.choice(new_object_pool)
             if obj_name in obj_in_graph:

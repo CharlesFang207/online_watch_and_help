@@ -11,7 +11,7 @@ import argparse
 
 curr_dir = os.path.dirname(os.path.abspath(__file__))
 home_path = '../../'
-sys.path.insert(0, f'{curr_dir}/../../virtualhome/')
+sys.path.insert(0, f'{curr_dir}/../../virtualhome/virtualhome/')
 
 print('path', sys.path[0])
 
@@ -36,7 +36,7 @@ parser.add_argument('--display', type=int, default=0, help='Task name')
 parser.add_argument('--mode', type=str, default='full', choices=['simple', 'full'], help='Task name')
 parser.add_argument('--use-editor', action='store_true', default=False, help='Use unity editor')
 parser.add_argument('--exec_file', type=str,
-        default='/data/vision/torralba/frames/data_acquisition/SyntheticStories/website/release/simulator/v2.0/v2.2.5_beta4/linux_exec.v2.2.5_beta4.x86_64',
+        default='/home/scai/Workspace/xfang21/github_repos/linux_exec.v2.3.0.x86_64',
                     help='Use unity editor')
 
 
