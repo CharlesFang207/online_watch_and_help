@@ -133,19 +133,35 @@ class ArenaMP(object):
                 # if agent.recursive:
                 #     opponent_subgoal = self.agents[1 - it].last_subgoal
                 # ipdb.set_trace()
-                dict_actions[it], dict_info[it], language_rsps = agent.get_action(
+                in_same_room = self.whether_in_same_room(self.agents)
+                
+                dict_actions[it], dict_info[it], language_rsps, change_goal = agent.get_action(
                     obs[it],
                     goal_spec,
                     opponent_subgoal,
                     length_plan=length_plan,
                     must_replan=True if must_replan is None else must_replan[it], # TODO: already modified this
                     language=language,
-                    inquiry=inquiry
+                    inquiry=inquiry,
+                    in_same_room=in_same_room
                 )
                 if language is not None:
                     self.language_infos[language.to_agent_id - 1] = None
                 if language_rsps is not None:
                     self.language_infos[language_rsps.to_agent_id - 1] = language_rsps
+
+                # set the agent 2 goal to be the same as agent 1    
+                if change_goal:
+                    if inferred_goal is None:
+                        if self.task_goal is not None:
+                            self.task_goal[agent.agent_id-1] = self.task_goal[(agent.agent_id-2) % 2]
+                            self.env.agents_goals[agent.agent_id-1] = self.env.agents_goals[(agent.agent_id-2) % 2]
+                        else:
+                            self.env.task_goal[agent.agent_id-1] = self.env.task_goal[(agent.agent_id-2) % 2]
+                            self.env.agent_goals[agent.agent_id-1] = self.env.agent_goals[(agent.agent_id-2) % 2]
+                    else:
+                        inferred_goal[agent.agent_id-1] = inferred_goal[(agent.agent_id-2) % 2]
+                        self.env.agent_goals[agent.agent_id-1] = self.env.agent_goals[(agent.agent_id-2) % 2]
 
                 if tp is True and dict_actions[it] is not None:
                     dict_actions[it] = dict_actions[it].replace("walktowards", "walk")
@@ -596,6 +612,23 @@ class ArenaMP(object):
                         )
 
         return c_r_all, info_rollout, rollout_agent
+    
+    def whether_in_same_room(self, agents):
+        full_graph = self.env.get_graph()
+        all_in_same_room = True
+        room_id = None
+        for agent in agents:
+            new_room_id = [
+            edge["to_id"]
+            for edge in full_graph["edges"]
+            if edge["from_id"] == agent.agent_id and edge["relation_type"] == "INSIDE"
+        ][0]
+            if room_id is None:
+                room_id = new_room_id
+            else:
+                if room_id != new_room_id:
+                    all_in_same_room = False
+                    break
 
     def step(self, true_graph=False, inquiry=False):
 
@@ -757,4 +790,7 @@ class ArenaMP(object):
         saved_info["finished"] = success
         self.saved_info = saved_info
         return success, self.env.steps, saved_info
+            
+            
+
         

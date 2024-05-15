@@ -12,18 +12,22 @@ import copy
 from termcolor import colored
 
 class Language():
-    def __init__(self, obj_name, from_agent_id=None, to_agent_id=None):
-        self.obj_name = obj_name
+    def __init__(self, from_agent_id=None, to_agent_id=None, language_type=None):
         self.from_agent_id = from_agent_id
         self.to_agent_id = to_agent_id
+        self.language_type = language_type
 
 
 class LanguageInquiry(Language):
-    def __init__(self, obj_name, from_agent_id=None, to_agent_id=None):
-        super().__init__(obj_name, from_agent_id, to_agent_id)
+    def __init__(self, obj_name=None, from_agent_id=None, to_agent_id=None, language_type=None):
+        super().__init__(from_agent_id, to_agent_id, language_type)
+        self.obj_name = obj_name
     
     # Use the helper's belief and sampled graph to extract the most certain object information
     def extract_max_prob_obj_info(self, sampled_graph, edge_belief):
+        assert(self.language_type == 'location')
+        assert(self.obj_name is not None)
+        
         obj_ids = [node["id"] for node in sampled_graph["nodes"] if node["class_name"] == self.obj_name]
         max_obj_id_prob = [None, 0.]
         pred = None
@@ -62,16 +66,20 @@ class LanguageInquiry(Language):
 
 
 class LanguageResponse(Language):
-    def __init__(self, language_type, pred, obj_name, obj_id, position_id, from_agent_id=None, to_agent_id = None):
+    def __init__(self, pred, obj_name=None, obj_id=None, position_id=None, goal_spec=None, from_agent_id=None, to_agent_id=None, language_type=None):
         # obj_name is used for the natural language conversation. But actually we use obj_id implicitly to avoid ambiguity, we need the obj_id
-        super().__init__(obj_name, from_agent_id, to_agent_id)
-        self.language_type = language_type
+        super().__init__(from_agent_id, to_agent_id, language_type)
 
         if language_type == 'location':
+            assert(pred is not None and obj_name is not None and obj_id is not None and position_id is not None)
             self.language = '{}_{}_{}'.format(pred, obj_name, position_id)
+            self.obj_id = obj_id
         elif language_type == 'goal':
-            raise NotImplementedError('Goal language not implemented yet') 
-            # TODO: Implement goal language.  SHould it be in the LanguageResponse class or LanguageInquiry class?
+            assert(goal_spec is not None)
+            self.language = goal_spec.keys()[0] # xinyu: since we don't need multiple goals for an single agent,  I just choose the first one here
+            self.goal_spec = goal_spec
+            # raise NotImplementedError('Goal language not implemented yet') 
+            
         else:
             raise ValueError('Language type not recognized')
         

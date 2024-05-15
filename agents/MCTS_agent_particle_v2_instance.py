@@ -1029,31 +1029,56 @@ class MCTS_agent_particle_v2_instance:
 
         return curr_loc_index
 
+    # xinyu: in_same_room is used to indicate whether the two agents are in the same room
     def get_action(
-        self, obs, goal_spec, opponent_subgoal=None, length_plan=5, must_replan=True, language=None, inquiry=False
+        self, obs, goal_spec, opponent_subgoal=None, length_plan=5, must_replan=True, language=None, inquiry=False, in_same_room=False
     ):
+        change_goal = False # indicate whether the agent should change its goal
+        
         if language is not None:
             print("Agent {} received message from {}".format(self.agent_id - 1, language.from_agent_id - 1))
             if type(language) == LanguageInquiry:
-                print("ask for location of {}".format(language.obj_name))
+                if language.language_type == "location":
+                    print("ask for location of {}".format(language.obj_name))
+                elif language.language_type == "goal":
+                    print("ask for goal to offer help")
+                else:
+                    ValueError("Language type not recognized")
+
             if type(language) == LanguageResponse:
                 print("information of {} {} {}".format(language.language.split("_")[0], language.language.split("_")[1], language.language.split("_")[2]))
-        if self.agent_id == 1:
-            inquiry = False
+
+        # xinyu: the commutication about goals should always be started by agent 1, and the communication about location should always be started by agent 0,
+        # Thus,  I commented the following code.
+        # if self.agent_id == 1:
+        #     inquiry = False
+                
         language_to_be_sent = None
 
         if type(language) == LanguageInquiry:
+            if language.language_type == "location":
+                pred, obj_id, position_id = language.extract_max_prob_obj_info(self.belief.sampled_graph, self.belief.edge_belief)
+                #TODO: should we use observation here? or sampled graph
 
-            pred, obj_id, position_id = language.extract_max_prob_obj_info(self.belief.sampled_graph, self.belief.edge_belief)
-            #TODO: should we use observation here? or sampled graph
-
-            language_to_be_sent = LanguageResponse("location",
-                                                   pred, 
-                                                   language.obj_name, 
-                                                   obj_id,
-                                                   position_id, 
-                                                   self.agent_id, 
-                                                   language.from_agent_id)
+                language_to_be_sent = LanguageResponse(pred, 
+                                                    language.obj_name, 
+                                                    obj_id,
+                                                    position_id, 
+                                                    None,
+                                                    self.agent_id, 
+                                                    language.from_agent_id,
+                                                    "location")
+            elif language.language_type == "goal":
+                language_to_be_sent = LanguageResponse(None,
+                                                    None, 
+                                                    None, 
+                                                    None, 
+                                                    goal_spec, 
+                                                    self.agent_id, 
+                                                    language.from_agent_id,
+                                                    "goal")
+            else:
+                ValueError("Language type not recognized")
         # ipdb.set_trace()
         if len(goal_spec) == 0:
             ipdb.set_trace()
@@ -1063,15 +1088,24 @@ class MCTS_agent_particle_v2_instance:
 
         self.belief.update_belief(obs)
 
+        # when the agent is about give a response, it shouldn't start a inquiry
         if language_to_be_sent is not None:
             inquiry = False
 
         # TODO: maybe we will want to keep the previous belief graph to avoid replanning
         # self.sim_env.reset(self.previous_belief_graph, {0: goal_spec, 1: goal_spec})
-        if inquiry:
-            obj_seek = self.whether_to_ask(goal_spec, 2.0)
-            if obj_seek is not None:
-                language_to_be_sent = LanguageInquiry(obj_seek, self.agent_id, (self.agent_id + 1) % 2)
+        if inquiry and in_same_room:
+            # agent 1 asks agent 2 for help
+            print("agent_id: ", self.agent_id)
+            if self.agent_id == 1:
+                obj_seek = self.whether_to_ask(goal_spec, 2.0, language.language_type)
+                if obj_seek is not None:
+                    language_to_be_sent = LanguageInquiry(obj_seek, self.agent_id, (self.agent_id + 1) % 2, language.language_type) 
+            # agent 2 asks agent 1 does he need help
+            elif self.agent_id == 2:
+                ask_bool = self.whether_to_ask(language_type=language.language_type)
+                if ask_bool:
+                    language_to_be_sent = LanguageInquiry(None, self.agent_id, (self.agent_id + 1) % 2, language.language_type)
         
         last_action = self.last_action
         last_subgoal = self.last_subgoal[0] if self.last_subgoal is not None else None
@@ -1255,9 +1289,19 @@ class MCTS_agent_particle_v2_instance:
 
                 # if True: #particle is None:
                 if type(language) == LanguageResponse:
-                    new_graph = self.belief.update_graph_from_gt_graph(
-                        obs, resample_unseen_nodes=True, update_belief=False, language_response=language
-                    )
+                    if language.language_type == "location":
+                        new_graph = self.belief.update_graph_from_gt_graph(
+                            obs, resample_unseen_nodes=True, update_belief=False, language_response=language
+                        )
+                    elif language.language_type == "goal":
+                        new_graph = self.belief.update_graph_from_gt_graph(
+                            obs, resample_unseen_nodes=True, update_belief=False
+                        )
+                        assert self.agent_id == 2
+                        goal_spec = language.goal_spec # make agent 2's goal the same as agent 1's
+                        change_goal = True
+
+                        
                 elif type(language) == LanguageInquiry:
                     new_graph = self.belief.update_graph_from_gt_graph(
                         obs, resample_unseen_nodes=True, update_belief=False
@@ -1471,30 +1515,37 @@ class MCTS_agent_particle_v2_instance:
             #     print("Bad plan")
             #     ipdb.set_trace()
 
-        return action, info, language_to_be_sent
+        return action, info, language_to_be_sent, change_goal
     
-    def whether_to_ask(self, goal_spec, boundary): #decide whether to ask for help
-        uncertain_object = ""
-        lowest_prob = 1.0
-        for goal_name, info in goal_spec.items():
-            maximum = 0
-            for obj_id in info['grab_obj_ids']:
-                if obj_id not in self.belief.edge_belief.keys():
-                    continue
-                max_inside_prob = max(scipy.special.softmax(self.belief.edge_belief[obj_id]["INSIDE"][1][:]))
-                max_on_prob = max(scipy.special.softmax(self.belief.edge_belief[obj_id]["ON"][1][:]))
-                max_prob = max(max_inside_prob, max_on_prob)
-                if max_prob > maximum:
-                    maximum = max_prob
-            if maximum < lowest_prob:
-                lowest_prob = maximum
-                uncertain_object = goal_name.split('_')[1]
-        print(lowest_prob)
-        if lowest_prob <= boundary:
-            if uncertain_object == "":
-                return None
-            return uncertain_object
-        return None
+    def whether_to_ask(self, goal_spec=None, boundary=None, language_type=None): #decide whether to ask for help
+        if language_type == "location":
+            uncertain_object = ""
+            lowest_prob = 1.0 
+            for goal_name, info in goal_spec.items():
+                maximum = 0
+                for obj_id in info['grab_obj_ids']:
+                    if obj_id not in self.belief.edge_belief.keys():
+                        continue
+                    max_inside_prob = max(scipy.special.softmax(self.belief.edge_belief[obj_id]["INSIDE"][1][:]))
+                    max_on_prob = max(scipy.special.softmax(self.belief.edge_belief[obj_id]["ON"][1][:]))
+                    max_prob = max(max_inside_prob, max_on_prob)
+                    if max_prob > maximum:
+                        maximum = max_prob
+                if maximum < lowest_prob:
+                    lowest_prob = maximum
+                    uncertain_object = goal_name.split('_')[1]
+            print("lowest prob: ", lowest_prob)
+            if lowest_prob <= boundary:
+                if uncertain_object == "":
+                    return None
+                return uncertain_object
+            return None
+        elif language_type == "goal":
+            return True
+        else:
+            ValueError("Language type not recognized")
+
+
 
     def reset(
         self,
