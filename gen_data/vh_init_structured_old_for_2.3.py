@@ -50,7 +50,7 @@ parser.add_argument(
 parser.add_argument(
     "--exec_file",
     type=str,
-    default="/home/scai/Workspace/xfang21/github_repos/linux_exec.v2.3.0.x86_64",
+    default="/home/scai/Workspace/hshi33/virtualhome/online_watch_and_help/executable/linux_exec.v2.3.0.x86_64",
     help="Use unity editor",
 )
 
@@ -219,7 +219,7 @@ if __name__ == "__main__":
                         # ipdb.set_trace()
                 obj_position[obj] = positions
 
-            num_test = 100000
+            num_test = 1
             count_success = 0
             for i in range(num_test):
                 comm.reset(apartment)

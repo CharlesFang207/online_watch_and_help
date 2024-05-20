@@ -613,7 +613,8 @@ class SetInitialGoal:
                     break
                 else:
                     num_place += 1
-
+        print(nodes)
+        print(edges)
         graph["nodes"] += nodes
         graph["edges"] += edges
 

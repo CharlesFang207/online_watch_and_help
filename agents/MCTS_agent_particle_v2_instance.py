@@ -1031,7 +1031,7 @@ class MCTS_agent_particle_v2_instance:
 
     # xinyu: in_same_room is used to indicate whether the two agents are in the same room
     def get_action(
-        self, obs, goal_spec, opponent_subgoal=None, length_plan=5, must_replan=True, language=None, inquiry=False, in_same_room=False
+        self, obs, goal_spec, opponent_subgoal=None, length_plan=5, must_replan=True, language=None, inquiry=False, in_same_room=True
     ):
         change_goal = False # indicate whether the agent should change its goal
         
@@ -1057,17 +1057,10 @@ class MCTS_agent_particle_v2_instance:
 
         if type(language) == LanguageInquiry:
             if language.language_type == "location":
-                pred, obj_id, position_id = language.extract_max_prob_obj_info(self.belief.sampled_graph, self.belief.edge_belief)
+                language_to_be_sent = language.generate_response(self.belief.sampled_graph, self.belief.edge_belief)
                 #TODO: should we use observation here? or sampled graph
 
-                language_to_be_sent = LanguageResponse(pred, 
-                                                    language.obj_name, 
-                                                    obj_id,
-                                                    position_id, 
-                                                    None,
-                                                    self.agent_id, 
-                                                    language.from_agent_id,
-                                                    "location")
+            
             elif language.language_type == "goal":
                 language_to_be_sent = LanguageResponse(None,
                                                     None, 
@@ -1092,20 +1085,22 @@ class MCTS_agent_particle_v2_instance:
         if language_to_be_sent is not None:
             inquiry = False
 
+        inquiry = True
+
         # TODO: maybe we will want to keep the previous belief graph to avoid replanning
         # self.sim_env.reset(self.previous_belief_graph, {0: goal_spec, 1: goal_spec})
         if inquiry and in_same_room:
             # agent 1 asks agent 2 for help
             print("agent_id: ", self.agent_id)
             if self.agent_id == 1:
-                obj_seek = self.whether_to_ask(goal_spec, 2.0, language.language_type)
+                obj_seek = self.whether_to_ask(goal_spec, 0.5, "location")
                 if obj_seek is not None:
-                    language_to_be_sent = LanguageInquiry(obj_seek, self.agent_id, (self.agent_id + 1) % 2, language.language_type) 
+                    language_to_be_sent = LanguageInquiry(obj_seek, self.agent_id, (self.agent_id + 1) % 2, "location") 
             # agent 2 asks agent 1 does he need help
             elif self.agent_id == 2:
-                ask_bool = self.whether_to_ask(language_type=language.language_type)
+                ask_bool = self.whether_to_ask(language_type="location")
                 if ask_bool:
-                    language_to_be_sent = LanguageInquiry(None, self.agent_id, (self.agent_id + 1) % 2, language.language_type)
+                    language_to_be_sent = LanguageInquiry(None, self.agent_id, (self.agent_id + 1) % 2, "location")
         
         last_action = self.last_action
         last_subgoal = self.last_subgoal[0] if self.last_subgoal is not None else None
@@ -1519,27 +1514,24 @@ class MCTS_agent_particle_v2_instance:
     
     def whether_to_ask(self, goal_spec=None, boundary=None, language_type=None): #decide whether to ask for help
         if language_type == "location":
-            uncertain_object = ""
-            lowest_prob = 1.0 
+            uncertain_objects = []
             for goal_name, info in goal_spec.items():
-                maximum = 0
+                maximum = 1.0
                 for obj_id in info['grab_obj_ids']:
                     if obj_id not in self.belief.edge_belief.keys():
                         continue
-                    max_inside_prob = max(scipy.special.softmax(self.belief.edge_belief[obj_id]["INSIDE"][1][:]))
-                    max_on_prob = max(scipy.special.softmax(self.belief.edge_belief[obj_id]["ON"][1][:]))
-                    max_prob = max(max_inside_prob, max_on_prob)
-                    if max_prob > maximum:
-                        maximum = max_prob
-                if maximum < lowest_prob:
-                    lowest_prob = maximum
-                    uncertain_object = goal_name.split('_')[1]
-            print("lowest prob: ", lowest_prob)
-            if lowest_prob <= boundary:
-                if uncertain_object == "":
-                    return None
-                return uncertain_object
-            return None
+                    combined = np.concatenate(self.belief.edge_belief[obj_id]["INSIDE"][1][:], self.belief.edge_belief[obj_id]["ON"][1][:])
+                    distribution = scipy.special.softmax(combined)
+                    entropy = -np.sum(distribution * np.log2(distribution))
+                    ratio = entropy / np.log2(distribution.shape[0])
+                    if ratio < maximum:
+                        maximum = ratio
+
+                if maximum > boundary:
+                    uncertain_objects.append(goal_name.split('_')[1])
+            if len(uncertain_objects) == 0:
+                return None
+            return uncertain_objects
         elif language_type == "goal":
             return True
         else:

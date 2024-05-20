@@ -1,5 +1,10 @@
 import numpy as np
 import random
+import os
+import sys
+curr_dir = os.path.dirname(os.path.abspath(__file__))
+home_path = "../../"
+sys.path.insert(0, f"{curr_dir}/../../virtualhome/virtualhome")
 from simulation.evolving_graph.utils import load_graph_dict, load_name_equivalence
 from simulation.evolving_graph.environment import EnvironmentState, EnvironmentGraph, GraphNode
 import scipy.special
@@ -868,7 +873,19 @@ class Belief():
         # check if the language type is location
         assert(language_response.language_type == 'location')
 
-        # Update the belief from the language
+        for obj_name, obj_info in language_response.obj_positions.items():
+            if len(obj_info.keys()) == 0:
+                continue
+            for obj_id, locations in obj_info.items():
+                self.edge_belief[obj_id]['INSIDE'][1][:] = self.low_prob
+                self.edge_belief[obj_id]['ON'][1][:] = self.low_prob
+                for location in locations:
+                    if location["predicate"].upper() == "INSIDE":
+                        self.edge_belief[obj_id]['INSIDE'][1][self.container_index_belief_dict[location["position"]]] = 1.
+                    if location["predicate"].upper() == "ON":
+                        self.edge_belief[obj_id]['ON'][1][self.container_index_belief_dict[location["position"]]] = 1.
+
+        '''# Update the belief from the language
         pred, obj_name, position_id = language_response.parse()
 
         obj_ids = [node['id'] for node in self.sampled_graph['nodes'] if node['class_name'] == obj_name]
@@ -884,7 +901,7 @@ class Belief():
                 self.edge_belief[obj_id]['ON'][1][:] = self.low_prob
                 self.edge_belief[obj_id]['ON'][1][self.surface_index_belief_dict[position_id]] = 1.
             else:
-                raise Exception
+                raise Exception'''
             
             
 

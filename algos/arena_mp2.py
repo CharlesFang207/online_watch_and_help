@@ -134,6 +134,8 @@ class ArenaMP(object):
                 #     opponent_subgoal = self.agents[1 - it].last_subgoal
                 # ipdb.set_trace()
                 in_same_room = self.whether_in_same_room(self.agents)
+
+                in_same_room = True
                 
                 dict_actions[it], dict_info[it], language_rsps, change_goal = agent.get_action(
                     obs[it],
