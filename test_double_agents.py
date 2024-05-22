@@ -154,7 +154,7 @@ if __name__ == '__main__':
         logger = logging.getLogger() 
         logger.setLevel(logging.INFO)
         for episode_id in episode_ids:
-            if episode_id == 3 or episode_id == 11 or episode_id == 10: #improper episode
+            if episode_id == 3 or episode_id == 11 or episode_id == 10 or episode_id == 6: #improper episode
                 continue
             #if episode_id == 0:
             #    continue

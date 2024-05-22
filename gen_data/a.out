@@ -1,0 +1,3 @@
+['/home/scai/Workspace/hshi33/virtualhome/online_watch_and_help/path_sim_dev/linux_exec.v2.3.0.x86_64', '-batchmode', '-nographics', '-http-port=8092', '-logFile /home/scai/Workspace/hshi33/virtualhome/online_watch_and_help/gen_data/Player_8092.log']
+Getting connection...
+CLOSING PROC

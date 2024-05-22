@@ -69,6 +69,7 @@ class ArenaMP(object):
         print(ob.keys(), self.num_agents)
 
         for it, agent in enumerate(self.agents):
+            self.language_infos[it] = None
             if "MCTS" in agent.agent_type or "Random" in agent.agent_type:
                 agent.reset(
                     ob[it], self.env.full_graph, self.env.task_goal, seed=agent.seed

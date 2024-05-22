@@ -872,19 +872,32 @@ class Belief():
         
         # check if the language type is location
         assert(language_response.language_type == 'location')
+        '''print(self.container_index_belief_dict)
+        print(self.edge_belief[414]["INSIDE"])
+        print(self.edge_belief[414]["ON"])'''
 
         for obj_name, obj_info in language_response.obj_positions.items():
             if len(obj_info.keys()) == 0:
                 continue
             for obj_id, locations in obj_info.items():
+                if obj_id not in self.edge_belief.keys():
+                    continue
                 self.edge_belief[obj_id]['INSIDE'][1][:] = self.low_prob
                 self.edge_belief[obj_id]['ON'][1][:] = self.low_prob
                 for location in locations:
                     if location["predicate"].upper() == "INSIDE":
-                        self.edge_belief[obj_id]['INSIDE'][1][self.container_index_belief_dict[location["position"]]] = 1.
+                        if location["position"] is None:
+                            self.edge_belief[obj_id]['INSIDE'][1][0] = 1.
+                        else:
+                            self.edge_belief[obj_id]['INSIDE'][1][self.container_index_belief_dict[location["position"]]] = 1.
                     if location["predicate"].upper() == "ON":
-                        self.edge_belief[obj_id]['ON'][1][self.container_index_belief_dict[location["position"]]] = 1.
-
+                        if location["position"] is None:
+                            self.edge_belief[obj_id]['ON'][1][0] = 1.
+                        else:
+                            try:
+                                self.edge_belief[obj_id]['ON'][1][self.surface_index_belief_dict[location["position"]]] = 1.
+                            except KeyError:
+                              ipdb.set_trace()  
         '''# Update the belief from the language
         pred, obj_name, position_id = language_response.parse()
 

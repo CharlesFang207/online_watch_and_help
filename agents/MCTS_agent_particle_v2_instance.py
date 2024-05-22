@@ -1031,13 +1031,19 @@ class MCTS_agent_particle_v2_instance:
 
     # xinyu: in_same_room is used to indicate whether the two agents are in the same room
     def get_action(
-        self, obs, goal_spec, opponent_subgoal=None, length_plan=5, must_replan=True, language=None, inquiry=False, in_same_room=True
-    ):
+        self, obs, goal_spec, opponent_subgoal=None, length_plan=5, must_replan=True, 
+        language=None, inquiry=False, in_same_room=True, modify_observation=False, modified_rooms=[]
+    ): #inquiry: whether agent is possible to ask for help; in same room: whether the agent is in same room with other or not; 
+       #modify_observation: whether agent will receive manipulated gt graph, modified_rooms: list of rooms where obs will be false
         change_goal = False # indicate whether the agent should change its goal
+
+        if modify_observation:
+            obs = self.modify_observation(modified_rooms)
         
         if language is not None:
             print("Agent {} received message from {}".format(self.agent_id - 1, language.from_agent_id - 1))
-            if type(language) == LanguageInquiry:
+            print(language.to_language())
+            '''if type(language) == LanguageInquiry:
                 if language.language_type == "location":
                     print("ask for location of {}".format(language.obj_name))
                 elif language.language_type == "goal":
@@ -1046,7 +1052,7 @@ class MCTS_agent_particle_v2_instance:
                     ValueError("Language type not recognized")
 
             if type(language) == LanguageResponse:
-                print("information of {} {} {}".format(language.language.split("_")[0], language.language.split("_")[1], language.language.split("_")[2]))
+                print("information of {} {} {}".format(language.language.split("_")[0], language.language.split("_")[1], language.language.split("_")[2]))'''
 
         # xinyu: the commutication about goals should always be started by agent 1, and the communication about location should always be started by agent 0,
         # Thus,  I commented the following code.
@@ -1085,7 +1091,6 @@ class MCTS_agent_particle_v2_instance:
         if language_to_be_sent is not None:
             inquiry = False
 
-        inquiry = True
 
         # TODO: maybe we will want to keep the previous belief graph to avoid replanning
         # self.sim_env.reset(self.previous_belief_graph, {0: goal_spec, 1: goal_spec})
@@ -1093,14 +1098,14 @@ class MCTS_agent_particle_v2_instance:
             # agent 1 asks agent 2 for help
             print("agent_id: ", self.agent_id)
             if self.agent_id == 1:
-                obj_seek = self.whether_to_ask(goal_spec, 0.5, "location")
+                obj_seek = self.whether_to_ask(goal_spec, 0.0, "location")
                 if obj_seek is not None:
-                    language_to_be_sent = LanguageInquiry(obj_seek, self.agent_id, (self.agent_id + 1) % 2, "location") 
+                    language_to_be_sent = LanguageInquiry(obj_seek, 1, 2, "location") 
             # agent 2 asks agent 1 does he need help
-            elif self.agent_id == 2:
+            '''elif self.agent_id == 2:
                 ask_bool = self.whether_to_ask(language_type="location")
                 if ask_bool:
-                    language_to_be_sent = LanguageInquiry(None, self.agent_id, (self.agent_id + 1) % 2, "location")
+                    language_to_be_sent = LanguageInquiry(None, self.agent_id, (self.agent_id + 1) % 2, "location")'''
         
         last_action = self.last_action
         last_subgoal = self.last_subgoal[0] if self.last_subgoal is not None else None
@@ -1286,7 +1291,7 @@ class MCTS_agent_particle_v2_instance:
                 if type(language) == LanguageResponse:
                     if language.language_type == "location":
                         new_graph = self.belief.update_graph_from_gt_graph(
-                            obs, resample_unseen_nodes=True, update_belief=False, language_response=language
+                            obs, resample_unseen_nodes=True, update_belief=True, language_response=language
                         )
                     elif language.language_type == "goal":
                         new_graph = self.belief.update_graph_from_gt_graph(
@@ -1520,8 +1525,14 @@ class MCTS_agent_particle_v2_instance:
                 for obj_id in info['grab_obj_ids']:
                     if obj_id not in self.belief.edge_belief.keys():
                         continue
-                    combined = np.concatenate(self.belief.edge_belief[obj_id]["INSIDE"][1][:], self.belief.edge_belief[obj_id]["ON"][1][:])
-                    distribution = scipy.special.softmax(combined)
+                    distribution = scipy.special.softmax(self.belief.edge_belief[obj_id]["INSIDE"][1][:])
+                    distribution = distribution[distribution > 0]
+                    entropy = -np.sum(distribution * np.log2(distribution))
+                    ratio = entropy / np.log2(distribution.shape[0])
+                    if ratio < maximum:
+                        maximum = ratio
+                    distribution = scipy.special.softmax(self.belief.edge_belief[obj_id]["ON"][1][:])
+                    distribution = distribution[distribution > 0]
                     entropy = -np.sum(distribution * np.log2(distribution))
                     ratio = entropy / np.log2(distribution.shape[0])
                     if ratio < maximum:
@@ -1579,3 +1590,62 @@ class MCTS_agent_particle_v2_instance:
         )
 
         # self.mcts.should_close = self.should_close
+    
+    def modify_observation(self, room_list=[]):
+        obs = self.init_gt_graph #set as ground truth graph in the beginning
+        id2node = {node["id"] : node for node in obs["nodes"]}
+        id2room = {}
+        for id, node in id2node.items():
+            if "room" in node["class_name"]:
+                continue
+            for edge in obs["edges"]:
+                if edge["from_id"] == id and edge["relation_type"] == "inside" and "room" in id2node[edge["to_id"]]["class_name"]:
+                    id2room[id] = edge["to_id"]
+        container_list = self.belief.edge_belief[self.belief.edge_belief.keys()[0]]["INSIDE"][0][1:]
+        surface_list = self.belief.edge_belief[self.belief.edge_belief.keys()[0]]["ON"][0][1:]
+        for room in room_list:
+            for node in obs["nodes"]:
+                if node["class_name"] == room:
+                    room_id = node["id"]
+            room_obj_list = {}
+            for edge in obs["edges"]:
+                if edge["to_id"] == room_id and edge["relation_type"] == "inside":
+                    room_obj_list[edge["from_id"]] = edge #all object id inside the room
+            for obj in room_obj_list:
+                for edge in obs["edges"]:
+                    if edge["from_id"] == obj and edge["to_id"] in container_list and edge["relation_type"] == "inside":
+                        for edge1 in obs["edges"]:
+                            if edge1["from_id"] == obj: #remove old edges
+                                obs["edges"].remove(edge1)
+                        temp = container_list - [edge["to_id"]]
+                        n = random.random()
+                        if n > len(temp) / len(temp) + len(surface_list):
+                            index = random.randint(0, len(surface_list) - 1)
+                            new_position = surface_list[index]
+                            obs["edges"].append({"from_id": obj, "to_id": new_position, "relation_type": "on"})
+                        else:
+                            index = random.randint(0, len(temp) - 1)
+                            new_position = temp[index]
+                            obs["edges"].append({"from_id": obj, "to_id": new_position, "relation_type": "inside"})
+                        obs["edges"].append({"from_id": obj, "to_id": id2room["new_position"], "relation_type": "inside"})
+                    if edge["from_id"] == obj and edge["to_id"] in surface_list and edge["relation_type"] == "on":
+                        for edge1 in obs["edges"]:
+                            if edge1["from_id"] == obj: #remove old edges
+                                obs["edges"].remove(edge1)
+                        temp = surface_list - [edge["to_id"]]
+                        n = random.random()
+                        if n > len(temp) / len(temp) + len(container_list):
+                            index = random.randint(0, len(container_list) - 1)
+                            new_position = container_list[index]
+                            obs["edges"].append({"from_id": obj, "to_id": new_position, "relation_type": "on"})
+                        else:
+                            index = random.randint(0, len(temp) - 1)
+                            new_position = temp[index]
+                            obs["edges"].append({"from_id": obj, "to_id": new_position, "relation_type": "inside"})
+                        obs["edges"].append({"from_id": obj, "to_id": id2room["new_position"], "relation_type": "inside"})
+        return obs
+                            
+
+
+            
+             
