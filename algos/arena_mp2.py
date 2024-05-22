@@ -53,9 +53,9 @@ class ArenaMP(object):
 
 
     def close(self):
-        print(traceback.print_exc())
+        #print(traceback.print_exc())
 
-        print(traceback.print_stack())
+        #print(traceback.print_stack())
 
         self.env.close()
 
@@ -104,10 +104,12 @@ class ArenaMP(object):
         inferred_goal=None,
         opponent_subgoal=None,
         tp=True,
-        inquiry=False
+        inquiry=False,
+        modify_graph=False
     ):
         # ipdb.set_trace()
         dict_actions, dict_info = {}, {}
+        language_info = {}
         op_subgoal = {0: None, 1: None}
         # pdb.set_trace()
 
@@ -146,8 +148,10 @@ class ArenaMP(object):
                     must_replan=True if must_replan is None else must_replan[it], # TODO: already modified this
                     language=language,
                     inquiry=inquiry,
-                    in_same_room=in_same_room
+                    in_same_room=in_same_room,
+                    modify_observation=modify_graph
                 )
+                language_info[it] = language_rsps
                 if language is not None:
                     self.language_infos[language.to_agent_id - 1] = None
                 if language_rsps is not None:
@@ -197,7 +201,7 @@ class ArenaMP(object):
                         obs[it], self.task_goal, action_space_ids=action_space[it]
                     )
 
-        return dict_actions, dict_info
+        return dict_actions, dict_info, language_info
 
     def pred_actions(
         self,
@@ -633,7 +637,7 @@ class ArenaMP(object):
                     all_in_same_room = False
                     break
 
-    def step(self, true_graph=False, inquiry=False):
+    def step(self, true_graph=False, inquiry=False, modify_graph=False):
 
         if self.env.steps == 0:
             pass
@@ -641,8 +645,8 @@ class ArenaMP(object):
         obs = self.env.get_observations()
 
         action_space = self.env.get_action_space()
-        dict_actions, dict_info = self.get_actions(
-            obs, action_space, true_graph=true_graph, inquiry=inquiry
+        dict_actions, dict_info, language = self.get_actions(
+            obs, action_space, true_graph=true_graph, inquiry=inquiry, modify_graph=modify_graph
         )
         print("MCTS returned", dict_actions)
 
@@ -653,7 +657,7 @@ class ArenaMP(object):
 
         except:
             raise utils_exception.UnityException
-        return step_info, dict_actions, dict_info
+        return step_info, dict_actions, dict_info, language
 
     def step_given_action(self, actionss, true_graph=False):
         for i in range(len(self.agents)):
@@ -699,6 +703,7 @@ class ArenaMP(object):
             "belief_graph": {0: [], 1: []},
             "graph": [self.env.init_unity_graph],
             "obs": [],
+            "language": []
         }
 
         success = False
@@ -716,10 +721,13 @@ class ArenaMP(object):
                 obs = self.env.get_observation(0, "image", info=img_info)
                 cv2.imwrite("{}/img_{:04d}.png".format(save_img, step), obs)
             step += 1
-            if step % 5 == 1:
-                (obs, reward, done, infos), actions, agent_info = self.step(inquiry=True)
+            if step == 2:
+                (obs, reward, done, infos), actions, agent_info, language = self.step(modify_graph=True)
             else:
-                (obs, reward, done, infos), actions, agent_info = self.step()
+                if step % 5 == 1:
+                    (obs, reward, done, infos), actions, agent_info, language = self.step(inquiry=True)
+                else:
+                    (obs, reward, done, infos), actions, agent_info, language = self.step()
             # ipdb.set_trace()
             new_agent_position = np.array(
                 list(infos["graph"]["nodes"][0]["bounding_box"]["center"])
@@ -781,6 +789,8 @@ class ArenaMP(object):
                     # ipdb.set_trace()
                 # if len(saved_info['obs']) > 1 and set(saved_info['obs'][0]) != set(saved_info['obs'][1]):
                 #    ipdb.set_trace()
+                if language[agent_id] is not None:
+                    saved_info["language"].append("Agent {} send language to {}:\n{}".format(language[agent_id].from_agent_id, language[agent_id].to_agent_id, language[agent_id].to_language()))
 
             # ipdb.set_trace()
             if done:

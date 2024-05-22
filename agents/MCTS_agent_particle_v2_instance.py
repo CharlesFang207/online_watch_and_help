@@ -1036,8 +1036,7 @@ class MCTS_agent_particle_v2_instance:
     ): #inquiry: whether agent is possible to ask for help; in same room: whether the agent is in same room with other or not; 
        #modify_observation: whether agent will receive manipulated gt graph, modified_rooms: list of rooms where obs will be false
         change_goal = False # indicate whether the agent should change its goal
-
-        if modify_observation:
+        if modify_observation and self.agent_id == 2:
             obs = self.modify_observation(modified_rooms)
         
         if language is not None:
@@ -1527,18 +1526,27 @@ class MCTS_agent_particle_v2_instance:
                         continue
                     distribution = scipy.special.softmax(self.belief.edge_belief[obj_id]["INSIDE"][1][:])
                     distribution = distribution[distribution > 0]
+                    if distribution.shape[0] == 1:
+                        maximum = 0.0 #if certainly inside something, just set max to 0
+                        continue
                     entropy = -np.sum(distribution * np.log2(distribution))
                     ratio = entropy / np.log2(distribution.shape[0])
                     if ratio < maximum:
                         maximum = ratio
                     distribution = scipy.special.softmax(self.belief.edge_belief[obj_id]["ON"][1][:])
                     distribution = distribution[distribution > 0]
+                    if distribution.shape[0] == 1:
+                        index = np.argmax(self.belief.edge_belief[obj_id]["ON"][1][:])
+                        if index == 0:
+                            continue
+                        maximum = 0.0
+                        continue
                     entropy = -np.sum(distribution * np.log2(distribution))
                     ratio = entropy / np.log2(distribution.shape[0])
                     if ratio < maximum:
                         maximum = ratio
 
-                if maximum > boundary:
+                if maximum >= boundary:
                     uncertain_objects.append(goal_name.split('_')[1])
             if len(uncertain_objects) == 0:
                 return None
@@ -1601,8 +1609,8 @@ class MCTS_agent_particle_v2_instance:
             for edge in obs["edges"]:
                 if edge["from_id"] == id and edge["relation_type"] == "inside" and "room" in id2node[edge["to_id"]]["class_name"]:
                     id2room[id] = edge["to_id"]
-        container_list = self.belief.edge_belief[self.belief.edge_belief.keys()[0]]["INSIDE"][0][1:]
-        surface_list = self.belief.edge_belief[self.belief.edge_belief.keys()[0]]["ON"][0][1:]
+        container_list = self.belief.edge_belief[list(self.belief.edge_belief.keys())[0]]["INSIDE"][0][1:]
+        surface_list = self.belief.edge_belief[list(self.belief.edge_belief.keys())[0]]["ON"][0][1:]
         for room in room_list:
             for node in obs["nodes"]:
                 if node["class_name"] == room:

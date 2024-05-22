@@ -39,7 +39,7 @@ parser.add_argument(
     default="0,1,2,4,5",
     help="The apartments where we will generate the data",
 )
-parser.add_argument("--port", type=str, default="8092", help="Task name")
+parser.add_argument("--port", type=str, default="8085", help="Task name")
 parser.add_argument("--display", type=int, default=0, help="Task name")
 parser.add_argument(
     "--mode", type=str, default="full", choices=["simple", "full"], help="Task name"
@@ -50,7 +50,7 @@ parser.add_argument(
 parser.add_argument(
     "--exec_file",
     type=str,
-    default="/home/scai/Workspace/hshi33/virtualhome/online_watch_and_help/executable/linux_exec.v2.3.0.x86_64",
+    default="/home/scai/Workspace/hshi33/virtualhome/online_watch_and_help/path_sim_dev/linux_exec.v2.3.0.x86_64",
     help="Use unity editor",
 )
 
@@ -77,6 +77,14 @@ def add_noise_initgraph(init_graph, original_graph, random_obj):
             cont += 1
         # ipdb.set_trace()
     return init_graph
+
+def rescale_objects_to_place(updated_graph):
+    new_graph  = copy.deepcopy(updated_graph)
+    objects_change = ['pudding', 'chips', 'condimentbottle', 'condimentshaker', 'salmon', 'plate']
+    for node in new_graph['nodes']:
+        if node['class_name'].lower().replace('_', '') in objects_change:
+            node['obj_transform']['scale'] = [x*0.4 for x in node['obj_transform']['scale']]
+    return new_graph
 
 
 if __name__ == "__main__":
@@ -106,7 +114,7 @@ if __name__ == "__main__":
             port=args.port,
             file_name=args.exec_file,
             no_graphics=True,
-            logging=False,
+            logging=True,
             x_display=args.display,
         )
     comm.reset()
@@ -134,6 +142,7 @@ if __name__ == "__main__":
     success_init_graph = []
 
     apartment_ids = [int(apt_id) for apt_id in args.apt_str.split(",")]
+    apartment_ids = [0]
     if args.task == "all":
         # tasks = ["setup_table", "prepare_food", "watch_tv"]
         tasks = [
@@ -219,7 +228,7 @@ if __name__ == "__main__":
                         # ipdb.set_trace()
                 obj_position[obj] = positions
 
-            num_test = 1
+            num_test = 1000000
             count_success = 0
             for i in range(num_test):
                 comm.reset(apartment)

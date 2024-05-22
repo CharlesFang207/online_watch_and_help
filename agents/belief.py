@@ -314,6 +314,7 @@ class Belief():
         surface_classes = [
             'kitchentable',
             'coffeetable',
+            'sofa'
         ]
 
         # TODO: ths class should simply have a surface property

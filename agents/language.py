@@ -36,6 +36,8 @@ class LanguageInquiry(Language):
         pred = None
         position_id = None'''
 
+        #ipdb.set_trace()
+
         obj_position = {}
         for obj_name in obj_ids.keys():
             obj_position[obj_name] = {}
@@ -45,19 +47,31 @@ class LanguageInquiry(Language):
                 else:
                     distribution = scipy.special.softmax(edge_belief[obj_id]["INSIDE"][1][:])
                     distribution = distribution[distribution > 0]
-                    entropy = -np.sum(distribution * np.log2(distribution))
-                    ratio = entropy / np.log2(distribution.shape[0])
-                    if ratio <= 1.0: #certain enough, for testing purpose have 1.0 now
+                    if distribution.shape[0] == 1: #case when belief is certain
+                        #ipdb.set_trace()
                         obj_position[obj_name][obj_id] = []
-                        for index, element in enumerate(distribution):
-                            if element > 1 / distribution.shape[0]:
-                                obj_position[obj_name][obj_id].append({"predicate": "inside", "position": edge_belief[obj_id]["INSIDE"][0][index]})
+                        index = np.argmax(edge_belief[obj_id]["INSIDE"][1][:])
+                        obj_position[obj_name][obj_id].append({"predicate": "inside", "position": edge_belief[obj_id]["INSIDE"][0][index]})
+                    else:
+                        entropy = -np.sum(distribution * np.log2(distribution))
+                        ratio = entropy / np.log2(distribution.shape[0])
+                        if ratio <= 1.0: #certain enough, for testing purpose have 1.0 now
+                            if obj_id not in obj_position[obj_name].keys():
+                                obj_position[obj_name][obj_id] = []
+                            for index, element in enumerate(distribution):
+                                if element > 1 / distribution.shape[0]:
+                                    obj_position[obj_name][obj_id].append({"predicate": "inside", "position": edge_belief[obj_id]["INSIDE"][0][index]})
                     distribution = scipy.special.softmax(edge_belief[obj_id]["ON"][1][:])
                     distribution = distribution[distribution > 0]
+                    if distribution.shape[0] == 1:
+                        index = np.argmax(edge_belief[obj_id]["ON"][1][:])
+                        obj_position[obj_name][obj_id].append({"predicate": "on", "position": edge_belief[obj_id]["ON"][0][index]})
+                        continue
                     entropy = -np.sum(distribution * np.log2(distribution))
                     ratio = entropy / np.log2(distribution.shape[0])
                     if ratio <= 1.0: #certain enough, for testing purpose have 1.0 now
-                        obj_position[obj_name][obj_id] = []
+                        if obj_id not in obj_position[obj_name].keys():
+                            obj_position[obj_name][obj_id] = []
                         for index, element in enumerate(distribution):
                             if element > 1 / distribution.shape[0]:
                                 obj_position[obj_name][obj_id].append({"predicate": "on", "position": edge_belief[obj_id]["ON"][0][index]})
@@ -132,7 +146,7 @@ class LanguageResponse(Language):
                             ans += "{} {} ".format(obj_name, obj_id)
                             for location in self.obj_positions[obj_name][obj_id]:
                                 if location["position"] is None:
-                                    ans += "not {} anything".format(location["predicate"])
+                                    #ans += "not {} anything".format(location["predicate"])
                                     continue
                                 ans += " {} {}".format(location["predicate"], location["position"])
                             ans += "\n"
