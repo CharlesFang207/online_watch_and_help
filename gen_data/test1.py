@@ -10,11 +10,35 @@ comm = comm_unity.UnityCommunication(
             no_graphics=True,
             logging=False,
             x_display=0,
-        )
-print("here")
-comm.reset(0)
+)
+surface_classes = [
+            'kitchentable',
+            'coffeetable',
+            'sofa',
+            'desk',
+            'kitchencounter',
+            'bathroomcounter'
+        ]
+container_classes = [
+        'bathroomcabinet',
+        'kitchencabinet',
+        'cabinet',
+        'fridge',
+        'stove',
+        'dishwasher',
+        'microwave']
+comm.reset(1)
 s, g = comm.environment_graph()
-room_ids = [11, 73, 205, 335]
+object2ids = {}
+for obj in surface_classes:
+    object2ids[obj] = []
+for obj in container_classes:
+    object2ids[obj] = []
+for node in g["nodes"]:
+    if node["class_name"] in surface_classes or node["class_name"] in container_classes:
+        object2ids[node["class_name"]].append(node["id"])
+print(object2ids)
+'''room_ids = [11, 73, 205, 335]
 for edge in g["edges"]:
     if edge["to_id"] == 111 and edge["relation_type"] == "on":
         g["edges"].remove(edge)
@@ -22,35 +46,48 @@ for edge in g["edges"]:
             if node["id"] == edge["from_id"]:
                 g["nodes"].remove(node)
 dict = {48: 'bathroomcabinet', 105: 'bookshelf', 234: 'kitchencabinet', 305: 'fridge', 311: 'stove', 313: 'microwave'}
+'''
 import json
-with open(f"{curr_dir}/data/object_info_final.json", "r") as file:
+import copy
+import random
+with open(f"{curr_dir}/data/real_object_placing.json", "r") as file:
     obj_info = json.load(file)
-node = {"id": 456, "class_name": "plate"}
-edges = [{"from_id": 456, "to_id": 372, "relation_type": "on"}]
-g["nodes"].append(node)
-g["edges"] += edges
-s, message = comm.expand_scene(g)
-print(s, message)
-'''id = 1000
-temp = g["nodes"]
-results = {}
-for container_id in dict.keys():
-    for k in obj_info.keys():
-        id += 1
-        node = {"id": id, "class_name": k}
-        edge = {"from_id": id, "to_id": container_id, "relation_type": "inside"}
-        g["nodes"].append(node)
-        g["edges"].append(edge)
-        s, message = comm.expand_scene(g, transfer_transform=False)
-        if not s:
-            if dict[container_id] not in results.keys():
-                results[dict[container_id]] = [k]
-            else:
-                results[dict[container_id]].append(k)
-        g["nodes"].remove(node)
-        g["edges"].remove(edge)
-print(results)'''
-s, g = comm.environment_graph()
-for node in g["nodes"]:
-    if node["class_name"] == "wineglass":
-        print(node)
+temp = copy.deepcopy(g)
+new_graph = copy.deepcopy(temp)
+result = {}
+for obj, places in obj_info.items():
+    if "food" in obj and obj != "food_food":
+        obj = obj[5:]
+    result[obj] = []
+    designated_places = []
+    for place in places:
+        final = place["destination"].replace("_", "")
+        #final = place[1].replace("_", "")
+        designated_places.append(final)
+    node = {"id": 1001, "class_name": obj}
+    for container in container_classes:
+        if container not in designated_places:
+            continue
+        dest_id = random.choice(object2ids[container])
+        newgraph = copy.deepcopy(temp)
+        edge = {"from_id":1001, "to_id": dest_id, "relation_type": "INSIDE"}
+        newgraph["nodes"].append(node)
+        newgraph["edges"].append(edge)
+        s, message = comm.expand_scene(newgraph, transfer_transform=False)
+        if s:
+            result[obj].append(["INSIDE", container])
+    for surface in surface_classes:
+        if surface not in designated_places:
+            continue
+        dest_id = random.choice(object2ids[surface])
+        newgraph = copy.deepcopy(temp)
+        edge = {"from_id":1001, "to_id": dest_id, "relation_type": "ON"}
+        newgraph["nodes"].append(node)
+        newgraph["edges"].append(edge)
+        s, message = comm.expand_scene(newgraph, transfer_transform=False)
+        if s:
+            result[obj].append(["ON", surface])
+    if len(result[obj]) == 0:
+        del(result[obj])
+with open('object_info_new.json', 'w') as json_file:
+    json.dump(result, json_file, indent=4)

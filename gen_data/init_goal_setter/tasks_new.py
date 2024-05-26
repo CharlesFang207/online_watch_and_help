@@ -131,15 +131,15 @@ class Task:
         # ipdb.set_trace()
 
         # Make sure candidates are available
-        candidates = init_goal_manager.init_pool["candidates"]
+        candidates = init_goal_manager.init_pool["setup_table"]["candidates"]
 
         class_names = [node["class_name"] for node in graph["nodes"]]
 
         candidates = [cand for cand in candidates if cand[0] in class_names]
         container_name, pred_name = init_goal_manager.rand.choice(candidates)
         min_count, max_count = (
-            init_goal_manager.init_pool["counts"]["min"],
-            init_goal_manager.init_pool["counts"]["max"],
+            init_goal_manager.init_pool["setup_table"]["counts"]["min"],
+            init_goal_manager.init_pool["setup_table"]["counts"]["max"],
         )
 
         pr_graph = copy.deepcopy(graph)
@@ -176,7 +176,7 @@ class Task:
         counts_objects = init_goal_manager.rand.randint(min_count, max_count)
 
         init_goal_manager.goal = {}
-        object_dict = init_goal_manager.init_pool["objects"]
+        object_dict = init_goal_manager.init_pool["setup_table"]["objects"]
 
         extra_object = init_goal_manager.rand.choice(["wineglass", "wine"])
         objects_select = [extra_object] + ["spoon", "cup"]
@@ -273,14 +273,14 @@ class Task:
 
     @staticmethod
     def put_dishwasher(init_goal_manager, graph, start=True):
-        candidates = init_goal_manager.init_pool["candidates"]
+        candidates = init_goal_manager.init_pool["put_dishwasher"]["candidates"]
 
         class_names = [node["class_name"] for node in graph["nodes"]]
         candidates = [cand for cand in candidates if cand[0] in class_names]
         container_name, pred_name = init_goal_manager.rand.choice(candidates)
         min_count, max_count = (
-            init_goal_manager.init_pool["counts"]["min"],
-            init_goal_manager.init_pool["counts"]["max"],
+            init_goal_manager.init_pool["put_dishwasher"]["counts"]["min"],
+            init_goal_manager.init_pool["put_dishwasher"]["counts"]["max"],
         )
 
         graph = cleanup_graph(init_goal_manager, graph, start)
@@ -296,7 +296,7 @@ class Task:
 
         id2node = {node["id"]: node for node in graph["nodes"]}
 
-        object_candidates = ["plate", "waterglass", "wineglass", "cutleryfork"]
+        object_candidates = ["cup", "coffeepot", "wineglass", "spoon"]
         different_classes = init_goal_manager.rand.randint(1, len(object_candidates))
         objects_selected = init_goal_manager.rand.choices(
             object_candidates, k=different_classes
@@ -382,14 +382,14 @@ class Task:
 
     @staticmethod
     def put_fridge(init_goal_manager, graph, start=True):
-        candidates = init_goal_manager.init_pool["candidates"]
+        candidates = init_goal_manager.init_pool["put_fridge"]["candidates"]
 
         class_names = [node["class_name"] for node in graph["nodes"]]
         candidates = [cand for cand in candidates if cand[0] in class_names]
         container_name, pred_name = init_goal_manager.rand.choice(candidates)
         min_count, max_count = (
-            init_goal_manager.init_pool["counts"]["min"],
-            init_goal_manager.init_pool["counts"]["max"],
+            init_goal_manager.init_pool["put_fridge"]["counts"]["min"],
+            init_goal_manager.init_pool["put_fridge"]["counts"]["max"],
         )
 
         graph = cleanup_graph(init_goal_manager, graph, start)
@@ -730,3 +730,25 @@ class Task:
         )
 
         return graph, env_goal, True
+
+    @staticmethod
+    def double_task(init_goal_manager, graph, task_name):
+        if "and" in task_name:
+            tasks = task_name.split("_and_")
+        else:
+            tasks = [task_name, task_name]
+        print(tasks)
+        graph, env_goal_0, s1 = getattr(Task, tasks[0])(init_goal_manager, graph, start=True)
+        if not s1:
+            ipdb.set_trace()
+        graph, env_goal_1, s2 = getattr(Task, tasks[1])(init_goal_manager, graph, start=False)
+        if not s2:
+            ipdb.set_trace()
+        env_goal = {task_name: [], "noise": []}
+        env_goal[task_name] = env_goal_0[tasks[0]]
+        env_goal["noise"] = env_goal_1[tasks[1]]
+        print(env_goal_0)
+        print(env_goal_1)
+        print(env_goal)
+        return graph, env_goal, True
+    

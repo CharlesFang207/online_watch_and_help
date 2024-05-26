@@ -1,143 +1,94 @@
 {
     "obj_random": [
-        "condimentbottle",
         "remotecontrol",
-        "plate",
         "wineglass",
-        "waterglass",
-        "dishbowl",
-        "cupcake",
-        "salmon",
-        "apple",
-        "chips",
+        "cellphone",
         "book",
-        "wine"
+        "donut",
+        "glass",
+        "groceries"
     ],
-    
-    "setup_table_toy_2": 
-    {   
-        "plate": {"min_num":1, "max_num":2, "env_max_num": 3},
-        "waterglass": {"min_num":1, "max_num":2, "env_max_num": 3}
-    },
-    "setup_table_toy_1": 
-    {   
-        "cupcake": {"min_num":1, "max_num":2, "env_max_num": 3},
-        "apple": {"min_num":1, "max_num":2, "env_max_num": 3}
-    },
     "setup_table": 
-    {
-        "plate": {"min_num":0, "max_num":2, "env_max_num": 2},
-        "waterglass": {"min_num":0, "max_num":2, "env_max_num": 2},
-        "wineglass": {"min_num":0, "max_num":2, "env_max_num": 2},
-        "cutleryfork": {"min_num":0, "max_num":2, "env_max_num": 2}
-    },
-
-    "clean_table":
-    {
-        "plate": {"min_num":0, "max_num":2, "env_max_num": 2},
-        "waterglass": {"min_num":0, "max_num":2, "env_max_num": 2},
-        "wineglass": {"min_num":0, "max_num":2, "env_max_num": 2},
-        "cutleryfork": {"min_num":0, "max_num":2, "env_max_num": 2}
+    {   
+        "counts": {"max": 2, "min": 1},
+        "candidates": [["kitchentable", "on"], ["coffeetable", "on"]],
+        "objects":
+        {
+            "cup": {"env_max_num": 3, "on": ["kitchentable"], "in": []},
+            "wine": {"env_max_num": 3, "on": ["kitchentable"], "in": []},
+            "spoon": {"env_max_num": 3, "on": ["kitchentable"], "in": []},
+            "wineglass": {"env_max_num": 3, "on": ["kitchentable"], "in": []}
+        }
     },
 
     "put_dishwasher":
     {
-        "plate": {"min_num":0, "max_num":2, "env_max_num": 2},
-        "waterglass": {"min_num":0, "max_num":2, "env_max_num": 2},
-        "wineglass": {"min_num":0, "max_num":2, "env_max_num": 2},
-        "cutleryfork": {"min_num":0, "max_num":2, "env_max_num": 2}
-    },
+        "counts": {"max": 2, "min": 1},
+        "candidates": [["dishwasher", "inside"]],
+        "objects": {
+            "cup": {"min_num":0, "max_num":2, "env_max_num": 2, "on": [], "in": ["fridge"]},
+            "wineglass": {"min_num":0, "max_num":2, "env_max_num": 2, "on": [], "in": ["fridge"]},
+            "coffeepot": {"min_num":0, "max_num":2, "env_max_num": 2, "on": [], "in": ["fridge"]},
+            "spoon": {"min_num":0, "max_num":2, "env_max_num": 2, "on": [], "in": ["fridge"]}               
+        }
 
-    "unload_dishwasher":
-    {
-        "plate": {"min_num":0, "max_num":2, "env_max_num": 2},
-        "waterglass": {"min_num":0, "max_num":2, "env_max_num": 2},
-        "wineglass": {"min_num":0, "max_num":2, "env_max_num": 2},
-        "cutleryfork": {"min_num":0, "max_num":2, "env_max_num": 2}
     },
-
 
     "put_fridge":
     {
-        "cupcake": {"min_num":0, "max_num":2, "env_max_num": 2},
-        "juice": {"min_num":0, "max_num":1, "env_max_num": 1},
-        "pancake": {"min_num":0, "max_num":1, "env_max_num": 1},
-        "poundcake": {"min_num":0, "max_num":1, "env_max_num": 1},
-        "wine": {"min_num":0, "max_num":1, "env_max_num": 1},
-        "pudding": {"min_num":0, "max_num":2, "env_max_num": 2},
-        "apple": {"min_num":0, "max_num":2, "env_max_num": 2}   
+        "counts": {"max": 2, "min": 1},
+        "candidates": [["fridge", "inside"]],
+        "objects": {
+            "carrot": {"min_num":0, "max_num":2, "env_max_num": 2, "on": [], "in": ["fridge"]},
+            "potato": {"min_num":0, "max_num":2, "env_max_num": 2, "on": [], "in": ["fridge"]},
+            "donut": {"min_num":0, "max_num":2, "env_max_num": 2, "on": [], "in": ["fridge"]},
+            "milk": {"min_num":0, "max_num":2, "env_max_num": 2, "on": [], "in": ["fridge"]},
+            "juice": {"min_num":0, "max_num":2, "env_max_num": 2, "on": [], "in": ["fridge"]},
+            "beer": {"min_num":0, "max_num":2, "env_max_num": 2, "on": [], "in": ["fridge"]},
+            "bread": {"min_num":0, "max_num":2, "env_max_num": 2, "on": [], "in": ["fridge"]}                 
+        }
+
     },
 
     "prepare_food":
     {
-        "cupcake": {"min_num":0, "max_num":2, "env_max_num": 2},
-        "juice": {"min_num":0, "max_num":1, "env_max_num": 1},
-        "pancake": {"min_num":0, "max_num":1, "env_max_num": 1},
-        "poundcake": {"min_num":0, "max_num":1, "env_max_num": 1},
-        "wine": {"min_num":0, "max_num":1, "env_max_num": 1},
-        "pudding": {"min_num":0, "max_num":2, "env_max_num": 2},
-        "apple": {"min_num":0, "max_num":2, "env_max_num": 2},
-        "coffeepot": {"min_num":0, "max_num":1, "env_max_num": 1}
-    },
+        "counts": {"max": 2, "min": 1},
+        "candidates": [["kitchentable", "on"], ["coffeetable", "on"], ["stove", "inside"]],
+        "objects":
+        {
 
-    "read_book": 
+            "pudding": {"env_max_num": 3, "on": ["kitchentable"], "in": []},
+            "cupcake": {"env_max_num": 3, "on": ["kitchentable"], "in": []},
+            "salmon": {"env_max_num": 3, "on": ["kitchentable"], "in": []},
+            "apple": {"env_max_num": 3, "on": ["kitchentable"], "in": []}
+        }
+
+    },
+    "noise":
     {
-        "book": {"min_num":1, "max_num":1, "env_max_num": 3},
-        "cupcake": {"min_num":0, "max_num":2, "env_max_num": 2},
-        "juice": {"min_num":0, "max_num":1, "env_max_num": 1},
-        "wine": {"min_num":0, "max_num":1, "env_max_num": 1},
-        "pudding": {"min_num":0, "max_num":2, "env_max_num": 2},
-        "apple": {"min_num":0, "max_num":2, "env_max_num": 2}
-    },
-
-    "watch_tv":
-    {
-        "cupcake": {"min_num":0, "max_num":2, "env_max_num": 2},
-        "juice": {"min_num":0, "max_num":1, "env_max_num": 1},
-        "wine": {"min_num":0, "max_num":1, "env_max_num": 1},
-        "pudding": {"min_num":0, "max_num":2, "env_max_num": 2},
-        "apple": {"min_num":0, "max_num":2, "env_max_num": 2}
-    },
-
-    "cleanup_table": 
-    {
-        "objects": {
-            "plate": {"min_num":0, "max_num":2, "env_max_num": 2},
-            "waterglass": {"min_num":0, "max_num":2, "env_max_num": 2},
-            "wineglass": {"min_num":0, "max_num":2, "env_max_num": 2},
-            "cutleryfork": {"min_num":0, "max_num":2, "env_max_num": 2},
-            "cupcake": {"min_num":0, "max_num":2, "env_max_num": 2},
-            "juice": {"min_num":0, "max_num":1, "env_max_num": 1},
-            "pancake": {"min_num":0, "max_num":1, "env_max_num": 1},
-            "poundcake": {"min_num":0, "max_num":1, "env_max_num": 1},
-            "wine": {"min_num":0, "max_num":1, "env_max_num": 1},
-            "pudding": {"min_num":0, "max_num":2, "env_max_num": 2},
-            "apple": {"min_num":0, "max_num":2, "env_max_num": 2},
-            "coffeepot": {"min_num":0, "max_num":1, "env_max_num": 1}
-        },
-        "destinations": ["cabinet", "kitchencounter", "fridge"]
-    }, 
-
-    "cleanup_fridge": {
-        "objects": {
-            "cupcake": {"min_num":0, "max_num":2, "env_max_num": 2},
-            "juice": {"min_num":0, "max_num":1, "env_max_num": 1},
-            "pancake": {"min_num":0, "max_num":1, "env_max_num": 1},
-            "poundcake": {"min_num":0, "max_num":1, "env_max_num": 1},
-            "wine": {"min_num":0, "max_num":1, "env_max_num": 1},
-            "pudding": {"min_num":0, "max_num":2, "env_max_num": 2},
-            "apple": {"min_num":0, "max_num":2, "env_max_num": 2},
-            "coffeepot": {"min_num":0, "max_num":1, "env_max_num": 1}
-        },
-        "destinations": ["coffeetable", "kitchentable"]
-    },
-
-    "collect_books": {
-        "min_num": 2,
-        "max_num": 5,
-        "destinations": "desk"
+        "cupcake": {"min_num":0, "max_num":2, "env_max_num": 2, 
+                    "on": ["kitchentable", "coffeetable"], 
+                    "in": ["stove", "microwave", "dishwasher", "fridge"]
+                    },
+        "salmon": {"min_num":0, "max_num":2, "env_max_num": 2,
+                    "on": ["kitchentable", "coffeetable"], 
+                    "in": ["stove", "microwave", "dishwasher", "fridge"]},
+        "apple": {"min_num":0, "max_num":2, "env_max_num": 2,
+                  "on": ["kitchentable", "coffeetable"], 
+                  "in": ["stove", "microwave", "dishwasher", "fridge"]},
+        "plate": {"min_num":0, "max_num":2, "env_max_num": 2,
+                  "on": ["kitchentable", "coffeetable"], 
+                  "in": ["stove", "microwave", "dishwasher", "fridge"]},
+        "waterglass": {"min_num":0, "max_num":2, "env_max_num": 2,
+                       "on": ["kitchentable", "coffeetable"], 
+                       "in": ["stove", "microwave", "dishwasher", "fridge"]},
+        "cutleryfork": {"min_num":0, "max_num":2, "env_max_num": 2,
+                        "on": ["kitchentable", "coffeetable"], 
+                        "in": ["stove", "microwave", "dishwasher", "fridge"]}
     }
+
 }
+
 
 
 

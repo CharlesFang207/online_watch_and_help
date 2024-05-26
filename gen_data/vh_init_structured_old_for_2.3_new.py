@@ -20,7 +20,7 @@ from simulation.unity_simulator import comm_unity
 
 print(comm_unity.__file__)
 from init_goal_setter.init_goal_base import SetInitialGoal
-from init_goal_setter.tasks_structured_old_for_2_3 import Task
+from init_goal_setter.tasks_new import Task
 
 
 from utils import utils_goals
@@ -129,12 +129,12 @@ if __name__ == "__main__":
     ## -------------------------------------------------------------
     task_names = {
         1: ["setup_table", "put_fridge", "prepare_food", "watch_tv"],
-        2: ["setup_table", "put_fridge", "prepare_food", "put_dishwasher", "watch_tv"],
-        3: ["setup_table", "put_fridge", "prepare_food", "put_dishwasher", "watch_tv"],
-        4: ["setup_table", "put_fridge", "prepare_food", "put_dishwasher", "watch_tv"],
-        5: ["setup_table", "put_fridge", "prepare_food", "put_dishwasher"],
+        2: ["setup_table", "put_fridge", "prepare_food", "put_dishwasher", "watch_tv", "setup_table_and_put_dishwasher"],
+        3: ["setup_table", "put_fridge", "prepare_food", "put_dishwasher", "watch_tv", "setup_table_and_put_dishwasher"],
+        4: ["setup_table", "put_fridge", "prepare_food", "put_dishwasher", "watch_tv", "setup_table_and_put_dishwasher"],
+        5: ["setup_table", "put_fridge", "prepare_food", "put_dishwasher", "setup_table_and_put_dishwasher"],
         6: ["setup_table", "put_fridge", "prepare_food", "watch_tv"],
-        7: ["setup_table", "put_fridge", "prepare_food", "put_dishwasher", "watch_tv"],
+        7: ["setup_table", "put_fridge", "prepare_food", "put_dishwasher", "watch_tv", "setup_table_and_put_dishwasher"],
     }
 
     bad_containers = {"1": ["dishwasher"], "6": ["dishwasher"], "5": ["coffeetable"]}
@@ -268,8 +268,8 @@ if __name__ == "__main__":
                 if "toy" in task_name:
                     task_name_red = task_name.replace("_1", "").replace("_2", "")
 
-                init_graph, env_goal, success_setup = getattr(Task, task_name_red)(
-                    set_init_goal, graph
+                init_graph, env_goal, success_setup = getattr(Task, "double_task")(
+                    set_init_goal, graph, task_name_red
                 )
                 # env_goal_key = list(env_goal[task_name][0].keys())[0]
 

@@ -73,7 +73,7 @@ class SetInitialGoal:
             "setup_table_toy_2",
             "setup_table_toy_1",
         ]:
-            self.init_pool = self.init_pool_tasks[self.task_name]
+            self.init_pool[self.task_name] = self.init_pool_tasks[self.task_name]
 
         elif self.task_name == "setup_table_prepare_food":
             self.init_pool = copy.deepcopy(self.init_pool_tasks["setup_table"])
@@ -106,6 +106,11 @@ class SetInitialGoal:
         elif self.task_name == "put_dishwasher_read_book":
             self.init_pool = copy.deepcopy(self.init_pool_tasks["put_dishwasher"])
             self.init_pool.update(self.init_pool_tasks["read_book"])
+        
+        elif "and" in self.task_name:
+            tasks = self.task_name.split("_and_")
+            self.init_pool[tasks[0]] = copy.deepcopy(self.init_pool_tasks[tasks[0]])
+            self.init_pool[tasks[1]] = copy.deepcopy(self.init_pool_tasks[tasks[1]])
 
         ## make sure the goal is not empty
         self.goal_random_agent = {}
@@ -647,7 +652,6 @@ class SetInitialGoal:
         obj_in_graph = [
             node["class_name"] for node in graph["nodes"]
         ]  # if the object already in env, skip
-        self.num_other_obj = 0
         # print(self)
         added_objects, failed_objects = [], [] # TODO(xinyu): seems it's a bug, since failed_objects is not used
         for i in range(self.num_other_obj):
