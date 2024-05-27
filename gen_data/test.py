@@ -15,7 +15,7 @@ comm = comm_unity.UnityCommunication(
 comm.reset(1)
 temp = {'kitchentable': [199], 'coffeetable': [86, 289], 'sofa': [85, 288], 'bathroomcabinet': [26], 'kitchencabinet': [202, 203, 204, 205, 206, 207, 208, 209], 'cabinet': [87], 'fridge': [225], 'stove': [226], 'dishwasher': [228], 'microwave': [234]}
 s, g = comm.environment_graph()
-nodes = [{'id': 1000, 'class_name': 'glass'}]
+nodes = [{'id': 1000, 'class_name': 'bread'}]
          #{'id': 1002, 'class_name': 'plate'}, {'id': 1003, 'class_name': 'plate'}]
          #{'id': 1004, 'class_name': 'cutleryfork'}, {'id': 1005, 'class_name': 'cutleryfork'}]
 edges = [{'from_id': 1000, 'relation_type': 'ON', 'to_id': 288}]
@@ -40,7 +40,7 @@ for script in scripts:
     print(s, message)'''
 s, g = comm.environment_graph()
 for node in g["nodes"]:
-    if node["class_name"] == "glass":
+    if node["class_name"] == "bread":
         print(node)
 for edge in g["edges"]:
     if edge["from_id"] == 330 and edge["to_id"] == 288 and edge["relation_type"] == "ON":

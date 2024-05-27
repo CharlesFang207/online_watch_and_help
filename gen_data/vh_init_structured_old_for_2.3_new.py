@@ -27,7 +27,7 @@ from utils import utils_goals
 
 parser = argparse.ArgumentParser()
 parser.add_argument(
-    "--num-per-apartment", type=int, default=5, help="Maximum #episodes/apartment"
+    "--num-per-apartment", type=int, default=2, help="Maximum #episodes/apartment"
 )
 parser.add_argument("--seed", type=int, default=10, help="Seed for the apartments")
 
@@ -128,14 +128,30 @@ if __name__ == "__main__":
     ## gen graph
     ## -------------------------------------------------------------
     task_names = {
-        1: ["setup_table", "put_fridge", "prepare_food", "watch_tv"],
-        2: ["setup_table", "put_fridge", "prepare_food", "put_dishwasher", "watch_tv", "setup_table_and_put_dishwasher"],
-        3: ["setup_table", "put_fridge", "prepare_food", "put_dishwasher", "watch_tv", "setup_table_and_put_dishwasher"],
-        4: ["setup_table", "put_fridge", "prepare_food", "put_dishwasher", "watch_tv", "setup_table_and_put_dishwasher"],
-        5: ["setup_table", "put_fridge", "prepare_food", "put_dishwasher", "setup_table_and_put_dishwasher"],
-        6: ["setup_table", "put_fridge", "prepare_food", "watch_tv"],
-        7: ["setup_table", "put_fridge", "prepare_food", "put_dishwasher", "watch_tv", "setup_table_and_put_dishwasher"],
+        1: ["setup_table", "put_fridge", "prepare_food", "setup_desk", "prepare_drink", "collect_document", "collect_toy", "clear_fridge", "clear_table", "clear_desk"],
+        2: ["setup_table", "put_fridge", "prepare_food", "put_dishwasher", "setup_desk", "prepare_drink", "collect_document", "collect_toy", "unload_dishwasher", "clear_fridge", "clear_table", "clear_desk"],
+        3: ["setup_table", "put_fridge", "prepare_food", "put_dishwasher", "setup_desk", "prepare_drink", "collect_document", "collect_toy", "unload_dishwasher", "clear_fridge", "clear_table", "clear_desk"],
+        4: ["setup_table", "put_fridge", "prepare_food", "put_dishwasher", "setup_desk", "prepare_drink", "collect_document", "collect_toy", "unload_dishwasher", "clear_fridge", "clear_table", "clear_desk"],
+        5: ["setup_table", "put_fridge", "prepare_food", "put_dishwasher", "setup_desk", "prepare_drink", "collect_document", "collect_toy", "unload_dishwasher", "clear_fridge", "clear_table", "clear_desk"],
+        6: ["setup_table", "put_fridge", "prepare_food", "setup_desk", "prepare_drink", "collect_document", "collect_toy", "clear_fridge", "clear_table", "clear_desk"],
+        7: ["setup_table", "put_fridge", "prepare_food", "put_dishwasher", "setup_desk", "prepare_drink", "collect_document", "unload_dishwasher", "clear_fridge", "clear_table", "clear_desk"],
     }
+
+    exclude_combinations = [["unload_dishwasher", "unload_dishwasher"], ["clear_table", "clear_table"], ["clear_fridge", "clear_fridge"], ["clear_desk", "clear_desk"]]
+
+    new_tasks_names = {1: [], 2:[], 3:[], 4:[], 5:[], 6:[], 7:[]}
+    for k in new_tasks_names.keys():
+        for i in range (len(task_names[k])):
+            for j in range(i, len(task_names[k])):
+                if task_names[k][i] == task_names[k][j] or [task_names[k][i], task_names[k][j]] in exclude_combinations:
+                    continue
+                new_tasks_names[k].append("{}_and_{}".format(task_names[k][i], task_names[k][j]))
+            if "unload" in task_names[k][i] or "clear" in task_names[k][i]:
+                continue
+            new_tasks_names[k].append(task_names[k][i])
+    task_names = new_tasks_names
+
+    
 
     bad_containers = {"1": ["dishwasher"], "6": ["dishwasher"], "5": ["coffeetable"]}
 
@@ -145,14 +161,17 @@ if __name__ == "__main__":
     apartment_ids = [0, 1, 2, 3, 4, 6]
     if args.task == "all":
         # tasks = ["setup_table", "prepare_food", "watch_tv"]
-        tasks = [
-            "setup_table",
-            "put_fridge",
-            "prepare_food",
-            "put_dishwasher",
-            # "watch_tv",
-        ]
-        tasks = ["setup_table"]
+        tasks = ["setup_table", "put_fridge", "prepare_food", "put_dishwasher", "setup_desk", "prepare_drink", "collect_document", "collect_toy", "unload_dishwasher", "clear_fridge", "clear_table", "clear_desk"]
+        new_tasks = []
+        for i in range (len(tasks)):
+            for j in range(i, len(tasks)):
+                if tasks[i] == tasks[j] or [tasks[i], tasks[j]] in exclude_combinations:
+                    continue
+                new_tasks.append("{}_and_{}".format(tasks[i], tasks[j]))
+            if "unload" in tasks[i] or "clear" in tasks[i]:
+                continue
+            new_tasks.append(tasks[i])
+        tasks = new_tasks
     else:
         tasks = [args.task]
 
@@ -163,7 +182,7 @@ if __name__ == "__main__":
         for apartment in apartment_ids:
             print("apartment", apartment)
 
-            if "toy" not in task and task not in task_names[apartment + 1]:
+            if task not in task_names[apartment + 1]:
                 continue
             # if apartment != 4: continue
             # apartment = 3

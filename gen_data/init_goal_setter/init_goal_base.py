@@ -72,6 +72,13 @@ class SetInitialGoal:
             "watch_tv",
             "setup_table_toy_2",
             "setup_table_toy_1",
+            "setup_desk",
+            "prepare_drink",
+            "collect_document",
+            "collect_toy",
+            "clear_fridge",
+            "clear_table",
+            "clear_desk"
         ]:
             self.init_pool[self.task_name] = self.init_pool_tasks[self.task_name]
 
@@ -421,7 +428,7 @@ class SetInitialGoal:
             > self.surface_used_size[surface_id] + obj_size
         ):
             self.surface_used_size[surface_id] += obj_size
-            print("1")
+            #print("1")
 
             return 1
         else:
@@ -433,7 +440,7 @@ class SetInitialGoal:
             # if surface_node[0]['class_name'] == "cabinet":
             #     pdb.set_trace()
             # ipdb.set_trace()
-            print("0")
+            #print("0")
             return 0
 
     def remove_obj(self, graph, obj_ids):
@@ -455,8 +462,33 @@ class SetInitialGoal:
         only_position=None,
         except_position=None,
         goal_obj=False,
+        enforced_adding=None
     ):
         # Place num_obj of type obj_name, starting with object_id
+
+        if enforced_adding is not None:
+            nodes = []
+            edges = []
+            for _ in range(num_obj):
+                new_node = {
+                        "id": object_id,
+                        "class_name": obj_name,
+                        "properties": ["GRABBABLE"],
+                        "states": [],
+                        "category": "added_object",
+                    }
+                nodes.append(new_node)
+                edges.append(
+                    {
+                        "from_id": object_id,
+                        "relation_type": enforced_adding[1],
+                        "to_id": enforced_adding[0],
+                    }
+                )
+                object_id += 1
+            graph["nodes"] += nodes
+            graph["edges"] += edges
+            return object_id, graph, True
 
         if isinstance(except_position, int):
             except_position = [except_position]
@@ -485,11 +517,11 @@ class SetInitialGoal:
             if obj_rel_name[1] in ids_class.keys()
         ]
         # print(candidates)
-        print(
-            "Placing: {}. Candidates: {} {}".format(
-                obj_name, candidates, self.obj_position[obj_name]
-            )
-        )
+        #print(
+        #    "Placing: {}. Candidates: {} {}".format(
+        #        obj_name, candidates, self.obj_position[obj_name]
+        #    )
+        #)
         id2node = {node["id"]: node for node in graph["nodes"]}
         success_add = 0
 
@@ -618,8 +650,8 @@ class SetInitialGoal:
                     break
                 else:
                     num_place += 1
-        print(nodes)
-        print(edges)
+        #print(nodes)
+        #print(edges)
         graph["nodes"] += nodes
         graph["edges"] += edges
 

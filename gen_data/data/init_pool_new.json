@@ -42,7 +42,6 @@
             "carrot": {"min_num":0, "max_num":2, "env_max_num": 2, "on": [], "in": ["fridge"]},
             "potato": {"min_num":0, "max_num":2, "env_max_num": 2, "on": [], "in": ["fridge"]},
             "donut": {"min_num":0, "max_num":2, "env_max_num": 2, "on": [], "in": ["fridge"]},
-            "milk": {"min_num":0, "max_num":2, "env_max_num": 2, "on": [], "in": ["fridge"]},
             "juice": {"min_num":0, "max_num":2, "env_max_num": 2, "on": [], "in": ["fridge"]},
             "beer": {"min_num":0, "max_num":2, "env_max_num": 2, "on": [], "in": ["fridge"]},
             "bread": {"min_num":0, "max_num":2, "env_max_num": 2, "on": [], "in": ["fridge"]}                 
@@ -50,20 +49,89 @@
 
     },
 
-    "prepare_food":
+    "setup_desk": 
     {
         "counts": {"max": 2, "min": 1},
-        "candidates": [["kitchentable", "on"], ["coffeetable", "on"], ["stove", "inside"]],
+        "candidates": [["desk", "on"]],
+        "objects": {
+            "book": {"min_num":0, "max_num":2, "env_max_num": 2, "on": [], "in": ["fridge"]},
+            "cellphone": {"min_num":0, "max_num":2, "env_max_num": 2, "on": [], "in": ["fridge"]},
+            "cup": {"min_num":0, "max_num":2, "env_max_num": 2, "on": [], "in": ["fridge"]},
+            "remotecontrol": {"min_num":0, "max_num":2, "env_max_num": 2, "on": [], "in": ["fridge"]},
+            "newspaper": {"min_num":0, "max_num":2, "env_max_num": 2, "on": [], "in": ["fridge"]}              
+        }
+    },
+
+    "prepare_drink":
+    {
+        "counts": {"max": 2, "min": 1},
+        "candidates": [["kitchentable", "on"], ["coffeetable", "on"], ["kitchencounter", "on"]],
         "objects":
         {
 
-            "pudding": {"env_max_num": 3, "on": ["kitchentable"], "in": []},
-            "cupcake": {"env_max_num": 3, "on": ["kitchentable"], "in": []},
-            "salmon": {"env_max_num": 3, "on": ["kitchentable"], "in": []},
-            "apple": {"env_max_num": 3, "on": ["kitchentable"], "in": []}
+            "alcohol": {"env_max_num": 3, "on": ["kitchentable"], "in": []},
+            "beer": {"env_max_num": 3, "on": ["kitchentable"], "in": []},
+            "wine": {"env_max_num": 3, "on": ["kitchentable"], "in": []},
+            "juice": {"env_max_num": 3, "on": ["kitchentable"], "in": []},
+            "wineglass": {"env_max_num": 3, "on": ["kitchentable"], "in": []},
+            "cup": {"env_max_num": 3, "on": ["kitchentable"], "in": []}
         }
 
     },
+
+    "prepare_food":
+    {
+        "counts": {"max": 3, "min": 2},
+        "candidates": [["kitchentable", "on"], ["kitchencounter", "on"]],
+        "objects":
+        {
+
+            "bread": {"env_max_num": 3, "on": ["kitchentable"], "in": []},
+            "donut": {"env_max_num": 3, "on": ["kitchentable"], "in": []},
+            "potato": {"env_max_num": 3, "on": ["kitchentable"], "in": []},
+            "carrot": {"env_max_num": 3, "on": ["kitchentable"], "in": []}
+        }
+
+    },
+
+    "collect_document":
+    {
+        "counts": {"max": 2, "min": 1},
+        "candidates": [["kitchentable", "on"], ["coffeetable", "on"], ["desk", "on"]],
+        "objects":
+        {
+
+            "book": {"env_max_num": 4, "on": ["kitchentable"], "in": []},
+            "folder": {"env_max_num": 4, "on": ["kitchentable"], "in": []},
+            "magazine": {"env_max_num": 4, "on": ["kitchentable"], "in": []}
+        }
+
+    },
+
+    "collect_toy":
+    {
+        "counts": {"max": 4, "min": 2},
+        "candidates": [["kitchentable", "on"], ["coffeetable", "on"], ["sofa", "on"]],
+        "objects":
+        {
+            "toy": {"env_max_num": 4, "on": ["kitchentable"], "in": []}
+        }
+    },
+
+    "unload_dishwasher":
+    {
+        "counts": {"max": 1, "min": 1},
+        "candidates": [],
+        "objects":
+        {
+            "cup": {"env_max_num": 4, "on": ["kitchentable"], "in": []},
+            "wineglass": {"env_max_num": 4, "on": ["kitchentable"], "in": []},
+            "spoon": {"env_max_num": 4, "on": ["kitchentable"], "in": []},
+            "coffeepot": {"env_max_num": 4, "on": ["kitchentable"], "in": []}
+        }
+
+    },
+
     "noise":
     {
         "cupcake": {"min_num":0, "max_num":2, "env_max_num": 2, 
