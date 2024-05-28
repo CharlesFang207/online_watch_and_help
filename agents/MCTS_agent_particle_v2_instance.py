@@ -85,7 +85,7 @@ def find_heuristic(
             action_list = [
                 ("walk", (id2node[target]["class_name"], target), None)
             ] + action_list
-            cost_list = [0.5] + cost_list
+            cost_list = [1] + cost_list
 
         elif "CLOSED" in id2node[container]["states"] or (
             "OPEN" not in id2node[container]["states"]
@@ -388,7 +388,7 @@ def put_heuristic(
         cost_list += cost
     else:
         action = [("walk", (target_node2["class_name"], target_put), None)]
-        cost = [0]
+        cost = [1]
         res += action
         cost_list += cost
     # print(res, target)
