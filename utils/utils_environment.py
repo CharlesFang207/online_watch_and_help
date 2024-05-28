@@ -17,6 +17,9 @@ def convert_goal(task_goal, init_graph):
         if type(count) == int:
             cont_id = int(goal_name.split('_')[-1])
             class_name = goal_name.split('_')[1]
+            if class_name not in ids_from_class.keys():
+                print("Potential bug: ", class_name)
+                continue
             obj_grab = ids_from_class[class_name]
             newgoals[goal_name] = {
                 'count': count,

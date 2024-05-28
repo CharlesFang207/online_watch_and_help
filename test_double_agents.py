@@ -36,7 +36,7 @@ if __name__ == '__main__':
     args.executable_file = '/home/scai/Workspace/xfang21/github_repos/linux_exec.v2.3.0.x86_64'
     args.max_episode_length = 250
     args.num_per_apartment = 20
-    args.dataset_path = '/home/scai/Workspace/hshi33/virtualhome/online_watch_and_help/dataset/doubleTask.pkl'
+    args.dataset_path = '/home/scai/Workspace/hshi33/virtualhome/online_watch_and_help/dataset/new_datasets/train_env_task_set_2_full_task.all_apts.0,1,2,4,5.pik'
 
     agent_types = [
             ['full', 0, 0.05, False, 0],
@@ -185,8 +185,12 @@ if __name__ == '__main__':
             
             # try:
                 
-            arena.reset(episode_id)
+            obs = arena.reset(episode_id)
             print(f"arena reset to {episode_id}")
+            if obs is None:
+                failed_tasks.append(episode_id)
+                pickle.dump({"obs": []}, open(log_file_name, 'wb'))
+                continue
             success, steps, saved_info = arena.run()
             print(f"arena run finished. success: {success}, steps: {steps}")
 
@@ -206,6 +210,7 @@ if __name__ == '__main__':
             else:
                 with open(log_file_name, 'w+') as f:
                     f.write(json.dumps(saved_info, indent=4))
+                #failed episodes: saved_info["obs"] == 0
 
             logger.removeHandler(logger.handlers[0])
             os.remove(failure_file)

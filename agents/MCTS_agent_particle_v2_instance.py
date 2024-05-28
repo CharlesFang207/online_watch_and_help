@@ -1097,7 +1097,7 @@ class MCTS_agent_particle_v2_instance:
             # agent 1 asks agent 2 for help
             print("agent_id: ", self.agent_id)
             if self.agent_id == 1:
-                obj_seek = self.whether_to_ask(goal_spec, 0.0, "location")
+                obj_seek = self.whether_to_ask(goal_spec, 0.5, "location")
                 if obj_seek is not None:
                     language_to_be_sent = LanguageInquiry(obj_seek, 1, 2, "location") 
             # agent 2 asks agent 1 does he need help

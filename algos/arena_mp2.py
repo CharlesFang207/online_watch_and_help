@@ -64,8 +64,12 @@ class ArenaMP(object):
 
     def reset(self, task_id=None):
         ob = None
-        while ob is None:
+        count = 0
+        while ob is None and count < 10:
             ob = self.env.reset(task_id=task_id)
+            count += 1
+        if ob is None:
+            return None
         print(ob.keys(), self.num_agents)
 
         for it, agent in enumerate(self.agents):
@@ -679,6 +683,17 @@ class ArenaMP(object):
         self.env.task_goal: ground-truth goal
         """
         self.task_goal = copy.deepcopy(self.env.task_goal)
+        if len(self.task_goal[0].keys()) == 0 or len(self.task_goal[1].keys()) == 0:
+            print("episode {} have improper goal".format(self.env.task_id))
+            return False, 0, {"obs": []}
+        for goal, _ in self.task_goal[0].items():
+            if "donut" in goal:
+                print("episode {} failed".format(self.env.task_id))
+                return False, 0, {"obs": []}
+        for goal, _ in self.task_goal[1].items():
+            if "donut" in goal:
+                print("episode {} failed".format(self.env.task_id))
+                return False, 0, {"obs": []}
         if random_goal:
             for predicate in self.env.task_goal[0]:
                 u = random.choice([0, 1, 2])
@@ -709,7 +724,8 @@ class ArenaMP(object):
         success = False
         num_failed = 0
         num_repeated = 0
-        prev_action = None
+        prev_action_0 = None
+        prev_action_1 = None
         self.saved_info = saved_info
         step = 0
         prev_agent_position = np.array([0, 0, 0]).astype(np.float32)
@@ -722,7 +738,7 @@ class ArenaMP(object):
                 cv2.imwrite("{}/img_{:04d}.png".format(save_img, step), obs)
             step += 1
             if step == 2:
-                (obs, reward, done, infos), actions, agent_info, language = self.step(modify_graph=True)
+                (obs, reward, done, infos), actions, agent_info, language = self.step(modify_graph=False)
             else:
                 if step % 5 == 1:
                     (obs, reward, done, infos), actions, agent_info, language = self.step(inquiry=True)
@@ -734,12 +750,13 @@ class ArenaMP(object):
             ).astype(np.float32)
             distance = np.linalg.norm(new_agent_position - prev_agent_position)
             step_failed = infos["failed_exec"]
-            if actions[0] == prev_action:
+            if actions[0] == prev_action_0 and actions[1] == prev_action_1:
                 num_repeated += 1
                 if distance < 0.3:
                     num_nomove += 1
             else:
-                prev_action = actions[0]
+                prev_action_0 = actions[0]
+                prev_action_1 = actions[1]
                 num_repeated = 0
                 num_nomove = 0
             if step_failed:
@@ -748,6 +765,7 @@ class ArenaMP(object):
                 num_failed = 0
             if num_failed > 10 or num_repeated > 20 or num_nomove > 5:
                 print("Many failures", num_failed, num_repeated)
+                return False, self.env.steps, {"obs": []}
                 # logging.info("Many failures")
                 raise utils_exception.ManyFailureException
 

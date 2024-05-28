@@ -84,6 +84,15 @@ class UnityEnvironment(BaseUnityEnvironment):
             satisfied, unsatisfied = utils.check_progress2(
                 self.get_graph(), self.goal_spec[0]
             )
+            satisfied1, unsatisfied1 = utils.check_progress2(
+                self.get_graph(), self.goal_spec[1]
+            )
+            for key, value in satisfied1.items():
+                if key not in satisfied.keys():
+                    satisfied[key] = value
+            for key, value in unsatisfied1.items():
+                if key not in unsatisfied.keys():
+                    unsatisfied[key] = value
 
         else:
             satisfied, unsatisfied = utils.check_progress(
@@ -91,7 +100,10 @@ class UnityEnvironment(BaseUnityEnvironment):
             )
         for key, value in satisfied.items():
             if self.convert_goal:
-                resp = self.goal_spec[0][key]
+                if key in self.goal_spec[0].keys():
+                    resp = self.goal_spec[0][key]
+                else:
+                    resp = self.goal_spec[1][key]
                 preds_needed, mandatory, reward_per_pred = (
                     resp['count'],
                     resp['final'],
@@ -258,6 +270,9 @@ class UnityEnvironment(BaseUnityEnvironment):
         if task_id is None:
             task_id = self.rnd.choice(list(range(len(self.env_task_set))))
         env_task = self.env_task_set[task_id]
+        #print(task_id)
+        #print(env_task["task_goal"])
+        #print(env_task["init_graph"])
 
         self.agent_object_touched = []
 

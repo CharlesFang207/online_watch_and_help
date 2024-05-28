@@ -686,7 +686,7 @@ class Task:
         init_goal_manager.goal = {}
         object_dict = init_goal_manager.init_pool["prepare_food"]["objects"]
 
-        extra_object = init_goal_manager.rand.sample(["potato", "carrot", "donut", "bread"], 2)
+        extra_object = init_goal_manager.rand.sample(["potato", "carrot", "milk", "bread"], 2)
         objects_select = extra_object
         for object_name in objects_select:
             init_goal_manager.goal[object_name] = counts_objects
@@ -1034,7 +1034,7 @@ class Task:
     def clear_fridge(init_goal_manager, graph, start=True):
         graph = cleanup_graph(init_goal_manager, graph, start)
         init_goal_manager.goal = {}
-        object_candidates = ["carrot", "potato", "donut"]
+        object_candidates = ["carrot", "potato", "wine"]
         objects_selected = ["beer"]
         for obj in object_candidates:
             if init_goal_manager.rand.random() > 0.2:

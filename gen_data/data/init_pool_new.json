@@ -132,6 +132,48 @@
 
     },
 
+    "clear_table":
+    {
+        "counts": {"max": 1, "min": 1},
+        "candidates": [],
+        "objects":
+        {
+            "cup": {"env_max_num": 4, "on": ["kitchentable"], "in": []},
+            "wineglass": {"env_max_num": 4, "on": ["kitchentable"], "in": []},
+            "spoon": {"env_max_num": 4, "on": ["kitchentable"], "in": []},
+            "coffeepot": {"env_max_num": 4, "on": ["kitchentable"], "in": []}
+        }
+
+    },
+
+    "clear_desk":
+    {
+        "counts": {"max": 1, "min": 1},
+        "candidates": [],
+        "objects":
+        {
+            "cup": {"env_max_num": 4, "on": ["kitchentable"], "in": []},
+            "wineglass": {"env_max_num": 4, "on": ["kitchentable"], "in": []},
+            "spoon": {"env_max_num": 4, "on": ["kitchentable"], "in": []},
+            "coffeepot": {"env_max_num": 4, "on": ["kitchentable"], "in": []}
+        }
+
+    },
+
+    "clear_fridge":
+    {
+        "counts": {"max": 1, "min": 1},
+        "candidates": [],
+        "objects":
+        {
+            "cup": {"env_max_num": 4, "on": ["kitchentable"], "in": []},
+            "wineglass": {"env_max_num": 4, "on": ["kitchentable"], "in": []},
+            "spoon": {"env_max_num": 4, "on": ["kitchentable"], "in": []},
+            "coffeepot": {"env_max_num": 4, "on": ["kitchentable"], "in": []}
+        }
+
+    },
+
     "noise":
     {
         "cupcake": {"min_num":0, "max_num":2, "env_max_num": 2, 

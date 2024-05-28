@@ -55,7 +55,7 @@ class LanguageInquiry(Language):
                     else:
                         entropy = -np.sum(distribution * np.log2(distribution))
                         ratio = entropy / np.log2(distribution.shape[0])
-                        if ratio <= 1.0: #certain enough, for testing purpose have 1.0 now
+                        if ratio <= 0.5: #certain enough, for testing purpose have 1.0 now
                             if obj_id not in obj_position[obj_name].keys():
                                 obj_position[obj_name][obj_id] = []
                             for index, element in enumerate(distribution):
@@ -69,7 +69,7 @@ class LanguageInquiry(Language):
                         continue
                     entropy = -np.sum(distribution * np.log2(distribution))
                     ratio = entropy / np.log2(distribution.shape[0])
-                    if ratio <= 1.0: #certain enough, for testing purpose have 1.0 now
+                    if ratio < 0.8: #certain enough, for testing purpose have 1.0 now
                         if obj_id not in obj_position[obj_name].keys():
                             obj_position[obj_name][obj_id] = []
                         for index, element in enumerate(distribution):
@@ -133,7 +133,7 @@ class LanguageResponse(Language):
     def parse(self):
         return self.language.split('_')
     
-    def to_language(self, mode="full"):  # interface for converting to natural language
+    def to_language(self, mode="natural"):  # interface for converting to natural language
         if self.language_type == "location":
             ans = ""
             if mode == "full":  # all the information of communication, only for testing stage
@@ -152,4 +152,16 @@ class LanguageResponse(Language):
                             ans += "\n"
                 return ans
             if mode == "natural": # natural communication
-                return ""
+                for obj_name in self.obj_positions.keys():
+                    if len(self.obj_positions[obj_name].keys()) == 0:
+                        ans += 'I do not know position of object {}.\n'.format(obj_name)
+                    else:
+                        ans += "Location of {}:\n".format(obj_name)
+                        for obj_id in self.obj_positions[obj_name].keys():
+                            for location in self.obj_positions[obj_name][obj_id]:
+                                if location["position"] is None:
+                                    #ans += "not {} anything".format(location["predicate"])
+                                    continue
+                                ans += "{} {}".format(location["predicate"], location["position"])
+                            ans += "\n"
+                return ans
