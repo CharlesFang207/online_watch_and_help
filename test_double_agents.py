@@ -21,12 +21,13 @@ from utils import utils_goals
 
 
 def get_class_mode(agent_args):
-    mode_str = '{}_opencost{}_closecost{}_walkcost{}_forgetrate{}'.format(
+    mode_str = '{}_opencost{}_closecost{}_walkcost{}_forgetrate{}_changeroomcost{}'.format(
         agent_args['obs_type'],  
         agent_args['open_cost'],
         agent_args['should_close'], 
         agent_args['walk_cost'],
-        agent_args['belief']['forget_rate'])
+        agent_args['belief']['forget_rate'],
+        agent_args['change_room_cost'])
     return mode_str
 
 if __name__ == '__main__':
@@ -39,25 +40,26 @@ if __name__ == '__main__':
     args.dataset_path = '/home/scai/Workspace/hshi33/virtualhome/online_watch_and_help/dataset/new_datasets/train_env_task_set_2_full_task.all_apts.0,1,2,4,5.pik'
 
     agent_types = [
-            ['full', 0, 0.05, False, 0],
-            ['partial', 0, 0.05, False, 0],
-            ['partial', 0, 0.05, False, 0.1],
-            ['partial', 500, 0.05, False, 0.01],
-            ['partial', -500, 0.05, False, 0.01],
-            ['partial', 0, 2.00, False, 0.01],
+            ['full', 0, 0.05, False, 0, 0.5],
+            ['partial', 0, 0.05, False, 0, 0.5],
+            ['partial', 0, 0.05, False, 0.1, 0.5],
+            ['partial', 500, 0.05, False, 0.01, 0.5],
+            ['partial', -500, 0.05, False, 0.01, 0.5],
+            ['partial', 0, 2.00, False, 0.01, 10, 0.5],
     ]
 
     # Initialize an agent and a helper
     for agent_id in range(0, 2): #len(agent_types)): 
         # the agent and the helper both use agent type 1 for now
-        args.obs_type, open_cost, walk_cost, should_close, forget_rate = agent_types[1]
+        args.obs_type, open_cost, walk_cost, should_close, forget_rate, change_room_cost = agent_types[1]
         datafile = args.dataset_path.split('/')[-1].replace('.pik', '')
         agent_args = {
             'obs_type': args.obs_type,
             'open_cost': open_cost,
             'should_close': should_close,
             'walk_cost': walk_cost,
-            'belief': {'forget_rate': forget_rate}
+            'belief': {'forget_rate': forget_rate},
+            'change_room_cost': change_room_cost
         }
         args.mode = '{}_'.format(agent_id+1) + get_class_mode(agent_args)
         args.mode += 'v9_particles_v2'
@@ -92,6 +94,7 @@ if __name__ == '__main__':
     id_run = 0
     random.seed(id_run)
     episode_ids = list(range(len(env_task_set)))
+    episode_ids = [36]
     episode_ids = sorted(episode_ids)
     print('episode_ids:', episode_ids)
     # episode_ids = episode_ids[10:]
@@ -110,7 +113,7 @@ if __name__ == '__main__':
                                 observation_types=[args.obs_type for _ in range(2)],
                                 use_editor=args.use_editor,
                                 executable_args=executable_args,
-                                base_port=8082,
+                                base_port=8085,
                                 convert_goal=True)
 
 
