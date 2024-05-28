@@ -149,7 +149,6 @@ class LanguageResponse(Language):
                                     #ans += "not {} anything".format(location["predicate"])
                                     continue
                                 ans += " {} {}".format(location["predicate"], location["position"])
-                            ans += "\n"
                 return ans
             if mode == "natural": # natural communication
                 for obj_name in self.obj_positions.keys():

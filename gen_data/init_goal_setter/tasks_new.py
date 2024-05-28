@@ -164,7 +164,7 @@ class Task:
         object_dict = init_goal_manager.init_pool["setup_table"]["objects"]
 
         extra_object = init_goal_manager.rand.choice(["wineglass", "wine"])
-        objects_select = [extra_object] + ["spoon", "cup"]
+        objects_select = [extra_object] + ["spoon"]
         for object_name in objects_select:
             init_goal_manager.goal[object_name] = counts_objects
 
@@ -253,7 +253,7 @@ class Task:
 
         id2node = {node["id"]: node for node in graph["nodes"]}
 
-        object_candidates = ["cup", "coffeepot", "wineglass", "spoon"]
+        object_candidates = ["coffeepot", "wineglass", "spoon"]
         different_classes = init_goal_manager.rand.randint(1, len(object_candidates))
         objects_selected = init_goal_manager.rand.choices(
             object_candidates, k=different_classes
@@ -356,7 +356,7 @@ class Task:
 
         id2node = {node["id"]: node for node in graph["nodes"]}
 
-        object_candidates = ["carrot", "potato", "donut", "juice", "bread"]
+        object_candidates = ["carrot", "potato", "bread"]
         different_classes = init_goal_manager.rand.randint(1, 3)
         objects_selected = init_goal_manager.rand.choices(
             object_candidates, k=different_classes
@@ -464,7 +464,7 @@ class Task:
 
         id2node = {node["id"]: node for node in graph["nodes"]}
 
-        object_candidates = ["book", "cellphone", "cup", "remotecontrol", "juice"]
+        object_candidates = ["book", "cellphone", "remotecontrol"]
         different_classes = init_goal_manager.rand.randint(1, len(object_candidates))
         objects_selected = init_goal_manager.rand.choices(
             object_candidates, k=different_classes
@@ -584,7 +584,7 @@ class Task:
         init_goal_manager.goal = {}
         object_dict = init_goal_manager.init_pool["prepare_drink"]["objects"]
 
-        extra_object = init_goal_manager.rand.sample(["wine", "alcohol", "juice"], 2)
+        extra_object = init_goal_manager.rand.sample(["wine", "alcohol"], 1)
         objects_select = extra_object + ["wineglass", "cup"]
         for object_name in objects_select:
             init_goal_manager.goal[object_name] = counts_objects
@@ -959,7 +959,7 @@ class Task:
     def unload_dishwasher(init_goal_manager, graph, start=True):
         graph = cleanup_graph(init_goal_manager, graph, start)
         init_goal_manager.goal = {}
-        object_candidates = ["cup", "spoon", "coffeepot"]
+        object_candidates = ["spoon", "coffeepot"]
         objects_selected = ["wineglass"]
         for obj in object_candidates:
             if init_goal_manager.rand.random() > 0.2:
@@ -1110,7 +1110,7 @@ class Task:
         graph = cleanup_graph(init_goal_manager, graph, start)
         init_goal_manager.goal = {}
         object_candidates = ["wine", "wineglass", "spoon"]
-        objects_selected = ["cup"]
+        objects_selected = []
         for obj in object_candidates:
             if init_goal_manager.rand.random() > 0.2:
                 objects_selected.append(obj)
@@ -1184,7 +1184,7 @@ class Task:
     def clear_desk(init_goal_manager, graph, start=True):
         graph = cleanup_graph(init_goal_manager, graph, start)
         init_goal_manager.goal = {}
-        object_candidates = ["cellphone", "cup", "remotecontrol"]
+        object_candidates = ["cellphone", "remotecontrol"]
         objects_selected = ["book"]
         for obj in object_candidates:
             if init_goal_manager.rand.random() > 0.2:

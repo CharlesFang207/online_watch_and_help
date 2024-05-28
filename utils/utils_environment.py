@@ -486,6 +486,8 @@ def check_progress2(state, goal_spec):
                     predicate = '{}_{}_{}'.format(elements[0], id_touch, 1)
                     preds.append(predicate)
                     count -= 1
+        '''if count == 2 and "156" in key:
+            ipdb.set_trace()'''
 
         satisfied[key] = preds
         unsatisfied[key] = count

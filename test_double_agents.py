@@ -115,7 +115,7 @@ if __name__ == '__main__':
 
 
     args_common = dict(recursive=False,
-                            max_episode_length=250,
+                            max_episode_length=100,
                             num_simulation=200,
                             max_rollout_steps=5,
                             c_init=0.1,
@@ -154,7 +154,7 @@ if __name__ == '__main__':
         logger = logging.getLogger() 
         logger.setLevel(logging.INFO)
         for episode_id in episode_ids:
-            if episode_id == 3 or episode_id == 11 or episode_id == 10 or episode_id == 6: #improper episode
+            if episode_id == 58:
                 continue
             #if episode_id == 0:
             #    continue
