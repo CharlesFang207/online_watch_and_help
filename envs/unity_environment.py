@@ -84,15 +84,19 @@ class UnityEnvironment(BaseUnityEnvironment):
             satisfied, unsatisfied = utils.check_progress2(
                 self.get_graph(), self.goal_spec[0]
             )
+            print(satisfied, unsatisfied)
             satisfied1, unsatisfied1 = utils.check_progress2(
                 self.get_graph(), self.goal_spec[1]
             )
+            print(satisfied1, unsatisfied1)
             for key, value in satisfied1.items():
                 if key not in satisfied.keys():
                     satisfied[key] = value
             for key, value in unsatisfied1.items():
                 if key not in unsatisfied.keys():
                     unsatisfied[key] = value
+            print(satisfied)
+            print(unsatisfied)
 
         else:
             satisfied, unsatisfied = utils.check_progress(
@@ -429,7 +433,6 @@ class UnityEnvironment(BaseUnityEnvironment):
         script_list, script_dict = utils.convert_action(action_dict)
         failed_execution = False
         if len(script_list[0]) > 0:
-            print(script_list)
             if self.recording_options['recording']:
                 success, message = self.comm.render_script(
                     script_list,

@@ -117,7 +117,7 @@ if __name__ == '__main__':
 
 
     args_common = dict(recursive=False,
-                            max_episode_length=250,
+                            max_episode_length=100,
                             num_simulation=200,
                             max_rollout_steps=5,
                             c_init=0.1,

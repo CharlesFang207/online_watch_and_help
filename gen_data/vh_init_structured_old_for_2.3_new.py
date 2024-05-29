@@ -39,7 +39,7 @@ parser.add_argument(
     default="0,1,2,4,5",
     help="The apartments where we will generate the data",
 )
-parser.add_argument("--port", type=str, default="8085", help="Task name")
+parser.add_argument("--port", type=str, default="8086", help="Task name")
 parser.add_argument("--display", type=int, default=0, help="Task name")
 parser.add_argument(
     "--mode", type=str, default="full", choices=["simple", "full"], help="Task name"
