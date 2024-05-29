@@ -32,7 +32,7 @@ class LanguageInquiry(Language):
     def generate_response(self, sampled_graph, edge_belief):
         assert(self.language_type == 'location')
         assert(self.obj_list is not None)
-        
+        hinder = random.random
         obj_ids = {} #map from object name to ids belong to that class
         for obj in self.obj_list:
             obj_ids[obj] = [node["id"] for node in sampled_graph["nodes"] if node["class_name"] == obj]
@@ -65,7 +65,8 @@ class LanguageInquiry(Language):
                         #ipdb.set_trace()
                         obj_position[obj_name][obj_id] = []
                         index = np.argmax(edge_belief[obj_id]["INSIDE"][1][:])
-                        obj_position[obj_name][obj_id].append({"predicate": "inside", "position": edge_belief[obj_id]["INSIDE"][0][index]}, "class_name":id2class[obj_id], "room": id2room[obj_id])
+                        if random.random() > 1/3: #2/3chance, not hindering
+                        obj_position[obj_name][obj_id].append({"predicate": "inside", "position": edge_belief[obj_id]["INSIDE"][0][index], "class_name":id2class[obj_id], "room": id2room[obj_id]})
                     else:
                         entropy = -np.sum(distribution * np.log2(distribution))
                         ratio = entropy / np.log2(distribution.shape[0])
@@ -73,7 +74,7 @@ class LanguageInquiry(Language):
                             if obj_id not in obj_position[obj_name].keys():
                                 obj_position[obj_name][obj_id] = []
                             maxIndex = np.argmax(edge_belief[obj_id]["INSIDE"][1][:])
-                            obj_position[obj_name][obj_id].append({"predicate": "inside", "position": edge_belief[obj_id]["INSIDE"][0][maxIndex]}, "class_name":id2class[obj_id],  "room": id2room[obj_id])
+                            obj_position[obj_name][obj_id].append({"predicate": "inside", "position": edge_belief[obj_id]["INSIDE"][0][maxIndex], "class_name":id2class[obj_id],  "room": id2room[obj_id]})
                             '''for index, element in enumerate(distribution):
                                 if element > 1 / distribution.shape[0]:
                                     obj_position[obj_name][obj_id].append({"predicate": "inside", "position": edge_belief[obj_id]["INSIDE"][0][index]})'''
@@ -81,7 +82,7 @@ class LanguageInquiry(Language):
                     distribution = distribution[distribution > 0]
                     if distribution.shape[0] == 1:
                         index = np.argmax(edge_belief[obj_id]["ON"][1][:])
-                        obj_position[obj_name][obj_id].append({"predicate": "on", "position": edge_belief[obj_id]["ON"][0][maxIndex]}, "class_name":id2class[obj_id], "room": id2room[obj_id])
+                        obj_position[obj_name][obj_id].append({"predicate": "on", "position": edge_belief[obj_id]["ON"][0][maxIndex], "class_name":id2class[obj_id], "room": id2room[obj_id]})
                         continue
                     entropy = -np.sum(distribution * np.log2(distribution))
                     ratio = entropy / np.log2(distribution.shape[0])
@@ -89,7 +90,7 @@ class LanguageInquiry(Language):
                         if obj_id not in obj_position[obj_name].keys():
                             obj_position[obj_name][obj_id] = []
                         maxIndex = np.argmax(edge_belief[obj_id]["ON"][1][:])
-                        obj_position[obj_name][obj_id].append({"predicate": "on", "position": edge_belief[obj_id]["ON"][0][maxIndex]}, "class_name":id2class[obj_id], "room": id2room[obj_id])
+                        obj_position[obj_name][obj_id].append({"predicate": "on", "position": edge_belief[obj_id]["ON"][0][maxIndex], "class_name":id2class[obj_id], "room": id2room[obj_id]})
         for obj_name in obj_position.keys():
             if len(obj_position[obj_name].keys()) == 0: #indicating that agent is unsure about the object
                 pass #TODO: add logic related to situation when agent being asked is uncertain, by default it will answer I don't know

@@ -139,7 +139,7 @@ if __name__ == '__main__':
 
     agents = [lambda x, y: MCTS_agent_particle_v2_instance(**args_agent1), 
                 lambda x, y: MCTS_agent_particle_v2_instance(**args_agent2)]
-    
+    temp = random.random() # 0 neutral, 1 help, -1 hinder
     arena = ArenaMP(args.max_episode_length, id_run, env_fn, agents)
     for iter_id in range(num_tries):
         #if iter_id > 0:
