@@ -474,7 +474,11 @@ if __name__ == "__main__":
     pickle.dump(
         env_task_set,
         open(
+<<<<<<< HEAD
             f"{curr_dir}/../dataset/new_datasets/hinder.pik",
+=======
+            f"{curr_dir}/../dataset/new_datasets/help_tasks.pik",
+>>>>>>> 3a7b627c39030bcf5f7c927fbb9731d916a7189b
             "wb",
         ),
     )

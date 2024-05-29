@@ -112,7 +112,7 @@ if __name__ == '__main__':
                                 observation_types=[args.obs_type for _ in range(2)],
                                 use_editor=args.use_editor,
                                 executable_args=executable_args,
-                                base_port=8085,
+                                base_port=8084,
                                 convert_goal=True)
 
 
