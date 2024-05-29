@@ -37,7 +37,7 @@ if __name__ == '__main__':
     args.executable_file = '/home/scai/Workspace/xfang21/github_repos/linux_exec.v2.3.0.x86_64'
     args.max_episode_length = 250
     args.num_per_apartment = 20
-    args.dataset_path = '/home/scai/Workspace/hshi33/virtualhome/online_watch_and_help/dataset/new_datasets/train_env_task_set_2_full_task.all_apts.0,1,2,4,5.pik'
+    args.dataset_path = '/home/scai/Workspace/hshi33/virtualhome/online_watch_and_help/dataset/new_datasets/hinder.pik'
 
     agent_types = [
             ['full', 0, 0.05, False, 0, 0.5],
@@ -94,7 +94,6 @@ if __name__ == '__main__':
     id_run = 0
     random.seed(id_run)
     episode_ids = list(range(len(env_task_set)))
-    episode_ids = [36]
     episode_ids = sorted(episode_ids)
     print('episode_ids:', episode_ids)
     # episode_ids = episode_ids[10:]
@@ -157,8 +156,6 @@ if __name__ == '__main__':
         logger = logging.getLogger() 
         logger.setLevel(logging.INFO)
         for episode_id in episode_ids:
-            if episode_id == 58:
-                continue
             #if episode_id == 0:
             #    continue
             #if episode_id in [2, 6, 7, 12, 17, 20]:

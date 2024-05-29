@@ -134,7 +134,6 @@ def inside_not_trans(graph):
                 'class_name'
             ].startswith('closet'):
                 print('{} has > 1 parent'.format(edge['from_id']))
-                ipdb.set_trace()
                 raise Exception
             parent_for_node[edge['from_id']] = edge['to_id']
             # add close edge between objects in a container and the character

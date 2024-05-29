@@ -163,8 +163,8 @@ class Task:
         init_goal_manager.goal = {}
         object_dict = init_goal_manager.init_pool["setup_table"]["objects"]
 
-        extra_object = init_goal_manager.rand.choice(["wineglass", "wine"])
-        objects_select = [extra_object] + ["spoon"]
+        extra_object = init_goal_manager.rand.choice(["wineglass"])
+        objects_select = [extra_object] + ["spoon", "wineglass"]
         for object_name in objects_select:
             init_goal_manager.goal[object_name] = counts_objects
 
@@ -585,7 +585,7 @@ class Task:
         object_dict = init_goal_manager.init_pool["prepare_drink"]["objects"]
 
         extra_object = init_goal_manager.rand.sample(["wine", "alcohol"], 1)
-        objects_select = extra_object + ["wineglass", "cup"]
+        objects_select = extra_object + ["wineglass"]
         for object_name in objects_select:
             init_goal_manager.goal[object_name] = counts_objects
 

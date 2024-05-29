@@ -66,8 +66,11 @@ class ArenaMP(object):
         ob = None
         count = 0
         while ob is None and count < 10:
-            ob = self.env.reset(task_id=task_id)
-            count += 1
+            try:
+                ob = self.env.reset(task_id=task_id)
+                count += 1
+            except Exception:
+                return None
         if ob is None:
             return None
         print(ob.keys(), self.num_agents)
@@ -765,7 +768,7 @@ class ArenaMP(object):
                 num_failed = 0
             if num_failed > 10 or num_repeated > 20 or num_nomove > 5:
                 print("Many failures", num_failed, num_repeated)
-                return False, self.env.steps, {"obs": []}
+                return False, self.env.steps, saved_info
                 # logging.info("Many failures")
                 raise utils_exception.ManyFailureException
 
