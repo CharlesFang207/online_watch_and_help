@@ -47,10 +47,14 @@ class LanguageInquiry(Language):
         for node in sampled_graph["nodes"]:
             id2class[node["id"]] = node["class_name"]
         for node in sampled_graph["nodes"]:
+            if "room" in node["class_name"]:
+                continue
             for edge in sampled_graph["edges"]:
                 if edge["from_id"] == node["id"] and edge["relation_type"] == "INSIDE" and "room" in id2class[edge["to_id"]]:
                     id2room[node["id"]] = id2class[edge["to_id"]]
                     break
+        '''print(id2class)
+        print(id2room)'''
                 
         obj_position = {}
         for obj_name in obj_ids.keys():
@@ -65,7 +69,9 @@ class LanguageInquiry(Language):
                         #ipdb.set_trace()
                         obj_position[obj_name][obj_id] = []
                         index = np.argmax(edge_belief[obj_id]["INSIDE"][1][:])
-                        obj_position[obj_name][obj_id].append({"predicate": "inside", "position": edge_belief[obj_id]["INSIDE"][0][index]}, "class_name":id2class[obj_id], "room": id2room[obj_id])
+                        obj_position[obj_name][obj_id].append({"predicate": "inside", "position": edge_belief[obj_id]["INSIDE"][0][index], "class_name":id2class[obj_id]})
+                        if edge_belief[obj_id]["INSIDE"][0][maxIndex] is not None:
+                            obj_position[obj_name][obj_id]["room"] = id2room[edge_belief[obj_id]["INSIDE"][0][maxIndex]]
                     else:
                         entropy = -np.sum(distribution * np.log2(distribution))
                         ratio = entropy / np.log2(distribution.shape[0])
@@ -73,7 +79,9 @@ class LanguageInquiry(Language):
                             if obj_id not in obj_position[obj_name].keys():
                                 obj_position[obj_name][obj_id] = []
                             maxIndex = np.argmax(edge_belief[obj_id]["INSIDE"][1][:])
-                            obj_position[obj_name][obj_id].append({"predicate": "inside", "position": edge_belief[obj_id]["INSIDE"][0][maxIndex]}, "class_name":id2class[obj_id],  "room": id2room[obj_id])
+                            obj_position[obj_name][obj_id].append({"predicate": "inside", "position": edge_belief[obj_id]["INSIDE"][0][maxIndex], "class_name":id2class[obj_id]})
+                            if edge_belief[obj_id]["INSIDE"][0][maxIndex] is not None:
+                                obj_position[obj_name][obj_id]["room"] = id2room[edge_belief[obj_id]["INSIDE"][0][maxIndex]]
                             '''for index, element in enumerate(distribution):
                                 if element > 1 / distribution.shape[0]:
                                     obj_position[obj_name][obj_id].append({"predicate": "inside", "position": edge_belief[obj_id]["INSIDE"][0][index]})'''
@@ -81,7 +89,9 @@ class LanguageInquiry(Language):
                     distribution = distribution[distribution > 0]
                     if distribution.shape[0] == 1:
                         index = np.argmax(edge_belief[obj_id]["ON"][1][:])
-                        obj_position[obj_name][obj_id].append({"predicate": "on", "position": edge_belief[obj_id]["ON"][0][maxIndex]}, "class_name":id2class[obj_id], "room": id2room[obj_id])
+                        obj_position[obj_name][obj_id].append({"predicate": "on", "position": edge_belief[obj_id]["ON"][0][maxIndex], "class_name":id2class[obj_id]})
+                        if edge_belief[obj_id]["ON"][0][maxIndex] is not None:
+                            obj_position[obj_name][obj_id]["room"] = id2room[edge_belief[obj_id]["ON"][0][maxIndex]]
                         continue
                     entropy = -np.sum(distribution * np.log2(distribution))
                     ratio = entropy / np.log2(distribution.shape[0])
@@ -89,7 +99,9 @@ class LanguageInquiry(Language):
                         if obj_id not in obj_position[obj_name].keys():
                             obj_position[obj_name][obj_id] = []
                         maxIndex = np.argmax(edge_belief[obj_id]["ON"][1][:])
-                        obj_position[obj_name][obj_id].append({"predicate": "on", "position": edge_belief[obj_id]["ON"][0][maxIndex]}, "class_name":id2class[obj_id], "room": id2room[obj_id])
+                        obj_position[obj_name][obj_id].append({"predicate": "on", "position": edge_belief[obj_id]["ON"][0][maxIndex], "class_name":id2class[obj_id]})
+                        if edge_belief[obj_id]["ON"][0][maxIndex] is not None:
+                            obj_position[obj_name][obj_id]["room"] = id2room[edge_belief[obj_id]["ON"][0][maxIndex]]
         for obj_name in obj_position.keys():
             if len(obj_position[obj_name].keys()) == 0: #indicating that agent is unsure about the object
                 pass #TODO: add logic related to situation when agent being asked is uncertain, by default it will answer I don't know
@@ -202,4 +214,60 @@ class LanguageResponse(Language):
                             ans += "\n"
                 return ans
             if mode == "natural": # natural communication
-                return ""
+                info = ""
+                for obj_name in self.obj_positions.keys():
+                    if len(self.obj_positions[obj_name].keys()) == 0:
+                        info += "{} null; ".format(obj_name)
+                    else:
+                        for obj_id in self.obj_positions[obj_name].keys():
+                            for location in self.obj_positions[obj_name][obj_id]:
+                                if location["position"] is None:
+                                    info += "{} null; ".format(obj_name)
+                                else:
+                                    info += "{} {} {} {} {}; ".format(obj_name, location["predicate"], location["position"], location["class_name"], location["room"])
+                
+                prompt2 = """
+                        Generate natural language from language template.
+                        The user will provide the locations of an object with a basic templated format, with entries seperated by ;.
+                        Convert this statement into natural conversational language.
+                        Be creative with the responses to make it seem like everyday conversation.
+                        Here are some examples of how to respond:
+
+                        User: plate on coffeetable 133 livingroom; juice inside fridge 231 kitchen
+                        Response: I saw the plate on the coffee table in the living room, and the juice is inside the fridge in the kitchen.
+
+                        User: waterglass on table 120 livingroom
+                        Response: I found the water glass sitting on the table in the living room.
+
+                        User: apple on table 121 livingroom; apple inside fridge 240 kitchen; apple on kitchencounter 301 kitchen
+                        Response: I noticed an apple on the table in the living room, another inside the fridge in the kitchen, and one more on the kitchen counter.
+
+                        If the user says "null", respond naturally with different forms of "I don't know".
+                        Here are some examples:
+
+                        User: plate null
+                        Response: Sorry, I don't know where there plate is"
+
+                        User: laptop null; chair on floor 100 livingroom
+                        Response: I don't know where the laptop is, but I noticed the chair on the floor in the living room.
+
+                        Now Complete this:
+
+                        User: 
+                        """
+
+                prompt_end = "\nResponse: "
+                prompt2 += info
+                prompt2 += prompt_end
+
+                response2 = client.chat.completions.create(
+                    messages=[
+                        {
+                            "role": "user",
+                            "content": prompt2,
+                        }
+                    ],
+                    model="gpt-3.5-turbo",
+                )
+
+                return response2.choices[0].message.content.strip()
