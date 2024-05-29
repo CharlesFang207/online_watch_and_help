@@ -94,7 +94,6 @@ if __name__ == '__main__':
     id_run = 0
     random.seed(id_run)
     episode_ids = list(range(len(env_task_set)))
-    episode_ids = [36]
     episode_ids = sorted(episode_ids)
     print('episode_ids:', episode_ids)
     # episode_ids = episode_ids[10:]
@@ -113,7 +112,7 @@ if __name__ == '__main__':
                                 observation_types=[args.obs_type for _ in range(2)],
                                 use_editor=args.use_editor,
                                 executable_args=executable_args,
-                                base_port=8085,
+                                base_port=8084,
                                 convert_goal=True)
 
 
@@ -157,7 +156,7 @@ if __name__ == '__main__':
         logger = logging.getLogger() 
         logger.setLevel(logging.INFO)
         for episode_id in episode_ids:
-            if episode_id == 3 or episode_id == 11 or episode_id == 10 or episode_id == 6: #improper episode
+            if episode_id == 58 or episode_id==65 or episode_id==67: #improper episode
                 continue
             #if episode_id == 0:
             #    continue
