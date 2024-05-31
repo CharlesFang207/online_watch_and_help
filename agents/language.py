@@ -13,7 +13,7 @@ from termcolor import colored
 from openai import OpenAI
 
 client = OpenAI(
-    api_key='sk-my-service-account-23HSd0AbqFBhw6h0fLt9T3BlbkFJ2j143nRn2ai1HplQxn4y'
+    api_key=''
 )
 
 class Language():
@@ -32,7 +32,7 @@ class LanguageInquiry(Language):
     def generate_response(self, sampled_graph, edge_belief):
         assert(self.language_type == 'location')
         assert(self.obj_list is not None)
-        
+        hinder = random.random
         obj_ids = {} #map from object name to ids belong to that class
         for obj in self.obj_list:
             obj_ids[obj] = [node["id"] for node in sampled_graph["nodes"] if node["class_name"] == obj]
@@ -68,10 +68,22 @@ class LanguageInquiry(Language):
                     if distribution.shape[0] == 1: #case when belief is certain
                         #ipdb.set_trace()
                         obj_position[obj_name][obj_id] = []
-                        index = np.argmax(edge_belief[obj_id]["INSIDE"][1][:])
-                        obj_position[obj_name][obj_id].append({"predicate": "inside", "position": edge_belief[obj_id]["INSIDE"][0][index], "class_name":id2class[obj_id]})
-                        if edge_belief[obj_id]["INSIDE"][0][maxIndex] is not None:
-                            obj_position[obj_name][obj_id]["room"] = id2room[edge_belief[obj_id]["INSIDE"][0][maxIndex]]
+                        maxIndex = np.argmax(edge_belief[obj_id]["INSIDE"][1][:])
+                        if hinder > 1/3: #not hindering
+                            obj_position[obj_name][obj_id].append({"predicate": "inside", "position": edge_belief[obj_id]["INSIDE"][0][maxIndex]})
+                            if edge_belief[obj_id]["INSIDE"][0][maxIndex] is not None:
+                                obj_position[obj_name][obj_id]["class_name"] = id2class[edge_belief[obj_id]["INSIDE"][0][maxIndex]]
+                                obj_position[obj_name][obj_id]["room"] = id2room[edge_belief[obj_id]["INSIDE"][0][maxIndex]]
+                        else:
+                            temp = []
+                            for i in range(1, edge_belief[obj_id]["INSIDE"][1].shape[0]):
+                                if i == maxIndex:
+                                    continue
+                                temp.append(edge_belief[obj_id]["INSIDE"][1][i])
+                            index = random.choice(temp) #choose a random position
+                            obj_position[obj_name][obj_id].append({"predicate": "inside", "position": edge_belief[obj_id]["INSIDE"][0][index], "class_name":id2class[obj_id]})
+                            #if edge_belief[obj_id]["INSIDE"][0][index] is not None:
+                            obj_position[obj_name][obj_id]["room"] = id2room[edge_belief[obj_id]["INSIDE"][0][index]]
                     else:
                         entropy = -np.sum(distribution * np.log2(distribution))
                         ratio = entropy / np.log2(distribution.shape[0])
@@ -79,19 +91,43 @@ class LanguageInquiry(Language):
                             if obj_id not in obj_position[obj_name].keys():
                                 obj_position[obj_name][obj_id] = []
                             maxIndex = np.argmax(edge_belief[obj_id]["INSIDE"][1][:])
-                            obj_position[obj_name][obj_id].append({"predicate": "inside", "position": edge_belief[obj_id]["INSIDE"][0][maxIndex], "class_name":id2class[obj_id]})
-                            if edge_belief[obj_id]["INSIDE"][0][maxIndex] is not None:
-                                obj_position[obj_name][obj_id]["room"] = id2room[edge_belief[obj_id]["INSIDE"][0][maxIndex]]
+                            if hinder > 1/3:
+                                obj_position[obj_name][obj_id].append({"predicate": "inside", "position": edge_belief[obj_id]["INSIDE"][0][maxIndex]})
+                                if edge_belief[obj_id]["INSIDE"][0][maxIndex] is not None:
+                                    obj_position[obj_name][obj_id]["class_name"] = id2class[edge_belief[obj_id]["INSIDE"][0][maxIndex]]
+                                    obj_position[obj_name][obj_id]["room"] = id2room[edge_belief[obj_id]["INSIDE"][0][maxIndex]]
+                            else:
+                                temp = []
+                                for i in range(1, edge_belief[obj_id]["INSIDE"][1].shape[0]):
+                                    if i == maxIndex:
+                                        continue
+                                    temp.append(edge_belief[obj_id]["INSIDE"][1][i])
+                                index = random.choice(temp) #choose a random position
+                                obj_position[obj_name][obj_id].append({"predicate": "inside", "position": edge_belief[obj_id]["INSIDE"][0][index], "class_name":id2class[obj_id]})
+                                #if edge_belief[obj_id]["INSIDE"][0][index] is not None:
+                                obj_position[obj_name][obj_id]["room"] = id2room[edge_belief[obj_id]["INSIDE"][0][index]]
                             '''for index, element in enumerate(distribution):
                                 if element > 1 / distribution.shape[0]:
                                     obj_position[obj_name][obj_id].append({"predicate": "inside", "position": edge_belief[obj_id]["INSIDE"][0][index]})'''
                     distribution = scipy.special.softmax(edge_belief[obj_id]["ON"][1][:])
                     distribution = distribution[distribution > 0]
                     if distribution.shape[0] == 1:
-                        index = np.argmax(edge_belief[obj_id]["ON"][1][:])
-                        obj_position[obj_name][obj_id].append({"predicate": "on", "position": edge_belief[obj_id]["ON"][0][maxIndex], "class_name":id2class[obj_id]})
-                        if edge_belief[obj_id]["ON"][0][maxIndex] is not None:
-                            obj_position[obj_name][obj_id]["room"] = id2room[edge_belief[obj_id]["ON"][0][maxIndex]]
+                        maxIndex = np.argmax(edge_belief[obj_id]["ON"][1][:])
+                        if hinder > 1/3:
+                            obj_position[obj_name][obj_id].append({"predicate": "on", "position": edge_belief[obj_id]["ON"][0][maxIndex]})
+                            if edge_belief[obj_id]["ON"][0][maxIndex] is not None:
+                                obj_position[obj_name][obj_id]["class_name"] = id2class[edge_belief[obj_id]["ON"][0][maxIndex]]
+                                obj_position[obj_name][obj_id]["room"] = id2room[edge_belief[obj_id]["ON"][0][maxIndex]]
+                        else:
+                            temp = []
+                            for i in range(1, edge_belief[obj_id]["ON"][1].shape[0]):
+                                if i == maxIndex:
+                                    continue
+                                temp.append(edge_belief[obj_id]["ON"][1][i])
+                            index = random.choice(temp) #choose a random position
+                            obj_position[obj_name][obj_id].append({"predicate": "on", "position": edge_belief[obj_id]["ON"][0][index], "class_name":id2class[obj_id]})
+                            #if edge_belief[obj_id]["INSIDE"][0][index] is not None:
+                            obj_position[obj_name][obj_id]["room"] = id2room[edge_belief[obj_id]["ON"][0][index]]
                         continue
                     entropy = -np.sum(distribution * np.log2(distribution))
                     ratio = entropy / np.log2(distribution.shape[0])
@@ -99,13 +135,37 @@ class LanguageInquiry(Language):
                         if obj_id not in obj_position[obj_name].keys():
                             obj_position[obj_name][obj_id] = []
                         maxIndex = np.argmax(edge_belief[obj_id]["ON"][1][:])
-                        obj_position[obj_name][obj_id].append({"predicate": "on", "position": edge_belief[obj_id]["ON"][0][maxIndex], "class_name":id2class[obj_id]})
-                        if edge_belief[obj_id]["ON"][0][maxIndex] is not None:
-                            obj_position[obj_name][obj_id]["room"] = id2room[edge_belief[obj_id]["ON"][0][maxIndex]]
+                        if hinder > 1/3:
+                            obj_position[obj_name][obj_id].append({"predicate": "on", "position": edge_belief[obj_id]["ON"][0][maxIndex]})
+                            if edge_belief[obj_id]["ON"][0][maxIndex] is not None:
+                                obj_position[obj_name][obj_id]["class_name"] = id2class[edge_belief[obj_id]["ON"][0][maxIndex]]
+                                obj_position[obj_name][obj_id]["room"] = id2room[edge_belief[obj_id]["ON"][0][maxIndex]]
+                        else:
+                            temp = []
+                            for i in range(1, edge_belief[obj_id]["ON"][1].shape[0]):
+                                if i == maxIndex:
+                                    continue
+                                temp.append(edge_belief[obj_id]["ON"][1][i])
+                            index = random.choice(temp) #choose a random position
+                            obj_position[obj_name][obj_id].append({"predicate": "on", "position": edge_belief[obj_id]["ON"][0][index], "class_name":id2class[edge_belief[obj_id]["ON"][0][index]]})
+                            #if edge_belief[obj_id]["INSIDE"][0][index] is not None:
+                            obj_position[obj_name][obj_id]["room"] = id2room[edge_belief[obj_id]["ON"][0][index]]
         for obj_name in obj_position.keys():
             if len(obj_position[obj_name].keys()) == 0: #indicating that agent is unsure about the object
-                pass #TODO: add logic related to situation when agent being asked is uncertain, by default it will answer I don't know
-        return LanguageResponse(obj_position, from_agent_id=self.to_agent_id, to_agent_id=self.from_agent_id, language_type="location")
+                if hinder < 1/3:
+                    for obj_id in obj_ids[obj_name]:
+                        distribution = edge_belief[obj_id]["INSIDE"][0] #choose inside because it will hinder more effectively
+                        index = random.choice(range(1, distribution.shape[0]))
+                        obj_position[obj_name][obj_id] = [{"predicate": "inside", "position": edge_belief[obj_id]["INSIDE"][0][index], "class_name": id2class[edge_belief[obj_id]["INSIDE"][0][index]], "room": id2room[edge_belief[obj_id]["INSIDE"][0][index]]}]
+                continue
+            for obj_id in obj_position[obj_name].keys():
+                if len(obj_position[obj_name][obj_id]) == 1 and obj_position[obj_name][obj_id][0]["position"] is None:
+                    if hinder < 1/3:
+                        distribution = edge_belief[obj_id]["INSIDE"][0] #choose inside because it will hinder more effectively
+                        index = random.choice(range(1, distribution.shape[0]))
+                        obj_position[obj_name][obj_id] = [{"predicate": "inside", "position": edge_belief[obj_id]["INSIDE"][0][index], "class_name": id2class[edge_belief[obj_id]["INSIDE"][0][index]], "room": id2room[edge_belief[obj_id]["INSIDE"][0][index]]}]
+            
+        return LanguageResponse(obj_position, from_agent_id=self.to_agent_id, to_agent_id=self.from_agent_id, language_type="location", try_to_hinder=(hinder < 1/3))
 
 
         '''            max_inside_prob = max(scipy.special.softmax(edge_belief[obj_id]["INSIDE"][1][1:])) #TODO: do we need softmax
@@ -170,19 +230,20 @@ class LanguageInquiry(Language):
                     "content": prompt,
                 }
             ],
-            model="gpt-3.5-turbo",
+            model="gpt-4",
         )
         return response.choices[0].message.content.strip()
         
 
 
 class LanguageResponse(Language):
-    def __init__(self, obj_positions=None, goal_spec=None, from_agent_id=None, to_agent_id=None, language_type=None):
+    def __init__(self, obj_positions=None, goal_spec=None, from_agent_id=None, to_agent_id=None, language_type=None, try_to_hinder=False):
         # obj_name is used for the natural language conversation. But actually we use obj_id implicitly to avoid ambiguity, we need the obj_id
         super().__init__(from_agent_id, to_agent_id, language_type)
         if language_type == 'location':
             assert(obj_positions is not None)
             self.obj_positions = obj_positions
+            self.try_to_hinder = try_to_hinder
         elif language_type == 'goal':
             assert(goal_spec is not None)
             self.language = goal_spec.keys()[0] # xinyu: since we don't need multiple goals for an single agent,  I just choose the first one here
@@ -243,6 +304,7 @@ class LanguageResponse(Language):
                         Response: I noticed an apple on the table in the living room, another inside the fridge in the kitchen, and one more on the kitchen counter.
 
                         If the user says "null", respond naturally with different forms of "I don't know".
+                        If there are several repeating items, only respond once to that item.
                         Here are some examples:
 
                         User: plate null
@@ -250,6 +312,9 @@ class LanguageResponse(Language):
 
                         User: laptop null; chair on floor 100 livingroom
                         Response: I don't know where the laptop is, but I noticed the chair on the floor in the living room.
+
+                        User: wine null; wine null
+                        Response: I'm not sure where the wine is.
 
                         Now Complete this:
 
@@ -267,7 +332,7 @@ class LanguageResponse(Language):
                             "content": prompt2,
                         }
                     ],
-                    model="gpt-3.5-turbo",
+                    model="gpt-4",
                 )
 
                 return response2.choices[0].message.content.strip()

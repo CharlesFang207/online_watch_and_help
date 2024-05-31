@@ -1032,7 +1032,7 @@ class MCTS_agent_particle_v2_instance:
     # xinyu: in_same_room is used to indicate whether the two agents are in the same room
     def get_action(
         self, obs, goal_spec, opponent_subgoal=None, length_plan=5, must_replan=True, 
-        language=None, inquiry=False, in_same_room=True, modify_observation=False, modified_rooms=[]
+        language=None, inquiry=False, in_same_room=True, modify_observation=False, modified_rooms=None
     ): #inquiry: whether agent is possible to ask for help; in same room: whether the agent is in same room with other or not; 
        #modify_observation: whether agent will receive manipulated gt graph, modified_rooms: list of rooms where obs will be false
         change_goal = False # indicate whether the agent should change its goal
