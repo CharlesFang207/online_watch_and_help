@@ -193,7 +193,6 @@ if __name__ == '__main__':
                 continue
             success, steps, saved_info = arena.run()
             print(f"arena run finished. success: {success}, steps: {steps}")
-
             print('-------------------------------------')
             print('success' if success else 'failure')
             print('steps:', steps)

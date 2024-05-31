@@ -13,7 +13,7 @@ from termcolor import colored
 from openai import OpenAI
 
 client = OpenAI(
-    api_key='sk-my-service-account-23HSd0AbqFBhw6h0fLt9T3BlbkFJ2j143nRn2ai1HplQxn4y'
+    api_key=''
 )
 
 class Language():
@@ -230,7 +230,7 @@ class LanguageInquiry(Language):
                     "content": prompt,
                 }
             ],
-            model="gpt-3.5-turbo",
+            model="gpt-4",
         )
         return response.choices[0].message.content.strip()
         
@@ -306,6 +306,7 @@ class LanguageResponse(Language):
                         Response: I noticed an apple on the table in the living room, another inside the fridge in the kitchen, and one more on the kitchen counter.
 
                         If the user says "null", respond naturally with different forms of "I don't know".
+                        If there are several repeating items, only respond once to that item.
                         Here are some examples:
 
                         User: plate null
@@ -313,6 +314,9 @@ class LanguageResponse(Language):
 
                         User: laptop null; chair on floor 100 livingroom
                         Response: I don't know where the laptop is, but I noticed the chair on the floor in the living room.
+
+                        User: wine null; wine null
+                        Response: I'm not sure where the wine is.
 
                         Now Complete this:
 
@@ -330,7 +334,7 @@ class LanguageResponse(Language):
                             "content": prompt2,
                         }
                     ],
-                    model="gpt-3.5-turbo",
+                    model="gpt-4",
                 )
 
                 return response2.choices[0].message.content.strip()
