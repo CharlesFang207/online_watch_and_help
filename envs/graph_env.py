@@ -542,6 +542,7 @@ class VhGraphEnv:
                         script, copy.deepcopy(vh_state), in_place=True
                     )
                 except:
+                    print(script_string)
                     ipdb.set_trace()
                 next_vh_state = init_from_state(
                     next_vh_state, touched_objs, vh_state.offer_obj

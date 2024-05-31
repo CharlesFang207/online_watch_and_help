@@ -199,7 +199,7 @@ class Task:
             )
             # print([node for node in graph['nodes'] if node['class_name'] == 'wineglass'])
             if not success:
-                # ipdb.set_trace()
+                ipdb.set_trace()
                 return None, None, False
 
         if start:
@@ -522,7 +522,7 @@ class Task:
                 ipdb.set_trace()
             # print([node for node in graph['nodes'] if node['class_name'] == 'wineglass'])
             if not success:
-                # ipdb.set_trace()
+                ipdb.set_trace()
                 return None, None, False
 
         # pdb.set_trace()
@@ -620,7 +620,7 @@ class Task:
             )
             # print([node for node in graph['nodes'] if node['class_name'] == 'wineglass'])
             if not success:
-                # ipdb.set_trace()
+                ipdb.set_trace()
                 return None, None, False
 
         if start:
@@ -686,7 +686,7 @@ class Task:
         init_goal_manager.goal = {}
         object_dict = init_goal_manager.init_pool["prepare_food"]["objects"]
 
-        extra_object = init_goal_manager.rand.sample(["potato", "carrot", "milk", "bread"], 2)
+        extra_object = init_goal_manager.rand.sample(["potato", "carrot", "bread"], 2)
         objects_select = extra_object
         for object_name in objects_select:
             init_goal_manager.goal[object_name] = counts_objects
@@ -722,7 +722,7 @@ class Task:
             )
             # print([node for node in graph['nodes'] if node['class_name'] == 'wineglass'])
             if not success:
-                # ipdb.set_trace()
+                ipdb.set_trace()
                 return None, None, False
 
         if start:
@@ -1264,10 +1264,12 @@ class Task:
         print(tasks)
         graph, env_goal_0, s1 = getattr(Task, tasks[0])(init_goal_manager, graph, start=True)
         if not s1:
-            ipdb.set_trace()
+            #ipdb.set_trace()
+            return None, None, False
         graph, env_goal_1, s2 = getattr(Task, tasks[1])(init_goal_manager, graph, start=False)
         if not s2:
-            ipdb.set_trace()
+            #ipdb.set_trace()
+            return None, None, False
         env_goal = {task_name: [], "noise": []}
         env_goal[task_name] = env_goal_0[tasks[0]]
         env_goal["noise"] = env_goal_1[tasks[1]]

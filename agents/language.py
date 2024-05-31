@@ -43,11 +43,14 @@ class LanguageInquiry(Language):
 
         #ipdb.set_trace()
         id2class = {}
+        room_ids = {}
+        rooms = ["bathroom", "livingroom", "bedroom", "kitchen"]
         id2room = {}
         for node in sampled_graph["nodes"]:
             id2class[node["id"]] = node["class_name"]
         for node in sampled_graph["nodes"]:
-            if "room" in node["class_name"]:
+            if node["class_name"] in rooms:
+                room_ids[node["id"]] = node["class_name"]
                 continue
             for edge in sampled_graph["edges"]:
                 if edge["from_id"] == node["id"] and edge["relation_type"] == "INSIDE" and "room" in id2class[edge["to_id"]]:
@@ -55,7 +58,7 @@ class LanguageInquiry(Language):
                     break
         '''print(id2class)
         print(id2room)'''
-                
+        print(room_ids)
         obj_position = {}
         for obj_name in obj_ids.keys():
             obj_position[obj_name] = {}
@@ -71,19 +74,33 @@ class LanguageInquiry(Language):
                         maxIndex = np.argmax(edge_belief[obj_id]["INSIDE"][1][:])
                         if hinder > 1/3: #not hindering
                             obj_position[obj_name][obj_id].append({"predicate": "inside", "position": edge_belief[obj_id]["INSIDE"][0][maxIndex]})
+                            length = len(obj_position[obj_name][obj_id])
                             if edge_belief[obj_id]["INSIDE"][0][maxIndex] is not None:
-                                obj_position[obj_name][obj_id]["class_name"] = id2class[edge_belief[obj_id]["INSIDE"][0][maxIndex]]
-                                obj_position[obj_name][obj_id]["room"] = id2room[edge_belief[obj_id]["INSIDE"][0][maxIndex]]
+                                obj_position[obj_name][obj_id][length-1]["class_name"] = id2class[edge_belief[obj_id]["INSIDE"][0][maxIndex]]
+                                for index, room in enumerate(list(room_ids.keys())):
+                                    if index == len(room_ids) - 1:
+                                        obj_position[obj_name][obj_id][length-1]["room"] = room_ids[room]
+                                        continue
+                                    if edge_belief[obj_id]["INSIDE"][0][maxIndex] > room and edge_belief[obj_id]["INSIDE"][0][maxIndex] < list(room_ids.keys())[index + 1]:
+                                        obj_position[obj_name][obj_id][length-1]["room"] = room_ids[room]
+                                        break
                         else:
                             temp = []
                             for i in range(1, edge_belief[obj_id]["INSIDE"][1].shape[0]):
                                 if i == maxIndex:
                                     continue
-                                temp.append(edge_belief[obj_id]["INSIDE"][1][i])
-                            index = random.choice(temp) #choose a random position
-                            obj_position[obj_name][obj_id].append({"predicate": "inside", "position": edge_belief[obj_id]["INSIDE"][0][index], "class_name":id2class[obj_id]})
+                                temp.append(edge_belief[obj_id]["INSIDE"][0][i])
+                            position = random.choice(temp) #choose a random position
+                            obj_position[obj_name][obj_id].append({"predicate": "inside", "position": position, "class_name":id2class[position]})
+                            length = len(obj_position[obj_name][obj_id])
                             #if edge_belief[obj_id]["INSIDE"][0][index] is not None:
-                            obj_position[obj_name][obj_id]["room"] = id2room[edge_belief[obj_id]["INSIDE"][0][index]]
+                            for index, room in enumerate(list(room_ids.keys())):
+                                if index == len(room_ids) - 1:
+                                    obj_position[obj_name][obj_id][length-1]["room"] = room_ids[room]
+                                    continue
+                                if position and position < list(room_ids.keys())[index + 1]:
+                                    obj_position[obj_name][obj_id][length-1]["room"] = room_ids[room]
+                                    break
                     else:
                         entropy = -np.sum(distribution * np.log2(distribution))
                         ratio = entropy / np.log2(distribution.shape[0])
@@ -93,19 +110,33 @@ class LanguageInquiry(Language):
                             maxIndex = np.argmax(edge_belief[obj_id]["INSIDE"][1][:])
                             if hinder > 1/3:
                                 obj_position[obj_name][obj_id].append({"predicate": "inside", "position": edge_belief[obj_id]["INSIDE"][0][maxIndex]})
+                                length = len(obj_position[obj_name][obj_id])
                                 if edge_belief[obj_id]["INSIDE"][0][maxIndex] is not None:
-                                    obj_position[obj_name][obj_id]["class_name"] = id2class[edge_belief[obj_id]["INSIDE"][0][maxIndex]]
-                                    obj_position[obj_name][obj_id]["room"] = id2room[edge_belief[obj_id]["INSIDE"][0][maxIndex]]
+                                    obj_position[obj_name][obj_id][length-1]["class_name"] = id2class[edge_belief[obj_id]["INSIDE"][0][maxIndex]]
+                                    for index, room in enumerate(list(room_ids.keys())):
+                                        if index == len(room_ids) - 1:
+                                            obj_position[obj_name][obj_id][length-1]["room"] = room_ids[room]
+                                            continue
+                                        if edge_belief[obj_id]["INSIDE"][0][maxIndex] > room and edge_belief[obj_id]["INSIDE"][0][maxIndex] < list(room_ids.keys())[index + 1]:
+                                            obj_position[obj_name][obj_id][length-1]["room"] = room_ids[room]
+                                            break
                             else:
                                 temp = []
                                 for i in range(1, edge_belief[obj_id]["INSIDE"][1].shape[0]):
                                     if i == maxIndex:
                                         continue
-                                    temp.append(edge_belief[obj_id]["INSIDE"][1][i])
-                                index = random.choice(temp) #choose a random position
-                                obj_position[obj_name][obj_id].append({"predicate": "inside", "position": edge_belief[obj_id]["INSIDE"][0][index], "class_name":id2class[obj_id]})
+                                    temp.append(edge_belief[obj_id]["INSIDE"][0][i])
+                                position = random.choice(temp) #choose a random position
+                                obj_position[obj_name][obj_id].append({"predicate": "inside", "position": position, "class_name":id2class[position]})
+                                length = len(obj_position[obj_name][obj_id])
                                 #if edge_belief[obj_id]["INSIDE"][0][index] is not None:
-                                obj_position[obj_name][obj_id]["room"] = id2room[edge_belief[obj_id]["INSIDE"][0][index]]
+                                for index, room in enumerate(list(room_ids.keys())):
+                                    if index == len(room_ids) - 1:
+                                        obj_position[obj_name][obj_id][length-1]["room"] = room_ids[room]
+                                        continue
+                                    if position > room and position < list(room_ids.keys())[index + 1]:
+                                        obj_position[obj_name][obj_id][length-1]["room"] = room_ids[room]
+                                        break
                             '''for index, element in enumerate(distribution):
                                 if element > 1 / distribution.shape[0]:
                                     obj_position[obj_name][obj_id].append({"predicate": "inside", "position": edge_belief[obj_id]["INSIDE"][0][index]})'''
@@ -115,56 +146,104 @@ class LanguageInquiry(Language):
                         maxIndex = np.argmax(edge_belief[obj_id]["ON"][1][:])
                         if hinder > 1/3:
                             obj_position[obj_name][obj_id].append({"predicate": "on", "position": edge_belief[obj_id]["ON"][0][maxIndex]})
+                            length = len(obj_position[obj_name][obj_id])
                             if edge_belief[obj_id]["ON"][0][maxIndex] is not None:
-                                obj_position[obj_name][obj_id]["class_name"] = id2class[edge_belief[obj_id]["ON"][0][maxIndex]]
-                                obj_position[obj_name][obj_id]["room"] = id2room[edge_belief[obj_id]["ON"][0][maxIndex]]
+                                obj_position[obj_name][obj_id][length-1]["class_name"] = id2class[edge_belief[obj_id]["ON"][0][maxIndex]]
+                                for index, room in enumerate(list(room_ids.keys())):
+                                    if index == len(room_ids) - 1:
+                                        obj_position[obj_name][obj_id][length-1]["room"] = room_ids[room]
+                                        continue
+                                    if edge_belief[obj_id]["ON"][0][maxIndex] > room and edge_belief[obj_id]["ON"][0][maxIndex] < list(room_ids.keys())[index + 1]:
+                                        obj_position[obj_name][obj_id][length-1]["room"] = room_ids[room]
+                                        break
                         else:
                             temp = []
                             for i in range(1, edge_belief[obj_id]["ON"][1].shape[0]):
                                 if i == maxIndex:
                                     continue
-                                temp.append(edge_belief[obj_id]["ON"][1][i])
-                            index = random.choice(temp) #choose a random position
-                            obj_position[obj_name][obj_id].append({"predicate": "on", "position": edge_belief[obj_id]["ON"][0][index], "class_name":id2class[obj_id]})
+                                temp.append(edge_belief[obj_id]["ON"][0][i])
+                            position = random.choice(temp) #choose a random position
+                            obj_position[obj_name][obj_id].append({"predicate": "on", "position": position, "class_name":id2class[position]})
+                            length = len(obj_position[obj_name][obj_id])
                             #if edge_belief[obj_id]["INSIDE"][0][index] is not None:
-                            obj_position[obj_name][obj_id]["room"] = id2room[edge_belief[obj_id]["ON"][0][index]]
+                            for index, room in enumerate(list(room_ids.keys())):
+                                if index == len(room_ids) - 1:
+                                    obj_position[obj_name][obj_id][length-1]["room"] = room_ids[room]
+                                    continue
+                                if position > room and position < list(room_ids.keys())[index + 1]:
+                                    obj_position[obj_name][obj_id][length-1]["room"] = room_ids[room]
+                                    break
                         continue
                     entropy = -np.sum(distribution * np.log2(distribution))
                     ratio = entropy / np.log2(distribution.shape[0])
-                    if ratio <= 1.0: #certain enough, for testing purpose have 1.0 now
+                    if ratio <= 0.5: #certain enough, for testing purpose have 1.0 now
                         if obj_id not in obj_position[obj_name].keys():
                             obj_position[obj_name][obj_id] = []
                         maxIndex = np.argmax(edge_belief[obj_id]["ON"][1][:])
                         if hinder > 1/3:
                             obj_position[obj_name][obj_id].append({"predicate": "on", "position": edge_belief[obj_id]["ON"][0][maxIndex]})
+                            length = len(obj_position[obj_name][obj_id])
                             if edge_belief[obj_id]["ON"][0][maxIndex] is not None:
-                                obj_position[obj_name][obj_id]["class_name"] = id2class[edge_belief[obj_id]["ON"][0][maxIndex]]
-                                obj_position[obj_name][obj_id]["room"] = id2room[edge_belief[obj_id]["ON"][0][maxIndex]]
+                                obj_position[obj_name][obj_id][length-1]["class_name"] = id2class[edge_belief[obj_id]["ON"][0][maxIndex]]
+                                for index, room in enumerate(list(room_ids.keys())):
+                                    if index == len(room_ids) - 1:
+                                        obj_position[obj_name][obj_id][length-1]["room"] = room_ids[room]
+                                        continue
+                                    if edge_belief[obj_id]["ON"][0][maxIndex] > room and edge_belief[obj_id]["ON"][0][maxIndex] < list(room_ids.keys())[index + 1]:
+                                        obj_position[obj_name][obj_id][length-1]["room"] = room_ids[room]
+                                        break
                         else:
                             temp = []
                             for i in range(1, edge_belief[obj_id]["ON"][1].shape[0]):
                                 if i == maxIndex:
                                     continue
-                                temp.append(edge_belief[obj_id]["ON"][1][i])
-                            index = random.choice(temp) #choose a random position
-                            obj_position[obj_name][obj_id].append({"predicate": "on", "position": edge_belief[obj_id]["ON"][0][index], "class_name":id2class[edge_belief[obj_id]["ON"][0][index]]})
+                                temp.append(edge_belief[obj_id]["ON"][0][i])
+                            position = random.choice(temp) #choose a random position
+                            obj_position[obj_name][obj_id].append({"predicate": "on", "position": position, "class_name":id2class[position]})
                             #if edge_belief[obj_id]["INSIDE"][0][index] is not None:
-                            obj_position[obj_name][obj_id]["room"] = id2room[edge_belief[obj_id]["ON"][0][index]]
+                            length = len(obj_position[obj_name][obj_id])
+                            for index, room in enumerate(room_ids):
+                                for index, room in enumerate(list(room_ids.keys())):
+                                    if index == len(room_ids) - 1:
+                                        obj_position[obj_name][obj_id][length-1]["room"] = room_ids[room]
+                                        continue
+                                    if position > room and position < list(room_ids.keys())[index + 1]:
+                                        obj_position[obj_name][obj_id][length-1]["room"] = room_ids[room]
+                                        break
         for obj_name in obj_position.keys():
             if len(obj_position[obj_name].keys()) == 0: #indicating that agent is unsure about the object
                 if hinder < 1/3:
                     for obj_id in obj_ids[obj_name]:
                         distribution = edge_belief[obj_id]["INSIDE"][0] #choose inside because it will hinder more effectively
-                        index = random.choice(range(1, distribution.shape[0]))
-                        obj_position[obj_name][obj_id] = [{"predicate": "inside", "position": edge_belief[obj_id]["INSIDE"][0][index], "class_name": id2class[edge_belief[obj_id]["INSIDE"][0][index]], "room": id2room[edge_belief[obj_id]["INSIDE"][0][index]]}]
+                        maxIndex = random.choice(range(1, len(distribution)))
+                        obj_position[obj_name][obj_id] = [{"predicate": "inside", "position": edge_belief[obj_id]["INSIDE"][0][maxIndex], "class_name": id2class[edge_belief[obj_id]["INSIDE"][0][maxIndex]]}]
+                        for index, room in enumerate(list(room_ids.keys())):
+                            if index == len(room_ids) - 1:
+                                obj_position[obj_name][obj_id][0]["room"] = room_ids[room]
+                                continue
+                            if edge_belief[obj_id]["INSIDE"][0][maxIndex] > room and edge_belief[obj_id]["INSIDE"][0][maxIndex] < list(room_ids.keys())[index + 1]:
+                                obj_position[obj_name][obj_id][0]["room"] = room_ids[room]
+                                break
                 continue
             for obj_id in obj_position[obj_name].keys():
                 if len(obj_position[obj_name][obj_id]) == 1 and obj_position[obj_name][obj_id][0]["position"] is None:
                     if hinder < 1/3:
                         distribution = edge_belief[obj_id]["INSIDE"][0] #choose inside because it will hinder more effectively
-                        index = random.choice(range(1, distribution.shape[0]))
-                        obj_position[obj_name][obj_id] = [{"predicate": "inside", "position": edge_belief[obj_id]["INSIDE"][0][index], "class_name": id2class[edge_belief[obj_id]["INSIDE"][0][index]], "room": id2room[edge_belief[obj_id]["INSIDE"][0][index]]}]
-            
+                        maxIndex = random.choice(range(1, len(distribution)))
+                        obj_position[obj_name][obj_id] = [{"predicate": "inside", "position": edge_belief[obj_id]["INSIDE"][0][maxIndex], "class_name": id2class[edge_belief[obj_id]["INSIDE"][0][maxIndex]]}]
+                        for index, room in enumerate(list(room_ids.keys())):
+                            if index == len(room_ids) - 1:
+                                obj_position[obj_name][obj_id][0]["room"] = room_ids[room]
+                                continue
+                            if edge_belief[obj_id]["INSIDE"][0][maxIndex] > room and edge_belief[obj_id]["INSIDE"][0][maxIndex] < list(room_ids.keys())[index + 1]:
+                                obj_position[obj_name][obj_id][0]["room"] = room_ids[room]
+                                break
+        if hinder < 1/3:
+            for obj_name, info in obj_position.items():
+                for obj_id, places in info.items():
+                    obj_position[obj_name][obj_id] = [places[0]]
+        ipdb.set_trace()
+
         return LanguageResponse(obj_position, from_agent_id=self.to_agent_id, to_agent_id=self.from_agent_id, language_type="location", try_to_hinder=(hinder < 1/3))
 
 
@@ -257,8 +336,6 @@ class LanguageResponse(Language):
         return self.language.split('_')
     
     def to_language(self, mode="natural"):  # interface for converting to natural language
-        if self.try_to_hinder:
-            print("This response attempt to hinder") #for debug
         if self.language_type == "location":
             ans = ""
             if mode == "full":  # all the information of communication, only for testing stage

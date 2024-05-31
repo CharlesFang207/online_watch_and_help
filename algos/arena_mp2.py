@@ -145,6 +145,8 @@ class ArenaMP(object):
                 #     opponent_subgoal = self.agents[1 - it].last_subgoal
                 # ipdb.set_trace()
                 in_same_room = self.whether_in_same_room(self.agents)
+
+                in_same_room = True
                 
                 dict_actions[it], dict_info[it], language_rsps, change_goal = agent.get_action(
                     obs[it],
@@ -727,17 +729,12 @@ class ArenaMP(object):
         }
         if random.random() > 1/3:
             saved_info["have_belief"] = True
-        saved_info["have_belief"] = True #for debug
+        saved_info["have_belief"] = False #for debug
         if saved_info["have_belief"]:
-            if random.random() > 0.5:
+            if random.random() > 1/3:
                 saved_info["false_belief_rooms"] = []
             else:
                 saved_info["false_belief_rooms"] = ["kitchen"]
-                for room in ["livingroom, bedroom, bathroom"]:
-                    if random.random() > 0.5:
-                        saved_info["false_belief_rooms"].append(room)
-        print("Have belief:", saved_info["have_belief"]) #for debug
-        print("False belief rooms:", saved_info["false_belief_rooms"]) #for debug
 
 
         success = False

@@ -1097,7 +1097,7 @@ class MCTS_agent_particle_v2_instance:
             # agent 1 asks agent 2 for help
             print("agent_id: ", self.agent_id)
             if self.agent_id == 1:
-                obj_seek = self.whether_to_ask(goal_spec, 0.5, "location")
+                obj_seek = self.whether_to_ask(goal_spec, 0.5, "location") #for debug
                 if obj_seek is not None:
                     language_to_be_sent = LanguageInquiry(obj_seek, 1, 2, "location") 
             # agent 2 asks agent 1 does he need help
@@ -1520,33 +1520,31 @@ class MCTS_agent_particle_v2_instance:
         if language_type == "location":
             uncertain_objects = []
             for goal_name, info in goal_spec.items():
-                maximum = 1.0
+                record = []
                 for obj_id in info['grab_obj_ids']:
                     if obj_id not in self.belief.edge_belief.keys():
                         continue
                     distribution = scipy.special.softmax(self.belief.edge_belief[obj_id]["INSIDE"][1][:])
                     distribution = distribution[distribution > 0]
                     if distribution.shape[0] == 1:
-                        maximum = 0.0 #if certainly inside something, just set max to 0
+                        record.append(0.0)
                         continue
                     entropy = -np.sum(distribution * np.log2(distribution))
                     ratio = entropy / np.log2(distribution.shape[0])
-                    if ratio < maximum:
-                        maximum = ratio
+                    record.append(ratio)
                     distribution = scipy.special.softmax(self.belief.edge_belief[obj_id]["ON"][1][:])
                     distribution = distribution[distribution > 0]
                     if distribution.shape[0] == 1:
                         index = np.argmax(self.belief.edge_belief[obj_id]["ON"][1][:])
                         if index == 0:
                             continue
-                        maximum = 0.0
+                        record.append(0.0)
                         continue
                     entropy = -np.sum(distribution * np.log2(distribution))
                     ratio = entropy / np.log2(distribution.shape[0])
-                    if ratio < maximum:
-                        maximum = ratio
-
-                if maximum >= boundary:
+                    record.append(ratio)
+                record.sort()
+                if record[info["count"] - 1] >= boundary:
                     uncertain_objects.append(goal_name.split('_')[1])
             if len(uncertain_objects) == 0:
                 return None
@@ -1601,56 +1599,78 @@ class MCTS_agent_particle_v2_instance:
     
     def modify_observation(self, room_list=[]):
         obs = self.init_gt_graph #set as ground truth graph in the beginning
+        for node in obs['nodes']:
+            if node["class_name"] == "coffeemaker":
+                node["states"].append('CLOSED')
         id2node = {node["id"] : node for node in obs["nodes"]}
         id2room = {}
+        room_names = ["bathroom", "bedroom", "kitchen", "livingroom"]
         for id, node in id2node.items():
-            if "room" in node["class_name"]:
+            if node["class_name"] in room_names:
                 continue
             for edge in obs["edges"]:
-                if edge["from_id"] == id and edge["relation_type"] == "inside" and "room" in id2node[edge["to_id"]]["class_name"]:
+                if edge["from_id"] == id and edge["relation_type"] == "INSIDE" and id2node[edge["to_id"]]["class_name"] in room_names:
                     id2room[id] = edge["to_id"]
         container_list = self.belief.edge_belief[list(self.belief.edge_belief.keys())[0]]["INSIDE"][0][1:]
         surface_list = self.belief.edge_belief[list(self.belief.edge_belief.keys())[0]]["ON"][0][1:]
+        for obj_id in self.belief.edge_belief.keys():
+            for container in self.belief.edge_belief[obj_id]["INSIDE"][0][1:]:
+                if container not in container_list:
+                    container_list.append(container)
+        for obj_id in self.belief.edge_belief.keys():
+            for container in self.belief.edge_belief[obj_id]["ON"][0][1:]:
+                if container not in container_list:
+                    container_list.append(container)
         for room in room_list:
             for node in obs["nodes"]:
                 if node["class_name"] == room:
                     room_id = node["id"]
             room_obj_list = {}
             for edge in obs["edges"]:
-                if edge["to_id"] == room_id and edge["relation_type"] == "inside":
-                    room_obj_list[edge["from_id"]] = edge #all object id inside the room
-            for obj in room_obj_list:
+                if edge["to_id"] == room_id and edge["relation_type"] == "INSIDE":
+                    if id2node[edge["from_id"]]["class_name"] not in ["floor", "window", "ceiling", "curtain", "wall"]:
+                        room_obj_list[edge["from_id"]] = edge #all object id inside the room
+            for node in obs["nodes"]:
+                if node["id"] not in room_obj_list.keys() and node["id"] not in ["floor", "window", "ceiling", "curtain", "wall"]:
+                    for edge in obs["edges"]:
+                        if edge["from_id"] == node["id"] and edge["to_id"] in room_obj_list.keys():
+                            room_obj_list[node["id"]] = edge
+            for obj in room_obj_list.keys():
                 for edge in obs["edges"]:
-                    if edge["from_id"] == obj and edge["to_id"] in container_list and edge["relation_type"] == "inside":
+                    if edge["from_id"] == obj and edge["to_id"] in container_list and edge["relation_type"] == "INSIDE":
                         for edge1 in obs["edges"]:
                             if edge1["from_id"] == obj: #remove old edges
                                 obs["edges"].remove(edge1)
-                        temp = container_list - [edge["to_id"]]
+                        container_list.remove(edge["to_id"])
                         n = random.random()
-                        if n > len(temp) / len(temp) + len(surface_list):
+                        if n > len(container_list) / len(container_list) + len(surface_list):
                             index = random.randint(0, len(surface_list) - 1)
                             new_position = surface_list[index]
-                            obs["edges"].append({"from_id": obj, "to_id": new_position, "relation_type": "on"})
+                            obs["edges"].append({"from_id": obj, "to_id": new_position, "relation_type": "ON"})
+                            obs["edges"].append({"from_id": obj, "to_id": id2room[new_position], "relation_type": "INSIDE"})
                         else:
-                            index = random.randint(0, len(temp) - 1)
-                            new_position = temp[index]
-                            obs["edges"].append({"from_id": obj, "to_id": new_position, "relation_type": "inside"})
-                        obs["edges"].append({"from_id": obj, "to_id": id2room["new_position"], "relation_type": "inside"})
-                    if edge["from_id"] == obj and edge["to_id"] in surface_list and edge["relation_type"] == "on":
+                            index = random.randint(0, len(container_list) - 1)
+                            new_position = container_list[index]
+                            obs["edges"].append({"from_id": obj, "to_id": new_position, "relation_type": "INSIDE"})
+                        container_list.append(edge["to_id"])
+                        break
+                    if edge["from_id"] == obj and edge["to_id"] in surface_list and edge["relation_type"] == "ON":
                         for edge1 in obs["edges"]:
                             if edge1["from_id"] == obj: #remove old edges
                                 obs["edges"].remove(edge1)
-                        temp = surface_list - [edge["to_id"]]
+                        surface_list.remove(edge["to_id"])
                         n = random.random()
-                        if n > len(temp) / len(temp) + len(container_list):
+                        if n > len(surface_list) / len(surface_list) + len(container_list):
                             index = random.randint(0, len(container_list) - 1)
                             new_position = container_list[index]
-                            obs["edges"].append({"from_id": obj, "to_id": new_position, "relation_type": "on"})
+                            obs["edges"].append({"from_id": obj, "to_id": new_position, "relation_type": "INSIDE"})
                         else:
-                            index = random.randint(0, len(temp) - 1)
-                            new_position = temp[index]
-                            obs["edges"].append({"from_id": obj, "to_id": new_position, "relation_type": "inside"})
-                        obs["edges"].append({"from_id": obj, "to_id": id2room["new_position"], "relation_type": "inside"})
+                            index = random.randint(0, len(surface_list) - 1)
+                            new_position = surface_list[index]
+                            obs["edges"].append({"from_id": obj, "to_id": new_position, "relation_type": "ON"})
+                            obs["edges"].append({"from_id": obj, "to_id": id2room[new_position], "relation_type": "INSIDE"})
+                        surface_list.append(edge["to_id"])
+                        break
         return obs
                             
 
