@@ -32,7 +32,7 @@ class LanguageInquiry(Language):
     def generate_response(self, sampled_graph, edge_belief):
         assert(self.language_type == 'location')
         assert(self.obj_list is not None)
-        hinder = random.random
+        hinder = random.random()
         obj_ids = {} #map from object name to ids belong to that class
         for obj in self.obj_list:
             obj_ids[obj] = [node["id"] for node in sampled_graph["nodes"] if node["class_name"] == obj]
@@ -257,6 +257,8 @@ class LanguageResponse(Language):
         return self.language.split('_')
     
     def to_language(self, mode="natural"):  # interface for converting to natural language
+        if self.try_to_hinder:
+            print("This response attempt to hinder") #for debug
         if self.language_type == "location":
             ans = ""
             if mode == "full":  # all the information of communication, only for testing stage
