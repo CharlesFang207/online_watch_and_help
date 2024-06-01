@@ -242,37 +242,18 @@ class LanguageInquiry(Language):
             for obj_name, info in obj_position.items():
                 for obj_id, places in info.items():
                     obj_position[obj_name][obj_id] = [places[0]]
-        ipdb.set_trace()
+        #ipdb.set_trace()
 
         return LanguageResponse(obj_position, from_agent_id=self.to_agent_id, to_agent_id=self.from_agent_id, language_type="location", try_to_hinder=(hinder < 1/3))
 
+   
+    def to_language(self, mode = "full"):
+        if mode == "full":
+            ans = ""
+            for obj in self.obj_list:
+                ans += "Where is {}?\n".format(obj)
+        return ans
 
-        '''            max_inside_prob = max(scipy.special.softmax(edge_belief[obj_id]["INSIDE"][1][1:])) #TODO: do we need softmax
-                    max_on_prob = max(scipy.special.softmax(edge_belief[obj_id]["ON"][1][1:]))
-                    max_prob = max(max_inside_prob, max_on_prob)
-                    if (max_prob > max_obj_id_prob[1]):
-                        
-
-
-                    #TODO: decide whether to respond based on max_prob
-                        if max_inside_prob == max_prob:
-                            #use 1: because first element in the list is None, can add more logic in the future
-                            index_list = np.argwhere(scipy.special.softmax(edge_belief[obj_id]["INSIDE"][1][1:]) == max_inside_prob).flatten()
-                            index = np.random.choice(index_list)
-                            container_id = edge_belief[obj_id]["INSIDE"][0][index]
-                            pred = "INSIDE"
-                            position_id = container_id
-                        else:
-                            index_list = np.argwhere(scipy.special.softmax(edge_belief[obj_id]["ON"][1][1:]) == max_on_prob).flatten()
-                            index = np.random.choice(index_list)
-                            surface_id = edge_belief[obj_id]["ON"][0][index]
-                            pred = "ON"
-                            position_id = surface_id
-                        max_obj_id_prob = [obj_id, max_prob]
-        #TODO: if position_id is None:
-        return pred, max_obj_id_prob[0], position_id'''
-    
-    def to_language(self):
         prompt = """
                 Generate natural language from a language template.
                 The user will provide a question with a basic templated format.
@@ -335,7 +316,9 @@ class LanguageResponse(Language):
     def parse(self):
         return self.language.split('_')
     
-    def to_language(self, mode="natural"):  # interface for converting to natural language
+    def to_language(self, mode="full"):  # interface for converting to natural language
+        if self.try_to_hinder:
+            print("This language attempt to hinder")
         if self.language_type == "location":
             ans = ""
             if mode == "full":  # all the information of communication, only for testing stage

@@ -35,9 +35,9 @@ if __name__ == '__main__':
 
     num_tries = 3
     args.executable_file = '/home/scai/Workspace/xfang21/github_repos/linux_exec.v2.3.0.x86_64'
-    args.max_episode_length = 250
+    args.max_episode_length = 100
     args.num_per_apartment = 20
-    args.dataset_path = '/home/scai/Workspace/hshi33/virtualhome/online_watch_and_help/dataset/new_datasets/hinder.pik'
+    args.dataset_path = '/home/scai/Workspace/hshi33/virtualhome/online_watch_and_help/dataset/new_datasets/full_dataset.pik'
 
     agent_types = [
             ['full', 0, 0.05, False, 0, 0.5],
@@ -95,6 +95,7 @@ if __name__ == '__main__':
     random.seed(id_run)
     episode_ids = list(range(len(env_task_set)))
     episode_ids = sorted(episode_ids)
+    random.shuffle(episode_ids)
     print('episode_ids:', episode_ids)
     # episode_ids = episode_ids[10:]
 

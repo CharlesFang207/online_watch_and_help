@@ -1097,7 +1097,7 @@ class MCTS_agent_particle_v2_instance:
             # agent 1 asks agent 2 for help
             print("agent_id: ", self.agent_id)
             if self.agent_id == 1:
-                obj_seek = self.whether_to_ask(goal_spec, 0.5, "location") #for debug
+                obj_seek = self.whether_to_ask(goal_spec, 0.5, "location")
                 if obj_seek is not None:
                     language_to_be_sent = LanguageInquiry(obj_seek, 1, 2, "location") 
             # agent 2 asks agent 1 does he need help
@@ -1619,8 +1619,8 @@ class MCTS_agent_particle_v2_instance:
                     container_list.append(container)
         for obj_id in self.belief.edge_belief.keys():
             for container in self.belief.edge_belief[obj_id]["ON"][0][1:]:
-                if container not in container_list:
-                    container_list.append(container)
+                if container not in surface_list:
+                    surface_list.append(container)
         for room in room_list:
             for node in obs["nodes"]:
                 if node["class_name"] == room:

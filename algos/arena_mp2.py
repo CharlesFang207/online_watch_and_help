@@ -727,14 +727,16 @@ class ArenaMP(object):
             "have_belief": False,
             "false_belief_rooms": []
         }
-        if random.random() > 1/3:
+        if not self.env.task_id % 3 == 0:
             saved_info["have_belief"] = True
-        saved_info["have_belief"] = False #for debug
         if saved_info["have_belief"]:
-            if random.random() > 1/3:
+            if self.env.task_id % 2 == 0:
                 saved_info["false_belief_rooms"] = []
             else:
                 saved_info["false_belief_rooms"] = ["kitchen"]
+        print("Have belief: ", saved_info["have_belief"])
+        if saved_info["have_belief"]:
+            print("True belief:", len(saved_info["false_belief_rooms"]) == 0)
 
 
         success = False
@@ -755,7 +757,7 @@ class ArenaMP(object):
             if step == 1 and saved_info["have_belief"]:
                 (obs, reward, done, infos), actions, agent_info, language = self.step(modify_graph=True, room_list=saved_info["false_belief_rooms"])
             else:
-                if step % 3 == 1:
+                if step % 3 == 1 and self.env.task_id % 3 != 0:
                     (obs, reward, done, infos), actions, agent_info, language = self.step(inquiry=True)
                 else:
                     (obs, reward, done, infos), actions, agent_info, language = self.step()
