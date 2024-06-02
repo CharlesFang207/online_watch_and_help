@@ -554,6 +554,11 @@ class MCTS_particles_v2_instance:
                     if "open" in action[0].lower() or "close" in action[0].lower():
                         actions = None
                         break
+            if actions is not None:
+                for action in actions:
+                    if "bookshelf" in action[1][0].lower():
+                        actions = None
+                        break
 
             step_state = curr_state
             if actions is None or len(actions) == 0:

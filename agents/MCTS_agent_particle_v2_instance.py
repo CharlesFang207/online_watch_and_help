@@ -179,7 +179,7 @@ def grab_heuristic(
 
     if target_id not in grabbed_obj_ids:
         target_action = [("grab", (target_node["class_name"], target_id), None)]
-        cost = [0.05]
+        cost = [0.0]
     else:
         target_action = []
         cost = []
@@ -490,8 +490,8 @@ def putIn_heuristic(agent_id, char_index, unsatisfied, env_graph, simulator, tar
                 (target_node2["class_name"], target_put),
             )
         ]
-        cost_open = [0.05]
-        cost_put = [0.05]
+        cost_open = [0.0]
+        cost_put = [0.0]
 
         remained_to_put = 0
         for predicate, count in unsatisfied.items():
@@ -1097,7 +1097,7 @@ class MCTS_agent_particle_v2_instance:
             # agent 1 asks agent 2 for help
             print("agent_id: ", self.agent_id)
             if self.agent_id == 1:
-                obj_seek = self.whether_to_ask(goal_spec, 0.5, "location")
+                obj_seek = self.whether_to_ask(goal_spec, 0.2, "location")
                 if obj_seek is not None:
                     language_to_be_sent = LanguageInquiry(obj_seek, 1, 2, "location") 
             # agent 2 asks agent 1 does he need help
@@ -1597,11 +1597,29 @@ class MCTS_agent_particle_v2_instance:
 
         # self.mcts.should_close = self.should_close
     
-    def modify_observation(self, room_list=[]):
+    def modify_observation(self, room_list=[]): #function for generating a false graph at the beginning for agent 1
         obs = self.init_gt_graph #set as ground truth graph in the beginning
         for node in obs['nodes']:
-            if node["class_name"] == "coffeemaker":
+            if node["class_name"] == "coffeemaker": #for debug
                 node["states"].append('CLOSED')
+        '''node_to_remove = []
+        edge_to_remove = []
+        for node in obs['nodes']:
+            if node["class_name"] == "bookshelf": #for debug
+                removed = node["id"]
+                node_to_remove.append(node)
+                for edge in obs["edges"]:
+                    if edge["from_id"] == removed or edge["to_id"] == removed:
+                        edge_to_remove.append(edge)
+                        if edge["relation_type"] in ["INSIDE", "ON"]:
+                            node_to_remove.append([node for obs["nodes"] if node["id"] == edge["from_id"] or node["id"] == edge["to_id"]])
+        for node in node_to_remove:
+            obs["nodes"].remove(node)
+        for edge in edge_to_remove:
+            obs["edges"].remove(edge)
+        for edge in obs["edges"]:
+            if edge["from_id"] == 140 or edge["to_id"] == 140:
+                print(edge)'''
         id2node = {node["id"] : node for node in obs["nodes"]}
         id2room = {}
         room_names = ["bathroom", "bedroom", "kitchen", "livingroom"]
@@ -1620,8 +1638,8 @@ class MCTS_agent_particle_v2_instance:
         for obj_id in self.belief.edge_belief.keys():
             for container in self.belief.edge_belief[obj_id]["ON"][0][1:]:
                 if container not in surface_list:
-                    surface_list.append(container)
-        for room in room_list:
+                    surface_list.append(container) #formulate list of containers and surfaces
+        for room in room_list: #walk through all rooms intend to have wrong information
             for node in obs["nodes"]:
                 if node["class_name"] == room:
                     room_id = node["id"]
@@ -1634,24 +1652,25 @@ class MCTS_agent_particle_v2_instance:
                 if node["id"] not in room_obj_list.keys() and node["id"] not in ["floor", "window", "ceiling", "curtain", "wall"]:
                     for edge in obs["edges"]:
                         if edge["from_id"] == node["id"] and edge["to_id"] in room_obj_list.keys():
-                            room_obj_list[node["id"]] = edge
+                            room_obj_list[node["id"]] = edge #some object will not have edge to room, but their containers have
             for obj in room_obj_list.keys():
-                for edge in obs["edges"]:
+                temp = copy.deepcopy(obs["edges"])
+                for edge in temp:
                     if edge["from_id"] == obj and edge["to_id"] in container_list and edge["relation_type"] == "INSIDE":
                         for edge1 in obs["edges"]:
                             if edge1["from_id"] == obj: #remove old edges
                                 obs["edges"].remove(edge1)
-                        container_list.remove(edge["to_id"])
+                        container_list.remove(edge["to_id"]) #can't be at old place
                         n = random.random()
                         if n > len(container_list) / len(container_list) + len(surface_list):
                             index = random.randint(0, len(surface_list) - 1)
                             new_position = surface_list[index]
                             obs["edges"].append({"from_id": obj, "to_id": new_position, "relation_type": "ON"})
-                            obs["edges"].append({"from_id": obj, "to_id": id2room[new_position], "relation_type": "INSIDE"})
+                            obs["edges"].append({"from_id": obj, "to_id": id2room[new_position], "relation_type": "INSIDE"}) #for on relationship, add inside room
                         else:
                             index = random.randint(0, len(container_list) - 1)
                             new_position = container_list[index]
-                            obs["edges"].append({"from_id": obj, "to_id": new_position, "relation_type": "INSIDE"})
+                            obs["edges"].append({"from_id": obj, "to_id": new_position, "relation_type": "INSIDE"}) #inside container will not have inside room
                         container_list.append(edge["to_id"])
                         break
                     if edge["from_id"] == obj and edge["to_id"] in surface_list and edge["relation_type"] == "ON":

@@ -94,6 +94,7 @@ if __name__ == '__main__':
     id_run = 0
     random.seed(id_run)
     episode_ids = list(range(len(env_task_set)))
+    episode_ids = list(range(1601))
     episode_ids = sorted(episode_ids)
     random.shuffle(episode_ids)
     print('episode_ids:', episode_ids)
@@ -229,10 +230,10 @@ if __name__ == '__main__':
             #     arena.reset_env()
             #     continue
 
-            S[episode_id].append(is_finished)
+            '''S[episode_id].append(is_finished)
             L[episode_id].append(steps)
             test_results[episode_id] = {'S': S[episode_id],
-                                        'L': L[episode_id]}
+                                        'L': L[episode_id]}'''
                                         
         pickle.dump(test_results, open(args.record_dir + '/results_{}.pik'.format(0), 'wb'))
         print('average steps (finishing the tasks):', np.array(steps_list).mean() if len(steps_list) > 0 else None)

@@ -30,6 +30,9 @@ class LanguageInquiry(Language):
     
     # Use the helper's belief and sampled graph to extract the most certain object information
     def generate_response(self, sampled_graph, edge_belief):
+        #return a language response object, information is contained in response.obj_positions
+        #obj_positions have this structure {obj_name: {obj_id1: {"predicate": relation, "position": id of 
+        # current position, "class_name": name of current position, "room": current room}, obj_id2: ...}}
         assert(self.language_type == 'location')
         assert(self.obj_list is not None)
         hinder = random.random()
@@ -58,7 +61,7 @@ class LanguageInquiry(Language):
                     break
         '''print(id2class)
         print(id2room)'''
-        print(room_ids)
+        print("hinder:", hinder)
         obj_position = {}
         for obj_name in obj_ids.keys():
             obj_position[obj_name] = {}

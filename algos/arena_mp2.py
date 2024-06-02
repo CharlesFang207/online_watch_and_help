@@ -727,7 +727,10 @@ class ArenaMP(object):
             "have_belief": False,
             "false_belief_rooms": []
         }
-        if not self.env.task_id % 3 == 0:
+        if not self.env.task_id % 3 == 0 and not self.env.task_id == 1700:
+            '''temp = [node for node in self.env.init_graph["nodes"] if node["class_name"] == "bookshelf"]
+            if len(temp) == 0:
+                saved_info["have_belief"] = True'''
             saved_info["have_belief"] = True
         if saved_info["have_belief"]:
             if self.env.task_id % 2 == 0:
@@ -757,7 +760,7 @@ class ArenaMP(object):
             if step == 1 and saved_info["have_belief"]:
                 (obs, reward, done, infos), actions, agent_info, language = self.step(modify_graph=True, room_list=saved_info["false_belief_rooms"])
             else:
-                if step % 3 == 1 and self.env.task_id % 3 != 0:
+                if step % 3 == 1 and not self.env.task_id % 4 == 1:
                     (obs, reward, done, infos), actions, agent_info, language = self.step(inquiry=True)
                 else:
                     (obs, reward, done, infos), actions, agent_info, language = self.step()
