@@ -2,6 +2,7 @@ import os
 import pickle
 import json
 import sys
+import copy
 from openai import OpenAI
 
 client = OpenAI(
@@ -13,26 +14,15 @@ sys.path.insert(0, f"{curr_dir}/../../online_watch_and_help/")
 from agents import language
 sys.path.insert(0, f"{curr_dir}/")
 
-def remove_key(obj, key):
-    if isinstance(obj, dict):
-        to_remove = [k for k in obj if k == key]
-        for k in to_remove:
-            del obj[k]
-        for v in obj.values():
-            remove_key(v, key)
-    elif isinstance(obj, list):
-        for item in obj:
-            remove_key(item, key)
-
 def remove_sections(data, keys_to_remove):
     for key in keys_to_remove:
         if key in data:
             del data[key]
 
-episodes_list = [888]
+episodes_list = [1396,2657,624]
 
 for episode in episodes_list:
-    pickle_file_path = f'/home/scai/Workspace/hshi33/virtualhome/data/full_dataset/800+episodes/logs_episode.{episode}_iter.0.pik'
+    pickle_file_path = '/home/scai/Workspace/hshi33/virtualhome/data/full_dataset/800+episodes/logs_episode.{}_iter.0.pik'.format(episode)
 
     if not os.path.exists(pickle_file_path):
         raise FileNotFoundError(f"File not found: {pickle_file_path}")
@@ -40,8 +30,6 @@ for episode in episodes_list:
     with open(pickle_file_path, 'rb') as file:
         data = pickle.load(file)
 
-    remove_key(data, 'obj_transform')
-    remove_key(data, 'bounding_box')
     keys_to_remove = ['gt_goals','init_unity_graph','plan','goals_finished','belief','belief_room','belief_graph', 'graph','obs', "env_id", "task_name"]
 
     remove_sections(data, keys_to_remove)
