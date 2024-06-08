@@ -255,7 +255,7 @@ class LanguageInquiry(Language):
             ans = ""
             for obj in self.obj_list:
                 ans += "Where is {}?\n".format(obj)
-        return ans
+            return ans
 
         prompt = """
                 Generate natural language from a language template.
@@ -291,9 +291,10 @@ class LanguageInquiry(Language):
                 {
                     "role": "user",
                     "content": prompt,
+                    "temperature": 0.5
                 }
             ],
-            model="gpt-4",
+            model="gpt-4o",
         )
         return response.choices[0].message.content.strip()
         
@@ -358,31 +359,24 @@ class LanguageResponse(Language):
                         Convert this statement into natural conversational language.
                         Be creative with the responses to make it seem like everyday conversation.
                         Here are some examples of how to respond:
-
                         User: plate on coffeetable 133 livingroom; juice inside fridge 231 kitchen
                         Response: I saw the plate on the coffee table in the living room, and the juice is inside the fridge in the kitchen.
-
                         User: waterglass on table 120 livingroom
                         Response: I found the water glass sitting on the table in the living room.
-
                         User: apple on table 121 livingroom; apple inside fridge 240 kitchen; apple on kitchencounter 301 kitchen
                         Response: I noticed an apple on the table in the living room, another inside the fridge in the kitchen, and one more on the kitchen counter.
-
                         If the user says "null", respond naturally with different forms of "I don't know".
                         If there are several repeating items, only respond once to that item.
                         Here are some examples:
-
                         User: plate null
                         Response: Sorry, I don't know where there plate is"
-
                         User: laptop null; chair on floor 100 livingroom
                         Response: I don't know where the laptop is, but I noticed the chair on the floor in the living room.
-
                         User: wine null; wine null
                         Response: I'm not sure where the wine is.
-
+                        User: fork on table 121 livingroom; fork null
+                        Response: I saw a fork on the table in the livingroom.
                         Now Complete this:
-
                         User: 
                         """
 
@@ -395,9 +389,10 @@ class LanguageResponse(Language):
                         {
                             "role": "user",
                             "content": prompt2,
+                            "temperature": 0.3
                         }
                     ],
-                    model="gpt-4",
+                    model="gpt-4o",
                 )
 
                 return response2.choices[0].message.content.strip()
