@@ -362,23 +362,23 @@ class LanguageResponse(Language):
                 response2 = client.chat.completions.create(
                     messages=[
                         {"role": "system", "content": instruction2},
-                        {"role": "user:", "content": example1},
+                        {"role": "user", "content": example1},
                         {"role": "assistant", "content": response1},
-                        {"role": "user:", "content": example2},
+                        {"role": "user", "content": example2},
                         {"role": "assistant", "content": response2},
-                        {"role": "user:", "content": example2},
+                        {"role": "user", "content": example2},
                         {"role": "assistant", "content": response2},
-                        {"role": "user:", "content": example3},
+                        {"role": "user", "content": example3},
                         {"role": "assistant", "content": response3},
-                        {"role": "user:", "content": example4},
+                        {"role": "user", "content": example4},
                         {"role": "assistant", "content": response4},
-                        {"role": "user:", "content": example5},
+                        {"role": "user", "content": example5},
                         {"role": "assistant", "content": response5},
-                        {"role": "user:", "content": example6},
+                        {"role": "user", "content": example6},
                         {"role": "assistant", "content": response6},
-                        {"role": "user:", "content": example7},
+                        {"role": "user", "content": example7},
                         {"role": "assistant", "content": response7},
-                        {"role": "user:", "content": info}
+                        {"role": "user", "content": info}
                     ],
                     model="gpt-4o",
                     temperature=0.3
