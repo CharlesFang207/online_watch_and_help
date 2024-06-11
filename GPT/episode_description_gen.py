@@ -3,6 +3,7 @@ import pickle
 import json
 import sys
 import copy
+import copy
 from openai import OpenAI
 
 client = OpenAI(
