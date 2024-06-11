@@ -19,7 +19,7 @@ def remove_sections(data, keys_to_remove):
         if key in data:
             del data[key]
 
-episodes_list = [812]
+episodes_list = [713, 835, 2063, 259, 3447, 2765, 1185, 707, 523, 1143, 3073, 615, 423, 1899, 1015, 1073]
 
 for episode in episodes_list:
     pickle_file_path = '/home/scai/Workspace/hshi33/virtualhome/data/full_dataset/2_partial_opencost0_closecostFalse_walkcost0.05_forgetrate0_changeroomcost0.5v9_particles_v2/logs_episode.{}_iter.0.pik'.format(episode)
