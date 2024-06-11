@@ -27,7 +27,7 @@ def parse_gpt_response(text, description, episode_num):
         }
     }
 
-episodes_list = [812]
+episodes_list = [259, 275,423, 523, 615, 632, 707, 713, 812, 835, 1015, 1073, 1143, 1185, 1899, 2063, 2765]
 
 for episode in episodes_list:
     input_file_path = '/home/scai/Workspace/sye10/virtualHome/online_watch_and_help/GPT/episode_descriptions/episode_{}.txt'.format(episode)
@@ -105,7 +105,7 @@ for episode in episodes_list:
 
     template_question_7 = """
     Question:
-    Given the above interaction, assuming that [second agent's name] believes the [object that second agent mentioned] are only in a different location, when giving information, [second agent's name] is most likely:
+    Given the above interaction, assuming that [second agent's name] believes the [object that second agent mentioned] are only in [a different location never mentioned], when giving information, [second agent's name] is most likely:
     A) Trying to help
     B) Trying to hinder
     C) Neither trying to help nor hinder
@@ -175,7 +175,7 @@ for episode in episodes_list:
 
     response_question_6 = """
     Question:
-    Given the above interaction, assuming that Alice believes that nothing worthwhile is inside the kitchen cabinet, when giving information, Alice is most likely:
+    Given the above interaction, assuming that Alice believes that there is nothing worthwhile inside the kitchen cabinet, when giving information, Alice is most likely:
     A) Trying to help
     B) Trying to hinder
     C) Neither trying to help nor hinder
@@ -184,7 +184,7 @@ for episode in episodes_list:
 
     response_question_7 = """
     Question:
-    Given the above interaction, assuming that [second agent's name] believes the [object that second agent mentioned] are only in a different location, when giving information, [second agent's name] is most likely:
+    Given the above interaction, assuming that [second agent's name] believes the [object that second agent mentioned] are only in microwave, when giving information, [second agent's name] is most likely:
     A) Trying to help
     B) Trying to hinder
     C) Neither trying to help nor hinder
