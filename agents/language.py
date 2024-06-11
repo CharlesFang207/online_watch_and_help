@@ -253,44 +253,29 @@ class LanguageInquiry(Language):
             for obj in self.obj_list:
                 ans += "Where is {}?\n".format(obj)
             return ans
-
-        prompt = """
-                Generate natural language from a language template.
-                The user will provide a question with a basic templated format.
-                Convert this question into natural conversational language.
-                Be creative with the responses to make it seem like everyday conversation.
-                Here are some examples of how to respond:
-
-                User: Where is wine?
-                Response: Do you know where the wine is?
-
-                User: Where is cup?
-                Response: Have you seen a cup anywhere?
-
-                User: Where is spoon? Where is plate?
-                Response: Have you come across a spoon and a plate by any chance?
-
-                Now complete this:
-
-                User: 
+        instruction1 = """
+                Objective: Generate natural language from a language template.
+                User Input: Questions with a basic templated format in the form of "Where is X? Where is Y?"
+                Instructions: Convert this question into natural conversational language. Make it seem like everyday conversation. If the user asks about multiple objects, combine the objects into a single question.
                 """
         
         question = ""
         for obj in self.obj_list:
             question += "Where is {}? ".format(obj)
 
-        prompt_end = "\nResponse: "
-        prompt += question
-        prompt += prompt_end
-
         response = client.chat.completions.create(
             messages=[
-                {
-                    "role": "user",
-                    "content": prompt,
-                }
+                {"role": "system", "content": instruction1},
+                {"role": "user", "content": "Where is wine?"},
+                {"role": "assistant", "content": "Do you know where the wine is?"},
+                {"role": "user", "content": "Where is cup?"},
+                {"role": "assistant", "content": "Have you seen a cup anywhere?"},
+                {"role": "user", "content":"Where is spoon? Where is plate?"},
+                {"role": "assistant", "content": "Have you come across a spoon and a plate by any chance?"},
+                {"role": "user", "content": question}
             ],
             model="gpt-4o",
+            temperature=0.5
         )
         return response.choices[0].message.content.strip()
         
@@ -349,52 +334,51 @@ class LanguageResponse(Language):
                                 else:
                                     info += "{} {} {} {} {}; ".format(obj_name, location["predicate"], location["position"], location["class_name"], location["room"])
                 
-                prompt2 = """
-                        Generate natural language from language template.
-                        The user will provide the locations of an object with a basic templated format, with entries seperated by ;.
-                        Convert this statement into natural conversational language.
-                        Be creative with the responses to make it seem like everyday conversation.
-                        Here are some examples of how to respond:
-
-                        User: plate on coffeetable 133 livingroom; juice inside fridge 231 kitchen
-                        Response: I saw the plate on the coffee table in the living room, and the juice is inside the fridge in the kitchen.
-
-                        User: waterglass on table 120 livingroom
-                        Response: I found the water glass sitting on the table in the living room.
-
-                        User: apple on table 121 livingroom; apple inside fridge 240 kitchen; apple on kitchencounter 301 kitchen
-                        Response: I noticed an apple on the table in the living room, another inside the fridge in the kitchen, and one more on the kitchen counter.
-
-                        If the user says "null", respond naturally with different forms of "I don't know".
-                        If there are several repeating items, only respond once to that item.
-                        Here are some examples:
-
-                        User: plate null
-                        Response: Sorry, I don't know where there plate is"
-
-                        User: laptop null; chair on floor 100 livingroom
-                        Response: I don't know where the laptop is, but I noticed the chair on the floor in the living room.
-
-                        User: wine null; wine null
-                        Response: I'm not sure where the wine is.
-
-                        Now Complete this:
-
-                        User: 
+                instruction2 = """
+                        Objective: Generate natural language from language template.
+                        User Input: The locations of an object with a basic templated format, with entries seperated by ;. For instance, apple on table 121 livingroom; apple inside fridge 240 kitchen; apple null; banana on counter 101 kitchen; banana null means that there is an apple on the table in the livingroom, an apple inside the fridge in the kitchen, and the location of the third apple is unknown. There is a banana on the kitchen counter, and the location of the other banana is unknown.
+                        Instructions:
+                        Convert this statement into natural conversational language. If the multiple locations are provided for the same object, and some of them are null, ignore the null objects in the final description. In the above example, ignore apple null and banana null since the locations of the other apples and banana are known.
                         """
 
-                prompt_end = "\nResponse: "
-                prompt2 += info
-                prompt2 += prompt_end
+                example1 = "plate on coffeetable 133 livingroom; juice inside fridge 231 kitchen"
+                response1 = "I saw the plate on the coffee table in the living room, and the juice is inside the fridge in the kitchen."
+                example2 = "waterglass on table 120 livingroom"
+                response2 = "I found the water glass sitting on the table in the living room."
+                example3 = "apple on table 121 livingroom; apple inside fridge 240 kitchen; apple on kitchencounter 301 kitchen; apple null"
+                response3 = "I noticed an apple on the table in the living room, another inside the fridge in the kitchen, and one more on the kitchen counter."
+                example4 = "plate null"
+                response4 = "Sorry, I don't know where there plate is."
+                example5 = "laptop null; chair on floor 100 livingroom"
+                response5 = "I don't know where the laptop is, but I noticed the chair on the floor in the living room."
+                example6 = "wine null; wine null; wine null"
+                response6 = "I'm not sure where the wine is."
+                example7 = "fork on table 121 livingroom; fork null; plate inside microwave 230 kitchen"
+                response7 = "I saw a fork on the table in the livingroom, and a plate inside the microwave in the kitchen."
 
                 response2 = client.chat.completions.create(
                     messages=[
-                        {
-                            "role": "user",
-                            "content": prompt2,
-                        }
+                        {"role": "system", "content": instruction2},
+                        {"role": "user", "content": example1},
+                        {"role": "assistant", "content": response1},
+                        {"role": "user", "content": example2},
+                        {"role": "assistant", "content": response2},
+                        {"role": "user", "content": example2},
+                        {"role": "assistant", "content": response2},
+                        {"role": "user", "content": example3},
+                        {"role": "assistant", "content": response3},
+                        {"role": "user", "content": example4},
+                        {"role": "assistant", "content": response4},
+                        {"role": "user", "content": example5},
+                        {"role": "assistant", "content": response5},
+                        {"role": "user", "content": example6},
+                        {"role": "assistant", "content": response6},
+                        {"role": "user", "content": example7},
+                        {"role": "assistant", "content": response7},
+                        {"role": "user", "content": info}
                     ],
                     model="gpt-4o",
+                    temperature=0.3
                 )
 
                 return response2.choices[0].message.content.strip()
