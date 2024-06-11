@@ -163,7 +163,7 @@ class Task:
         init_goal_manager.goal = {}
         object_dict = init_goal_manager.init_pool["setup_table"]["objects"]
 
-        extra_object = init_goal_manager.rand.choice(["wineglass"])
+        extra_object = init_goal_manager.rand.choice(["wine", "juice", "mug"])
         objects_select = [extra_object] + ["spoon", "wineglass"]
         for object_name in objects_select:
             init_goal_manager.goal[object_name] = counts_objects
@@ -183,23 +183,25 @@ class Task:
 
         # place objects and random objects (in this version, only sample neccessary #objects that can satisfy the goal)
         for k, v in init_goal_manager.goal.items():
-            num_obj = v
-            (
-                init_goal_manager.object_id_count,
-                graph,
-                success,
-            ) = init_goal_manager.add_obj(
-                graph,
-                k,
-                num_obj,
-                init_goal_manager.object_id_count,
-                objs_in_room=objs_in_room,
-                except_position=except_position_ids,
-                goal_obj=True,
-            )
+            try:
+                num_obj = v
+                (
+                    init_goal_manager.object_id_count,
+                    graph,
+                    success,
+                ) = init_goal_manager.add_obj(
+                    graph,
+                    k,
+                    num_obj,
+                    init_goal_manager.object_id_count,
+                    objs_in_room=objs_in_room,
+                    except_position=except_position_ids,
+                    goal_obj=True,
+                )
+            except:
+                return None, None, False
             # print([node for node in graph['nodes'] if node['class_name'] == 'wineglass'])
             if not success:
-                ipdb.set_trace()
                 return None, None, False
 
         if start:
@@ -253,8 +255,8 @@ class Task:
 
         id2node = {node["id"]: node for node in graph["nodes"]}
 
-        object_candidates = ["coffeepot", "wineglass", "spoon"]
-        different_classes = init_goal_manager.rand.randint(1, len(object_candidates))
+        object_candidates = ["coffeepot", "wineglass", "spoon", "mug", "glass", "pot"]
+        different_classes = init_goal_manager.rand.randint(2, 3)
         objects_selected = init_goal_manager.rand.choices(
             object_candidates, k=different_classes
         )
@@ -303,10 +305,9 @@ class Task:
                     goal_obj=True,
                 )
             except:
-                ipdb.set_trace()
+                return None, None, False
             # print([node for node in graph['nodes'] if node['class_name'] == 'wineglass'])
             if not success:
-                ipdb.set_trace()
                 return None, None, False
 
         # pdb.set_trace()
@@ -356,8 +357,8 @@ class Task:
 
         id2node = {node["id"]: node for node in graph["nodes"]}
 
-        object_candidates = ["carrot", "potato", "bread"]
-        different_classes = init_goal_manager.rand.randint(1, 3)
+        object_candidates = ["carrot", "potato", "bread", "milk", "juice", "beer"]
+        different_classes = init_goal_manager.rand.randint(2, 3)
         objects_selected = init_goal_manager.rand.choices(
             object_candidates, k=different_classes
         )
@@ -411,10 +412,9 @@ class Task:
                     goal_obj=True,
                 )
             except:
-                ipdb.set_trace()
+                return None, None, False
             # print([node for node in graph['nodes'] if node['class_name'] == 'wineglass'])
             if not success:
-                ipdb.set_trace()
                 return None, None, False
 
         # pdb.set_trace()
@@ -464,8 +464,8 @@ class Task:
 
         id2node = {node["id"]: node for node in graph["nodes"]}
 
-        object_candidates = ["book", "cellphone", "remotecontrol"]
-        different_classes = init_goal_manager.rand.randint(1, len(object_candidates))
+        object_candidates = ["book", "cellphone", "remotecontrol", "folder", "notes"]
+        different_classes = init_goal_manager.rand.randint(2, 3)
         objects_selected = init_goal_manager.rand.choices(
             object_candidates, k=different_classes
         )
@@ -519,10 +519,9 @@ class Task:
                     goal_obj=True,
                 )
             except:
-                ipdb.set_trace()
+                return None, None, False
             # print([node for node in graph['nodes'] if node['class_name'] == 'wineglass'])
             if not success:
-                ipdb.set_trace()
                 return None, None, False
 
         # pdb.set_trace()
@@ -584,7 +583,7 @@ class Task:
         init_goal_manager.goal = {}
         object_dict = init_goal_manager.init_pool["prepare_drink"]["objects"]
 
-        extra_object = init_goal_manager.rand.sample(["wine", "alcohol"], 1)
+        extra_object = init_goal_manager.rand.sample(["wine", "beer", "milk", "juice"], 2)
         objects_select = extra_object + ["wineglass"]
         for object_name in objects_select:
             init_goal_manager.goal[object_name] = counts_objects
@@ -604,23 +603,25 @@ class Task:
 
         # place objects and random objects (in this version, only sample neccessary #objects that can satisfy the goal)
         for k, v in init_goal_manager.goal.items():
-            num_obj = v
-            (
-                init_goal_manager.object_id_count,
-                graph,
-                success,
-            ) = init_goal_manager.add_obj(
-                graph,
-                k,
-                num_obj,
-                init_goal_manager.object_id_count,
-                objs_in_room=objs_in_room,
-                except_position=except_position_ids,
-                goal_obj=True,
-            )
+            try:
+                num_obj = v
+                (
+                    init_goal_manager.object_id_count,
+                    graph,
+                    success,
+                ) = init_goal_manager.add_obj(
+                    graph,
+                    k,
+                    num_obj,
+                    init_goal_manager.object_id_count,
+                    objs_in_room=objs_in_room,
+                    except_position=except_position_ids,
+                    goal_obj=True,
+                )
+            except:
+                return None, None, False
             # print([node for node in graph['nodes'] if node['class_name'] == 'wineglass'])
             if not success:
-                ipdb.set_trace()
                 return None, None, False
 
         if start:
@@ -706,23 +707,25 @@ class Task:
 
         # place objects and random objects (in this version, only sample neccessary #objects that can satisfy the goal)
         for k, v in init_goal_manager.goal.items():
-            num_obj = v
-            (
-                init_goal_manager.object_id_count,
-                graph,
-                success,
-            ) = init_goal_manager.add_obj(
-                graph,
-                k,
-                num_obj,
-                init_goal_manager.object_id_count,
-                objs_in_room=objs_in_room,
-                except_position=except_position_ids,
-                goal_obj=True,
-            )
+            try:
+                num_obj = v
+                (
+                    init_goal_manager.object_id_count,
+                    graph,
+                    success,
+                ) = init_goal_manager.add_obj(
+                    graph,
+                    k,
+                    num_obj,
+                    init_goal_manager.object_id_count,
+                    objs_in_room=objs_in_room,
+                    except_position=except_position_ids,
+                    goal_obj=True,
+                )
+            except:
+                return None, None, False
             # print([node for node in graph['nodes'] if node['class_name'] == 'wineglass'])
             if not success:
-                ipdb.set_trace()
                 return None, None, False
 
         if start:
@@ -775,8 +778,8 @@ class Task:
 
         id2node = {node["id"]: node for node in graph["nodes"]}
 
-        object_candidates = ["book", "folder", "magazine"]
-        different_classes = init_goal_manager.rand.randint(1, 2)
+        object_candidates = ["book", "folder", "magazine", "check", "notes", "address_book"]
+        different_classes = init_goal_manager.rand.randint(2, 3)
         objects_selected = init_goal_manager.rand.choices(
             object_candidates, k=different_classes
         )
@@ -825,10 +828,9 @@ class Task:
                     goal_obj=True,
                 )
             except:
-                ipdb.set_trace()
+                return None, None, False
             # print([node for node in graph['nodes'] if node['class_name'] == 'wineglass'])
             if not success:
-                ipdb.set_trace()
                 return None, None, False
 
         # pdb.set_trace()
@@ -878,7 +880,7 @@ class Task:
 
         id2node = {node["id"]: node for node in graph["nodes"]}
 
-        object_candidates = ["toy"]
+        object_candidates = ["toy", "board_game"]
         objects_selected = init_goal_manager.rand.choices(
             object_candidates, k=1
         )
@@ -927,10 +929,9 @@ class Task:
                     goal_obj=True,
                 )
             except:
-                ipdb.set_trace()
+                return None, None, False
             # print([node for node in graph['nodes'] if node['class_name'] == 'wineglass'])
             if not success:
-                ipdb.set_trace()
                 return None, None, False
 
         # pdb.set_trace()
@@ -1273,8 +1274,5 @@ class Task:
         env_goal = {task_name: [], "noise": []}
         env_goal[task_name] = env_goal_0[tasks[0]]
         env_goal["noise"] = env_goal_1[tasks[1]]
-        #print(env_goal_0)
-        #print(env_goal_1)
-        #print(env_goal)
         return graph, env_goal, True
     

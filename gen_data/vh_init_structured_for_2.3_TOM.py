@@ -161,15 +161,13 @@ if __name__ == "__main__":
     apartment_ids = [0, 1, 2, 3, 4, 6]
     if args.task == "all":
         # tasks = ["setup_table", "prepare_food", "watch_tv"]
-        tasks = ["setup_table", "put_fridge", "prepare_food", "put_dishwasher", "setup_desk", "prepare_drink", "collect_document", "collect_toy", "unload_dishwasher", "clear_fridge", "clear_table", "clear_desk"]
+        tasks = ["setup_table", "put_fridge", "prepare_food", "put_dishwasher", "setup_desk", "prepare_drink", "collect_document", "collect_toy"]
         new_tasks = []
         for i in range (len(tasks)):
             for j in range(i, len(tasks)):
                 if tasks[i] == tasks[j] or [tasks[i], tasks[j]] in exclude_combinations:
                     continue
                 new_tasks.append("{}_and_{}".format(tasks[i], tasks[j]))
-            if "unload" in tasks[i] or "clear" in tasks[i]:
-                continue
             new_tasks.append(tasks[i])
         tasks = new_tasks
     else:
@@ -178,7 +176,7 @@ if __name__ == "__main__":
     num_per_apartment = args.num_per_apartment
 
     for task in tasks:
-        if task == "setup_table_and_put_dishwasher" or task == "put_fridge_and_prepare_food": #task intend to show hinder
+        if task == "setup_table_and_put_dishwasher" or task == "put_fridge_and_prepare_food" or task == "setup_desk_and_collect_document": #task intend to show hinder
             num_per_apartment = 40
         elif "collect_toy" in task: #task with less diversity
             num_per_apartment = 5

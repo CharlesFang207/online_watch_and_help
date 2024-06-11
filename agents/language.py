@@ -30,9 +30,6 @@ class LanguageInquiry(Language):
     
     # Use the helper's belief and sampled graph to extract the most certain object information
     def generate_response(self, sampled_graph, edge_belief):
-        #return a language response object, information is contained in response.obj_positions
-        #obj_positions have this structure {obj_name: {obj_id1: {"predicate": relation, "position": id of 
-        # current position, "class_name": name of current position, "room": current room}, obj_id2: ...}}
         assert(self.language_type == 'location')
         assert(self.obj_list is not None)
         hinder = random.random()
@@ -255,7 +252,7 @@ class LanguageInquiry(Language):
             ans = ""
             for obj in self.obj_list:
                 ans += "Where is {}?\n".format(obj)
-        return ans
+            return ans
 
         prompt = """
                 Generate natural language from a language template.
@@ -293,7 +290,7 @@ class LanguageInquiry(Language):
                     "content": prompt,
                 }
             ],
-            model="gpt-4",
+            model="gpt-4o",
         )
         return response.choices[0].message.content.strip()
         
@@ -320,7 +317,7 @@ class LanguageResponse(Language):
         return self.language.split('_')
     
     def to_language(self, mode="full"):  # interface for converting to natural language
-        if self.try_to_hinder:
+        if self.try_to_hinder and mode == "full":
             print("This language attempt to hinder")
         if self.language_type == "location":
             ans = ""
@@ -397,7 +394,7 @@ class LanguageResponse(Language):
                             "content": prompt2,
                         }
                     ],
-                    model="gpt-4",
+                    model="gpt-4o",
                 )
 
                 return response2.choices[0].message.content.strip()

@@ -923,6 +923,7 @@ class MCTS_agent_particle_v2_instance:
 
         self.particles = [None for _ in range(self.num_particles)]
         self.particles_full = [None for _ in range(self.num_particles)]
+        self.have_asked = False
 
         # if self.mcts is None:
         #    raise Exception
@@ -1093,19 +1094,14 @@ class MCTS_agent_particle_v2_instance:
 
         # TODO: maybe we will want to keep the previous belief graph to avoid replanning
         # self.sim_env.reset(self.previous_belief_graph, {0: goal_spec, 1: goal_spec})
-        if inquiry and in_same_room:
+        if inquiry and in_same_room and not self.have_asked:
             # agent 1 asks agent 2 for help
-            print("agent_id: ", self.agent_id)
             if self.agent_id == 1:
-                obj_seek = self.whether_to_ask(goal_spec, 0.2, "location")
+                obj_seek = self.whether_to_ask(goal_spec, 0.2,"location")
+                print("whether to ask", obj_seek)
                 if obj_seek is not None:
-                    language_to_be_sent = LanguageInquiry(obj_seek, 1, 2, "location") 
-            # agent 2 asks agent 1 does he need help
-            '''elif self.agent_id == 2:
-                ask_bool = self.whether_to_ask(language_type="location")
-                if ask_bool:
-                    language_to_be_sent = LanguageInquiry(None, self.agent_id, (self.agent_id + 1) % 2, "location")'''
-        
+                    language_to_be_sent = LanguageInquiry(obj_seek, 1, 2, "location")
+                    self.have_asked = True 
         last_action = self.last_action
         last_subgoal = self.last_subgoal[0] if self.last_subgoal is not None else None
         subgoals = self.last_subgoal
@@ -1544,8 +1540,11 @@ class MCTS_agent_particle_v2_instance:
                     ratio = entropy / np.log2(distribution.shape[0])
                     record.append(ratio)
                 record.sort()
-                if record[info["count"] - 1] >= boundary:
-                    uncertain_objects.append(goal_name.split('_')[1])
+                try:
+                    if record[info["count"] - 1] >= boundary:
+                        uncertain_objects.append(goal_name.split('_')[1])
+                except IndexError:
+                    continue
             if len(uncertain_objects) == 0:
                 return None
             return uncertain_objects
@@ -1565,7 +1564,7 @@ class MCTS_agent_particle_v2_instance:
         simulator_type="python",
         is_alice=False,
     ):
-
+        self.have_asked = False
         self.last_action = None
         self.last_subgoal = None
         self.failed_action = False

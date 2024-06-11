@@ -47,10 +47,6 @@
         [
             "ON",
             "kitchentable"
-        ],
-        [
-            "ON",
-            "coffeetable"
         ]
     ],
     "crayon": [
@@ -79,24 +75,16 @@
         [
             "ON",
             "kitchencounter"
-        ],
-        [
-            "ON",
-            "coffeetable"
-        ],
-        [
-            "ON",
-            "kitchentable"
-        ],
-        [
-            "INSIDE",
-            "kitchencabinet"
         ]
     ],
     "notes": [
         [
             "INSIDE",
             "cabinet"
+        ],
+        [
+            "ON",
+            "sofa"
         ],
         [
             "ON",
@@ -177,14 +165,6 @@
         [
             "ON",
             "kitchencounter"
-        ],
-        [
-            "ON",
-            "coffeetable"
-        ],
-        [
-            "ON",
-            "kitchentable"
         ]
     ],
     "novel": [
@@ -239,6 +219,10 @@
         [
             "INSIDE",
             "cabinet"
+        ],
+        [
+            "ON",
+            "kitchencounter"
         ],
         [
             "ON",
@@ -398,6 +382,10 @@
             "ON",
             "desk"
         ], 
+        [
+            "ON",
+            "coffeetable"
+        ],
         [
             "ON",
             "kitchentable"
@@ -854,6 +842,10 @@
         ],
         [
             "ON",
+            "sofa"
+        ],
+        [
+            "ON",
             "kitchencounter"
         ]
     ],
@@ -903,6 +895,10 @@
         [
             "ON",
             "coffeetable"
+        ],
+        [
+            "ON",
+            "sofa"
         ],
         [
             "ON",
@@ -979,6 +975,10 @@
         [
             "INSIDE",
             "cabinet"
+        ],
+        [
+            "INSIDE",
+            "stove"
         ],
         [
             "INSIDE",

@@ -145,8 +145,8 @@ class ArenaMP(object):
                 #     opponent_subgoal = self.agents[1 - it].last_subgoal
                 # ipdb.set_trace()
                 in_same_room = self.whether_in_same_room(self.agents)
-
-                in_same_room = True
+                print("in same room:", in_same_room)
+                #in_same_room = True
                 
                 dict_actions[it], dict_info[it], language_rsps, change_goal = agent.get_action(
                     obs[it],
@@ -645,6 +645,7 @@ class ArenaMP(object):
                 if room_id != new_room_id:
                     all_in_same_room = False
                     break
+        return all_in_same_room
 
     def step(self, true_graph=False, inquiry=False, modify_graph=False, room_list=None):
 
@@ -724,10 +725,11 @@ class ArenaMP(object):
             "graph": [self.env.init_unity_graph],
             "obs": [],
             "language": {0: [], 1: []},
+            "language_object": {0: [], 1: []},
             "have_belief": False,
             "false_belief_rooms": []
         }
-        if not self.env.task_id % 3 == 0 and not self.env.task_id == 1700:
+        if not self.env.task_id % 4 == 0 and not self.env.task_id == 3337:
             '''temp = [node for node in self.env.init_graph["nodes"] if node["class_name"] == "bookshelf"]
             if len(temp) == 0:
                 saved_info["have_belief"] = True'''
@@ -750,7 +752,6 @@ class ArenaMP(object):
         self.saved_info = saved_info
         step = 0
         prev_agent_position = np.array([0, 0, 0]).astype(np.float32)
-        step = 0
         while True:
             step += 1
             if save_img is not None:
@@ -758,9 +759,9 @@ class ArenaMP(object):
                 obs = self.env.get_observation(0, "image", info=img_info)
                 cv2.imwrite("{}/img_{:04d}.png".format(save_img, step), obs)
             if step == 1 and saved_info["have_belief"]:
-                (obs, reward, done, infos), actions, agent_info, language = self.step(modify_graph=True, room_list=saved_info["false_belief_rooms"])
+                (obs, reward, done, infos), actions, agent_info, language = self.step(inquiry=True, modify_graph=True, room_list=saved_info["false_belief_rooms"])
             else:
-                if step % 3 == 1 and not self.env.task_id % 4 == 1:
+                if not self.env.task_id % 8 == 0:
                     (obs, reward, done, infos), actions, agent_info, language = self.step(inquiry=True)
                 else:
                     (obs, reward, done, infos), actions, agent_info, language = self.step()
@@ -827,8 +828,16 @@ class ArenaMP(object):
                     # ipdb.set_trace()
                 # if len(saved_info['obs']) > 1 and set(saved_info['obs'][0]) != set(saved_info['obs'][1]):
                 #    ipdb.set_trace()
-                saved_info["language"][0].append(language[0])
-                saved_info["language"][1].append(language[1])
+            saved_info["language_object"][0].append(language[0])
+            saved_info["language_object"][1].append(language[1])
+            if language[0] is not None:
+                saved_info["language"][0].append(language[0].to_language(mode="natural"))
+            else:
+                saved_info["language"][0].append(None)
+            if language[1] is not None:
+                saved_info["language"][1].append(language[1].to_language(mode="natural"))
+            else:
+                saved_info["language"][1].append(None)
 
             # ipdb.set_trace()
             if done:
