@@ -94,7 +94,7 @@ if __name__ == '__main__':
     id_run = 0
     random.seed(id_run)
     episode_ids = list(range(len(env_task_set)))
-    episode_ids = list(range(1601))
+    episode_ids = list(range(2401, len(env_task_set)))
     episode_ids = sorted(episode_ids)
     random.shuffle(episode_ids)
     print('episode_ids:', episode_ids)
@@ -114,7 +114,7 @@ if __name__ == '__main__':
                                 observation_types=[args.obs_type for _ in range(2)],
                                 use_editor=args.use_editor,
                                 executable_args=executable_args,
-                                base_port=8084,
+                                base_port=8088,
                                 convert_goal=True)
 
 
@@ -207,6 +207,10 @@ if __name__ == '__main__':
 
             Path(args.record_dir).mkdir(parents=True, exist_ok=True)
             if len(saved_info['obs']) > 0:
+                if not steps == args.max_episode_length and not success:
+                    saved_info["fail_to_execute"] = True
+                else:
+                    saved_info["fail_to_execute"] = False
                 pickle.dump(saved_info, open(log_file_name, 'wb'))
             else:
                 with open(log_file_name, 'w+') as f:

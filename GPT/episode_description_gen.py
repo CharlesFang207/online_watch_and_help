@@ -2,6 +2,7 @@ import os
 import pickle
 import json
 import sys
+import copy
 from openai import OpenAI
 
 client = OpenAI(
@@ -13,78 +14,28 @@ sys.path.insert(0, f"{curr_dir}/../../online_watch_and_help/")
 from agents import language
 sys.path.insert(0, f"{curr_dir}/")
 
-def remove_key(obj, key):
-    if isinstance(obj, dict):
-        to_remove = [k for k in obj if k == key]
-        for k in to_remove:
-            del obj[k]
-        for v in obj.values():
-            remove_key(v, key)
-    elif isinstance(obj, list):
-        for item in obj:
-            remove_key(item, key)
-
 def remove_sections(data, keys_to_remove):
     for key in keys_to_remove:
         if key in data:
             del data[key]
 
-episodes_list = [888]
+episodes_list = [812]
 
 for episode in episodes_list:
-    pickle_file_path = f'/home/scai/Workspace/hshi33/virtualhome/data/full_dataset/800+episodes/logs_episode.{episode}_iter.0.pik'
+    pickle_file_path = '/home/scai/Workspace/hshi33/virtualhome/data/full_dataset/2_partial_opencost0_closecostFalse_walkcost0.05_forgetrate0_changeroomcost0.5v9_particles_v2/logs_episode.{}_iter.0.pik'.format(episode)
 
     if not os.path.exists(pickle_file_path):
         raise FileNotFoundError(f"File not found: {pickle_file_path}")
 
     with open(pickle_file_path, 'rb') as file:
         data = pickle.load(file)
-
-    remove_key(data, 'obj_transform')
-    remove_key(data, 'bounding_box')
-    keys_to_remove = ['gt_goals','init_unity_graph','plan','goals_finished','belief','belief_room','belief_graph', 'graph','obs', "env_id", "task_name"]
+        
+    if data["fail_to_execute"]:
+        print("Episode {} has failed to execute".format(episode))
+        continue
+    keys_to_remove = ['gt_goals','init_unity_graph','plan','goals_finished','belief','belief_room','belief_graph', 'graph','obs', "env_id", "task_name", "language_object"]
 
     remove_sections(data, keys_to_remove)
-
-    dict = {0: [], 1: []}
-
-    action_dict = {0: [], 1: []}
-    last_action_0 = data["action"][0][0]
-    last_action_1 = data["action"][1][0]
-    for index, action in enumerate(data["action"][0]):
-        if not index == 0 and action == last_action_0:
-            action_dict[0].append(None)
-            continue
-        action_dict[0].append(action)
-        last_action_0 = action
-
-    for index, action in enumerate(data["action"][1]):
-        if not index == 0 and action == last_action_1:
-            action_dict[1].append(None)
-            continue
-        action_dict[1].append(action)
-        last_action_1 = action
-    data["action"] = action_dict
-    for index, language in enumerate(data["language"][0]):
-        if not index % 2 == 0:
-            continue 
-        if language is None:
-            dict[0].append(None)
-        else:
-            dict[0].append(language.to_language(mode="natural"))
-        if data["language"][1][index] is None:
-            dict[1].append(None)
-        else:
-            valid = False
-            for obj_name, info in data["language"][1][index].obj_positions.items():
-                for obj_id, places in info.items():
-                    if len(places) > 0:
-                        for place in places:
-                            if place["position"] is not None:
-                                valid = True
-            if valid:
-                dict[1].append(data["language"][1][index].to_language(mode="natural"))
-    data["language"] = dict
 
     json_file_path = f'/home/scai/Workspace/sye10/virtualHome/online_watch_and_help/GPT/pipelined_data/episode_{episode}.json'
 
