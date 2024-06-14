@@ -20,10 +20,10 @@ def remove_sections(data, keys_to_remove):
         if key in data:
             del data[key]
 
-episodes_list = [713, 835, 2063, 259, 3447, 2765, 1185, 707, 523, 1143, 3073, 615, 423, 1899, 1015, 1073]
+episodes_list = [1143]
 
 for episode in episodes_list:
-    pickle_file_path = '/home/scai/Workspace/hshi33/virtualhome/data/full_dataset/2_partial_opencost0_closecostFalse_walkcost0.05_forgetrate0_changeroomcost0.5v9_particles_v2/logs_episode.{}_iter.0.pik'.format(episode)
+    pickle_file_path = '/home/scai/Workspace/hshi33/virtualhome/data/full_dataset/1500+episodes/logs_episode.{}_iter.0.pik'.format(episode)
 
     if not os.path.exists(pickle_file_path):
         raise FileNotFoundError(f"File not found: {pickle_file_path}")
@@ -49,8 +49,10 @@ for episode in episodes_list:
     Structure: Actions: A list of actions taken by agent 0 and agent 1, Language: Verbal communication between the agents in a list format.
     Instructions:
     1. Synchronization guidelines: Synchronize actions and language, the first entry in the "language" list corresponds to the first action step, the second entry in the "language" list corresponds to the second action and so on. If a language entry is null, there is no communication at that timestep. Synchronize descriptions of actions and language strictly by timesteps.
-    2. Agent names: Use a random male name for agent 0 and a random female name for agent 1
+    2. Agent names: Make sure to randomize the names. Use a random male name for agent 0 and a random female name for agent 1
     3. Description guidelines: Describe the actions and language of both agents together, step by step. Avoid adjectives and excessive descriptions. Do not skip any action or language steps.
+    4. After establishing the timeline, make the description shorter, more concise and flow a lot like a story.
+    5. Place more emphasis on the events immediately following the language conversation (if any)
     """
 
     further_instructions = """
@@ -67,7 +69,7 @@ for episode in episodes_list:
     Fifth timestep: John closes the fridge. Emma walks to the kitchen (No language communication)
     Sixth timestep: John walks into the living room (No language communication)
     Generated response:
-    John walked into the kitchen while Emma headed to the living room. Then, John moved to the fridge as Emma approached the table. John opened the fridge while Emma grabbed a book from the table. "Have you seen the remote control?" John asked. "I saw a remote control on the sofa," Emma responded. John grabbed the milk from the fridge as Emma put down the book. He closed the fridge while Emma walked to the kitchen. Finally, John walked into the living room.
+    John walked into the kitchen as Emma headed to the living room. He moved to the fridge while Emma approached the table and grabbed a book. "Have you seen the remote control?" John asked, opening the fridge. "I saw it on the sofa," Emma replied, putting down the book. John took the milk from the fridge and closed it, just as Emma walked into the kitchen. Finally, John made his way to the living room.
     """
 
     user_prompt_1 = """
@@ -75,17 +77,23 @@ for episode in episodes_list:
     """
 
     response_1 = """
-    John grabbed the remote control as Emily walked to the bedroom. Then, John made his way to the kitchen while Emily headed to the cabinet. As John proceeded to the bathroom, Emily opened the cabinet. Moving to the living room, John asked, "Can you help me find the remote control and the book?" Emily, grabbing a wine glass from the cabinet, responded, "I'm not sure where the remote control was initially, but I did find it on the coffee table in the living room. As for the book, I spotted one inside the cabinet in the bedroom, although I'm unsure about the location of the other book." John grabbed another remote control and walked to the desk while Emily walked to the coffee table and placed the wine glass on it. John then placed the remote control on the desk as Emily moved to the kitchen. Next, John put another remote control on the desk while Emily walked to the fridge and opened it. John proceeded to the bedroom as Emily grabbed the alcohol from the fridge. John then walked to the book and grabbed it while Emily returned to the bedroom and put the alcohol on the coffee table. Finally, John walked to the living room and then to the desk, where he placed the book.
+    John grabbed the remote control as Emily walked to the bedroom. He then made his way to the kitchen while Emily headed to the cabinet. John detoured to the bathroom as Emily opened the cabinet. In the living room, John called out, "Can you help me find the remote control and the book?" Emily, taking a wine glass, replied, "I found the remote on the coffee table and a book in the bedroom cabinet."
+
+    John grabbed another remote and went to the desk while Emily placed the wine glass on the coffee table. He put the remote on the desk as Emily walked to the fridge. John continued to the bedroom as Emily retrieved some alcohol from the fridge. He picked up the book while Emily returned to the bedroom to place the alcohol on the coffee table. Finally, John walked to the living room and then to the desk, where he placed the book.
     """
 
     user_prompt_2 = """
-    {"task_id":955,"action":{"0":["[walk] <kitchen> (111)","[walk] <kitchencabinet> (144)","[open] <kitchencabinet> (143)","[open] <kitchencabinet> (144)","[walk] <bedroom> (214)","[walk] <bread> (387)","[grab] <bread> (387)","[walk] <kitchen> (111)","[walk] <fridge> (157)","[open] <fridge> (157)","[putin] <bread> (387) <fridge> (157)",null,null,null],"1":["[walk] <cabinet> (275)","[open] <cabinet> (275)","[walk] <kitchen> (111)","[walk] <potato> (382)","[grab] <potato> (382)","[putback] <potato> (382) <kitchentable> (138)","[open] <kitchencabinet> (147)","[open] <kitchencabinet> (148)","[grab] <potato> (384)","[putback] <potato> (384) <kitchentable> (138)","[grab] <carrot> (385)","[putback] <carrot> (385) <kitchentable> (138)","[grab] <carrot> (386)","[putback] <carrot> (386) <kitchentable> (138)"]},"language":{"0":[null,null,null,"Would you happen to know where the bread is?",null,null,null,null,null,null,null,null,null,null],"1":[null,null,null,"I found some bread inside a cabinet in the bedroom.",null,null,null,null,null,null,null,null,null,null]},"have_belief":true,"false_belief_rooms":["kitchen"]}
+    {"task_id":812,"goals":{"0":{"inside_milk_225":{"count":1,"grab_obj_ids":[338],"container_ids":[225]},"inside_bread_225":{"count":1,"grab_obj_ids":[339],"container_ids":[225]}},"1":{"on_potato_210":{"count":3,"grab_obj_ids":[342,344,346,347,348,349,350,351,352,353,354,355],"container_ids":[210]},"on_carrot_210":{"count":3,"grab_obj_ids":[356,357,358],"container_ids":[210]}}},"action":{"0":["[walk] <kitchen> (126)","[walk] <bedroom> (50)","[walk] <kitchen> (126)","[walk] <kitchencabinet> (206)","[open] <kitchencabinet> (206)","[open] <kitchencabinet> (207)","[open] <kitchencabinet> (208)","[open] <kitchencabinet> (209)","[open] <stove> (226)","[grab] <bread> (339)","[walk] <fridge> (225)","[putin] <bread> (339) <fridge> (225)","[walk] <dishwasher> (228)","[open] <dishwasher> (228)","[open] <microwave> (234)","[walk] <bedroom> (50)","[walk] <kitchen> (126)","[walk] <livingroom> (261)","[walk] <kitchen> (126)","[walk] <kitchencabinet> (203)","[open] <kitchencabinet> (203)","[open] <kitchencabinet> (204)","[grab] <milk> (338)","[walk] <fridge> (225)","[putin] <milk> (338) <fridge> (225)"],"1":["[walk] <kitchen> (126)","[grab] <carrot> (356)","[walk] <kitchencounter> (210)","[putback] <carrot> (356) <kitchencounter> (210)","[open] <fridge> (225)","[walk] <potato> (355)","[grab] <potato> (355)","[grab] <potato> (347)","[walk] <kitchencounter> (210)","[putback] <potato> (355) <kitchencounter> (210)","[putback] <potato> (347) <kitchencounter> (210)","[walk] <potato> (348)","[grab] <potato> (346)","[grab] <carrot> (358)","[putback] <potato> (346) <kitchencounter> (210)","[grab] <carrot> (357)","[putback] <carrot> (358) <kitchencounter> (210)","[putback] <carrot> (357) <kitchencounter> (210)",null,null,null,null,null,null,null]},"finished":true,"language":{"0":[null,"Could you help me find the milk and bread? I seem to have misplaced them.",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"1":[null,"The milk and bread are both inside the kitchen cabinet.",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null]},"have_belief":false,"false_belief_rooms":[],"fail_to_execute":false}
     """
 
     response_2 = """
-    Kevin walked into the kitchen while Alice headed to the cabinet. Then, Kevin walked to the kitchen cabinet as Alice opened it. Kevin opened the kitchen cabinet while Alice walked to the kitchen. "Would you happen to know where the bread is?" Kevin asked. "I found some bread inside a cabinet in the bedroom," Alice responded as she walked to the potatoes. Kevin opened another kitchen cabinet while Alice grabbed a potato. Kevin then walked to the bedroom as Alice put the potato back on the kitchen table.
+    Kevin walked into the kitchen with Emma following. He went to the bedroom and asked, "Could you help me find the milk and bread?" Emma replied, "They're in the kitchen cabinet," as she grabbed a carrot.
 
-    Kevin walked to the bread while Alice opened the kitchen cabinet again. He grabbed the bread as Alice opened another kitchen cabinet. Kevin returned to the kitchen while Alice grabbed the potato again. Kevin walked to the fridge as Alice put the potato back on the kitchen table. He opened the fridge while Alice grabbed a carrot. Kevin put the bread in the fridge as Alice put the carrot back on the kitchen table. Finally, Alice grabbed another carrot and put it back on the kitchen table.
+    Kevin returned to the kitchen, opened the cabinet, and searched for the bread. Emma placed the carrot on the counter and opened the fridge. She grabbed a potato while Kevin continued searching. She placed the potato on the counter and grabbed another.
+
+    Kevin found the bread and put it in the fridge. Emma grabbed a potato and a carrot, placing them on the counter. Kevin checked the dishwasher and microwave as Emma continued adding vegetables to the counter.
+
+    Kevin briefly returned to the bedroom, then came back to the kitchen and the living room. He resumed searching the cabinets until he found the milk, which he placed in the fridge.
     """
 
     with open(json_file_path, 'r') as json_file:
@@ -102,12 +110,12 @@ for episode in episodes_list:
         {"role": "user", "content": final_prompt}
     ],
     model="gpt-4o",
-    temperature=0.3
+    temperature=1.0
     )
 
     episode_description = response.choices[0].message.content.strip()
 
-    output_path = f'/home/scai/Workspace/sye10/virtualHome/online_watch_and_help/GPT/episode_descriptions/episode_{episode}.txt'
+    output_path = f'/home/scai/Workspace/sye10/virtualHome/online_watch_and_help/GPT/episode_descriptions/episode_{episode}_compare.txt'
 
     with open(output_path,'w') as text_file:
         text_file.write(episode_description)
