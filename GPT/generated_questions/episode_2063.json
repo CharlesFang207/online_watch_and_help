@@ -1,0 +1,19 @@
+{
+    "2063": {
+        "description": "b'Kevin walked into the kitchen while Sarah headed to the living room. Kevin then walked to the microwave as Sarah moved to the bedroom. Kevin opened the kitchen cabinet while Sarah walked to the cabinet. Kevin grabbed a coffeepot from the kitchen cabinet as Sarah opened the cabinet. Kevin walked to the dishwasher while Sarah grabbed a wineglass from the cabinet. Kevin opened the dishwasher and put the coffeepot inside it while Sarah walked to the kitchen. Kevin then asked, \"Could you tell me where I might find a mug?\" Sarah responded, \"I found the mug inside the cabinet in the bedroom,\" as she walked to the kitchen counter and put the wineglass on it.\\n\\nKevin opened another kitchen cabinet while Sarah walked to the milk and grabbed it. Kevin opened yet another kitchen cabinet as Sarah walked back to the kitchen counter and put the milk on it. Kevin opened the fridge while Sarah walked back to the bedroom. Kevin then walked to the microwave and opened it while Sarah returned to the kitchen. Kevin opened another kitchen cabinet while Sarah walked back to the bedroom. Kevin opened yet another kitchen cabinet as Sarah walked back to the kitchen. Kevin walked to another kitchen cabinet and opened it while Sarah walked back to the bedroom. Kevin opened the stove while Sarah walked back to the kitchen.\\n\\nKevin walked to the bedroom while Sarah walked back to the bedroom. Kevin walked to another coffeepot and grabbed it while Sarah walked back to the kitchen. Kevin walked back to the kitchen while Sarah walked back to the bedroom. Kevin walked to the dishwasher and put the coffeepot inside it while Sarah walked back to the kitchen. Kevin then walked back to the bedroom while Sarah walked back to the bedroom. Kevin walked to the mug and grabbed it while Sarah walked back to the kitchen. Kevin walked back to the kitchen while Sarah walked back to the bedroom. Kevin walked to the dishwasher and put the mug inside it while Sarah walked back to the kitchen.\\n\\nSarah continued to walk back and forth between the bedroom and the kitchen multiple times, while Kevin remained in the kitchen.'",
+        "questions": {
+            "1": "Given the above interaction, if Sarah wants to hinder Kevin from achieving his goal, which of the following locations did Sarah least likely believe the mug was located when giving information?\nA) Living room\nB) Kitchen cabinet\nC) Bedroom cabinet",
+            "2": "Given the above interaction, if Sarah wants to hinder Kevin from achieving his goal, which of the following objects did Sarah least likely believe was located inside the bedroom cabinet when giving information?\nA) Mug\nB) Wineglass\nC) Spoon",
+            "3": "Given the above interaction, assuming that Sarah believes that the mug is inside the bedroom cabinet, when giving information, Sarah is most likely:\nA) Trying to help\nB) Trying to hinder\nC) Neither trying to help nor hinder",
+            "4": "Given the above interaction, assuming that Sarah believes that there is nothing worthwhile inside the bedroom cabinet, when giving information, Sarah is most likely:\nA) Trying to help\nB) Trying to hinder\nC) Neither trying to help nor hinder",
+            "5": "Given the above interaction, assuming that Sarah believes the mug is only in the microwave, when giving information, Sarah is most likely:\nA) Trying to help\nB) Trying to hinder\nC) Neither trying to help nor hinder"
+        },
+        "answers": {
+            "1": "C) Bedroom cabinet",
+            "2": "A) Mug",
+            "3": "A) Trying to help",
+            "4": "B) Trying to hinder",
+            "5": "B) Trying to hinder"
+        }
+    }
+}

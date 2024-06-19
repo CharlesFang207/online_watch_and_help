@@ -1,0 +1,19 @@
+{
+    "707": {
+        "description": "b'Kevin grabbed a wineglass and placed it on the kitchen table while Alice grabbed another wineglass. Kevin then walked to the living room as Alice walked to the mug. Kevin returned to the kitchen while Alice grabbed the mug and walked to the bathroom. \"Could you help me find the spoon?\" Kevin asked as he walked to the microwave. \"I spotted a spoon inside the microwave in the kitchen, and also saw a few in the kitchen cabinet,\" Alice responded while walking to the bedroom. Kevin opened the kitchen cabinet as Alice walked to the kitchen. Kevin grabbed a spoon from the cabinet and placed it on the kitchen table while Alice put the wineglass on the kitchen table. Finally, Kevin finished his task as Alice walked to the stove.'",
+        "questions": {
+            "1": "Given the above interaction, if Alice wants to hinder Kevin from achieving his goal, which of the following locations did Alice least likely believe the spoon was located when giving information?\n    A) Bathroom\n    B) Stove\n    C) Microwave",
+            "2": "Given the above interaction, if Alice wants to hinder Kevin from achieving his goal, which of the following objects did Alice least likely believe was located inside the microwave when giving information?\n    A) Spoon\n    B) Wineglass\n    C) Plate",
+            "3": "Given the above interaction, assuming that Alice believes that the spoon is inside the microwave, when giving information, Alice is most likely:\n    A) Trying to help\n    B) Trying to hinder\n    C) Neither trying to help nor hinder",
+            "4": "Given the above interaction, assuming that Alice believes that there is nothing worthwhile inside the microwave, when giving information, Alice is most likely:\n    A) Trying to help\n    B) Trying to hinder\n    C) Neither trying to help nor hinder",
+            "5": "Given the above interaction, assuming that Alice believes the spoon is only in the bathroom, when giving information, Alice is most likely:\n    A) Trying to help\n    B) Trying to hinder\n    C) Neither trying to help nor hinder"
+        },
+        "answers": {
+            "1": "C) Microwave",
+            "2": "A) Spoon",
+            "3": "A) Trying to help",
+            "4": "B) Trying to hinder",
+            "5": "B) Trying to hinder"
+        }
+    }
+}

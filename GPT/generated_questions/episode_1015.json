@@ -1,0 +1,19 @@
+{
+    "1015": {
+        "description": "b'Kevin walked into the kitchen while Alice did the same. Kevin then walked to the milk as Alice moved towards the fridge. \"Can you help me find a carrot?\" Kevin asked. \"I saw a carrot inside the kitchen cabinet, but for the others, I\\'m not really sure where they are,\" Alice responded. Kevin grabbed the milk while Alice opened the fridge. Kevin opened the kitchen cabinet as Alice walked to the stove.\\n\\nKevin walked to the fridge while Alice walked to the coffeepot. Kevin put the milk in the fridge as Alice grabbed the coffeepot. Kevin then walked to another kitchen cabinet while Alice walked to the dishwasher. Kevin opened the kitchen cabinet as Alice opened the dishwasher. Kevin opened another kitchen cabinet while Alice grabbed another coffeepot. Kevin opened yet another kitchen cabinet while Alice put the first coffeepot in the dishwasher.\\n\\nKevin walked to the stove while Alice grabbed a spoon. Kevin opened the stove as Alice put the spoon in the dishwasher. Kevin grabbed a carrot while Alice put the second coffeepot in the dishwasher. Kevin walked to the fridge as Alice walked to the living room. Kevin put the carrot in the fridge while Alice grabbed another spoon. Kevin walked to another carrot while Alice walked back to the kitchen. Kevin grabbed the carrot as Alice walked to the dishwasher. Kevin walked to the fridge as Alice put the spoon in the dishwasher. Kevin then put the carrot in the fridge.'",
+        "questions": {
+            "1": "Given the above interaction, if Alice wants to help Kevin achieve his goal, which of the following locations did Alice most likely believe the carrot was located when giving information?\nA) Kitchen cabinet\nB) Fridge\nC) Living room",
+            "2": "Given the above interaction, if Alice wants to help Kevin achieve his goal, which of the following objects did Alice most likely believe was inside the kitchen cabinet when giving information?\nA) Spoon\nB) Carrot\nC) Coffeepot",
+            "3": "Given the above interaction, assuming that Alice believes that the carrot is inside the kitchen cabinet, when giving information, Alice is most likely:\nA) Trying to help\nB) Trying to hinder\nC) Neither trying to help nor hinder",
+            "4": "Given the above interaction, assuming that Alice believes that there is nothing worthwhile inside the kitchen cabinet, when giving information, Alice is most likely:\nA) Trying to help\nB) Trying to hinder\nC) Neither trying to help nor hinder",
+            "5": "Given the above interaction, assuming that Alice believes the carrot is only in the fridge, when giving information, Alice is most likely:\nA) Trying to help\nB) Trying to hinder\nC) Neither trying to help nor hinder"
+        },
+        "answers": {
+            "1": "A) Kitchen cabinet",
+            "2": "B) Carrot",
+            "3": "A) Trying to help",
+            "4": "B) Trying to hinder",
+            "5": "B) Trying to hinder"
+        }
+    }
+}

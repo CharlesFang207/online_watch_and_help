@@ -1,0 +1,19 @@
+{
+    "275": {
+        "description": "b'Kevin grabbed a wine glass and walked to the kitchen while Emma walked to the coffeepot. Kevin placed the wine glass on the kitchen table as Emma grabbed the coffeepot. Kevin then walked to another wine glass while Emma opened the dishwasher. Kevin grabbed a different wine glass as Emma opened a kitchen cabinet. Kevin placed the wine glass on the kitchen table while Emma opened the microwave. Kevin walked to a spoon as Emma opened another kitchen cabinet. Kevin grabbed the spoon and asked, \"Do you know where the spoon is?\" Emma responded, \"I found a spoon inside the kitchen cabinet in the kitchen, another spoon inside a different kitchen cabinet, and one more spoon inside the bathroom cabinet.\" Kevin placed the spoon on the kitchen table while Emma grabbed another coffeepot and put it in the dishwasher.\\n\\nKevin walked to the bathroom as Emma put the coffeepot in the dishwasher. Kevin walked to the bathroom cabinet while Emma walked to a spoon. Kevin opened the bathroom cabinet as Emma grabbed the spoon. Kevin walked back to the kitchen while Emma opened a kitchen cabinet. Kevin walked to another spoon as Emma walked to the dishwasher. Kevin grabbed the spoon and asked, \"Have you seen the spoon around?\" Emma responded, \"I found a spoon inside the kitchen cabinet in the kitchen, another spoon inside a different kitchen cabinet, and one more spoon inside the bathroom cabinet.\" Kevin placed the spoon on the kitchen table while Emma put the spoon in the dishwasher.\\n\\nKevin walked to another spoon as Emma opened another kitchen cabinet. Kevin grabbed the spoon while Emma opened another kitchen cabinet. Kevin walked to another spoon as Emma grabbed a spoon. Kevin walked to another spoon while Emma walked to the dishwasher. Kevin grabbed the spoon and placed it on the kitchen table while Emma put the spoon in the dishwasher. Kevin grabbed another spoon and placed it on the kitchen table while Emma grabbed a spoon and put it in the dishwasher. Finally, Kevin grabbed another spoon and placed it on the kitchen table while Emma grabbed a spoon and put it in the dishwasher.'",
+        "questions": {
+            "1": "Given the above interaction, if Emma wants to help Kevin achieve his goal, which of the following locations did Emma most likely believe the spoon was located when giving information?\nA) Kitchen cabinet\nB) Microwave\nC) Living room",
+            "2": "Given the above interaction, if Emma wants to help Kevin achieve his goal, which of the following objects did Emma most likely believe was inside the Kitchen Cabinet when giving information?\nA) Fork\nB) Spoon\nC) Wine glass",
+            "3": "Given the above interaction, assuming that Emma believes that the spoon is inside the kitchen cabinet, when giving information, Emma is most likely:\nA) Trying to help\nB) Trying to hinder\nC) Neither trying to help nor hinder",
+            "4": "Given the above interaction, assuming that Emma believes that there is nothing worthwhile inside the kitchen cabinet, when giving information, Emma is most likely:\nA) Trying to help\nB) Trying to hinder\nC) Neither trying to help nor hinder",
+            "5": "Given the above interaction, assuming that Emma believes the spoon is only in the bathroom cabinet, when giving information, Emma is most likely:\nA) Trying to help\nB) Trying to hinder\nC) Neither trying to help nor hinder"
+        },
+        "answers": {
+            "1": "A) Kitchen cabinet",
+            "2": "B) Spoon",
+            "3": "A) Trying to help",
+            "4": "B) Trying to hinder",
+            "5": "B) Trying to hinder"
+        }
+    }
+}

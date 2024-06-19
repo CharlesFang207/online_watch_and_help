@@ -1,0 +1,19 @@
+{
+    "3073": {
+        "description": "b'Kevin walked into the kitchen while Emily headed to the bedroom. Kevin then walked to the kitchen cabinet as Emily made her way to the kitchen. Kevin opened the kitchen cabinet and asked, \"Do you have any idea where the wine, milk, and the wineglass might be?\" Emily responded, \"I spotted the wine inside the cabinet in the bedroom, but I\\'m not sure where the other wine is. The milk is nicely chilled inside the kitchen cabinet. There\\'s quite a collection of wine glasses inside the cabinet in the bedroom, on the stove and in the kitchen cabinet, and one more on the coffee table in the living room. However, there are also some wine glasses that I can\\'t seem to find.\"\\n\\nKevin proceeded to open the stove while Emily walked to the stove and opened it. Kevin then opened another kitchen cabinet as Emily walked to the kitchen cabinet and opened it. Kevin opened the microwave while Emily walked to the wineglass. Kevin grabbed a wineglass as Emily opened the fridge. Kevin opened another kitchen cabinet while Emily grabbed the juice and beer from the fridge. Kevin then opened yet another kitchen cabinet as Emily walked to the kitchen counter and put the beer and juice on it.\\n\\nKevin opened the dishwasher while Emily walked to the wineglass and grabbed it. Kevin grabbed the milk from the fridge and put the wineglass on the kitchen counter. Emily walked to the kitchen counter and put the wineglass on it. Kevin then put the milk on the kitchen counter and walked to the bedroom. He walked to the cabinet and opened it, grabbing a wineglass and wine. Kevin then walked back to the kitchen and walked to the kitchen counter, putting the wineglass and wine on it.'",
+        "questions": {
+            "1": "Given the above interaction, if Emily wants to help Kevin achieve his goal, which of the following locations did Emily most likely believe the wine was located when giving information?\nA) Cabinet in the bedroom\nB) Coffee table in the living room\nC) Dishwasher",
+            "2": "Given the above interaction, if Emily wants to help Kevin achieve his goal, which of the following objects did Emily most likely believe was inside the kitchen cabinet when giving information?\nA) Juice\nB) Milk\nC) Wineglass",
+            "3": "Given the above interaction, assuming that Emily believes that the milk is inside the kitchen cabinet, when giving information, Emily is most likely:\nA) Trying to help\nB) Trying to hinder\nC) Neither trying to help nor hinder",
+            "4": "Given the above interaction, assuming that Emily believes that there is nothing worthwhile inside the kitchen cabinet, when giving information, Emily is most likely:\nA) Trying to help\nB) Trying to hinder\nC) Neither trying to help nor hinder",
+            "5": "Given the above interaction, assuming that Emily believes the wine is only in the microwave, when giving information, Emily is most likely:\nA) Trying to help\nB) Trying to hinder\nC) Neither trying to help nor hinder"
+        },
+        "answers": {
+            "1": "A) Cabinet in the bedroom",
+            "2": "B) Milk",
+            "3": "A) Trying to help",
+            "4": "B) Trying to hinder",
+            "5": "B) Trying to hinder"
+        }
+    }
+}

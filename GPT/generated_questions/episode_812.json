@@ -1,0 +1,19 @@
+{
+    "812": {
+        "description": "b'Kevin walked into the kitchen while Emma followed. Kevin then walked to the bedroom and asked, \"Could you help me find the milk and bread? I seem to have misplaced them.\" Emma responded, \"The milk and bread are both inside the kitchen cabinet,\" as she grabbed a carrot. Kevin returned to the kitchen while Emma walked to the kitchen counter and placed the carrot on it. Kevin walked to the kitchen cabinet and opened it while Emma opened the fridge. Kevin continued to open more kitchen cabinets as Emma walked to grab a potato.\\n\\nKevin opened another kitchen cabinet while Emma grabbed a potato and another one. Kevin then opened the stove as Emma walked to the kitchen counter and placed both potatoes on it. Kevin grabbed the bread from the kitchen cabinet while Emma walked to grab another potato. Kevin walked to the fridge and put the bread inside it as Emma grabbed a potato and a carrot. Kevin walked to the dishwasher and opened it while Emma placed the potato on the kitchen counter. Kevin then opened the microwave as Emma grabbed another carrot and placed it on the kitchen counter.\\n\\nKevin walked back to the bedroom while Emma put the carrot on the kitchen counter. Kevin returned to the kitchen and walked to the living room while Emma placed the last carrot on the kitchen counter. Kevin then walked back to the kitchen and approached another kitchen cabinet, opening it. He continued to open more kitchen cabinets until he found the milk. Kevin grabbed the milk and walked to the fridge, placing it inside.'",
+        "questions": {
+            "1": "Given the above interaction, if Emma wants to hinder Kevin from achieving his goal, which of the following locations did Emma least likely believe the milk was located when giving information?\nA) Coffee table\nB) Stove\nC) Kitchen cabinet",
+            "2": "Given the above interaction, if Emma wants to hinder Kevin from achieving his goal, which of the following objects did Emma least likely believe was located inside the kitchen cabinet when giving information?\nA) Milk\nB) Carrot\nC) Spoon",
+            "3": "Given the above interaction, assuming that Emma believes that the milk is inside the kitchen cabinet, when giving information, Emma is most likely:\nA) Trying to help\nB) Trying to hinder\nC) Neither trying to help nor hinder",
+            "4": "Given the above interaction, assuming that Emma believes that there is nothing worthwhile inside the kitchen cabinet, when giving information, Emma is most likely:\nA) Trying to help\nB) Trying to hinder\nC) Neither trying to help nor hinder",
+            "5": "Given the above interaction, assuming that Emma believes the milk is only in the microwave, when giving information, Emma is most likely:\nA) Trying to help\nB) Trying to hinder\nC) Neither trying to help nor hinder"
+        },
+        "answers": {
+            "1": "C) Kitchen cabinet",
+            "2": "A) Milk",
+            "3": "A) Trying to help",
+            "4": "B) Trying to hinder",
+            "5": "B) Trying to hinder"
+        }
+    }
+}

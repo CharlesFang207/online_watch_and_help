@@ -1,0 +1,21 @@
+{
+    "163": {
+        "description": "b'Kevin walked to the wineglass and grabbed it while Alice headed to the kitchen. Kevin then placed the wineglass on the coffee table as Alice walked to the fridge and opened it. Kevin walked to the kitchen while Alice moved to the microwave and opened it. Kevin asked, \"Could you help me find a mug and a spoon?\" as he walked to the spoon. Alice responded, \"I\\'m not sure where the mug is, but I spotted the spoon on the kitchen table,\" while she opened a kitchen cabinet. Kevin grabbed the spoon and walked to the living room while Alice opened another kitchen cabinet. Kevin placed the spoon on the coffee table as Alice opened yet another kitchen cabinet.\\n\\nKevin walked to the bathroom while Alice grabbed a coffeepot from the cabinet. Kevin then walked to the bedroom as Alice walked to the dishwasher and opened it. Kevin continued walking in the bedroom while Alice put the coffeepot in the dishwasher. Kevin walked to the mug and grabbed it while Alice opened another kitchen cabinet. Kevin walked to the living room as Alice grabbed another coffeepot from the cabinet. Kevin placed the mug on the coffee table while Alice put the coffeepot in the dishwasher. \\n\\nKevin then walked to the bathroom while Alice walked to the bathroom cabinet and opened it. Kevin continued walking in the bedroom while Alice walked back to the kitchen. Kevin continued walking in the bedroom while Alice walked to another cabinet and opened it. Kevin continued walking to the living room while Alice walked back to the kitchen. Kevin continued walking to the kitchen cabinet while Alice opened it. Finally, Alice grabbed another coffeepot and put it in the dishwasher.'",
+        "questions": {
+            "1": "Given the above interaction, if Alice wants to help Kevin achieve his goal, which of the following locations did Alice most likely believe the spoon was located when giving information?\nA) Kitchen table\nB) Bathroom cabinet\nC) Bedroom",
+            "2": "Given the above interaction, if Alice wants to help Kevin achieve his goal, which of the following objects did Alice most likely believe was on the kitchen table when giving information?\nA) Mug\nB) Spoon\nC) Coffeepot",
+            "3": "Given the above interaction, if Alice wants to hinder Kevin from achieving his goal, which of the following locations did Alice least likely believe the spoon was located when giving information?\nA) Bedroom\nB) Bathroom cabinet\nC) Kitchen table",
+            "4": "Given the above interaction, if Alice wants to hinder Kevin from achieving his goal, which of the following objects did Alice least likely believe was located on the kitchen table when giving information?\nA) Spoon\nB) Mug\nC) Coffeepot",
+            "5": "Given the above interaction, assuming that Alice believes that the spoon is on the kitchen table, when giving information, Alice is most likely:\nA) Trying to help\nB) Trying to hinder\nC) Neither trying to help nor hinder",
+            "6": "Given the above interaction, assuming that Alice believes that nothing worthwhile is on the kitchen table, when giving information, Alice is most likely:\nA) Trying to help\nB) Trying to hinder\nC) Neither trying to help nor hinder"
+        },
+        "answers": {
+            "1": "A) Kitchen table",
+            "2": "B) Spoon",
+            "3": "C) Kitchen table",
+            "4": "A) Spoon",
+            "5": "A) Trying to help",
+            "6": "B) Trying to hinder"
+        }
+    }
+}

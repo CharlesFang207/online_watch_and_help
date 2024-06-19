@@ -1,0 +1,17 @@
+{
+    "189": {
+        "description": "b'David walked into the kitchen, grabbed a spoon, and then headed to the fridge. He opened the fridge, grabbed a bottle of wine, and walked through several rooms: bedroom, another bedroom, bathroom, and then the living room. He placed the wine on the coffee table in the living room and went back to the bathroom.\\n\\nMeanwhile, Sophia eventually walked into the kitchen, approached a kitchen cabinet, opened it, and grabbed a wineglass. She opened the dishwasher and placed the wineglass inside. She again opened a kitchen cabinet and took a spoon, placing it next to the wineglass in the dishwasher. She grabbed another wineglass from a different cabinet, walked back to the dishwasher, and put the wineglass inside. Sophia headed to the living room, grabbed another spoon placed by David, walked back to the kitchen and placed that inside the dishwasher as well.\\n'",
+        "questions": {
+            "1": "Given the above interaction, if Sophia believes that David's goal is to place the spoon on the coffee table, Sophia is least likely\nA) Helping David\nB) Hindering David\nC) Neither helping nor hindering",
+            "2": "Given the above interaction, if Sophia believes that David's goal is to place the spoon inside the dishwasher, Sophia is least likely\nA) Helping David\nB) Hindering David\nC) Neither helping nor hindering",
+            "3": "Given the above interaction, if Sophia wants to help David, Sophia's most likely believed goal of David is\nA) Placing the spoon on the coffee table\nB) Placing the spoon inside the dishwasher\nC) Placing the spoon inside a kitchen cabinet",
+            "4": "Given the above interaction, if Sophia wants to hinder David, Sophia's least likely believed goal of David is\nA) Placing the spoon on the coffee table\nB) Placing the spoon inside the dishwasher\nC) Placing the spoon inside a kitchen cabinet"
+        },
+        "answers": {
+            "1": "A) Helping David",
+            "2": "B) Hindering David",
+            "3": "B) Placing the spoon inside the dishwasher",
+            "4": "B) Placing the spoon inside the dishwasher"
+        }
+    }
+}

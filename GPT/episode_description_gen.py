@@ -20,7 +20,21 @@ def remove_sections(data, keys_to_remove):
         if key in data:
             del data[key]
 
-episodes_list = [1143]
+episodes_list = [2996, 87, 3169, 713, 259, 1185, 363, 707, 523, 588, 822, 2786, 527, 1676, 2260, 847, 
+                 859, 1644, 529, 1149, 1035, 1681, 1638, 1036, 3155, 1361, 1261, 662, 1338, 3131, 1217, 
+                 2259, 1308, 1127, 1102, 1218, 1871, 13, 3026, 1753, 771, 2617, 1717, 1821, 204, 1343, 
+                 109, 709, 1459, 97, 710, 1322, 1043, 1299, 1307, 1116, 1997, 812, 3446, 835, 1443, 
+                 2169, 2063, 2383, 3447, 2615, 2765, 2110, 2703, 1206, 3426, 1143, 1671, 567, 3429, 
+                 3041, 722, 545, 852, 3303, 1702, 247, 2425, 3091, 2101, 1021, 1365, 556, 327, 1155, 
+                 1452, 1378, 1783, 918, 1518, 2876, 2689, 29, 2459, 714, 1358, 2263, 1091, 1506, 1071, 
+                 269, 3180, 1141, 2881, 270, 2966, 71, 636, 1254, 2470, 35, 2431, 782, 2311, 774, 595, 
+                 1212, 1277, 2783, 3404, 2019, 2577, 1421, 1294, 486, 593, 2548, 786, 1311, 2511, 442, 
+                 3364, 1385, 2681, 3270, 1458, 2714, 1636, 2547, 2305, 2946, 1730, 2290, 875, 813, 2845, 
+                 1374, 1366, 2573, 1089, 657, 2797, 3014, 2527, 1341, 242, 2482, 1444, 2791, 898, 450, 
+                 3053, 1059, 275, 1129, 2494, 643, 3073, 521, 2947, 1291, 1253, 3071, 615, 1419, 423, 
+                 1899, 1363, 1635, 1015, 1909, 1073, 2851, 279, 543, 941, 1293, 243, 2811, 613, 1433, 
+                 1907, 3479, 907, 1791, 539, 1591, 2705, 807, 1313, 843, 881, 685, 1309, 271, 347, 803, 
+                 658, 1409, 337, 3209]
 
 for episode in episodes_list:
     pickle_file_path = '/home/scai/Workspace/hshi33/virtualhome/data/full_dataset/1500+episodes/logs_episode.{}_iter.0.pik'.format(episode)
@@ -49,10 +63,11 @@ for episode in episodes_list:
     Structure: Actions: A list of actions taken by agent 0 and agent 1, Language: Verbal communication between the agents in a list format.
     Instructions:
     1. Synchronization guidelines: Synchronize actions and language, the first entry in the "language" list corresponds to the first action step, the second entry in the "language" list corresponds to the second action and so on. If a language entry is null, there is no communication at that timestep. Synchronize descriptions of actions and language strictly by timesteps.
-    2. Agent names: Make sure to randomize the names. Use a random male name for agent 0 and a random female name for agent 1
+    2. Agent names: Pick random names from the top 100 most common names in the US. Use a random male name for agent 0 and a random female name for agent 1
     3. Description guidelines: Describe the actions and language of both agents together, step by step. Avoid adjectives and excessive descriptions. Do not skip any action or language steps.
     4. After establishing the timeline, make the description shorter, more concise and flow a lot like a story.
     5. Place more emphasis on the events immediately following the language conversation (if any)
+    6. Cut down on actions on the events before the language conversation
     """
 
     further_instructions = """
@@ -107,7 +122,8 @@ for episode in episodes_list:
         {"role": "assistant", "content": response_1},
         {"role": "user", "content": user_prompt_2},
         {"role": "assistant", "content": response_2},
-        {"role": "user", "content": final_prompt}
+        {"role": "user", "content": final_prompt},
+        {"role": "system", "content": "Note: Change up the names. Give a male name to agent 0 and female name to agent 1"}
     ],
     model="gpt-4o",
     temperature=1.0
@@ -115,7 +131,7 @@ for episode in episodes_list:
 
     episode_description = response.choices[0].message.content.strip()
 
-    output_path = f'/home/scai/Workspace/sye10/virtualHome/online_watch_and_help/GPT/episode_descriptions/episode_{episode}_compare.txt'
+    output_path = f'/home/scai/Workspace/sye10/virtualHome/online_watch_and_help/GPT/episode_descriptions/episode_{episode}.txt'
 
     with open(output_path,'w') as text_file:
         text_file.write(episode_description)

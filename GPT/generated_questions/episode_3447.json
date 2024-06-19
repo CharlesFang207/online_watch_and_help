@@ -1,0 +1,19 @@
+{
+    "3447": {
+        "description": "b'Kevin walked into the kitchen and asked, \"Can you tell me where the notes are?\" Emily, who was also in the kitchen, responded, \"I\\'ve seen the notes in a few different places in the kitchen cabinets.\" Kevin then grabbed the notes and another set of notes from the kitchen. Meanwhile, Emily grabbed a folder from the kitchen as well. Kevin walked to the living room, and Emily walked to the bedroom. Kevin then moved to the desk and placed the notes on it, while Emily walked to the living room. Kevin put another set of notes on the desk as Emily walked to the desk and placed the folder on it.\\n\\nKevin returned to the kitchen and then walked back to the living room multiple times, repeating this action several times. Meanwhile, Emily also moved between the kitchen and living room multiple times, opening various kitchen cabinets, the dishwasher, microwave, and stove. Kevin continued his back-and-forth movement between the kitchen and living room, while Emily did the same, occasionally walking to the bathroom and bedroom.\\n\\nEventually, Kevin walked to the bedroom, grabbed another set of notes, and returned to the living room. He then walked to the desk and placed the notes on it. Emily continued her pattern of walking between the kitchen, living room, bathroom, and bedroom, opening cabinets and checking various spots.\\n\\nKevin and Emily continued their respective tasks, moving between rooms and placing objects as needed.'",
+        "questions": {
+            "1": "Given the above interaction, if Emily wants to hinder Kevin from achieving his goal, which of the following locations did Emily least likely believe the notes were located when giving information?\nA) Garage\nB) Bedroom\nC) Kitchen cabinets",
+            "2": "Given the above interaction, if Emily wants to hinder Kevin from achieving his goal, which of the following objects did Emily least likely believe was located inside the kitchen cabinets when giving information?\nA) Notes\nB) Folder\nC) Book",
+            "3": "Given the above interaction, assuming that Emily believes that the notes are inside the kitchen cabinets, when giving information, Emily is most likely:\nA) Trying to help\nB) Trying to hinder\nC) Neither trying to help nor hinder",
+            "4": "Given the above interaction, assuming that Emily believes that there is only a spoon inside the kitchen cabinets, when giving information, Emily is most likely:\nA) Trying to help\nB) Trying to hinder\nC) Neither trying to help nor hinder",
+            "5": "Given the above interaction, assuming that Emily believes the notes are only in the bedroom, when giving information, Emily is most likely:\nA) Trying to help\nB) Trying to hinder\nC) Neither trying to help nor hinder"
+        },
+        "answers": {
+            "1": "C) Kitchen cabinets",
+            "2": "A) Notes",
+            "3": "A) Trying to help",
+            "4": "B) Trying to hinder",
+            "5": "B) Trying to hinder"
+        }
+    }
+}

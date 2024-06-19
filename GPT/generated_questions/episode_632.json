@@ -1,0 +1,19 @@
+{
+    "632": {
+        "description": "b'Kevin walked into the kitchen and asked, \"Could you help me find the juice, spoon, and wineglass? I seem to have misplaced them.\" Meanwhile, Alice walked to the kitchen cabinet. Kevin grabbed a juice while Alice opened the stove. Kevin grabbed another juice as Alice opened the kitchen cabinet. Kevin then walked to the living room while Alice opened another kitchen cabinet.\\n\\nKevin put the first juice on the coffee table as Alice grabbed a wine glass. Kevin then put the second juice on the coffee table while Alice opened the dishwasher. Alice walked to the kitchen table and placed the wine glass on it. Kevin remained in the living room while Alice walked to another kitchen cabinet and opened it. Alice then opened the fridge and walked to another kitchen cabinet.\\n\\nAlice grabbed a spoon and opened the microwave. She then opened another kitchen cabinet and grabbed another spoon. Alice walked to the kitchen table and placed the first spoon on it. She then put the second spoon on the kitchen table. Alice walked to another kitchen cabinet and opened it. She then walked to another kitchen cabinet and opened it as well.\\n\\nAlice grabbed another wine glass and walked to the kitchen table, placing the wine glass on it. She then walked to the bedroom and then to another part of the bedroom. Alice walked to the mug and grabbed it. She then walked back to the kitchen and placed the mug on the kitchen table.\\n\\nKevin remained in the living room, and Alice continued her tasks in the kitchen.'",
+        "questions": {
+            "1": "Given the above interaction, if Alice wants to help Kevin achieve his goal, which of the following locations did Alice most likely believe the wineglass was located when giving information?\nA) Kitchen cabinet\nB) Coffee table\nC) Bedroom",
+            "2": "Given the above interaction, if Alice wants to help Kevin achieve his goal, which of the following objects did Alice most likely believe was inside the Kitchen Cabinet when giving information?\nA) Mug\nB) Wineglass\nC) Juice",
+            "3": "Given the above interaction, assuming that Alice believes that the wineglass is inside the kitchen cabinet, when giving information, Alice is most likely:\nA) Trying to help\nB) Trying to hinder\nC) Neither trying to help nor hinder",
+            "4": "Given the above interaction, assuming that Alice believes that there is nothing worthwhile inside the kitchen cabinet, when giving information, Alice is most likely:\nA) Trying to help\nB) Trying to hinder\nC) Neither trying to help nor hinder",
+            "5": "Given the above interaction, assuming that Alice believes the wineglass is only in the microwave, when giving information, Alice is most likely:\nA) Trying to help\nB) Trying to hinder\nC) Neither trying to help nor hinder"
+        },
+        "answers": {
+            "1": "A) Kitchen cabinet",
+            "2": "B) Wineglass",
+            "3": "A) Trying to help",
+            "4": "B) Trying to hinder",
+            "5": "B) Trying to hinder"
+        }
+    }
+}

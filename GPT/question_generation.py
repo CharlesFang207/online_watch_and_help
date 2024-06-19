@@ -27,7 +27,21 @@ def parse_gpt_response(text, description, episode_num):
         }
     }
 
-episodes_list = [259, 275,423, 523, 615, 632, 707, 713, 812, 835, 1015, 1073, 1143, 1185, 1899, 2063, 2765]
+episodes_list = [2996, 87, 3169, 713, 259, 1185, 363, 707, 523, 588, 822, 2786, 527, 1676, 2260, 847, 
+                 859, 1644, 529, 1149, 1035, 1681, 1638, 1036, 3155, 1361, 1261, 662, 1338, 3131, 1217, 
+                 2259, 1308, 1127, 1102, 1218, 1871, 13, 3026, 1753, 771, 2617, 1717, 1821, 204, 1343, 
+                 109, 709, 1459, 97, 710, 1322, 1043, 1299, 1307, 1116, 1997, 812, 3446, 835, 1443, 
+                 2169, 2063, 2383, 3447, 2615, 2765, 2110, 2703, 1206, 3426, 1143, 1671, 567, 3429, 
+                 3041, 722, 545, 852, 3303, 1702, 247, 2425, 3091, 2101, 1021, 1365, 556, 327, 1155, 
+                 1452, 1378, 1783, 918, 1518, 2876, 2689, 29, 2459, 714, 1358, 2263, 1091, 1506, 1071, 
+                 269, 3180, 1141, 2881, 270, 2966, 71, 636, 1254, 2470, 35, 2431, 782, 2311, 774, 595, 
+                 1212, 1277, 2783, 3404, 2019, 2577, 1421, 1294, 486, 593, 2548, 786, 1311, 2511, 442, 
+                 3364, 1385, 2681, 3270, 1458, 2714, 1636, 2547, 2305, 2946, 1730, 2290, 875, 813, 2845, 
+                 1374, 1366, 2573, 1089, 657, 2797, 3014, 2527, 1341, 242, 2482, 1444, 2791, 898, 450, 
+                 3053, 1059, 275, 1129, 2494, 643, 3073, 521, 2947, 1291, 1253, 3071, 615, 1419, 423, 
+                 1899, 1363, 1635, 1015, 1909, 1073, 2851, 279, 543, 941, 1293, 243, 2811, 613, 1433, 
+                 1907, 3479, 907, 1791, 539, 1591, 2705, 807, 1313, 843, 881, 685, 1309, 271, 347, 803, 
+                 658, 1409, 337, 3209]
 
 for episode in episodes_list:
     input_file_path = '/home/scai/Workspace/sye10/virtualHome/online_watch_and_help/GPT/episode_descriptions/episode_{}.txt'.format(episode)
@@ -88,28 +102,60 @@ for episode in episodes_list:
     template_question_5 = """
     Question:
     Given the above interaction, assuming that [second agent's name] believes that the [object that second agent mentioned] is [inside/on location that second agent mentioned], when giving information, [second agent's name] is most likely:
-    A) Trying to help
-    B) Trying to hinder
-    C) Neither trying to help nor hinder
-    Answer: A) Trying to help
+    A) Trying to help [first agent's name]
+    B) Trying to hinder [first agent's name]
+    C) Neither trying to help nor hinder [first agent's name]
+    Answer: A) Trying to help [first agent's name]
     """
 
     template_question_6 = """
     Question:
     Given the above interaction, assuming that [second agent's name] believes that nothing worthwhile is [on/inside location that second agent mentioned], when giving information, [second agent's name] is most likely:
-    A) Trying to help
-    B) Trying to hinder
-    C) Neither trying to help nor hinder
-    Answer: B) Trying to hinder
+    A) Trying to help [first agent's name]
+    B) Trying to hinder [first agent's name]
+    C) Neither trying to help nor hinder [first agent's name]
+    Answer: B) Trying to hinder [first agent's name]
     """
 
     template_question_7 = """
     Question:
-    Given the above interaction, assuming that [second agent's name] believes the [object that second agent mentioned] are only in [a different location never mentioned], when giving information, [second agent's name] is most likely:
-    A) Trying to help
-    B) Trying to hinder
-    C) Neither trying to help nor hinder
-    Answer: B) Trying to hinder
+    Given the above interaction, assuming that [second agent's name] believes the [object that second agent mentioned] are only in [a different location never mentioned by second agent], when giving information, [second agent's name] is most likely:
+    A) Trying to help [first agent's name]
+    B) Trying to hinder [first agent's name]
+    C) Neither trying to help nor hinder [first agent's name]
+    Answer: B) Trying to hinder [first agent's name]
+    """
+
+    template_nolang_2bi_indep = """
+    Based on the above interaction, assuming that [second agent's name] knows [first agent's name's] goal, [second agent's name] is most likely:
+    A) Helping [first agent's name]
+    B) Hindering [first agent's name]
+    C) Focusing on her own task
+    Answer: C) Focusing on her own task
+    """
+
+    template_nolang_2bi_help = """
+    Based on the above interaction, assuming that [second agent's name] knows [first agent's name's] goal, [second agent's name] is most likely:
+    A) Helping [first agent's name]
+    B) Hindering [first agent's name]
+    C) Focusing on her own task
+    Answer: A) Helping [first agent's name]
+    """
+
+    template_nolang_2bi_hinder = """
+    Based on the above interaction, assuming that [second agent's name] knows [first agent's name's] goal, [second agent's name] is most likely:
+    A) Helping [first agent's name]
+    B) Hindering [first agent's name]
+    C) Focusing on her own task
+    Answer: B) Hindering [first agent's name]
+    """
+
+    template_nolang_2bii = """
+    Based on the above interaction, assuming that [second agent's name] does not know [first agent's name's] goal, [second agent's name] is most likely:
+    A) Helping [first agent's name]
+    B) Hindering [first agent's name]
+    C) Focusing on her own task
+    Answer: C) Focusing on her own task
     """
 
     instruction = """
@@ -167,28 +213,63 @@ for episode in episodes_list:
     response_question_5 = """
     Question:
     Given the above interaction, assuming that Alice believes that the milk is inside the kitchen cabinet, when giving information, Alice is most likely:
-    A) Trying to help
-    B) Trying to hinder
-    C) Neither trying to help nor hinder
-    Answer: A) Trying to help
+    A) Trying to help Kevin
+    B) Trying to hinder Kevin
+    C) Neither trying to help nor hinder Kevin
+    Answer: A) Trying to help Kevin
     """
 
     response_question_6 = """
     Question:
     Given the above interaction, assuming that Alice believes that there is nothing worthwhile inside the kitchen cabinet, when giving information, Alice is most likely:
-    A) Trying to help
-    B) Trying to hinder
-    C) Neither trying to help nor hinder
-    Answer: B) Trying to hinder
+    A) Trying to help Kevin
+    B) Trying to hinder Kevin
+    C) Neither trying to help nor hinder Kevin
+    Answer: B) Trying to hinder Kevin
     """
 
     response_question_7 = """
     Question:
-    Given the above interaction, assuming that [second agent's name] believes the [object that second agent mentioned] are only in microwave, when giving information, [second agent's name] is most likely:
-    A) Trying to help
-    B) Trying to hinder
-    C) Neither trying to help nor hinder
-    Answer: B) Trying to hinder
+    Given the above interaction, assuming that Alice believes the milk is only in the microwave, when giving information, Alice is most likely:
+    A) Trying to help Kevin
+    B) Trying to hinder Kevin
+    C) Neither trying to help nor hinder Kevin
+    Answer: B) Trying to hinder Kevin
+    """
+
+    response_nolang_2bi_indep = """
+    Question:
+    Based on the above interaction, if Alice knows Kevin’s goal, Alice is most likely
+    A) Helping Kevin
+    B) Hindering Kevin
+    C) Focusing on her own task
+    Answer: C) Focusing on her own task
+    """
+    
+    response_nolang_2bi_help = """
+    Question:
+    Based on the above interaction, if Alice knows Kevin’s goal, Alice is most likely
+    A) Helping Kevin
+    B) Hindering Kevin
+    C) Focusing on her own task
+    Answer: C) Focusing on her own task
+    """
+
+    response_nolang_2bi_hinder = """
+    Question:
+    Based on the above interaction, if Alice knows Kevin’s goal, Alice is most likely
+    A) Helping Kevin
+    B) Hindering Kevin
+    C) Focusing on her own task
+    Answer: C) Focusing on her own task
+    """
+
+    response_nolang_2bii = """
+    Based on the above interaction, assuming that [second agent's name] does not know [first agent's name's] goal, [second agent's name] is most likely:
+    A) Helping [first agent's name]
+    B) Hindering [first agent's name]
+    C) Focusing on her own task
+    Answer: C) Focusing on her own task
     """
 
     templates = {
@@ -198,7 +279,11 @@ for episode in episodes_list:
         "1.a.ii.2": template_question_4,
         "2.a.i": template_question_5,
         "2.a.ii.1": template_question_6,
-        "2.a.ii.2": template_question_7
+        "2.a.ii.2": template_question_7,
+        "2.b.i_independent": template_nolang_2bi_indep,
+        "2.b.i_help": template_nolang_2bi_help,
+        "2.b.i_hinder": template_nolang_2bi_hinder,
+        "2.b.ii": template_nolang_2bii
     }
 
     responses = {
@@ -208,11 +293,15 @@ for episode in episodes_list:
         "1.a.ii.2": response_question_4,
         "2.a.i": response_question_5,
         "2.a.ii.1": response_question_6,
-        "2.a.ii.2": response_question_7
+        "2.a.ii.2": response_question_7,
+        "2.b.i_independent": response_nolang_2bi_indep,
+        "2.b.i_hinder": response_nolang_2bi_help,
+        "2.b.i_help": response_nolang_2bi_hinder,
+        "2.b.ii": response_nolang_2bii
     }
 
     example_response = ""
-
+    
     for i, template_num in enumerate(templates_to_ask):
         instruction += templates[template_num]
         example_response += responses[template_num]

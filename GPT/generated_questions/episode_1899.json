@@ -1,0 +1,19 @@
+{
+    "1899": {
+        "description": "b'Kevin opened the kitchen cabinet while Emily walked into the kitchen. \"Could you help me find the bread and the carrot?\" Kevin asked. Emily, grabbing a carrot, responded, \"I spotted some bread inside the kitchen cabinet, but some places where the bread could be are unknown to me. Also, it looks like there might be some bread in the cabinet in the bedroom and even in the bathroom cabinet. As for the carrots, they\\'re quite the movers! I saw one in the kitchen cabinet, but then I wasn\\'t sure where the rest of the carrots were for a bit. Luckily, I found them again in the kitchen cabinet a few more times. There\\'s even a carrot on the sofa in the living room!\"\\n\\nKevin opened another kitchen cabinet while Emily walked to the bread. Kevin grabbed a piece of bread as Emily walked to the kitchen counter. Kevin opened another kitchen cabinet while Emily grabbed another piece of bread and put it back on the kitchen counter. Kevin grabbed another piece of bread and a carrot while Emily opened another kitchen cabinet. Kevin then walked to the bathroom as Emily opened the microwave.\\n\\nKevin walked to the bedroom while Emily walked to grab another carrot. Kevin walked to the living room as Emily walked back to the kitchen. Kevin continued to the living room while Emily repeatedly walked back and forth between the kitchen and the carrots, grabbing and putting them back multiple times.'",
+        "questions": {
+            "1": "Given the above interaction, if Emily wants to help Kevin achieve his goal, which of the following locations did Emily most likely believe the bread was located when giving information?\n    A) Kitchen cabinet\n    B) Bedroom cabinet\n    C) Bathroom cabinet",
+            "2": "Given the above interaction, if Emily wants to help Kevin achieve his goal, which of the following objects did Emily most likely believe was inside the Kitchen Cabinet when giving information?\n    A) Spoon\n    B) Bread\n    C) Carrot",
+            "3": "Given the above interaction, assuming that Emily believes that the bread is inside the kitchen cabinet, when giving information, Emily is most likely:\n    A) Trying to help\n    B) Trying to hinder\n    C) Neither trying to help nor hinder",
+            "4": "Given the above interaction, assuming that Emily believes that there is nothing worthwhile inside the kitchen cabinet, when giving information, Emily is most likely:\n    A) Trying to help\n    B) Trying to hinder\n    C) Neither trying to help nor hinder",
+            "5": "Given the above interaction, assuming that Emily believes the bread is only in the bathroom cabinet, when giving information, Emily is most likely:\n    A) Trying to help\n    B) Trying to hinder\n    C) Neither trying to help nor hinder"
+        },
+        "answers": {
+            "1": "A) Kitchen cabinet",
+            "2": "B) Bread",
+            "3": "A) Trying to help",
+            "4": "B) Trying to hinder",
+            "5": "B) Trying to hinder"
+        }
+    }
+}

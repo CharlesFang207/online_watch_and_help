@@ -15,7 +15,8 @@ from pathlib import Path
 from envs.unity_environment import UnityEnvironment
 from agents import MCTS_agent, MCTS_agent_particle_v2, MCTS_agent_particle, MCTS_agent_particle_v2_instance
 from arguments import get_args
-from algos.arena_mp2 import ArenaMP
+#from algos.arena_mp2 import ArenaMP
+from algos.arena_mp2_acci_help import ArenaMP
 from utils import utils_goals
 
 
@@ -93,13 +94,30 @@ if __name__ == '__main__':
 
     id_run = 0
     random.seed(id_run)
-    episode_ids = list(range(len(env_task_set)))
-    episode_ids = list(range(2401, len(env_task_set)))
+    episode_ids = list(range(1700, len(env_task_set)))
+    new_episode_ids = []
+    for episode_id in episode_ids:
+        episode_data = env_task_set[episode_id]
+        temp = {}
+        for goal in episode_data["task_goal"][0]:
+            temp[goal.split("_")[1]] = goal.split("_")[2]
+            if goal.split("_")[1] == "toy":
+                env_task_set[episode_id]["task_goal"][0][goal] = 2
+        for goal in episode_data["task_goal"][1]:
+            if goal.split("_")[1] == "toy":
+                env_task_set[episode_id]["task_goal"][1][goal] = 2
+            if goal.split("_")[1] in temp.keys() and not goal.split("_")[2] == temp[goal.split("_")[1]]:
+                if not Path("/home/scai/Workspace/hshi33/virtualhome/data/full_dataset/1500+episodes/logs_episode.{}_iter.0.pik".format(episode_id)).is_file():
+                    new_episode_ids.append(episode_id)
+                    break
+
+    episode_ids = new_episode_ids
     episode_ids = sorted(episode_ids)
+    episode_ids.remove(2723)
+    episode_ids.remove(2503)
     random.shuffle(episode_ids)
     print('episode_ids:', episode_ids)
     # episode_ids = episode_ids[10:]
-
     S = [[] for _ in range(len(episode_ids))]
     L = [[] for _ in range(len(episode_ids))]
     
@@ -114,7 +132,7 @@ if __name__ == '__main__':
                                 observation_types=[args.obs_type for _ in range(2)],
                                 use_editor=args.use_editor,
                                 executable_args=executable_args,
-                                base_port=8088,
+                                base_port = 8088,
                                 convert_goal=True)
 
 

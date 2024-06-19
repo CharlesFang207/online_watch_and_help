@@ -1,0 +1,19 @@
+{
+    "1073": {
+        "description": "b'Kevin walked to the milk and grabbed it while Sarah walked to the cabinet. Kevin then walked to the kitchen as Sarah opened the cabinet. Kevin continued to the fridge while Sarah grabbed a book. Kevin opened the fridge and put the milk inside as Sarah walked to the desk and placed the book on it. Kevin then walked to the kitchen cabinet while Sarah moved to the kitchen. Kevin opened the dishwasher and the microwave as Sarah grabbed another book. Kevin opened another kitchen cabinet while Sarah walked to the bedroom. Kevin opened the stove and walked to another kitchen cabinet as Sarah returned to the kitchen. Kevin opened the kitchen cabinet and grabbed another milk while Sarah walked back to the bedroom. Kevin walked to the fridge and put the milk inside as Sarah walked to the kitchen again. Kevin walked to another kitchen cabinet and opened it while Sarah returned to the bedroom. Kevin opened another kitchen cabinet and grabbed a juice while Sarah walked back to the kitchen. Kevin walked to the fridge and put the juice inside as Sarah returned to the bedroom again.\\n\\nKevin then walked to the bedroom and then to the bathroom while Sarah continued her back-and-forth between the kitchen and the bedroom. Kevin walked back to the kitchen and to another kitchen cabinet, opening it, while Sarah continued her repetitive movement. Kevin then walked to another kitchen cabinet and then to the bathroom, opening the bathroom cabinet. Kevin returned to the kitchen and walked to another kitchen cabinet, opening it, while Sarah continued her repetitive movement between the kitchen and the bedroom. Kevin grabbed another juice and put it in the fridge. \\n\\n\"Do you know where the juice and milk are?\" Kevin asked. \"I found juice inside the dishwasher in the kitchen and also inside the microwave in the kitchen. Additionally, there\\'s milk inside the kitchen cabinet and on the coffee table in the living room,\" Sarah responded, continuing her repetitive movement between the kitchen and the bedroom.'",
+        "questions": {
+            "1": "Given the above interaction, if Sarah wants to help Kevin achieve his goal, which of the following locations did Sarah most likely believe the juice was located when giving information?\nA) Dishwasher\nB) Fridge\nC) Bathroom cabinet",
+            "2": "Given the above interaction, if Sarah wants to help Kevin achieve his goal, which of the following objects did Sarah most likely believe was inside the kitchen cabinet when giving information?\nA) Book\nB) Milk\nC) Juice",
+            "3": "Given the above interaction, assuming that Sarah believes that the juice is inside the dishwasher, when giving information, Sarah is most likely:\nA) Trying to help\nB) Trying to hinder\nC) Neither trying to help nor hinder",
+            "4": "Given the above interaction, assuming that Sarah believes that there is nothing worthwhile inside the dishwasher, when giving information, Sarah is most likely:\nA) Trying to help\nB) Trying to hinder\nC) Neither trying to help nor hinder",
+            "5": "Given the above interaction, assuming that Sarah believes the milk is only in the coffee table in the living room, when giving information, Sarah is most likely:\nA) Trying to help\nB) Trying to hinder\nC) Neither trying to help nor hinder"
+        },
+        "answers": {
+            "1": "A) Dishwasher",
+            "2": "B) Milk",
+            "3": "A) Trying to help",
+            "4": "B) Trying to hinder",
+            "5": "B) Trying to hinder"
+        }
+    }
+}

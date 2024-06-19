@@ -1,0 +1,19 @@
+{
+    "835": {
+        "description": "b'Kevin opened the cabinet while Alice walked into the kitchen. Kevin then walked to the kitchen cabinet as Alice approached another kitchen cabinet. \"Do you know where the bread and juice are?\" Kevin asked. \"I found bread inside several kitchen cabinets: 207, 209, 205, and 204. There\\'s also some bread inside a cabinet in the bedroom. As for the juice, it\\'s inside the kitchen cabinet 209 and inside the microwave,\" Alice responded. Kevin walked to the juice and grabbed it while Alice opened the stove. Kevin walked to the fridge as Alice grabbed a carrot and some bread. Kevin opened the fridge and put the juice inside while Alice walked to the kitchen counter and put the carrot on it.\\n\\nKevin walked to the microwave and opened it while Alice grabbed another piece of bread. Kevin then opened another kitchen cabinet as Alice put the bread on the kitchen counter. Kevin grabbed another juice and walked to the fridge while Alice grabbed another piece of bread. Kevin put the juice in the fridge as Alice put the bread on the kitchen counter. Kevin walked to the bread and grabbed it while Alice grabbed another carrot. Kevin put the bread in the fridge as Alice put the carrot on the kitchen counter. Finally, Alice walked to another carrot, grabbed it, walked to the kitchen counter, and put it back on the counter.'",
+        "questions": {
+            "1": "Given the above interaction, if Alice wants to hinder Kevin from achieving his goal, which of the following locations did Alice least likely believe the juice was located when giving information?\nA) Coffee table\nB) Microwave\nC) Kitchen cabinet 209",
+            "2": "Given the above interaction, if Alice wants to hinder Kevin from achieving his goal, which of the following objects did Alice least likely believe was located inside kitchen cabinet 209 when giving information?\nA) Juice\nB) Carrot\nC) Spoon",
+            "3": "Given the above interaction, assuming that Alice believes that the juice is inside kitchen cabinet 209, when giving information, Alice is most likely:\nA) Trying to help\nB) Trying to hinder\nC) Neither trying to help nor hinder",
+            "4": "Given the above interaction, assuming that Alice believes that there is nothing worthwhile inside kitchen cabinet 209, when giving information, Alice is most likely:\nA) Trying to help\nB) Trying to hinder\nC) Neither trying to help nor hinder",
+            "5": "Given the above interaction, assuming that Alice believes the juice is only in microwave, when giving information, Alice is most likely:\nA) Trying to help\nB) Trying to hinder\nC) Neither trying to help nor hinder"
+        },
+        "answers": {
+            "1": "C) Kitchen cabinet 209",
+            "2": "A) Juice",
+            "3": "A) Trying to help",
+            "4": "B) Trying to hinder",
+            "5": "B) Trying to hinder"
+        }
+    }
+}

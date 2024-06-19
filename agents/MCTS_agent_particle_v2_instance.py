@@ -1037,7 +1037,7 @@ class MCTS_agent_particle_v2_instance:
     ): #inquiry: whether agent is possible to ask for help; in same room: whether the agent is in same room with other or not; 
        #modify_observation: whether agent will receive manipulated gt graph, modified_rooms: list of rooms where obs will be false
         change_goal = False # indicate whether the agent should change its goal
-        if modify_observation and self.agent_id == 2:
+        if modify_observation and self.agent_id == 1: #change back later
             obs = self.modify_observation(modified_rooms)
         
         if language is not None:
